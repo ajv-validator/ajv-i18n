@@ -1,0 +1,26 @@
+{
+  "name": "ajv-i18n",
+  "version": "0.0.0",
+  "description": "Internationalised error messages for ajv JSON-Schema validator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epoberezkin/ajv-i18n.git"
+  },
+  "keywords": [
+    "ajv",
+    "JSON",
+    "schema",
+    "i18n",
+    "internationalisation"
+  ],
+  "author": "Evgeny Poberezkin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/epoberezkin/ajv-i18n/issues"
+  },
+  "homepage": "https://github.com/epoberezkin/ajv-i18n#readme"
+}

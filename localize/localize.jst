@@ -1,0 +1,35 @@
+'use strict';
+
+var util = require('ajv/lib/compile/util');
+
+{{
+  var STRIP_FUNCTION = /function\s+anonymous\s*\(it[^)]*\)\s*{|return\s+out;\s*}/g
+    , VAR_OUT = /var\s+out/
+    , OUT_EMPTY_STRING = /out\s*\+=\s*\'\'\s*\+\s*/g;
+}}
+
+{{ var name = 'localize_' + it.locale.replace('-','_'); }}
+module.exports = function {{=name}}(errors) {
+  if (!(errors && errors.length)) return;
+  for (var i=0; i<errors.length; i++) {
+    var e = errors[i];
+    var out;
+    switch (e.keyword) {
+      {{~ it.messages:msg }}
+        case '{{= msg.keyword }}':
+          {{= stripFunction(msg.msgFunc) }}
+          break;
+      {{~}}
+    }
+    e.message = out;
+  }
+};
+
+{{
+  function stripFunction(code) {
+    return code.toString()
+            .replace(STRIP_FUNCTION, '')
+            .replace(VAR_OUT, 'out')
+            .replace(OUT_EMPTY_STRING, 'out += ');
+  }
+}}

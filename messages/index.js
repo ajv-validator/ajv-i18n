@@ -1,31 +1,34 @@
 'use strict';
 
 module.exports = {
+  // supported locales
   _locales: ['en', 'ru'],
+
+  // shared defines
   _defs: {
-    n: '{{var $n = e.schema;}}',
-    q: '{{=util.escapeQuotes(e.schema)}}',
-    cond: '{{=e.params.op}} {{=e.schema}}',
-    mPlural: {
-      en: '{{? $n!=1 }}s{{?}}',
-      ru: '{{? $n>=2 && n<=4 }}а{{?? $n!=1 }}ов{{?}}'
+    n: '{{var n = e.schema;}}',
+    mPlural: { // plural for the words item and character
+      en: '{{? n!=1 }}s{{?}}',
+      ru: '{{? n>=2 && n<=4 }}а{{?? n!=1 }}ов{{?}}'
     },
-    propPlural: {
-      en: '{{? $n==1 }}y{{??}}ies{{?}}',
-      ru: '{{? $n==1 }}е{{?? $n>=2 && n<=4 }}я{{??}}ей{{?}}'
+    propPlural: { // plural for the word property
+      en: '{{? n==1 }}y{{??}}ies{{?}}',
+      ru: '{{? n==1 }}е{{?? n>=2 && n<=4 }}я{{??}}ей{{?}}'
     }
   },
+
+  // error messages
   $ref: {
-    en: 'can\\\'t resolve reference {{#def.q}}',
-    ru: 'не найдена схема {{#def.q}}'
+    en: 'can\\\'t resolve reference {{=e.params.escaped}}',
+    ru: 'не найдена схема {{=e.params.escaped}}'
   },
   additionalItems: {
     _defs: {
-      n: '{{var $n = e.schema.length;}}'
+      n: '{{var n = e.schema.length;}}'
     },
-    en: '{{#def.n}}should NOT have more than {{=$n}} item{{#def.mPlural}}',
-    ru: '{{#def.n}}должен иметь НЕ более, чем {{=$n}} элемент{{#def.mPlural}}',
-    // en1: 'Additional items not allowed',
+    en: '{{#def.n}}should NOT have more than {{=n}} item{{#def.mPlural}}',
+    ru: '{{#def.n}}должен иметь НЕ более, чем {{=n}} элемент{{#def.mPlural}}',
+    // en: 'Additional items not allowed',
     // de: 'Zusätzliche Einträge nicht erlaubt',
     // fr: 'Éléments additionnels non autorisés',
     // nb: 'Tillegselementer er ikke tillatt',
@@ -37,7 +40,7 @@ module.exports = {
   additionalProperties: {
     en: 'should NOT have additional properties',
     ru: 'не должен иметь дополнительные поля',
-    // en1: 'Additional properties not allowed',
+    // en: 'Additional properties not allowed',
     // de: 'Zusätzliche Attribute nicht erlaubt',
     // fr: 'Propriétés additionnelles non autorisées',
     // nb: 'Tilleggsvariabler er ikke tillatt',
@@ -49,7 +52,7 @@ module.exports = {
   anyOf: {
     en: 'should match some schema in "anyOf"',
     ru: 'должен соответствовать одной их схем в "anyOf"',
-    // en1: 'Data does not match any schemas from "anyOf"',
+    // en: 'Data does not match any schemas from "anyOf"',
     // de: 'Daten stimmen nicht überein mit einem der Schemas von "anyOf"',
     // fr: 'La donnée ne correspond à aucun schema de "anyOf"',
     // nb: 'Data samsvarer ikke med noe skjema fra "anyOf"',
@@ -60,14 +63,11 @@ module.exports = {
   },
   dependencies: {
     _defs: {
-      n: '{{var $deps = e.params.deps; $n = $deps.length; }}',
-      dep0: '{{= util.escapeQuotes($deps[0]) }}',
-      deps: '{{= util.escapeQuotes($deps.join(\", \")) }}',
-      prop: '{{= util.escapeQuotes(e.params.property) }}'
+      n: '{{var n = e.params.n;}}'
     },
-    en: '{{#def.n}}should have {{? $n==1 }}property {{#def.dep0}}{{??}}properties {{#def.deps}}{{?}} when property {{#def.prop}} is present',
-    ru: '{{#def.n}}должен иметь {{? $n==1 }}поле {{#def.dep0}}{{??}}поля {{#def.deps}}{{?}}, когда присутствует поле {{#def.prop}}',
-    // en1: 'Dependency failed - key must exist: {missing} (due to key: {key})',
+    en: '{{#def.n}}should have propert{{? n==1 }}y{{??}}ies{{?}} {{=e.params.deps}} when property {{=e.params.property}} is present',
+    ru: '{{#def.n}}должен иметь пол{{? n==1 }}е{{??}}я{{?}} {{=e.params.deps}}, когда присутствует поле {{=e.params.property}}',
+    // en: 'Dependency failed - key must exist: {missing} (due to key: {key})',
     // de: 'Abhängigkeit fehlt - Schlüssel nicht vorhanden: {missing} (wegen Schlüssel: {key})',
     // fr: 'Echec de dépendance - la clé doit exister: {missing} (du à la clé: {key})',
     // nb: 'Variabelen {missing} må være definert (på grunn av følgende variabel: {key})',
@@ -79,7 +79,7 @@ module.exports = {
   enum: {
     en: 'should be equal to one of values in "enum"',
     ru: 'должен быть равен одному из значений в "enum"',
-    // en1: 'No enum match for: {value}',
+    // en: 'No enum match for: {value}',
     // de: 'Keine Übereinstimmung mit der Aufzählung (enum) für: {value}',
     // fr: 'Aucune valeur correspondante (enum) pour: {value}',
     // nb: 'Ingen samsvarende enum verdi for: {value}',
@@ -89,9 +89,9 @@ module.exports = {
     // 'zh-CN': '{value} 不是有效的枚举类型取值'
   },
   format: {
-    en: 'should match format "{{#def.q}}"',
-    ru: 'должен соответствовать формату "{{#def.q}}"',
-    // en1: 'Format validation failed ({message})',
+    en: 'should match format "{{=e.params.escaped}}"',
+    ru: 'должен соответствовать формату "{{=e.params.escaped}}"',
+    // en: 'Format validation failed ({message})',
     // fr: 'Échec de validation du format ({message})',
     // nb: 'Formatteringen stemmer ikke ({message})',
     // 'pl-PL': 'Błąd zgodności z formatem ({message})',
@@ -100,9 +100,9 @@ module.exports = {
     // 'zh-CN': '格式校验失败 ({message})'
   },
   maximum: {
-    en: 'should be {{#def.cond}}',
-    ru: 'должен быть {{#def.cond}}',
-    // en1: 'Value {value} is greater than maximum {maximum}',
+    en: 'should be {{=e.params.condition}}',
+    ru: 'должен быть {{=e.params.condition}}',
+    // en: 'Value {value} is greater than maximum {maximum}',
     // de: 'Wert {value} ist größer als das Maximum {maximum}',
     // fr: 'La valeur {value} est supérieure au maximum {maximum}',
     // nb: 'Verdien {value} er større enn maksimalverdi {maximum}',
@@ -112,9 +112,9 @@ module.exports = {
     // 'zh-CN': '数值 {value} is greater 大于最大值 {maximum}'
   },
   minimum: {
-    en: 'should be {{#def.cond}}',
-    ru: 'должен быть {{#def.cond}}',
-    // en1: 'Value {value} is less than minimum {minimum}',
+    en: 'should be {{=e.params.condition}}',
+    ru: 'должен быть {{=e.params.condition}}',
+    // en: 'Value {value} is less than minimum {minimum}',
     // de: 'Wert {value} ist kleiner als das Minimum {minimum}',
     // fr: 'La valeur {value} est inférieure au minimum {minimum}',
     // nb: 'Verdien {value} er mindre enn minsteverdi {minimum}',
@@ -124,9 +124,9 @@ module.exports = {
     // 'zh-CN': '数值 {value} 小于最小值 {minimum}'
   },
   maxItems: {
-    en: '{{#def.n}}should NOT have more than {{=$n}} item{{#def.mPlural}}',
-    ru: '{{#def.n}}должен иметь НЕ более, чем {{=$n}} элемент{{#def.mPlural}}',
-    // en1: 'Array is too long ({length}), maximum {maximum}',
+    en: '{{#def.n}}should NOT have more than {{=n}} item{{#def.mPlural}}',
+    ru: '{{#def.n}}должен иметь НЕ более, чем {{=n}} элемент{{#def.mPlural}}',
+    // en: 'Array is too long ({length}), maximum {maximum}',
     // de: 'Array zu lang ({length}), maximum {maximum}',
     // fr: 'Le tableau est trop long ({length}), maximum {maximum}',
     // nb: 'Listen er for lang ({length} elementer), maksimalt {maximum}',
@@ -136,9 +136,9 @@ module.exports = {
     // 'zh-CN': '数组长度太长 ({length}), 最大长度 {maximum}'
   },
   minItems: {
-    en: '{{#def.n}}should NOT have less than {{=$n}} item{{#def.mPlural}}',
-    ru: '{{#def.n}}должен иметь НЕ менее, чем {{=$n}} элемент{{#def.mPlural}}',
-    // en1: 'Array is too short ({length}), minimum {minimum}',
+    en: '{{#def.n}}should NOT have less than {{=n}} item{{#def.mPlural}}',
+    ru: '{{#def.n}}должен иметь НЕ менее, чем {{=n}} элемент{{#def.mPlural}}',
+    // en: 'Array is too short ({length}), minimum {minimum}',
     // de: 'Array zu kurz ({length}), minimum {minimum}',
     // fr: 'Le tableau est trop court ({length}), minimum {minimum}',
     // nb: 'Listen er for kort ({length} elementer), minst {minimum}',
@@ -148,9 +148,9 @@ module.exports = {
     // 'zh-CN': '数组长度太短 ({length}), 最小长度 {minimum}'
   },
   maxLength: {
-    en: '{{#def.n}}should NOT be longer than {{=$n}} character{{#def.mPlural}}',
-    ru: '{{#def.n}}должен быть НЕ длиннее, чем {{=$n}} символ{{#def.mPlural}}',
-    // en1: 'String is too long ({length} chars), maximum {maximum}',
+    en: '{{#def.n}}should NOT be longer than {{=n}} character{{#def.mPlural}}',
+    ru: '{{#def.n}}должен быть НЕ длиннее, чем {{=n}} символ{{#def.mPlural}}',
+    // en: 'String is too long ({length} chars), maximum {maximum}',
     // de: 'Zeichenkette zu lang ({length} chars), maximum {maximum}',
     // fr: 'Le texte est trop long ({length} carac.), maximum {maximum}',
     // nb: 'Strengen er for lang ({length} tegn), maksimalt {maximum}',
@@ -160,9 +160,9 @@ module.exports = {
     // 'zh-CN': '字符串太长 ({length} 个字符), 最多 {maximum} 个'
   },
   minLength: {
-    en: '{{#def.n}}should NOT be shorter than {{=$n}} character{{#def.mPlural}}',
-    ru: '{{#def.n}}должен быть НЕ короче, чем {{=$n}} символ{{#def.mPlural}}',
-    // en1: 'String is too short ({length} chars), minimum {minimum}',
+    en: '{{#def.n}}should NOT be shorter than {{=n}} character{{#def.mPlural}}',
+    ru: '{{#def.n}}должен быть НЕ короче, чем {{=n}} символ{{#def.mPlural}}',
+    // en: 'String is too short ({length} chars), minimum {minimum}',
     // de: 'Zeichenkette zu kurz ({length} chars), minimum {minimum}',
     // fr: 'Le texte est trop court ({length} carac.), minimum {minimum}',
     // nb: 'Strengen er for kort ({length} tegn), minst {minimum}',
@@ -172,9 +172,9 @@ module.exports = {
     // 'zh-CN': '字符串太短 ({length} 个字符), 最少 {minimum} 个'
   },
   maxProperties: {
-    en: '{{#def.n}}should NOT have more than {{=$n}} propert{{#def.propPlural}}',
-    ru: '{{#def.n}}должен иметь НЕ более, чем {{=$n}} пол{{#def.propPlural}}',
-    // en1: 'Too many properties defined ({propertyCount}), maximum {maximum}',
+    en: '{{#def.n}}should NOT have more than {{=n}} propert{{#def.propPlural}}',
+    ru: '{{#def.n}}должен иметь НЕ более, чем {{=n}} пол{{#def.propPlural}}',
+    // en: 'Too many properties defined ({propertyCount}), maximum {maximum}',
     // de: 'Zu viele Attribute definiert ({propertyCount}), maximum {maximum}',
     // fr: 'Trop de propriétés définies ({propertyCount}), maximum {maximum}',
     // nb: 'For mange variabler definert ({propertyCount}), makismalt {maximum} er tillatt',
@@ -184,9 +184,9 @@ module.exports = {
     // 'zh-CN': '字段数过多 ({propertyCount}), 最多 {maximum} 个'
   },
   minProperties: {
-    en: '{{#def.n}}should NOT have less than {{=$n}} propert{{#def.propPlural}}',
-    ru: '{{#def.n}}должен иметь НЕ менее, чем {{=$n}} пол{{#def.propPlural}}',
-    // en1: 'Too few properties defined ({propertyCount}), minimum {minimum}',
+    en: '{{#def.n}}should NOT have less than {{=n}} propert{{#def.propPlural}}',
+    ru: '{{#def.n}}должен иметь НЕ менее, чем {{=n}} пол{{#def.propPlural}}',
+    // en: 'Too few properties defined ({propertyCount}), minimum {minimum}',
     // de: 'Zu wenige Attribute definiert ({propertyCount}), minimum {minimum}',
     // fr: 'Pas assez de propriétés définies ({propertyCount}), minimum {minimum}',
     // nb: 'For få variabler definert ({propertyCount}), minst {minimum} er forventet',
@@ -198,7 +198,7 @@ module.exports = {
   multipleOf: {
     en: 'should be multiple of {{=e.schema}}',
     ru: 'должен быть кратным {{=e.schema}}',
-    // en1: 'Value {value} is not a multiple of {multipleOf}',
+    // en: 'Value {value} is not a multiple of {multipleOf}',
     // de: 'Wert {value} ist kein Vielfaches von {multipleOf}',
     // fr: 'La valeur {value} n\'est pas un multiple de {multipleOf}',
     // nb: 'Verdien {value} er ikke et multiplum av {multipleOf}',
@@ -210,7 +210,7 @@ module.exports = {
   not: {
     en: 'should NOT be valid according to schema in "not"',
     ru: 'должен НЕ соответствовать схеме в "not"',
-    // en1: 'Data matches schema from "not"',
+    // en: 'Data matches schema from "not"',
     // de: 'Daten stimmen mit dem "not" Schema überein',
     // fr: 'La donnée correspond au schema de "not"',
     // nb: 'Data samsvarer med skjema fra "not"',
@@ -222,7 +222,7 @@ module.exports = {
   oneOf: {
     en: 'should match exactly one schema in "oneOf"',
     ru: 'должен соответствовать в точности одной схемe в "oneOf"',
-    // en1: 'Data does not match any schemas from "oneOf"',
+    // en: 'Data does not match any schemas from "oneOf"',
     // de: 'Daten stimmen nicht überein mit einem der Schemas von "oneOf"',
     // fr: 'La donnée ne correspond à aucun schema de  "oneOf"',
     // nb: 'Data samsvarer ikke med noe skjema fra "oneOf"',
@@ -232,9 +232,9 @@ module.exports = {
     // 'zh-CN': '数据不符合以下任何一个模式 ("oneOf")'
   },
   pattern: {
-    en: 'should match pattern "{{#def.q}}"',
-    ru: 'должен соответствовать образцу "{{#def.q}}"',
-    // en1: 'String does not match pattern: {pattern}',
+    en: 'should match pattern "{{=e.params.escaped}}"',
+    ru: 'должен соответствовать образцу "{{=e.params.escaped}}"',
+    // en: 'String does not match pattern: {pattern}',
     // de: 'Zeichenkette entspricht nicht dem Muster: {pattern}',
     // fr: 'Le texte ne correspond pas au motif: {pattern}',
     // nb: 'Strengen samsvarer ikke med regulært uttrykk: {pattern}',
@@ -246,7 +246,7 @@ module.exports = {
   required: {
     en: 'should have required property {{=e.params.missingProperty}}',
     ru: 'должен иметь обязательное поле {{=e.params.missingProperty}}',
-    // en1: 'Missing required property: {key}',
+    // en: 'Missing required property: {key}',
     // de: 'Notwendiges Attribut fehlt: {key}',
     // fr: 'Propriété requise manquante: {key}',
     // nb: 'Mangler obligatorisk variabel: {key}',
@@ -256,12 +256,9 @@ module.exports = {
     // 'zh-CN': '缺少必要字段: {key}'
   },
   type: {
-    _defs: {
-      type: '{{? Array.isArray(e.schema) }}{{= e.schema.join(",") }}{{??}}{{=e.schema}}{{?}}'
-    },
-    en: 'should be {{#def.type}}',
-    ru: 'должен иметь тип {{#def.type}}',
-    // en1: 'Invalid type: {type} (expected {expected})',
+    en: 'should be {{=e.params.type}}',
+    ru: 'должен быть {{=e.params.type}}',
+    // en: 'Invalid type: {type} (expected {expected})',
     // de: 'Ungültiger Typ: {type} (erwartet wurde: {expected})',
     // fr: 'Type invalide: {type} ({expected} attendu)',
     // nb: 'Ugyldig type: {type} (forventet {expected})',
@@ -272,8 +269,8 @@ module.exports = {
   },
   uniqueItems: {
     en: 'should NOT have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)',
-    ru: 'не должен иметь повторяющихся элементов (элементы N {{=e.params.j}} и {{=e.params.i}} идентичны)',
-    // en1: 'Array items are not unique (indices {match1} and {match2})',
+    ru: 'не должен иметь повторяющихся элементов (элементы {{=e.params.j}} и {{=e.params.i}} идентичны)',
+    // en: 'Array items are not unique (indices {match1} and {match2})',
     // de: 'Array Einträge nicht eindeutig (Index {match1} und {match2})',
     // fr: 'Des éléments du tableau ne sont pas uniques (indices {match1} et {match2})',
     // nb: 'Elementene er ikke unike (indeks {match1} og {match2} er like)',

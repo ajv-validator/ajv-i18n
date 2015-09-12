@@ -1,9 +1,9 @@
 'use strict';
 
-var messages = require('../lib/messages')
+var messages = require('../messages')
     , doT = require('doT')
     , beautify = require('js-beautify')
-    , util = require('ajv/lib/compile/util')
+    , copy = require('ajv/lib/compile/util').copy
     , fs = require('fs')
     , path = require('path')
 
@@ -33,7 +33,7 @@ function localeMessages(locale) {
         if (!msg) throw new Error('No message for locale ' + locale + ' keyword ' + keyword);
         var keyDefs = keyMsgs._defs
         var defs = keyDefs
-                    ? util.copy(keyDefs, util.copy(localeDefs))
+                    ? copy(keyDefs, copy(localeDefs))
                     : localeDefs;
         var msgFunc = doT.compile(msg, defs);
         locMsgs.push({ keyword: keyword, msgFunc: msgFunc });

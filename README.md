@@ -52,3 +52,24 @@ var localize = {
 ```
 
 See [Ajv docs](https://github.com/epoberezkin/ajv) for more information.
+
+
+## Tests
+
+```
+npm install
+git submodule update --init
+npm test
+```
+
+
+## Contributing
+
+Functions that localize error messages are generated using doT templates in [messages](https://github.com/epoberezkin/ajv-i18n/tree/master/messages/index.js) and [localize.jst](https://github.com/epoberezkin/ajv-i18n/tree/master/localize/localize.jst) template. Templates are precompiled so doT is not a run-time dependency.
+
+`npm run build` - compiles functions to [localize](https://github.com/epoberezkin/ajv/tree/master/localize) folder.
+
+
+## License
+
+[MIT](https://github.com/epoberezkin/ajv-i18n/blob/master/LICENSE)

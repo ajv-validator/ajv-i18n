@@ -4,9 +4,9 @@
   "description": "Internationalised error messages for ajv JSON-Schema validator",
   "main": "index.js",
   "scripts": {
-    "test": "mocha spec/*.spec.js -R spec",
     "build": "node scripts/compile-locales.js",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "test": "npm run build && mocha spec/*.spec.js -R spec"
   },
   "repository": {
     "type": "git",

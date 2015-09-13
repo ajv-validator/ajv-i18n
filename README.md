@@ -1,13 +1,20 @@
 # ajv-i18n
-Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) JSON-Schema validator
+Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) - currently the fastest JSON-Schema validator
 
-In progress...
+
+## Supported locales
+
+At the moment these locales are supported: `en` and `ru`.
+
+Please contribute those that you need to use.
+
 
 ## Install
 
 ```
 npm install ajv-i18n
 ```
+
 
 ## Usage
 

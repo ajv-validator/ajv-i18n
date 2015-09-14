@@ -1,6 +1,6 @@
 'use strict';
 
-var localize = require('../index');
+var localize = require('../localize');
 
 var jsonSchemaTest = require('json-schema-test');
 var Ajv = require('ajv');

@@ -1,7 +1,7 @@
 'use strict';
 
 var messages = require('../messages')
-    , doT = require('doT')
+    , doT = require('dot')
     , beautify = require('js-beautify')
     , copy = require('ajv/lib/compile/util').copy
     , fs = require('fs')

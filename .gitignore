@@ -30,3 +30,4 @@ node_modules
 
 # Compiled templates
 localize/**/*.js
+!localize/index.js

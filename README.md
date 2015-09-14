@@ -4,7 +4,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 
 ## Supported locales
 
-At the moment these locales are supported: `en` and `ru`.
+At the moment these locales are supported: `en`, `hu`, `pl` and `ru`.
 
 Please contribute those that you need to use.
 
@@ -33,7 +33,7 @@ if (!valid) {
     // array of error objects with Russian messages
     var errors = localize.ru(validate.errors);
     // string with all errors and data paths
-    console.log(ajv.errorsText(errors, { separator: '\n' })); 
+    console.log(ajv.errorsText(errors, { separator: '\n' }));
 }
 ```
 

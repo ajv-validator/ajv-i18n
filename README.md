@@ -24,6 +24,7 @@ In node:
 var Ajv = require('ajv'); // version >= 1.4.0
 var localize = require('ajv-i18n');
 
+// option `i18n` is required for this package to work
 var ajv = Ajv({ allErrors: true, i18n: true });
 var validate = ajv.compile(schema);
 var valid = validate(data);
@@ -32,7 +33,7 @@ if (!valid) {
     // array of error objects with Russian messages
     var errors = localize.ru(validate.errors);
     // string with all errors and data paths
-    console.log(ajv.errorsText(errors, { separator: '\n', })); 
+    console.log(ajv.errorsText(errors, { separator: '\n' })); 
 }
 ```
 

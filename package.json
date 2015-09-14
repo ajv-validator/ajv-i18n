@@ -34,6 +34,7 @@
     "dot": "^1.0.3",
     "js-beautify": "^1.5.10",
     "json-schema-test": "^0.1.4",
-    "mocha": "^2.3.2"
+    "mocha": "^2.3.2",
+    "pre-commit": "^1.1.1"
   }
 }

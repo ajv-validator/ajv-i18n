@@ -2,6 +2,7 @@
 
 module.exports = {
     en: require('./en'),
-    ru: require('./ru'),
-    pl: require('./pl')
+    hu: require('./hu'),
+    pl: require('./pl'),
+    ru: require('./ru')
 };

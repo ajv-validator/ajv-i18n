@@ -1,6 +1,8 @@
 # ajv-i18n
 Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) - currently the fastest JSON-Schema validator
 
+[![npm version](https://badge.fury.io/js/ajv-i18n.svg)](http://badge.fury.io/js/ajv-i18n)
+
 
 ## Supported locales
 

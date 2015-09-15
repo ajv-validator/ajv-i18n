@@ -2,17 +2,19 @@
 
 module.exports = {
   // supported locales
-  _locales: ['en', 'hu', 'ru', 'pl'],
+  _locales: ['en', 'hu', 'ru', 'pl', 'de'],
 
   // shared defines
   _defs: {
     n: '{{var n = e.schema;}}',
     mPlural: { // plural for the words item and character
+      de: '{{? n!=1 }}e{{?}}',
       en: '{{? n!=1 }}s{{?}}',
       ru: '{{? n>=2 && n<=4 }}а{{?? n!=1 }}ов{{?}}',
       pl: '{{? n==1 }}u{{??}}ów{{?}}'
     },
     propPlural: { // plural for the word property
+      de: '{{? n!=1 }}e{{?}}',
       en: '{{? n==1 }}y{{??}}ies{{?}}',
       hu: '{{? n!=1 }}i{{?}}',
       ru: '{{? n==1 }}е{{?? n>=2 && n<=4 }}я{{??}}ей{{?}}',
@@ -22,6 +24,7 @@ module.exports = {
 
   // error messages
   $ref: {
+    de: 'kann die Referenz {{=e.params.escaped}} nicht auflösen',
     en: 'can\\\'t resolve reference {{=e.params.escaped}}',
     hu: 'nem sikerült feloldani a hivatkozást {{=e.params.escaped}}',
     pl: 'nie można znaleść schematu',
@@ -31,6 +34,7 @@ module.exports = {
     _defs: {
       n: '{{var n = e.schema.length;}}'
     },
+    de: '{{#def.n}}sollte nicht mehr als {{=n}} Element{{#def.mPlural}} enthalten',
     en: '{{#def.n}}should NOT have more than {{=n}} item{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet több, mint {{=n}} eleme',
     pl: '{{#def.n}}nie powinien mieć więcej niż {{=n}} element{{#def.mPlural}}',
@@ -44,6 +48,7 @@ module.exports = {
     // 'zh-CN': '不允许多余的元素'
   },
   additionalProperties: {
+    de: 'sollte keine zusätzlichen Attribute haben',
     en: 'should NOT have additional properties',
     hu: 'nem lehetnek további elemei',
     pl: 'nie powinien zawierać dodatkowych pól',
@@ -57,6 +62,7 @@ module.exports = {
     // 'zh-CN': '不允许多余的字段'
   },
   anyOf: {
+    de: 'sollte einem der Schemata in "anyOf" entsprechen',
     en: 'should match some schema in "anyOf"',
     hu: 'meg kell feleljen legalább egy "anyOf" alaknak',
     pl: 'powinien pasować do wzoru z sekcji "anyOf"',
@@ -73,6 +79,7 @@ module.exports = {
     _defs: {
       n: '{{var n = e.params.n;}}'
     },
+    de: '{{#def.n}}sollte Attribut{{#def.propPlural}} {{=e.params.deps}} aufweisen, wenn Attribut {{=e.params.property}} gesetzt ist',
     en: '{{#def.n}}should have propert{{#def.propPlural}} {{=e.params.deps}} when property {{=e.params.property}} is present',
     hu: '{{#def.n}}-nak kell legyen{{? n>1 }}ek{{?}} a következő tulajdonsága{{#def.propPlural}}: {{=e.params.deps}}, ha van {{=e.params.property}} tulajdonsága',
     pl: '{{#def.n}}powinien zawierać pol{{#def.propPlural}} {{=e.params.deps}} kiedy pole {{=e.params.property}} jest obecne',
@@ -86,6 +93,7 @@ module.exports = {
     // 'zh-CN': '依赖失败 - 缺少键 {missing} (来自键: {key})'
   },
   enum: {
+    de: 'sollte einem der vorgegebenen Werte entsprechen',
     en: 'should be equal to one of predefined values',
     hu: 'egyenlő kell legyen valamely előre meghatározott értékkel',
     pl: 'powinien być równy do jednej z predefinowanej wartości',
@@ -99,6 +107,7 @@ module.exports = {
     // 'zh-CN': '{value} 不是有效的枚举类型取值'
   },
   format: {
+    de: 'sollte diesem Format entsprechen: "{{=e.params.escaped}}"',
     en: 'should match format "{{=e.params.escaped}}"',
     hu: 'meg kell feleljen a következő formátumnak: "{{=e.params.escaped}}"',
     pl: 'powinien zgadzać się z formatem "{{=e.params.escaped}}"',
@@ -111,6 +120,7 @@ module.exports = {
     // 'zh-CN': '格式校验失败 ({message})'
   },
   maximum: {
+    de: 'sollte {{=e.params.condition}} sein',
     en: 'should be {{=e.params.condition}}',
     hu: 'kell legyen {{=e.params.condition}}',
     pl: 'powinien być {{=e.params.condition}}',
@@ -124,6 +134,7 @@ module.exports = {
     // 'zh-CN': '数值 {value} is greater 大于最大值 {maximum}'
   },
   minimum: {
+    de: 'sollte {{=e.params.condition}} sein',
     en: 'should be {{=e.params.condition}}',
     hu: 'kell legyen {{=e.params.condition}}',
     pl: 'powinien być {{=e.params.condition}}',
@@ -137,6 +148,7 @@ module.exports = {
     // 'zh-CN': '数值 {value} 小于最小值 {minimum}'
   },
   maxItems: {
+    de: '{{#def.n}}sollte nicht mehr als {{=n}} Element{{#def.mPlural}} haben',
     en: '{{#def.n}}should NOT have more than {{=n}} item{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet több, mint {{=n}} eleme',
     pl: '{{#def.n}}nie powinien mieć więcej niż {{=n}} element{{#def.mPlural}}',
@@ -150,6 +162,7 @@ module.exports = {
     // 'zh-CN': '数组长度太长 ({length}), 最大长度 {maximum}'
   },
   minItems: {
+    de: '{{#def.n}}sollte nicht weniger als {{=n}} Element{{#def.mPlural}} haben',
     en: '{{#def.n}}should NOT have less than {{=n}} item{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet kevesebb, mint {{=n}} eleme',
     pl: '{{#def.n}}nie powinien mieć mniej niż {{=n}} element{{#def.mPlural}}',
@@ -163,6 +176,7 @@ module.exports = {
     // 'zh-CN': '数组长度太短 ({length}), 最小长度 {minimum}'
   },
   maxLength: {
+    de: '{{#def.n}}sollte nicht länger als {{=n}} Zeichen sein',
     en: '{{#def.n}}should NOT be longer than {{=n}} character{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet hosszabb, mint {{=n}} szimbólum',
     pl: '{{#def.n}}nie powinien być dłuższy niż {{=n}} znak{{? n!=1 }}ów{{?}}',
@@ -176,6 +190,7 @@ module.exports = {
     // 'zh-CN': '字符串太长 ({length} 个字符), 最多 {maximum} 个'
   },
   minLength: {
+    de: '{{#def.n}}sollte nicht kürzer als {{=n}} Zeichen sein',
     en: '{{#def.n}}should not be shorter than {{=n}} character{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet rövidebb, mint {{=n}} szimbólum',
     pl: '{{#def.n}}nie powinien być krótszy niż {{=n}} znak{{? n!=1 }}ów{{?}}',
@@ -189,6 +204,7 @@ module.exports = {
     // 'zh-CN': '字符串太短 ({length} 个字符), 最少 {minimum} 个'
   },
   maxProperties: {
+    de: '{{#def.n}}sollte nicht mehr als {{=n}} Attribut{{#def.propPlural}} haben',
     en: '{{#def.n}}should NOT have more than {{=n}} propert{{#def.propPlural}}',
     hu: '{{#def.n}}nem lehet több, mint {{=n}} tulajdonsága',
     pl: '{{#def.n}}nie powinien zawierać więcej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
@@ -202,6 +218,7 @@ module.exports = {
     // 'zh-CN': '字段数过多 ({propertyCount}), 最多 {maximum} 个'
   },
   minProperties: {
+    de: '{{#def.n}}sollte nicht weniger als {{=n}} Attribut{{#def.propPlural}} haben',
     en: '{{#def.n}}should NOT have less than {{=n}} propert{{#def.propPlural}}',
     hu: '{{#def.n}}nem lehet kevesebb, mint {{=n}} tulajdonsága',
     pl: '{{#def.n}}nie powinien zawierać mniej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
@@ -215,6 +232,7 @@ module.exports = {
     // 'zh-CN': '字段数过少 ({propertyCount}), 最少 {minimum} 个'
   },
   multipleOf: {
+    de: 'sollte ein Vielfaches von {{=e.schema}} sein',
     en: 'should be multiple of {{=e.schema}}',
     hu: 'a többszöröse kell legyen a következő számnak: {{=e.schema}}',
     pl: 'powinien być wielokrotnością {{=e.schema}}',
@@ -228,6 +246,7 @@ module.exports = {
     // 'zh-CN': '数值 {value} 不是 {multipleOf} 的倍数'
   },
   not: {
+    de: 'sollte dem in "not" angegebenen Schema widersprechen',
     en: 'should NOT be valid according to schema in "not"',
     hu: 'nem lehet érvényes a "not" alaknak megfelelően',
     pl: 'nie powinien pasować do wzoru z sekcji "not"',
@@ -241,6 +260,7 @@ module.exports = {
     // 'zh-CN': '数据不应匹配以下模式 ("not")'
   },
   oneOf: {
+    de: 'sollte genau einem der Schemata in "oneOf" entsprechen',
     en: 'should match exactly one schema in "oneOf"',
     hu: 'meg kell feleljen pontosan egy "anyOf" alaknak',
     pl: 'powinien pasować do jednego wzoru z sekcji {{=e.schema}}',
@@ -254,6 +274,7 @@ module.exports = {
     // 'zh-CN': '数据不符合以下任何一个模式 ("oneOf")'
   },
   pattern: {
+    de: 'sollte diesem Muster entsprechen: "{{=e.params.escaped}}"',
     en: 'should match pattern "{{=e.params.escaped}}"',
     hu: 'meg kell feleljen a következő mintának: "{{=e.params.escaped}}"',
     pl: 'powinien zgadzać się ze wzorem "{{=e.params.escaped}}"',
@@ -267,6 +288,7 @@ module.exports = {
     // 'zh-CN': '字符串不匹配模式: {pattern}'
   },
   required: {
+    de: 'sollte das erforderliche Attribut {{=e.params.missingProperty}} enthalten',
     en: 'should have required property {{=e.params.missingProperty}}',
     hu: 'kell legyen {{=e.params.missingProperty}} tulajdonsága',
     pl: 'powinien zawierać wymagane pole {{=e.params.missingProperty}}',
@@ -280,6 +302,7 @@ module.exports = {
     // 'zh-CN': '缺少必要字段: {key}'
   },
   type: {
+    de: 'sollte sein: {{=e.params.type}}',
     en: 'should be {{=e.params.type}}',
     hu: '{{=e.params.type}} kell legyen',
     pl: 'powinien być {{=e.params.type}}',
@@ -293,6 +316,7 @@ module.exports = {
     // 'zh-CN': '当前类型 {type} 不符合期望的类型 {expected}'
   },
   uniqueItems: {
+    de: 'sollte keine Duplikate enthalten (Elemente #{{=e.params.j}} und #{{=e.params.i}} sind gleich)',
     en: 'should NOT have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)',
     hu: 'nem lehetnek azonos elemei ({{=e.params.j}} és {{=e.params.i}} elemek azonosak)',
     pl: 'nie powinien zawierać elementów które się powtarzają (elementy {{=e.params.j}} i {{=e.params.i}} są identyczne)',

@@ -7,9 +7,15 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 
 ## Supported locales
 
-At the moment these locales are supported: `de`, `en`, `hu`, `pl` and `ru`.
+|locale|language |contributor|
+|------|:-------:|:---------:|
+|de|German   |[jmtoball](https://github.com/jmtoball)|
+|en|English  ||
+|hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|
+|pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|
+|ru|Russian  ||
 
-Please contribute those that you need to use.
+Please contribute locales that you need to use if they are missing.
 
 
 ## Install

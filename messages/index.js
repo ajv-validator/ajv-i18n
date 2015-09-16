@@ -29,6 +29,7 @@ module.exports = {
     hu: 'nem sikerült feloldani a hivatkozást {{=e.params.escaped}}',
     pl: 'nie można znaleść schematu',
     ru: 'не найдена схема {{=e.params.escaped}}'
+    jp: 'スキーマを見つけることができません'
   },
   additionalItems: {
     _defs: {

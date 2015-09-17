@@ -2,21 +2,23 @@
 
 module.exports = {
   // supported locales
-  _locales: ['de', 'en', 'hu', 'pl', 'ru' ],
+  _locales: ['de', 'en', 'hu', 'it', 'pl', 'ru' ],
 
   // shared defines
   _defs: {
     n: '{{var n = e.schema;}}',
-    mPlural: { // plural for the words item and character
+    mPlural: { // plural for the words item (element) and character
       de: '{{? n!=1 }}e{{?}}',
       en: '{{? n!=1 }}s{{?}}',
+      it: '{{? n==1 }}o{{??}}i{{?}}',
       pl: '{{? n==1 }}u{{??}}ów{{?}}',
       ru: '{{? n>=2 && n<=4 }}а{{?? n!=1 }}ов{{?}}'
     },
-    propPlural: { // plural for the word property
+    propPlural: { // plural for the word property (attribute)
       de: '{{? n!=1 }}e{{?}}',
       en: '{{? n==1 }}y{{??}}ies{{?}}',
       hu: '{{? n!=1 }}i{{?}}',
+      it: '{{? n==1 }}o{{??}}i{{?}}',
       pl: '{{? n==1 }}e{{??}}a{{?}}',
       ru: '{{? n==1 }}е{{?? n>=2 && n<=4 }}я{{??}}ей{{?}}'
     }
@@ -27,6 +29,7 @@ module.exports = {
     de: 'kann die Referenz {{=e.params.escaped}} nicht auflösen',
     en: 'can\\\'t resolve reference {{=e.params.escaped}}',
     hu: 'nem sikerült feloldani a hivatkozást {{=e.params.escaped}}',
+    it: 'non può risolvere il riferimento {{=e.params.escaped}}',
     pl: 'nie można znaleść schematu',
     ru: 'не найдена схема {{=e.params.escaped}}'
   },
@@ -37,6 +40,7 @@ module.exports = {
     de: '{{#def.n}}sollte nicht mehr als {{=n}} Element{{#def.mPlural}} enthalten',
     en: '{{#def.n}}should not have more than {{=n}} item{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet több, mint {{=n}} eleme',
+    it: '{{#def.n}}non dovrebbe avere più di {{=n}} element{{#def.mPlural}}',
     pl: '{{#def.n}}nie powinien mieć więcej niż {{=n}} element{{#def.mPlural}}',
     ru: '{{#def.n}}должен иметь не более, чем {{=n}} элемент{{#def.mPlural}}'
     // en: 'Additional items not allowed',
@@ -50,6 +54,7 @@ module.exports = {
     de: 'sollte keine zusätzlichen Attribute haben',
     en: 'should not have additional properties',
     hu: 'nem lehetnek további elemei',
+    it: 'non dovrebbe avere attributi aggiuntive',
     pl: 'nie powinien zawierać dodatkowych pól',
     ru: 'не должен иметь дополнительные поля'
     // en: 'Additional properties not allowed',
@@ -63,6 +68,7 @@ module.exports = {
     de: 'sollte einem der Schemata in "anyOf" entsprechen',
     en: 'should match some schema in "anyOf"',
     hu: 'meg kell feleljen legalább egy "anyOf" alaknak',
+    it: 'deve corrispondere qualche schema in "anyOf"',
     pl: 'powinien pasować do wzoru z sekcji "anyOf"',
     ru: 'должен соответствовать одной их схем в "anyOf"'
     // en: 'Data does not match any schemas from "anyOf"',
@@ -79,6 +85,7 @@ module.exports = {
     de: '{{#def.n}}sollte Attribut{{#def.propPlural}} {{=e.params.deps}} aufweisen, wenn Attribut {{=e.params.property}} gesetzt ist',
     en: '{{#def.n}}should have propert{{#def.propPlural}} {{=e.params.deps}} when property {{=e.params.property}} is present',
     hu: '{{#def.n}}-nak kell legyen{{? n>1 }}ek{{?}} a következő tulajdonsága{{#def.propPlural}}: {{=e.params.deps}}, ha van {{=e.params.property}} tulajdonsága',
+    it: '{{#def.n}}dovrebbe avere attribut{{#def.propPlural}} {{=e.params.deps}} quando attributo {{=e.params.property}} è presente',
     pl: '{{#def.n}}powinien zawierać pol{{#def.propPlural}} {{=e.params.deps}} kiedy pole {{=e.params.property}} jest obecne',
     ru: '{{#def.n}}должен иметь пол{{? n==1 }}е{{??}}я{{?}} {{=e.params.deps}}, когда присутствует поле {{=e.params.property}}'
     // en: 'Dependency failed - key must exist: {missing} (due to key: {key})',
@@ -92,6 +99,7 @@ module.exports = {
     de: 'sollte einem der vorgegebenen Werte entsprechen',
     en: 'should be equal to one of predefined values',
     hu: 'egyenlő kell legyen valamely előre meghatározott értékkel',
+    it: 'dovrebbe essere pari ad uno dei valori predefiniti',
     pl: 'powinien być równy do jednej z predefinowanej wartości',
     ru: 'должен быть равен одному из значений в "enum"'
     // en: 'No enum match for: {value}',
@@ -105,6 +113,7 @@ module.exports = {
     de: 'sollte diesem Format entsprechen: "{{=e.params.escaped}}"',
     en: 'should match format "{{=e.params.escaped}}"',
     hu: 'meg kell feleljen a következő formátumnak: "{{=e.params.escaped}}"',
+    it: 'deve corrispondere formato "{{=e.params.escaped}}"',
     pl: 'powinien zgadzać się z formatem "{{=e.params.escaped}}"',
     ru: 'должен соответствовать формату "{{=e.params.escaped}}"'
     // en: 'Format validation failed ({message})',
@@ -118,6 +127,7 @@ module.exports = {
     de: 'sollte {{=e.params.condition}} sein',
     en: 'should be {{=e.params.condition}}',
     hu: 'kell legyen {{=e.params.condition}}',
+    it: 'dovrebbe essere {{=e.params.condition}}',
     pl: 'powinien być {{=e.params.condition}}',
     ru: 'должен быть {{=e.params.condition}}'
     // en: 'Value {value} is greater than maximum {maximum}',
@@ -131,6 +141,7 @@ module.exports = {
     de: 'sollte {{=e.params.condition}} sein',
     en: 'should be {{=e.params.condition}}',
     hu: 'kell legyen {{=e.params.condition}}',
+    it: 'dovrebbe essere {{=e.params.condition}}',
     pl: 'powinien być {{=e.params.condition}}',
     ru: 'должен быть {{=e.params.condition}}'
     // en: 'Value {value} is less than minimum {minimum}',
@@ -144,6 +155,7 @@ module.exports = {
     de: '{{#def.n}}sollte nicht mehr als {{=n}} Element{{#def.mPlural}} haben',
     en: '{{#def.n}}should not have more than {{=n}} item{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet több, mint {{=n}} eleme',
+    it: '{{#def.n}}non dovrebbe avere più di {{=n}} element{{#def.mPlural}}',
     pl: '{{#def.n}}nie powinien mieć więcej niż {{=n}} element{{#def.mPlural}}',
     ru: '{{#def.n}}должен иметь не более, чем {{=n}} элемент{{#def.mPlural}}'
     // en: 'Array is too long ({length}), maximum {maximum}',
@@ -157,6 +169,7 @@ module.exports = {
     de: '{{#def.n}}sollte nicht weniger als {{=n}} Element{{#def.mPlural}} haben',
     en: '{{#def.n}}should not have less than {{=n}} item{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet kevesebb, mint {{=n}} eleme',
+    it: '{{#def.n}}non dovrebbe avere meno di {{=n}} element{{#def.mPlural}}',
     pl: '{{#def.n}}nie powinien mieć mniej niż {{=n}} element{{#def.mPlural}}',
     ru: '{{#def.n}}должен иметь не менее, чем {{=n}} элемент{{#def.mPlural}}'
     // en: 'Array is too short ({length}), minimum {minimum}',
@@ -170,6 +183,7 @@ module.exports = {
     de: '{{#def.n}}sollte nicht länger als {{=n}} Zeichen sein',
     en: '{{#def.n}}should not be longer than {{=n}} character{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet hosszabb, mint {{=n}} szimbólum',
+    it: '{{#def.n}}non dovrebbe essere più lungo di {{=n}} caratter{{? n==1 }}e{{??}}i{{?}}',
     pl: '{{#def.n}}nie powinien być dłuższy niż {{=n}} znak{{? n!=1 }}ów{{?}}',
     ru: '{{#def.n}}должен быть не длиннее, чем {{=n}} символ{{#def.mPlural}}'
     // en: 'String is too long ({length} chars), maximum {maximum}',
@@ -183,6 +197,7 @@ module.exports = {
     de: '{{#def.n}}sollte nicht kürzer als {{=n}} Zeichen sein',
     en: '{{#def.n}}should not be shorter than {{=n}} character{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet rövidebb, mint {{=n}} szimbólum',
+    it: '{{#def.n}}non dovrebbe essere meno lungo di {{=n}} caratter{{? n==1 }}e{{??}}i{{?}}',
     pl: '{{#def.n}}nie powinien być krótszy niż {{=n}} znak{{? n!=1 }}ów{{?}}',
     ru: '{{#def.n}}должен быть не короче, чем {{=n}} символ{{#def.mPlural}}'
     // en: 'String is too short ({length} chars), minimum {minimum}',
@@ -196,6 +211,7 @@ module.exports = {
     de: '{{#def.n}}sollte nicht mehr als {{=n}} Attribut{{#def.propPlural}} haben',
     en: '{{#def.n}}should not have more than {{=n}} propert{{#def.propPlural}}',
     hu: '{{#def.n}}nem lehet több, mint {{=n}} tulajdonsága',
+    it: '{{#def.n}}non dovrebbe avere più {{=n}} attribut{{#def.propPlural}}',
     pl: '{{#def.n}}nie powinien zawierać więcej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
     ru: '{{#def.n}}должен иметь не более, чем {{=n}} пол{{#def.propPlural}}'
     // en: 'Too many properties defined ({propertyCount}), maximum {maximum}',
@@ -209,6 +225,7 @@ module.exports = {
     de: '{{#def.n}}sollte nicht weniger als {{=n}} Attribut{{#def.propPlural}} haben',
     en: '{{#def.n}}should not have less than {{=n}} propert{{#def.propPlural}}',
     hu: '{{#def.n}}nem lehet kevesebb, mint {{=n}} tulajdonsága',
+    it: '{{#def.n}}non dovrebbe avere meno {{=n}} attribut{{#def.propPlural}}',
     pl: '{{#def.n}}nie powinien zawierać mniej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
     ru: '{{#def.n}}должен иметь не менее, чем {{=n}} пол{{#def.propPlural}}'
     // en: 'Too few properties defined ({propertyCount}), minimum {minimum}',
@@ -222,6 +239,7 @@ module.exports = {
     de: 'sollte ein Vielfaches von {{=e.schema}} sein',
     en: 'should be multiple of {{=e.schema}}',
     hu: 'a többszöröse kell legyen a következő számnak: {{=e.schema}}',
+    it: 'dovrebbe essere un multiplo di {{=e.schema}}',
     pl: 'powinien być wielokrotnością {{=e.schema}}',
     ru: 'должен быть кратным {{=e.schema}}'
     // en: 'Value {value} is not a multiple of {multipleOf}',
@@ -235,6 +253,7 @@ module.exports = {
     de: 'sollte dem in "not" angegebenen Schema widersprechen',
     en: 'should not be valid according to schema in "not"',
     hu: 'nem lehet érvényes a "not" alaknak megfelelően',
+    it: 'non dovrebbe essere valida in base allo schema di "non"',
     pl: 'nie powinien pasować do wzoru z sekcji "not"',
     ru: 'должен не соответствовать схеме в "not"'
     // en: 'Data matches schema from "not"',
@@ -248,6 +267,7 @@ module.exports = {
     de: 'sollte genau einem der Schemata in "oneOf" entsprechen',
     en: 'should match exactly one schema in "oneOf"',
     hu: 'meg kell feleljen pontosan egy "anyOf" alaknak',
+    it: 'dovrebbe corrispondere esattamente uno schema in "oneOf"',
     pl: 'powinien pasować do jednego wzoru z sekcji {{=e.schema}}',
     ru: 'должен соответствовать в точности одной схемe в "oneOf"'
     // en: 'Data does not match any schemas from "oneOf"',
@@ -261,6 +281,7 @@ module.exports = {
     de: 'sollte diesem Muster entsprechen: "{{=e.params.escaped}}"',
     en: 'should match pattern "{{=e.params.escaped}}"',
     hu: 'meg kell feleljen a következő mintának: "{{=e.params.escaped}}"',
+    it: 'deve corrispondere al modello "{{=e.params.escaped}}"',
     pl: 'powinien zgadzać się ze wzorem "{{=e.params.escaped}}"',
     ru: 'должен соответствовать образцу "{{=e.params.escaped}}"'
     // en: 'String does not match pattern: {pattern}',
@@ -274,6 +295,7 @@ module.exports = {
     de: 'sollte das erforderliche Attribut {{=e.params.missingProperty}} enthalten',
     en: 'should have required property {{=e.params.missingProperty}}',
     hu: 'kell legyen {{=e.params.missingProperty}} tulajdonsága',
+    it: 'dovrebbe avere attributo richiesta {{=e.params.missingProperty}}',
     pl: 'powinien zawierać wymagane pole {{=e.params.missingProperty}}',
     ru: 'должен иметь обязательное поле {{=e.params.missingProperty}}'
     // en: 'Missing required property: {key}',
@@ -287,6 +309,7 @@ module.exports = {
     de: 'sollte sein: {{=e.params.type}}',
     en: 'should be {{=e.params.type}}',
     hu: '{{=e.params.type}} kell legyen',
+    it: 'dovrebbe essere {{=e.params.type}}',
     pl: 'powinien być {{=e.params.type}}',
     ru: 'должен быть {{=e.params.type}}'
     // en: 'Invalid type: {type} (expected {expected})',
@@ -300,6 +323,7 @@ module.exports = {
     de: 'sollte keine Duplikate enthalten (Elemente #{{=e.params.j}} und #{{=e.params.i}} sind gleich)',
     en: 'should not have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)',
     hu: 'nem lehetnek azonos elemei ({{=e.params.j}} és {{=e.params.i}} elemek azonosak)',
+    it: 'non dovrebbe avere elementi duplicati (elementi ## {{=e.params.j}} e {{=e.params.i}} sono uguali)',
     pl: 'nie powinien zawierać elementów które się powtarzają (elementy {{=e.params.j}} i {{=e.params.i}} są identyczne)',
     ru: 'не должен иметь повторяющихся элементов (элементы {{=e.params.j}} и {{=e.params.i}} идентичны)'
     // en: 'Array items are not unique (indices {match1} and {match2})',

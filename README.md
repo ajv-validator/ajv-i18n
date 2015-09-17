@@ -9,13 +9,13 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 
 |locale|language |contributor|
 |------|:-------:|:---------:|
-|de|German   |[jmtoball](https://github.com/jmtoball)|
-|en|English  ||
-|hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|
-|it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|
-|ja|Japanese |[gilgongo](https://github.com/gilgongo)|
-|pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|
-|ru|Russian  ||
+|🇩🇪de|German   |[jmtoball](https://github.com/jmtoball)|
+|🇬🇧en|English  ||
+|🇭🇺hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|
+|🇮🇹it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|
+|🇯🇵ja|Japanese |[gilgongo](https://github.com/gilgongo)|
+|🇵🇱pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|
+|🇷🇺ru|Russian  ||
 
 Please contribute locales that you need to use if they are missing.
 

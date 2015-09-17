@@ -12,6 +12,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |de|German   |[jmtoball](https://github.com/jmtoball)|
 |en|English  ||
 |hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|
+|ja|Japanese |[gilgongo](https://github.com/gilgongo)|
 |pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|
 |ru|Russian  ||
 

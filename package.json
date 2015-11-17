@@ -1,6 +1,6 @@
 {
   "name": "ajv-i18n",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Internationalised error messages for ajv JSON-Schema validator",
   "main": "localize/index.js",
   "files": [
@@ -36,5 +36,8 @@
     "json-schema-test": "^0.1.4",
     "mocha": "^2.3.2",
     "pre-commit": "^1.1.1"
+  },
+  "peerDependencies": {
+    "ajv": "<2"
   }
 }

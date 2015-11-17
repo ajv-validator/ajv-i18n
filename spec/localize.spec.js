@@ -43,6 +43,7 @@ function afterEach(res) {
       assertStr(err.message);
     });
     var text = res.validator.errorsText(undefined, { separator: '\n' });
+    // if (locale == 'en') console.log(text);
     assertStr(text);
     res.errors.forEach(function (err) {
       delete err.message;
@@ -53,6 +54,7 @@ function afterEach(res) {
 function assertStr(str) {
   assert.equal(typeof str, 'string');
   assert(str.length > 0);
+  assert.equal(str.indexOf('undefined'), -1);
 }
 
 function addRemoteRefs(ajv) {

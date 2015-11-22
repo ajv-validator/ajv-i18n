@@ -32,11 +32,11 @@ npm install ajv-i18n
 In node:
 
 ```
-var Ajv = require('ajv'); // version >= 1.4.0
+var Ajv = require('ajv'); // version >= 2.0.0
 var localize = require('ajv-i18n');
 
 // option `i18n` is required for this package to work
-var ajv = Ajv({ allErrors: true, i18n: true });
+var ajv = Ajv({ allErrors: true });
 var validate = ajv.compile(schema);
 var valid = validate(data);
 

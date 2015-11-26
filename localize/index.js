@@ -7,5 +7,6 @@ module.exports = {
     it: require('./it'),
     ja: require('./ja'),
     pl: require('./pl'),
-    ru: require('./ru')
+    ru: require('./ru'),
+    es: require('./es')
 };

@@ -9,6 +9,8 @@
   ],
   "scripts": {
     "build": "node scripts/compile-locales.js",
+    "browserify": "browserify -r ./localize/index -o dist/ajv-i18n.bundle.js",
+    "uglify": "uglifyjs ./dist/ajv-i18n.bundle.js -o ./dist/ajv-i18n.min.js -m -c",
     "prepublish": "npm run build",
     "test": "npm run build && mocha spec/*.spec.js -R spec"
   },
@@ -31,11 +33,13 @@
   "homepage": "https://github.com/epoberezkin/ajv-i18n#readme",
   "devDependencies": {
     "ajv": "^2.0.0-beta.2",
+    "browserify": "^13.0.0",
     "dot": "^1.0.3",
     "js-beautify": "^1.5.10",
     "json-schema-test": "^0.1.4",
     "mocha": "^2.3.2",
-    "pre-commit": "^1.1.1"
+    "pre-commit": "^1.1.1",
+    "uglifyjs": "^2.4.10"
   },
   "peerDependencies": {
     "ajv": "^2.0.0-beta.2"

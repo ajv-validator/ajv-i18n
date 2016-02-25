@@ -1,6 +1,5 @@
 {
   "name": "ajv-i18n",
-  "version": "1.0.0",
   "description": "Internationalised error messages for avj JSON-Schema Validator",
   "main": "dist/ajv-i18n.min.js",
   "authors": [

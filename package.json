@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/epoberezkin/ajv-i18n#readme",
   "devDependencies": {
-    "ajv": "^2.0.0-beta.2",
+    "ajv": ">=2.0.0",
     "brfs": "^1.4.3",
     "browserify": "^13.0.0",
     "dot": "^1.0.3",
@@ -52,6 +52,6 @@
     "uglifyjs": "^2.4.10"
   },
   "peerDependencies": {
-    "ajv": "^2.0.0-beta.2"
+    "ajv": ">=2.0.0"
   }
 }

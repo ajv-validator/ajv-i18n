@@ -15,8 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'node_modules/ajv/ajv.bundle.js',
-      'dist/ajv-i18n.min.js',
+      'dist/ajv-i18n.test.min.js',
       '.browser/*.spec.js'
     ],
 

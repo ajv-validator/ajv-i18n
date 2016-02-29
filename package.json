@@ -10,11 +10,14 @@
   "scripts": {
     "build": "node scripts/compile-locales.js",
     "bundle-all": "npm run browserify && npm run uglify",
+    "bundle-test": "npm run browserify-test && npm run uglify-test",
     "browserify": "mkdir -p dist/ && browserify -r ./localize/index -o dist/ajv-i18n.bundle.js",
+    "browserify-test": "mkdir -p dist/ && browserify -r ./node_modules/ajv/lib/ajv.js:ajv -r ./localize/index -o dist/ajv-i18n.test.bundle.js",
     "uglify": "uglifyjs ./dist/ajv-i18n.bundle.js -o ./dist/ajv-i18n.min.js -m -c",
+    "uglify-test": "uglifyjs ./dist/ajv-i18n.test.bundle.js -o ./dist/ajv-i18n.test.min.js -m -c",
     "prepublish": "npm run build",
     "test": "npm run build && mocha spec/*.spec.js -R spec && npm run test-browser",
-    "test-browser": "npm run bundle-all && scripts/prepare-tests && karma start --single-run --browsers PhantomJS"
+    "test-browser": "npm run bundle-test && scripts/prepare-tests && karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",

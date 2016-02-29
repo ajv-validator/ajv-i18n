@@ -8,4 +8,3 @@ find spec -type f -name '*.spec.js' | \
 xargs -I {} sh -c \
 'export f="{}"; browserify $f -t require-globify -t brfs -x ajv -u buffer -o $(echo $f | sed -e "s/spec/.browser/");'
 
-(cd node_modules/ajv/ && npm run bundle)

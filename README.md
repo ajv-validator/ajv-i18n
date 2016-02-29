@@ -34,7 +34,7 @@ Using bower:
 ```
 bower install ajv-i18n
 cd bower_components/ajv-i18n
-npm install && npm run build
+npm install && npm run bundle-all
 ```
 
 ## Usage

@@ -31,3 +31,9 @@ node_modules
 # Compiled templates
 localize/**/*.js
 !localize/index.js
+
+# Browserified tests
+.browser
+
+# bundles
+dist/

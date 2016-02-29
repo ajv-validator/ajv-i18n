@@ -23,9 +23,7 @@ instances.forEach(addRemoteRefs);
 
 jsonSchemaTest(instances, {
   description: 'Schema tests of ' + instances.length + ' ajv instances with option i18n',
-  suites: {
-    'JSON-Schema tests draft4': './JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json',
-  },
+  suites: testSuites(),
   afterEach: afterEach,
   skip: [
     'optional/zeroTerminatedFloats'
@@ -34,6 +32,26 @@ jsonSchemaTest(instances, {
   hideFolder: 'draft4/',
   timeout: 30000
 });
+
+function testSuites() {
+  if (typeof window == 'object') {
+    var suites = {
+      'JSON-Schema tests draft4': require('./JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json', {
+        mode: 'list'
+      })
+    };
+    for (var suiteName in suites) {
+      suites[suiteName].forEach(function(suite) {
+        suite.test = suite.module;
+      });
+    }
+  } else {
+    var suites = {
+      'JSON-Schema tests draft4': './JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json',
+    }
+  }
+  return suites;
+}
 
 function afterEach(res) {
   if (res.valid) return;

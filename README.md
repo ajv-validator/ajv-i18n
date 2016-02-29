@@ -23,10 +23,19 @@ Please contribute locales that you need to use if they are missing.
 
 ## Install
 
+Using npm:
+
 ```
 npm install ajv-i18n
 ```
 
+Using bower:
+
+```
+bower install ajv-i18n
+cd bower_components/ajv-i18n
+npm install && npm run bundle-all
+```
 
 ## Usage
 

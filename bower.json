@@ -1,0 +1,27 @@
+{
+  "name": "ajv-i18n",
+  "description": "Internationalised error messages for avj JSON-Schema Validator",
+  "main": "dist/ajv-i18n.min.js",
+  "authors": [
+    "Evgeny Poberezkin"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ajv",
+    "JSON",
+    "schema",
+    "i18n",
+    "internationalisation"
+  ],
+  "homepage": "https://github.com/epoberezkin/ajv-i18n",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "spec"
+  ]
+}

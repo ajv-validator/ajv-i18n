@@ -399,7 +399,7 @@ module.exports = {
   },
   patternRequired: {
     en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
-    ru: 'должно иметь поле, соответствующее образцу "{{=e.params.pattern}}"'
+    ru: 'должно иметь поле, соответствующее образцу "{{=e.params.missingPattern}}"'
   },
   switch: {
     en: 'should pass \"switch\" keyword validation, case {{=e.params.caseIndex}} fails',
@@ -409,16 +409,26 @@ module.exports = {
     en: 'should be equal to constant',
     ru: 'должно быть равно заданному значению'
   },
-  // formatMaximum: {
-
-  // },
-  // formatMinimum: {
-
-  // },
-  // exclusiveFormatMaximum : {
-
-  // },
-  // exclusiveFormatMinimum : {
-
-  // }
+  formatMaximum: {
+    _defs: {
+      c: '{{var cond = e.params.comparison + " " + e.params.limit;}}'
+    },
+    en: '{{#def.c}}should be {{=cond}}',
+    ru: '{{#def.c}}должно быть {{=cond}}'
+  },
+  formatMinimum: {
+    _defs: {
+      c: '{{var cond = e.params.comparison + " " + e.params.limit;}}'
+    },
+    en: '{{#def.c}}should be {{=cond}}',
+    ru: '{{#def.c}}должно быть {{=cond}}'
+  },
+  formatExclusiveMaximum : {
+    en: 'formatExclusiveMaximum should be boolean',
+    ru: 'formatExclusiveMaximum должно быть boolean'
+  },
+  formatExclusiveMinimum : {
+    en: 'formatExclusiveMinimum should be boolean',
+    ru: 'formatExclusiveMinimum должно быть boolean'
+  }
 };

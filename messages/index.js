@@ -109,7 +109,7 @@ module.exports = {
     de: 'sollte einem der vorgegebenen Werte entsprechen',
     hu: 'egyenlő kell legyen valamely előre meghatározott értékkel',
     it: 'dovrebbe essere pari ad uno dei valori predefiniti',
-    pl: 'powinien być równy do jednej z predefinowanej wartości',
+    pl: 'powinien być równy jednej z predefiniowanych wartości',
     ru: 'должно быть равен одному из значений в "enum"',
     ja: '事前に定義された値のいずれかに等しくなければいけない',
     es: 'deber ser igual a uno de los valores predefinidos'
@@ -391,44 +391,54 @@ module.exports = {
   },
   custom: {
     en: 'should pass "{{=e.keyword}}" keyword validation',
-    ru: 'должно соответствовать правилу "{{=e.keyword}}"'
+    ru: 'должно соответствовать правилу "{{=e.keyword}}"',
+    pl: 'powinien przejść walidację "{{=e.keyword}}"'
   },
   patternGroups: {
     en: '{{#def.n}}should have {{=e.params.reason}} {{=n}} propert{{#def.propPlural}} matching pattern "{{=e.params.pattern}}"',
-    ru: '{{#def.n}}должно иметь {{=e.params.reason}} {{=n}} пол{{#def.propPlural}}, соответствующих образцу "{{=e.params.pattern}}"'
+    ru: '{{#def.n}}должно иметь {{=e.params.reason}} {{=n}} пол{{#def.propPlural}}, соответствующих образцу "{{=e.params.pattern}}"',
+    pl: '{{#def.n}}powinien mieć {{=e.params.reason}} {{=n}} pol{{#def.propPlural}} pasujące do wzorca "{{=e.params.pattern}}"'
   },
   patternRequired: {
     en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
-    ru: 'должно иметь поле, соответствующее образцу "{{=e.params.missingPattern}}"'
+    ru: 'должно иметь поле, соответствующее образцу "{{=e.params.missingPattern}}"',
+    pl: 'powinien mieć pole pasujące do wzorca "{{=e.params.missingPattern}}"'
   },
   switch: {
     en: 'should pass \"switch\" keyword validation, case {{=e.params.caseIndex}} fails',
-    ru: 'должно соответствовать правилу {{=e.params.caseIndex}} в "switch"'
+    ru: 'должно соответствовать правилу {{=e.params.caseIndex}} в "switch"',
+    pl: 'powinien przejść walidacje pola \"switch\", przypadek {{=e.params.caseIndex}} zawiódł'
   },
   constant: {
     en: 'should be equal to constant',
-    ru: 'должно быть равно заданному значению'
+    ru: 'должно быть равно заданному значению',
+    pl : 'powinien być równy stałej'
   },
   formatMaximum: {
     _defs: {
       c: '{{var cond = e.params.comparison + " " + e.params.limit;}}'
     },
     en: '{{#def.c}}should be {{=cond}}',
-    ru: '{{#def.c}}должно быть {{=cond}}'
+    ru: '{{#def.c}}должно быть {{=cond}}',
+    pl: '{{#def.c}}powinien być {{=cond}}'
   },
   formatMinimum: {
     _defs: {
       c: '{{var cond = e.params.comparison + " " + e.params.limit;}}'
     },
     en: '{{#def.c}}should be {{=cond}}',
-    ru: '{{#def.c}}должно быть {{=cond}}'
+    ru: '{{#def.c}}должно быть {{=cond}}',
+    pl: '{{#def.c}}powinien być {{=cond}}'
   },
   formatExclusiveMaximum : {
     en: 'formatExclusiveMaximum should be boolean',
-    ru: 'formatExclusiveMaximum должно быть boolean'
+    ru: 'formatExclusiveMaximum должно быть boolean',
+    pl: 'formatExclusiveMaximum powinien być boolean'
+
   },
   formatExclusiveMinimum : {
     en: 'formatExclusiveMinimum should be boolean',
-    ru: 'formatExclusiveMinimum должно быть boolean'
+    ru: 'formatExclusiveMinimum должно быть boolean',
+    pl: 'formatExclusiveMinimum powinień być boolean'
   }
 };

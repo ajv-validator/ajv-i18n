@@ -96,7 +96,7 @@ module.exports = {
     pl: '{{#def.n}}powinien zawierać pol{{#def.propPlural}} {{=e.params.deps}} kiedy pole {{=e.params.property}} jest obecne',
     ru: '{{#def.n}}должно иметь пол{{? n==1 }}е{{??}}я{{?}} {{=e.params.deps}}, когда присутствует поле {{=e.params.property}}',
     ja: '{{=e.params.property}}がある場合、{{#def.n}}は{{=e.params.deps}}をつけなければいけない',
-    es: '{{#def.n}}debe contener la{{? n!=1 }}s{{?}} propiedad{{#def.propPlural}} {{=e.params.deps}} cuando la propiedad {{=e.params.property}} se encuentra presente'
+    es: '{{#def.n}}debe contener la{{#def.mPlural}} propiedad{{#def.propPlural}} {{=e.params.deps}} cuando la propiedad {{=e.params.property}} se encuentra presente'
     // en: 'Dependency failed - key must exist: {missing} (due to key: {key})',
     // fr: 'Echec de dépendance - la clé doit exister: {missing} (du à la clé: {key})',
     // nb: 'Variabelen {missing} må være definert (på grunn av følgende variabel: {key})',
@@ -392,27 +392,32 @@ module.exports = {
   custom: {
     en: 'should pass "{{=e.keyword}}" keyword validation',
     ru: 'должно соответствовать правилу "{{=e.keyword}}"',
-    pl: 'powinien przejść walidację "{{=e.keyword}}"'
+    pl: 'powinien przejść walidację "{{=e.keyword}}"',
+    es: 'debe pasar la validación de palabra clave "{{=e.keyword}}"'
   },
   patternGroups: {
     en: '{{#def.n}}should have {{=e.params.reason}} {{=n}} propert{{#def.propPlural}} matching pattern "{{=e.params.pattern}}"',
     ru: '{{#def.n}}должно иметь {{=e.params.reason}} {{=n}} пол{{#def.propPlural}}, соответствующих образцу "{{=e.params.pattern}}"',
-    pl: '{{#def.n}}powinien mieć {{=e.params.reason}} {{=n}} pol{{#def.propPlural}} pasujące do wzorca "{{=e.params.pattern}}"'
+    pl: '{{#def.n}}powinien mieć {{=e.params.reason}} {{=n}} pol{{#def.propPlural}} pasujące do wzorca "{{=e.params.pattern}}"',
+    es: '{{#def.n}}debe tener {{=e.params.reason}} {{=n}} propiedad{{#def.propPlural}} coincidente{{#def.mPlural}} con el patrón "{{=e.params.pattern}}"'
   },
   patternRequired: {
     en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
     ru: 'должно иметь поле, соответствующее образцу "{{=e.params.missingPattern}}"',
-    pl: 'powinien mieć pole pasujące do wzorca "{{=e.params.missingPattern}}"'
+    pl: 'powinien mieć pole pasujące do wzorca "{{=e.params.missingPattern}}"',
+    es: 'la propiedad debe coincidir con el patrón "{{=e.params.missingPattern}}"'
   },
   switch: {
     en: 'should pass \"switch\" keyword validation, case {{=e.params.caseIndex}} fails',
     ru: 'должно соответствовать правилу {{=e.params.caseIndex}} в "switch"',
-    pl: 'powinien przejść walidacje pola \"switch\", przypadek {{=e.params.caseIndex}} zawiódł'
+    pl: 'powinien przejść walidacje pola \"switch\", przypadek {{=e.params.caseIndex}} zawiódł',
+    es: 'debe pasar la validación \"switch\" de palabra clave, el caso {{=e.params.caseIndex}} falló'
   },
   constant: {
     en: 'should be equal to constant',
     ru: 'должно быть равно заданному значению',
-    pl : 'powinien być równy stałej'
+    pl: 'powinien być równy stałej',
+    es: 'debe ser igual a la constante'
   },
   formatMaximum: {
     _defs: {
@@ -420,7 +425,8 @@ module.exports = {
     },
     en: '{{#def.c}}should be {{=cond}}',
     ru: '{{#def.c}}должно быть {{=cond}}',
-    pl: '{{#def.c}}powinien być {{=cond}}'
+    pl: '{{#def.c}}powinien być {{=cond}}',
+    es: '{{#def.c}}debe ser {{=cond}}'
   },
   formatMinimum: {
     _defs: {
@@ -428,17 +434,19 @@ module.exports = {
     },
     en: '{{#def.c}}should be {{=cond}}',
     ru: '{{#def.c}}должно быть {{=cond}}',
-    pl: '{{#def.c}}powinien być {{=cond}}'
+    pl: '{{#def.c}}powinien być {{=cond}}',
+    es: '{{#def.c}}debe ser {{=cond}}'
   },
   formatExclusiveMaximum : {
     en: 'formatExclusiveMaximum should be boolean',
     ru: 'formatExclusiveMaximum должно быть boolean',
-    pl: 'formatExclusiveMaximum powinien być boolean'
-
+    pl: 'formatExclusiveMaximum powinien być boolean',
+    es: 'formatExclusiveMaximum debe ser booleano'
   },
   formatExclusiveMinimum : {
     en: 'formatExclusiveMinimum should be boolean',
     ru: 'formatExclusiveMinimum должно быть boolean',
-    pl: 'formatExclusiveMinimum powinień być boolean'
+    pl: 'formatExclusiveMinimum powinień być boolean',
+    es: 'formatExclusiveMinimum debe ser booleano'
   }
 };

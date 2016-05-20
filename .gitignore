@@ -37,3 +37,6 @@ localize/**/*.js
 
 # bundles
 dist/
+
+# IDE files
+.idea

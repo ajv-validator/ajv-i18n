@@ -17,6 +17,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|
 |🇷🇺 ru|Russian  ||
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|
+|![swe-flag](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/se.png) sv|Swedish  |[limmen](https://github.com/Limmen)|
 
 Please contribute locales that you need to use if they are missing.
 

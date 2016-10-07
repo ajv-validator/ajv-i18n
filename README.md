@@ -41,7 +41,7 @@ npm install && npm run bundle-all
 
 In node:
 
-```
+```javascript
 var Ajv = require('ajv'); // version >= 2.0.0
 var localize = require('ajv-i18n');
 
@@ -60,13 +60,13 @@ if (!valid) {
 
 To require only necessary locales in browser (with browserify):
 
-```
+```javascript
 var localize_ru = require('ajv-i18n/localize/ru');
 ```
 
 or
 
-```
+```javascript
 var localize = {
     en: require('ajv-i18n/localize/en'),
     ru: require('ajv-i18n/localize/ru')

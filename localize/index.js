@@ -8,5 +8,6 @@ module.exports = {
     ja: require('./ja'),
     pl: require('./pl'),
     ru: require('./ru'),
-    es: require('./es')
+    es: require('./es'),
+    sv: require('./sv')
 };

@@ -9,5 +9,6 @@ module.exports = {
     pl: require('./pl'),
     ru: require('./ru'),
     es: require('./es'),
-    sv: require('./sv')
+    sv: require('./sv'),
+    'zh-CN': require('./zh-CN')
 };

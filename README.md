@@ -18,7 +18,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇷🇺 ru|Russian  ||
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|
-|🇨🇳 zh-CN|Chinese | [jinzhubaofu](https://github.com/jinzhubaofu)|
+|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|
 Please contribute locales that you need to use if they are missing.
 
 

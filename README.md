@@ -52,10 +52,10 @@ var validate = ajv.compile(schema);
 var valid = validate(data);
 
 if (!valid) {
-    // array of error objects with Russian messages
-    var errors = localize.ru(validate.errors);
+    // ru for Russian
+    localize.ru(validate.errors);
     // string with all errors and data paths
-    console.log(ajv.errorsText(errors, { separator: '\n' }));
+    console.log(ajv.errorsText(validate.errors, { separator: '\n' }));
 }
 ```
 

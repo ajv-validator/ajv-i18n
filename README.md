@@ -10,6 +10,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |locale|language |contributor|
 |------|:-------:|:---------:|
 |🇬🇧 en|English  ||
+|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|
 |🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|
 |🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|
@@ -17,6 +18,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|
 |🇷🇺 ru|Russian  ||
+|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|
 |🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|
 Please contribute locales that you need to use if they are missing.

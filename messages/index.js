@@ -143,7 +143,7 @@ module.exports = {
   format: {
     en: 'should match format "{{=e.params.format}}"',
     de: 'sollte diesem Format entsprechen: "{{=e.params.format}}"',
-    en: 'musí být ve formátu "{{=e.params.format}}"',
+    cz: 'musí být ve formátu "{{=e.params.format}}"',
     es: 'debe coincidir con el formato "{{=e.params.format}}"',
     hu: 'meg kell feleljen a következő formátumnak: "{{=e.params.format}}"',
     it: 'deve corrispondere formato "{{=e.params.format}}"',

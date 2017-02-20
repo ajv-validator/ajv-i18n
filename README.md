@@ -10,6 +10,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |locale|language |contributor|
 |------|:-------:|:---------:|
 |🇬🇧 en|English  ||
+|fr fr|French    |[monlouisj](https://github.com/monlouisj)|
 |🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|
 |🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|

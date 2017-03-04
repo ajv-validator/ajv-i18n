@@ -42,6 +42,7 @@
     "ajv": ">=2.0.0",
     "brfs": "^1.4.3",
     "browserify": "^13.0.0",
+    "coveralls": "^2.11.16",
     "dot": "^1.0.3",
     "jasmine-core": "^2.4.1",
     "js-beautify": "^1.5.10",

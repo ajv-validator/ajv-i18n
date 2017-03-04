@@ -8,21 +8,24 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 
 ## Supported locales
 
-|locale|language |contributor|
-|------|:-------:|:---------:|
-|🇬🇧 en|English  ||
-|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|
-|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|
-|🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|
-|🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|
-|🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|
-|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|
-|🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|
-|🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|
-|🇷🇺 ru|Russian  ||
-|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|
-|🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|
-|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|
+|locale|language |contributor|draft-04|Ajv v5<sup>\*</sup>|draft-06|
+|------|:-------:|:---------:|:------:|:------:|:------:|
+|🇬🇧 en|English  |[epoberezkin](https://github.com/epoberezkin)|✓|✓|✓|
+|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
+|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|-|-|
+|🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|-|
+|🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|✓|✓|-|
+|🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|
+|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|✓|-|-|
+|🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
+|🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|✓|-|
+|🇷🇺 ru|Russian  |[epoberezkin](https://github.com/epoberezkin)|✓|✓|✓|
+|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
+|🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|
+|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|✓|✓|-|
+
+<sup>\*</sup> v5 is a special mode in Ajv version 4.x.x
+
 Please contribute locales that you need to use if they are missing.
 
 

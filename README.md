@@ -9,20 +9,20 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 ## Supported locales
 
 |locale|language |contributor|draft-04|Ajv v5<sup>\*</sup>|draft-06|
-|------|:-------:|:----------|:------:|:------:|:------:|
-|🇬🇧 en|English  |[![epoberezkin](https://avatars1.githubusercontent.com/u/2769109?v=3&s=20) epoberezkin](https://github.com/epoberezkin)|✓|✓|✓|
-|🇨🇿 cz|Czech    |[![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=20) kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
-|🇩🇪 de|German   |[![jmtoball](https://avatars0.githubusercontent.com/u/219950?v=3&s=20) jmtoball](https://github.com/jmtoball)|✓|-|-|
-|🇪🇸 es|Spanish  |[![jpablom](https://avatars0.githubusercontent.com/u/3935083?v=3&s=20) jpablom](https://github.com/jpablom)|✓|✓|-|
-|🇫🇷 fr|French   |[![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=20) monlouisj](https://github.com/monlouisj)|✓|✓|-|
-|🇭🇺 hu|Hungarian|[![szilveszter9](https://avatars0.githubusercontent.com/u/7540866?v=3&s=20) szilveszter9](https://github.com/szilveszter9)|✓|-|-|
-|🇮🇹 it|Italian  |[![jasoniangreen](https://avatars3.githubusercontent.com/u/3481367?v=3&s=20) jasoniangreen](https://github.com/jasoniangreen)|✓|-|-|
-|🇯🇵 ja|Japanese |[![gilgongo](https://avatars2.githubusercontent.com/u/4561747?v=3&s=20) gilgongo](https://github.com/gilgongo)|✓|-|-|
-|🇵🇱 pl|Polish   |[![danielzurawski](https://avatars3.githubusercontent.com/u/1625711?v=3&s=20) danielzurawski](https://github.com/danielzurawski)|✓|✓|-|
-|🇷🇺 ru|Russian  |[![epoberezkin](https://avatars1.githubusercontent.com/u/2769109?v=3&s=20) epoberezkin](https://github.com/epoberezkin)|✓|✓|✓|
-|🇸🇰 sk|Slovak   |[![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=20) kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
-|🇸🇪 sv|Swedish  |[![Limmen](https://avatars2.githubusercontent.com/u/8254791?v=3&s=20) limmen](https://github.com/Limmen)|✓|✓|-|
-|🇨🇳 zh|Chinese  |[![jinzhubaofu](https://avatars2.githubusercontent.com/u/811195?v=3&s=20) jinzhubaofu](https://github.com/jinzhubaofu)|✓|✓|-|
+|------|:-------:|:---------:|:------:|:------:|:------:|
+|🇬🇧 en|English  | |✓|✓|✓|
+|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
+|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|-|-|
+|🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|-|
+|🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|✓|✓|-|
+|🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|
+|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|✓|-|-|
+|🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
+|🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|✓|-|
+|🇷🇺 ru|Russian  | |✓|✓|✓|
+|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
+|🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|
+|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|✓|✓|-|
 
 <sup>\*</sup> v5 is a special mode in Ajv version 4.x.x
 
@@ -98,6 +98,20 @@ npm test
 Functions that localize error messages are generated using doT templates in [messages](https://github.com/epoberezkin/ajv-i18n/tree/master/messages/index.js) and [localize.jst](https://github.com/epoberezkin/ajv-i18n/tree/master/localize/localize.jst) template. Templates are precompiled so doT is not a run-time dependency.
 
 `npm run build` - compiles functions to [localize](https://github.com/epoberezkin/ajv/tree/master/localize) folder.
+
+
+## Contributors
+
+[![danielzurawski](https://avatars3.githubusercontent.com/u/1625711?v=3&s=40)](https://github.com/danielzurawski)
+[![szilveszter9](https://avatars0.githubusercontent.com/u/7540866?v=3&s=40)](https://github.com/szilveszter9)
+[![jmtoball](https://avatars0.githubusercontent.com/u/219950?v=3&s=40)](https://github.com/jmtoball)
+[![gilgongo](https://avatars2.githubusercontent.com/u/4561747?v=3&s=40)](https://github.com/gilgongo)
+[![jasoniangreen](https://avatars3.githubusercontent.com/u/3481367?v=3&s=40)](https://github.com/jasoniangreen)
+[![jpablom](https://avatars0.githubusercontent.com/u/3935083?v=3&s=40)](https://github.com/jpablom)
+[![limmen](https://avatars2.githubusercontent.com/u/8254791?v=3&s=40)](https://github.com/Limmen)
+[![jinzhubaofu](https://avatars2.githubusercontent.com/u/811195?v=3&s=40)](https://github.com/jinzhubaofu)
+[![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=40)](https://github.com/kiskovacs)
+[![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=40)](https://github.com/monlouisj)
 
 
 ## License

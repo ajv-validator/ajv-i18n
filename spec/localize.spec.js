@@ -7,10 +7,10 @@ var Ajv = require('ajv');
 var assert = require('assert');
 
 var instances = [
-  Ajv({ i18n: true, messages: false }),
-  Ajv({ i18n: true, messages: false, verbose: true }),
-  Ajv({ i18n: true, messages: false, allErrors: true }),
-  Ajv({ i18n: true, messages: false, allErrors: true, verbose: true }),
+  Ajv({ i18n: true, v5: true, messages: false }),
+  Ajv({ i18n: true, v5: true, messages: false, verbose: true }),
+  Ajv({ i18n: true, v5: true, messages: false, allErrors: true }),
+  Ajv({ i18n: true, v5: true, messages: false, allErrors: true, verbose: true }),
 ];
 
 var remoteRefs = {
@@ -36,9 +36,8 @@ jsonSchemaTest(instances, {
 function testSuites() {
   if (typeof window == 'object') {
     var suites = {
-      'JSON-Schema tests draft4': require('./JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json', {
-        mode: 'list'
-      })
+      'JSON-Schema tests draft4': require('./JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json', {mode: 'list'}),
+      'ajv tests': require('./ajv/spec/v5/*.json', {mode: 'list'})
     };
     for (var suiteName in suites) {
       suites[suiteName].forEach(function(suite) {
@@ -48,6 +47,7 @@ function testSuites() {
   } else {
     var suites = {
       'JSON-Schema tests draft4': './JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json',
+      'ajv tests': './ajv/spec/v5/*.json'
     }
   }
   return suites;

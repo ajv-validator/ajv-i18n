@@ -41,6 +41,10 @@ module.exports = {
   },
 
   // error messages
+  'false schema':  {
+    en: 'boolean schema is false',
+    ru: 'схема равна false'
+  },
   $ref: {
     en: 'can\\\'t resolve reference {{=e.params.ref}}',
     cz: 'reference {{=e.params.ref}} nenalezena',
@@ -471,6 +475,10 @@ module.exports = {
     sv: '{{#def.n}}bör ha {{=e.params.reason}} {{=n}} egenskap{{#def.propPlural}} som matchar mönstret "{{=e.params.pattern}}"',
     zh: '{{#def.n}}应当有 {{=n}} 个 {{=e.params.reason}} 属性满足模式 {{=e.params.pattern}}'
   },
+  propertyNames: {
+    en: 'property name \'{{=e.params.propertyName}}\' is invalid',
+    ru: 'имя поля \'{{=e.params.propertyName}}\' не соответствует схеме'
+  },
   patternRequired: {
     en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
     cz: 'musí mýt položku vyhovující regulárnímu výrazu "{{=e.params.missingPattern}}"',
@@ -492,6 +500,17 @@ module.exports = {
     sk: 'musí prejsť validáciou \"switch\", prípad {{=e.params.caseIndex}} je neúspešný',
     sv: 'bör passera \"switch\" nyckelord validering, fallet {{=e.params.caseIndex}} misslyckas',
     zh: '由于 {{=e.params.caseIndex}} 失败，未通过 "switch" 校验, '
+  },
+  const: {
+    en: 'should be equal to constant',
+    cz: 'musí být konstantní',
+    es: 'debe ser igual a la constante',
+    fr: 'doit être égal à la constante',
+    pl: 'powinien być równy stałej',
+    ru: 'должно быть равно заданному значению',
+    sk: 'musí byť konštanta',
+    sv: 'bör vara en konstant',
+    zh: '应当等于常量'
   },
   constant: {
     en: 'should be equal to constant',

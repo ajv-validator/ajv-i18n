@@ -1,6 +1,6 @@
 {
   "name": "ajv-i18n",
-  "version": "1.5.0",
+  "version": "2.0.0-beta.0",
   "description": "Internationalised error messages for ajv JSON-Schema validator",
   "main": "localize/index.js",
   "files": [
@@ -39,7 +39,8 @@
   },
   "homepage": "https://github.com/epoberezkin/ajv-i18n#readme",
   "devDependencies": {
-    "ajv": ">=2.0.0",
+    "ajv": "^5.0.3-beta.0",
+    "ajv-keywords": "^2.0.1-beta.0",
     "brfs": "^1.4.3",
     "browserify": "^13.0.0",
     "coveralls": "^2.11.16",
@@ -59,7 +60,7 @@
     "uglifyjs": "^2.4.10"
   },
   "peerDependencies": {
-    "ajv": ">=2.0.0"
+    "ajv": ">=5.0.3-beta.0"
   },
   "nyc": {
     "exclude": [

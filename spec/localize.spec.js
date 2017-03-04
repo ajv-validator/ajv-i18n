@@ -4,14 +4,30 @@ var localize = require('../localize');
 
 var jsonSchemaTest = require('json-schema-test');
 var Ajv = require('ajv');
+var ajvKeywords = require('ajv-keywords')
 var assert = require('assert');
 
 var instances = [
-  Ajv({ i18n: true, v5: true, messages: false }),
-  Ajv({ i18n: true, v5: true, messages: false, verbose: true }),
-  Ajv({ i18n: true, v5: true, messages: false, allErrors: true }),
-  Ajv({ i18n: true, v5: true, messages: false, allErrors: true, verbose: true }),
+  getAjv(false, false),
+  getAjv(false, true),
+  getAjv(true, false),
+  getAjv(true, true)
 ];
+
+function getAjv(allErrors, verbose) {
+  var ajv = new Ajv({
+    i18n: true,
+    messages: false,
+    patternGroups: true,
+    unknownFormats: ['allowedUnknown'],
+    allErrors: allErrors,
+    verbose: allErrors
+  });
+  ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04.json'));
+  ajvKeywords(ajv, ['switch', 'patternRequired', 'formatMinimum', 'formatMaximum']);
+  ajv.addKeyword('constant', { macro: function(x) { return { const: x }; } })
+  return ajv;
+}
 
 var remoteRefs = {
     'http://localhost:1234/integer.json': require('./JSON-Schema-Test-Suite/remotes/integer.json'),
@@ -36,7 +52,8 @@ jsonSchemaTest(instances, {
 function testSuites() {
   if (typeof window == 'object') {
     var suites = {
-      'JSON-Schema tests draft4': require('./JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json', {mode: 'list'}),
+      'draft-04': require('./JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json', {mode: 'list'}),
+      'draft-06': require('./JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json', {mode: 'list'}),
       'ajv tests': require('./ajv/spec/v5/*.json', {mode: 'list'})
     };
     for (var suiteName in suites) {
@@ -46,7 +63,8 @@ function testSuites() {
     }
   } else {
     var suites = {
-      'JSON-Schema tests draft4': './JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json',
+      'draft-04': './JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json',
+      'draft-06': './JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json',
       'ajv tests': './ajv/spec/v5/*.json'
     }
   }

@@ -10,7 +10,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 
 |locale|language |contributor|draft-04|Ajv v5<sup>\*</sup>|draft-06|
 |------|:-------:|:---------:|:------:|:------:|:------:|
-|🇬🇧 en|English  |[epoberezkin](https://github.com/epoberezkin)|✓|✓|✓|
+|🇬🇧 en|English  | |✓|✓|✓|
 |🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
 |🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|-|-|
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|-|
@@ -19,7 +19,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|✓|-|-|
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|✓|-|
-|🇷🇺 ru|Russian  |[epoberezkin](https://github.com/epoberezkin)|✓|✓|✓|
+|🇷🇺 ru|Russian  | |✓|✓|✓|
 |🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|
 |🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|✓|✓|-|
@@ -98,6 +98,20 @@ npm test
 Functions that localize error messages are generated using doT templates in [messages](https://github.com/epoberezkin/ajv-i18n/tree/master/messages/index.js) and [localize.jst](https://github.com/epoberezkin/ajv-i18n/tree/master/localize/localize.jst) template. Templates are precompiled so doT is not a run-time dependency.
 
 `npm run build` - compiles functions to [localize](https://github.com/epoberezkin/ajv/tree/master/localize) folder.
+
+
+## Contributors
+
+[![danielzurawski](https://avatars3.githubusercontent.com/u/1625711?v=3&s=40)](https://github.com/danielzurawski)
+[![szilveszter9](https://avatars0.githubusercontent.com/u/7540866?v=3&s=40)](https://github.com/szilveszter9)
+[![jmtoball](https://avatars0.githubusercontent.com/u/219950?v=3&s=40)](https://github.com/jmtoball)
+[![gilgongo](https://avatars2.githubusercontent.com/u/4561747?v=3&s=40)](https://github.com/gilgongo)
+[![jasoniangreen](https://avatars3.githubusercontent.com/u/3481367?v=3&s=40)](https://github.com/jasoniangreen)
+[![jpablom](https://avatars0.githubusercontent.com/u/3935083?v=3&s=40)](https://github.com/jpablom)
+[![limmen](https://avatars2.githubusercontent.com/u/8254791?v=3&s=40)](https://github.com/Limmen)
+[![jinzhubaofu](https://avatars2.githubusercontent.com/u/811195?v=3&s=40)](https://github.com/jinzhubaofu)
+[![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=40)](https://github.com/kiskovacs)
+[![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=40)](https://github.com/monlouisj)
 
 
 ## License

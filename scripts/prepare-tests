@@ -4,7 +4,7 @@ set -e
 
 mkdir -p .browser
 
-find spec -type f -name '*.spec.js' | \
+ls spec | grep .spec.js | \
 xargs -I {} sh -c \
-'export f="{}"; browserify $f -t require-globify -t brfs -x ajv -u buffer -o $(echo $f | sed -e "s/spec/.browser/");'
+'export f="{}"; browserify spec/$f -t require-globify -t brfs -x ajv -u buffer -o .browser/$f;'
 

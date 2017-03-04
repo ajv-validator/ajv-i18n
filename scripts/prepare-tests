@@ -6,5 +6,5 @@ mkdir -p .browser
 
 ls spec | grep .spec.js | \
 xargs -I {} sh -c \
-'export f="{}"; browserify spec/$f -t require-globify -t brfs -x ajv -u buffer -o .browser/$f;'
+'export f="{}"; browserify spec/$f -t require-globify -t brfs -x ajv -o .browser/$f;'
 

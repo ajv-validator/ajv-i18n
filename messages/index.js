@@ -504,6 +504,10 @@ module.exports = {
     sv: 'bör vara en konstant',
     zh: '应当等于常量'
   },
+  contains: {
+    en: 'should contain a valid item',
+    ru: 'должно содержать значение соответствующее схеме'
+  },
   formatMaximum: {
     _defs: {
       c: '{{var cond = e.params.comparison + " " + e.params.limit;}}'

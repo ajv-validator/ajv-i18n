@@ -3,6 +3,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 
 [![Build Status](https://travis-ci.org/epoberezkin/ajv-i18n.svg?branch=master)](https://travis-ci.org/epoberezkin/ajv-i18n)
 [![npm version](https://badge.fury.io/js/ajv-i18n.svg)](http://badge.fury.io/js/ajv-i18n)
+[![Coverage Status](https://coveralls.io/repos/github/epoberezkin/ajv-i18n/badge.svg?branch=master)](https://coveralls.io/github/epoberezkin/ajv-i18n?branch=master)
 
 
 ## Supported locales

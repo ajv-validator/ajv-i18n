@@ -506,7 +506,8 @@ module.exports = {
   },
   contains: {
     en: 'should contain a valid item',
-    ru: 'должно содержать значение соответствующее схеме'
+    ru: 'должно содержать значение соответствующее схеме',
+    sv: 'bör innehålla ett giltigt objekt'
   },
   formatMaximum: {
     _defs: {

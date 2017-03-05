@@ -18,7 +18,7 @@
     "prepublish": "npm run build",
     "test": "npm run build && npm run test-cov && npm run test-browser",
     "test-spec": "mocha spec/*.spec.js -R spec",
-    "test-cov": "nyc mocha spec/*.spec.js -R spec",
+    "test-cov": "nyc npm run test-spec",
     "test-browser": "npm run bundle-test && scripts/prepare-tests && karma start --single-run --browsers PhantomJS"
   },
   "repository": {

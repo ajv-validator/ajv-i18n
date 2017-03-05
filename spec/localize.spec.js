@@ -44,6 +44,7 @@ jsonSchemaTest(instances, {
   skip: [
     'optional/zeroTerminatedFloats'
   ],
+  assert: assert,
   cwd: __dirname,
   hideFolder: 'draft4/',
   timeout: 30000

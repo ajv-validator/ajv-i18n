@@ -457,6 +457,7 @@ module.exports = {
   custom: {
     en: 'should pass "{{=e.keyword}}" keyword validation',
     cz: 'musí vyhovět "{{=e.keyword}}" validaci',
+    de: 'sollte die Validierung "{{=e.keyword}}" bestehen',
     es: 'debe pasar la validación de palabra clave "{{=e.keyword}}"',
     fr: 'doit être valide selon le critère "{{=e.keyword}}"',
     pl: 'powinien przejść walidację "{{=e.keyword}}"',
@@ -468,6 +469,7 @@ module.exports = {
   patternGroups: {
     en: '{{#def.n}}should have {{=e.params.reason}} {{=n}} propert{{#def.propPlural}} matching pattern "{{=e.params.pattern}}"',
     cz: '{{#def.n}}musí mýt {{=e.params.reason}} {{=n}} polož{{#def.propPlural}} vyhovující regulárnímu výrazu "{{=e.params.pattern}}"',
+    de: '{{#def.n}}sollte {{=e.params.reason}} {{=n}} Attribut{{#def.propPlural}} nach folgendem Muster haben "{{=e.params.pattern}}"',
     es: '{{#def.n}}debe tener {{=e.params.reason}} {{=n}} propiedad{{#def.propPlural}} coincidente{{#def.mPlural}} con el patrón "{{=e.params.pattern}}"',
     fr: '{{#def.n}}doit avoir {{=e.params.reason}} {{=n}} propriété{{#def.propPlural}} correspondant au format "{{=e.params.pattern}}"',
     pl: '{{#def.n}}powinien mieć {{=e.params.reason}} {{=n}} pol{{#def.propPlural}} pasujące do wzorca "{{=e.params.pattern}}"',
@@ -484,6 +486,7 @@ module.exports = {
   patternRequired: {
     en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
     cz: 'musí mýt položku vyhovující regulárnímu výrazu "{{=e.params.missingPattern}}"',
+    de: 'sollte ein Attribut nach folgendem Muster haben "{{=e.params.missingPattern}}"',
     es: 'la propiedad debe coincidir con el patrón "{{=e.params.missingPattern}}"',
     fr: 'la propriété doit correspondre au format "{{=e.params.missingPattern}}"',
     pl: 'powinien mieć pole pasujące do wzorca "{{=e.params.missingPattern}}"',
@@ -495,6 +498,7 @@ module.exports = {
   switch: {
     en: 'should pass \"switch\" keyword validation, case {{=e.params.caseIndex}} fails',
     cz: 'musí projít validácí \"switch\", případ {{=e.params.caseIndex}} je neúspěšný',
+    de: 'sollte der \"switch\" Validierung entsprechen, der Fall {{=e.params.caseIndex}} schlägt fehl',
     es: 'debe pasar la validación \"switch\" de palabra clave, el caso {{=e.params.caseIndex}} falló',
     fr: 'doit être valide selon le critère \"switch\":validation par mot-clé, le cas {{=e.params.caseIndex}} est invalide',
     pl: 'powinien przejść walidacje pola \"switch\", przypadek {{=e.params.caseIndex}} zawiódł',
@@ -517,6 +521,7 @@ module.exports = {
   constant: {
     en: 'should be equal to constant',
     cz: 'musí být konstantní',
+    de: 'sollte der Konstante entsprechen',
     es: 'debe ser igual a la constante',
     fr: 'doit être égal à la constante',
     pl: 'powinien być równy stałej',
@@ -527,6 +532,7 @@ module.exports = {
   },
   contains: {
     en: 'should contain a valid item',
+    de: 'sollte ein valides Element enthalten',
     ru: 'должно содержать значение соответствующее схеме',
     sv: 'bör innehålla ett giltigt objekt'
   },
@@ -536,6 +542,7 @@ module.exports = {
     },
     en: '{{#def.c}}should be {{=cond}}',
     cz: '{{#def.c}}musí být {{=cond}}',
+    de: '{{#def.c}}sollte {{=cond}} sein',
     es: '{{#def.c}}debe ser {{=cond}}',
     fr: '{{#def.c}}doit être {{=cond}}',
     pl: '{{#def.c}}powinien być {{=cond}}',
@@ -550,6 +557,7 @@ module.exports = {
     },
     en: '{{#def.c}}should be {{=cond}}',
     cz: '{{#def.c}}musí být {{=cond}}',
+    de: '{{#def.c}}sollte {{=cond}} sein',
     es: '{{#def.c}}debe ser {{=cond}}',
     fr: '{{#def.c}}doit être {{=cond}}',
     pl: '{{#def.c}}powinien być {{=cond}}',
@@ -561,6 +569,7 @@ module.exports = {
   formatExclusiveMaximum: {
     en: 'formatExclusiveMaximum should be boolean',
     cz: 'formatExclusiveMaximum musí být boolean',
+    de: 'formatExclusiveMaximum sollte ein boolscher Wert sein',
     es: 'formatExclusiveMaximum debe ser booleano',
     fr: 'formatExclusiveMaximum doit être un booléen',
     pl: 'formatExclusiveMaximum powinien być boolean',
@@ -572,6 +581,7 @@ module.exports = {
   formatExclusiveMinimum: {
     en: 'formatExclusiveMinimum should be boolean',
     cz: 'formatExclusiveMinimum musí být boolean',
+    de: 'formatExclusiveMinimum sollte ein boolscher Wert sein',
     es: 'formatExclusiveMinimum debe ser booleano',
     fr: 'formatExclusiveMinimum doit être un booléen',
     pl: 'formatExclusiveMinimum powinień być boolean',

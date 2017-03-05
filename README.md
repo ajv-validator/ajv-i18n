@@ -12,7 +12,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |------|:-------:|:---------:|:------:|:------:|:------:|
 |🇬🇧 en|English  | |✓|✓|✓|
 |🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
-|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|-|-|
+|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|✓|-|
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|-|
 |🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|✓|✓|-|
 |🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|
@@ -26,7 +26,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 
 <sup>\*</sup> v5 is a special mode in Ajv version 4.x.x
 
-Please contribute locales that you need to use if they are missing.
+Please contribute locales that you need to use if they are missing or incomplete.
 
 
 ## Install
@@ -100,18 +100,18 @@ Functions that localize error messages are generated using doT templates in [mes
 `npm run build` - compiles functions to [localize](https://github.com/epoberezkin/ajv/tree/master/localize) folder.
 
 
-## Contributors
+## Contributors of locales
 
-[![danielzurawski](https://avatars3.githubusercontent.com/u/1625711?v=3&s=40)](https://github.com/danielzurawski)
-[![szilveszter9](https://avatars0.githubusercontent.com/u/7540866?v=3&s=40)](https://github.com/szilveszter9)
-[![jmtoball](https://avatars0.githubusercontent.com/u/219950?v=3&s=40)](https://github.com/jmtoball)
-[![gilgongo](https://avatars2.githubusercontent.com/u/4561747?v=3&s=40)](https://github.com/gilgongo)
-[![jasoniangreen](https://avatars3.githubusercontent.com/u/3481367?v=3&s=40)](https://github.com/jasoniangreen)
-[![jpablom](https://avatars0.githubusercontent.com/u/3935083?v=3&s=40)](https://github.com/jpablom)
-[![limmen](https://avatars2.githubusercontent.com/u/8254791?v=3&s=40)](https://github.com/Limmen)
-[![jinzhubaofu](https://avatars2.githubusercontent.com/u/811195?v=3&s=40)](https://github.com/jinzhubaofu)
-[![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=40)](https://github.com/kiskovacs)
-[![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=40)](https://github.com/monlouisj)
+[![danielzurawski](https://avatars3.githubusercontent.com/u/1625711?v=3&s=40)](https://github.com/danielzurawski "danielzurawski")
+[![szilveszter9](https://avatars0.githubusercontent.com/u/7540866?v=3&s=40)](https://github.com/szilveszter9 "szilveszter9")
+[![jmtoball](https://avatars0.githubusercontent.com/u/219950?v=3&s=40)](https://github.com/jmtoball "jmtoball")
+[![gilgongo](https://avatars2.githubusercontent.com/u/4561747?v=3&s=40)](https://github.com/gilgongo "gilgongo")
+[![jasoniangreen](https://avatars3.githubusercontent.com/u/3481367?v=3&s=40)](https://github.com/jasoniangreen "jasoniangreen")
+[![jpablom](https://avatars0.githubusercontent.com/u/3935083?v=3&s=40)](https://github.com/jpablom "jpablom")
+[![limmen](https://avatars2.githubusercontent.com/u/8254791?v=3&s=40)](https://github.com/Limmen "Limmen")
+[![jinzhubaofu](https://avatars2.githubusercontent.com/u/811195?v=3&s=40)](https://github.com/jinzhubaofu "jinzhubaofu")
+[![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=40)](https://github.com/kiskovacs "kiskovacs")
+[![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=40)](https://github.com/monlouisj "monlouisj")
 
 
 ## License

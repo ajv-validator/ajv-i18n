@@ -21,7 +21,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|✓|-|
 |🇷🇺 ru|Russian  | |✓|✓|✓|
 |🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
-|🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|
+|🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|✓|
 |🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|✓|✓|-|
 
 <sup>\*</sup> v5 is a special mode in Ajv version 4.x.x

@@ -43,7 +43,8 @@ module.exports = {
   // error messages
   'false schema':  {
     en: 'boolean schema is false',
-    ru: 'схема равна false'
+    ru: 'схема равна false',
+    sv: 'boolean schema är falskt'
   },
   $ref: {
     en: 'can\\\'t resolve reference {{=e.params.ref}}',
@@ -477,7 +478,8 @@ module.exports = {
   },
   propertyNames: {
     en: 'property name \'{{=e.params.propertyName}}\' is invalid',
-    ru: 'имя поля \'{{=e.params.propertyName}}\' не соответствует схеме'
+    ru: 'имя поля \'{{=e.params.propertyName}}\' не соответствует схеме',
+    sv: 'egenskap med namnet \'{{=e.params.propertyName}}\' är inte giltig'
   },
   patternRequired: {
     en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
@@ -525,7 +527,8 @@ module.exports = {
   },
   contains: {
     en: 'should contain a valid item',
-    ru: 'должно содержать значение соответствующее схеме'
+    ru: 'должно содержать значение соответствующее схеме',
+    sv: 'bör innehålla ett giltigt objekt'
   },
   formatMaximum: {
     _defs: {

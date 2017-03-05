@@ -43,6 +43,7 @@ module.exports = {
   // error messages
   'false schema':  {
     en: 'boolean schema is false',
+    de: 'boolsches Schema ist falsch',
     ru: 'схема равна false',
     sv: 'boolean schema är falskt'
   },
@@ -480,6 +481,7 @@ module.exports = {
   },
   propertyNames: {
     en: 'property name \'{{=e.params.propertyName}}\' is invalid',
+    de: 'Attributname \'{{=e.params.propertyName}}\' ist ungültig',
     ru: 'имя поля \'{{=e.params.propertyName}}\' не соответствует схеме',
     sv: 'egenskap med namnet \'{{=e.params.propertyName}}\' är inte giltig'
   },
@@ -510,6 +512,7 @@ module.exports = {
   const: {
     en: 'should be equal to constant',
     cz: 'musí být konstantní',
+    de: 'sollte der Konstante entsprechen',
     es: 'debe ser igual a la constante',
     fr: 'doit être égal à la constante',
     pl: 'powinien być równy stałej',

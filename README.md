@@ -102,16 +102,16 @@ Functions that localize error messages are generated using doT templates in [mes
 
 ## Contributors of locales
 
-[![danielzurawski](https://avatars3.githubusercontent.com/u/1625711?v=3&s=40)](https://github.com/danielzurawski)
-[![szilveszter9](https://avatars0.githubusercontent.com/u/7540866?v=3&s=40)](https://github.com/szilveszter9)
-[![jmtoball](https://avatars0.githubusercontent.com/u/219950?v=3&s=40)](https://github.com/jmtoball)
-[![gilgongo](https://avatars2.githubusercontent.com/u/4561747?v=3&s=40)](https://github.com/gilgongo)
-[![jasoniangreen](https://avatars3.githubusercontent.com/u/3481367?v=3&s=40)](https://github.com/jasoniangreen)
-[![jpablom](https://avatars0.githubusercontent.com/u/3935083?v=3&s=40)](https://github.com/jpablom)
-[![limmen](https://avatars2.githubusercontent.com/u/8254791?v=3&s=40)](https://github.com/Limmen)
-[![jinzhubaofu](https://avatars2.githubusercontent.com/u/811195?v=3&s=40)](https://github.com/jinzhubaofu)
-[![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=40)](https://github.com/kiskovacs)
-[![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=40)](https://github.com/monlouisj)
+[![danielzurawski](https://avatars3.githubusercontent.com/u/1625711?v=3&s=40)](https://github.com/danielzurawski "danielzurawski")
+[![szilveszter9](https://avatars0.githubusercontent.com/u/7540866?v=3&s=40)](https://github.com/szilveszter9 "szilveszter9")
+[![jmtoball](https://avatars0.githubusercontent.com/u/219950?v=3&s=40)](https://github.com/jmtoball "jmtoball")
+[![gilgongo](https://avatars2.githubusercontent.com/u/4561747?v=3&s=40)](https://github.com/gilgongo "gilgongo")
+[![jasoniangreen](https://avatars3.githubusercontent.com/u/3481367?v=3&s=40)](https://github.com/jasoniangreen "jasoniangreen")
+[![jpablom](https://avatars0.githubusercontent.com/u/3935083?v=3&s=40)](https://github.com/jpablom "jpablom")
+[![limmen](https://avatars2.githubusercontent.com/u/8254791?v=3&s=40)](https://github.com/Limmen "Limmen")
+[![jinzhubaofu](https://avatars2.githubusercontent.com/u/811195?v=3&s=40)](https://github.com/jinzhubaofu "jinzhubaofu")
+[![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=40)](https://github.com/kiskovacs "kiskovacs")
+[![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=40)](https://github.com/monlouisj "monlouisj")
 
 
 ## License

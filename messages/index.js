@@ -43,8 +43,10 @@ module.exports = {
   // error messages
   'false schema':  {
     en: 'boolean schema is false',
+    cz: 'schéma je false',
     de: 'boolsches Schema ist falsch',
     ru: 'схема равна false',
+    sk: 'schéma je false',
     sv: 'boolean schema är falskt'
   },
   $ref: {
@@ -100,7 +102,7 @@ module.exports = {
   },
   anyOf: {
     en: 'should match some schema in "anyOf"',
-    cz: 'musí vyhovět alespoň jedné schémě v "anyOf"',
+    cz: 'musí vyhovět alespoň jednému schématu v "anyOf"',
     de: 'sollte einem der Schemata in "anyOf" entsprechen',
     es: 'debe coincidir con algún esquema en "anyOf"',
     fr: 'doit correspondre à un schéma de "anyOf"',
@@ -349,7 +351,7 @@ module.exports = {
   },
   not: {
     en: 'should not be valid according to schema in "not"',
-    cz: 'nesmí vyhovět schémě v "not"',
+    cz: 'nesmí vyhovět schématu v "not"',
     de: 'sollte dem in "not" angegebenen Schema widersprechen',
     es: 'no debe ser válido según el esquema en "not"',
     fr: 'est invalide selon le schéma "not"',
@@ -367,7 +369,7 @@ module.exports = {
   },
   oneOf: {
     en: 'should match exactly one schema in "oneOf"',
-    cz: 'musí vyhovět právě jedné schémě v "oneOf"',
+    cz: 'musí vyhovět právě jednému schématu v "oneOf"',
     de: 'sollte genau einem der Schemata in "oneOf" entsprechen',
     es: 'debe coincidir con un solo esquema en "oneOf"',
     fr: 'doit correspondre à exactement un schéma de "oneOf"',
@@ -481,8 +483,10 @@ module.exports = {
   },
   propertyNames: {
     en: 'property name \'{{=e.params.propertyName}}\' is invalid',
+    cz: 'název položky \'{{=e.params.propertyName}}\' neodpovídá schématu',
     de: 'Attributname \'{{=e.params.propertyName}}\' ist ungültig',
     ru: 'имя поля \'{{=e.params.propertyName}}\' не соответствует схеме',
+    sk: 'názov položky \'{{=e.params.propertyName}}\' nezodpovedá schéme',
     sv: 'egenskap med namnet \'{{=e.params.propertyName}}\' är inte giltig'
   },
   patternRequired: {
@@ -535,8 +539,10 @@ module.exports = {
   },
   contains: {
     en: 'should contain a valid item',
+    cz: 'musí obsahovat prvek odpovídající schématu',
     de: 'sollte ein valides Element enthalten',
     ru: 'должно содержать значение соответствующее схеме',
+    sk: 'musí obsahovať prvok zodpovedajúci schéme',
     sv: 'bör innehålla ett giltigt objekt'
   },
   formatMaximum: {

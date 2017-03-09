@@ -11,7 +11,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |locale|language |contributor|draft-04|Ajv v5<sup>\*</sup>|draft-06|
 |------|:-------:|:---------:|:------:|:------:|:------:|
 |🇬🇧 en|English  | |✓|✓|✓|
-|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
+|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|✓|
 |🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|✓|✓|
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|-|
 |🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|✓|✓|-|
@@ -20,7 +20,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|✓|-|
 |🇷🇺 ru|Russian  | |✓|✓|✓|
-|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
+|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|✓|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|✓|
 |🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|✓|✓|-|
 

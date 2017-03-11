@@ -511,8 +511,10 @@ module.exports = {
   },
   contains: {
     en: 'should contain a valid item',
+    cz: 'musí obsahovat prvek odpovídající schématu',
     de: 'sollte ein valides Element enthalten',
     ru: 'должно содержать значение соответствующее схеме',
+    sk: 'musí obsahovať prvok zodpovedajúci schéme',
     sv: 'bör innehålla ett giltigt objekt'
   },
   formatMaximum: {

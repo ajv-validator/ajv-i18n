@@ -20,6 +20,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|✓|-|
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|✓|
+|🇧🇷 pt-BR|Português - Brasil  |[marcosrava](https://github.com/marcosrava)|✓|✓|
 |🇷🇺 ru|Russian  ||✓|✓|
 |🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|
@@ -113,6 +114,7 @@ Functions that localize error messages are generated using doT templates in [mes
 [![jinzhubaofu](https://avatars2.githubusercontent.com/u/811195?v=3&s=40)](https://github.com/jinzhubaofu "jinzhubaofu")
 [![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=40)](https://github.com/kiskovacs "kiskovacs")
 [![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=40)](https://github.com/monlouisj "monlouisj")
+[![marcosrava](https://avatars2.githubusercontent.com/u/243790?v=3&s=40)](https://github.com/marcosrava "marcosrava")
 
 
 ## License

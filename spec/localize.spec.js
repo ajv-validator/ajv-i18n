@@ -39,9 +39,7 @@ function runTests(suite) {
     description: 'Schema tests of ' + instances.length + ' ajv instances with option i18n',
     suites: tests,
     afterEach: afterEach,
-    skip: [
-      'optional/zeroTerminatedFloats'
-    ],
+    skip: suite == 'draft-04' ? ['optional/zeroTerminatedFloats'] : [],
     assert: assert,
     cwd: __dirname,
     hideFolder: 'draft4/',

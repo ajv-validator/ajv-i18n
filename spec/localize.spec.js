@@ -7,17 +7,53 @@ var Ajv = require('ajv');
 var ajvKeywords = require('ajv-keywords')
 var assert = require('assert');
 
-var instances = [
-  getAjv(false, false),
-  getAjv(false, true),
-  getAjv(true, false),
-  getAjv(true, true)
-];
+var remoteRefs = {
+  'http://localhost:1234/integer.json': require('./JSON-Schema-Test-Suite/remotes/integer.json'),
+  'http://localhost:1234/subSchemas.json': require('./JSON-Schema-Test-Suite/remotes/subSchemas.json'),
+  'http://localhost:1234/folder/folderInteger.json': require('./JSON-Schema-Test-Suite/remotes/folder/folderInteger.json'),
+  'http://localhost:1234/name.json': require('./JSON-Schema-Test-Suite/remotes/name.json')
+};
+
+var suites = testSuites();
+for (var suite in suites) runTests(suite);
+
+function runTests(suite) {
+  var instances = [
+    getAjv(false, false),
+    getAjv(false, true),
+    getAjv(true, false),
+    getAjv(true, true)
+  ];
+
+  instances.forEach(function (ajv) {
+    addRemoteRefs(ajv);
+    if (suite != 'draft-06') {
+      ajv._opts.defaultMeta = 'http://json-schema.org/draft-04/schema#';
+    }
+  });
+
+  var tests = {};
+  tests[suite] = suites[suite];
+
+  jsonSchemaTest(instances, {
+    description: 'Schema tests of ' + instances.length + ' ajv instances with option i18n',
+    suites: tests,
+    afterEach: afterEach,
+    skip: [
+      'optional/zeroTerminatedFloats'
+    ],
+    assert: assert,
+    cwd: __dirname,
+    hideFolder: 'draft4/',
+    timeout: 30000
+  });
+}
+
 
 function getAjv(allErrors, verbose) {
   var ajv = new Ajv({
-    i18n: true,
     messages: false,
+    format: 'full',
     patternGroups: true,
     unknownFormats: ['allowedUnknown'],
     allErrors: allErrors,
@@ -29,26 +65,6 @@ function getAjv(allErrors, verbose) {
   return ajv;
 }
 
-var remoteRefs = {
-    'http://localhost:1234/integer.json': require('./JSON-Schema-Test-Suite/remotes/integer.json'),
-    'http://localhost:1234/subSchemas.json': require('./JSON-Schema-Test-Suite/remotes/subSchemas.json'),
-    'http://localhost:1234/folder/folderInteger.json': require('./JSON-Schema-Test-Suite/remotes/folder/folderInteger.json'),
-};
-
-instances.forEach(addRemoteRefs);
-
-jsonSchemaTest(instances, {
-  description: 'Schema tests of ' + instances.length + ' ajv instances with option i18n',
-  suites: testSuites(),
-  afterEach: afterEach,
-  skip: [
-    'optional/zeroTerminatedFloats'
-  ],
-  assert: assert,
-  cwd: __dirname,
-  hideFolder: 'draft4/',
-  timeout: 30000
-});
 
 function testSuites() {
   if (typeof window == 'object') {

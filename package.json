@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/epoberezkin/ajv-i18n#readme",
   "devDependencies": {
-    "ajv": "^5.0.3-beta.0",
+    "ajv": "^5.0.4-beta.0",
     "ajv-keywords": "^2.0.1-beta.0",
     "brfs": "^1.4.3",
     "browserify": "^14.1.0",
@@ -60,7 +60,7 @@
     "uglifyjs": "^2.4.10"
   },
   "peerDependencies": {
-    "ajv": ">=5.0.3-beta.0"
+    "ajv": ">=5.0.4-beta.0"
   },
   "nyc": {
     "exclude": [

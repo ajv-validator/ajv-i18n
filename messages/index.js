@@ -43,6 +43,14 @@ module.exports = {
   },
 
   // error messages
+  'false schema':  {
+    en: 'boolean schema is false',
+    cz: 'schéma je false',
+    de: 'boolsches Schema ist falsch',
+    ru: 'схема равна false',
+    sk: 'schéma je false',
+    sv: 'boolean schema är falskt'
+  },
   $ref: {
     en: 'can\\\'t resolve reference {{=e.params.ref}}',
     cz: 'reference {{=e.params.ref}} nenalezena',
@@ -99,7 +107,7 @@ module.exports = {
   },
   anyOf: {
     en: 'should match some schema in "anyOf"',
-    cz: 'musí vyhovět alespoň jedné schémě v "anyOf"',
+    cz: 'musí vyhovět alespoň jednému schématu v "anyOf"',
     de: 'sollte einem der Schemata in "anyOf" entsprechen',
     es: 'debe coincidir con algún esquema en "anyOf"',
     fr: 'doit correspondre à un schéma de "anyOf"',
@@ -361,7 +369,7 @@ module.exports = {
   },
   not: {
     en: 'should not be valid according to schema in "not"',
-    cz: 'nesmí vyhovět schémě v "not"',
+    cz: 'nesmí vyhovět schématu v "not"',
     de: 'sollte dem in "not" angegebenen Schema widersprechen',
     es: 'no debe ser válido según el esquema en "not"',
     fr: 'est invalide selon le schéma "not"',
@@ -380,7 +388,7 @@ module.exports = {
   },
   oneOf: {
     en: 'should match exactly one schema in "oneOf"',
-    cz: 'musí vyhovět právě jedné schémě v "oneOf"',
+    cz: 'musí vyhovět právě jednému schématu v "oneOf"',
     de: 'sollte genau einem der Schemata in "oneOf" entsprechen',
     es: 'debe coincidir con un solo esquema en "oneOf"',
     fr: 'doit correspondre à exactement un schéma de "oneOf"',
@@ -499,6 +507,14 @@ module.exports = {
     sv: '{{#def.n}}bör ha {{=e.params.reason}} {{=n}} egenskap{{#def.propPlural}} som matchar mönstret "{{=e.params.pattern}}"',
     zh: '{{#def.n}}应当有 {{=n}} 个 {{=e.params.reason}} 属性满足模式 {{=e.params.pattern}}'
   },
+  propertyNames: {
+    en: 'property name \'{{=e.params.propertyName}}\' is invalid',
+    cz: 'název položky \'{{=e.params.propertyName}}\' neodpovídá schématu',
+    de: 'Attributname \'{{=e.params.propertyName}}\' ist ungültig',
+    ru: 'имя поля \'{{=e.params.propertyName}}\' не соответствует схеме',
+    sk: 'názov položky \'{{=e.params.propertyName}}\' nezodpovedá schéme',
+    sv: 'egenskap med namnet \'{{=e.params.propertyName}}\' är inte giltig'
+  },
   patternRequired: {
     en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
     cz: 'musí mýt položku vyhovující regulárnímu výrazu "{{=e.params.missingPattern}}"',
@@ -524,6 +540,18 @@ module.exports = {
     sk: 'musí prejsť validáciou \"switch\", prípad {{=e.params.caseIndex}} je neúspešný',
     sv: 'bör passera \"switch\" nyckelord validering, fallet {{=e.params.caseIndex}} misslyckas',
     zh: '由于 {{=e.params.caseIndex}} 失败，未通过 "switch" 校验, '
+  },
+  const: {
+    en: 'should be equal to constant',
+    cz: 'musí být konstantní',
+    de: 'sollte der Konstante entsprechen',
+    es: 'debe ser igual a la constante',
+    fr: 'doit être égal à la constante',
+    pl: 'powinien być równy stałej',
+    ru: 'должно быть равно заданному значению',
+    sk: 'musí byť konštanta',
+    sv: 'bör vara en konstant',
+    zh: '应当等于常量'
   },
   constant: {
     en: 'should be equal to constant',

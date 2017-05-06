@@ -1,4 +1,6 @@
 # ajv-i18n
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/epoberezkin/ajv-i18n.svg)](https://greenkeeper.io/)
 Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) - currently the fastest JSON-Schema validator
 
 [![Build Status](https://travis-ci.org/epoberezkin/ajv-i18n.svg?branch=master)](https://travis-ci.org/epoberezkin/ajv-i18n)

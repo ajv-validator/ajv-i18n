@@ -228,12 +228,6 @@ module.exports = {
     // nb: 'Verdien {value} er mindre enn minsteverdi {minimum}',
     // 'pt-PT': 'O valor {value} é menor que o mínimo {minimum}',
   },
-  // exclusiveMaximum: {
-
-  // },
-  // exclusiveMinimum: {
-
-  // },
   maxItems: {
     en: '{{#def.n}}should not have more than {{=n}} item{{#def.mPlural}}',
     cz: '{{#def.n}}nesmí mýt víc než {{=n}} prv{{#def.mPlural}}',
@@ -634,3 +628,6 @@ module.exports = {
     zh: 'formatExclusiveMinimum 应当是布尔值'
   }
 };
+
+module.exports.exclusiveMaximum = module.exports.maximum;
+module.exports.exclusiveMinimum = module.exports.minimum;

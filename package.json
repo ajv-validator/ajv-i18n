@@ -39,8 +39,8 @@
   },
   "homepage": "https://github.com/epoberezkin/ajv-i18n#readme",
   "devDependencies": {
-    "ajv": "^5.0.0",
-    "ajv-keywords": "^2.0.0",
+    "ajv": "^5.1.5",
+    "ajv-keywords": "^2.1.0",
     "brfs": "^1.4.3",
     "browserify": "^14.1.0",
     "coveralls": "^2.11.16",

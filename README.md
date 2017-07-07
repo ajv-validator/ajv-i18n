@@ -21,6 +21,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|
 |🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|✓|-|-|
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
+|🇳🇴 no|Norwegian|[mtramm](https://github.com/mtramm)|✓|✓|✓|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|✓|-|
 |🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)|✓|✓|-|
 |🇷🇺 ru|Russian  | |✓|✓|✓|
@@ -117,6 +118,7 @@ Functions that localize error messages are generated using doT templates in [mes
 [![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=40)](https://github.com/kiskovacs "kiskovacs")
 [![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=40)](https://github.com/monlouisj "monlouisj")
 [![marcosrava](https://avatars2.githubusercontent.com/u/243790?v=3&s=40)](https://github.com/marcosrava "marcosrava")
+[![mtramm](https://avatars3.githubusercontent.com/u/3519541?v=3&s=40)](https://github.com/mtramm "mtramm")
 
 
 ## License

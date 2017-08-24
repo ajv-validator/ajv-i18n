@@ -9,7 +9,7 @@ module.exports = {
     hu: require('./hu'),
     it: require('./it'),
     ja: require('./ja'),
-    no: require('./no'),
+    nb: require('./nb'),
     pl: require('./pl'),
     'pt-BR': require('./pt-BR'),
     ru: require('./ru'),

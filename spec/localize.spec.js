@@ -4,40 +4,71 @@ var localize = require('../localize');
 
 var jsonSchemaTest = require('json-schema-test');
 var Ajv = require('ajv');
+var ajvKeywords = require('ajv-keywords')
 var assert = require('assert');
 
-var instances = [
-  Ajv({ i18n: true, v5: true, messages: false }),
-  Ajv({ i18n: true, v5: true, messages: false, verbose: true }),
-  Ajv({ i18n: true, v5: true, messages: false, allErrors: true }),
-  Ajv({ i18n: true, v5: true, messages: false, allErrors: true, verbose: true }),
-];
-
 var remoteRefs = {
-    'http://localhost:1234/integer.json': require('./JSON-Schema-Test-Suite/remotes/integer.json'),
-    'http://localhost:1234/subSchemas.json': require('./JSON-Schema-Test-Suite/remotes/subSchemas.json'),
-    'http://localhost:1234/folder/folderInteger.json': require('./JSON-Schema-Test-Suite/remotes/folder/folderInteger.json'),
+  'http://localhost:1234/integer.json': require('./JSON-Schema-Test-Suite/remotes/integer.json'),
+  'http://localhost:1234/subSchemas.json': require('./JSON-Schema-Test-Suite/remotes/subSchemas.json'),
+  'http://localhost:1234/folder/folderInteger.json': require('./JSON-Schema-Test-Suite/remotes/folder/folderInteger.json'),
+  'http://localhost:1234/name.json': require('./JSON-Schema-Test-Suite/remotes/name.json')
 };
 
-instances.forEach(addRemoteRefs);
+var suites = testSuites();
+for (var suite in suites) runTests(suite);
 
-jsonSchemaTest(instances, {
-  description: 'Schema tests of ' + instances.length + ' ajv instances with option i18n',
-  suites: testSuites(),
-  afterEach: afterEach,
-  skip: [
-    'optional/zeroTerminatedFloats'
-  ],
-  assert: assert,
-  cwd: __dirname,
-  hideFolder: 'draft4/',
-  timeout: 30000
-});
+function runTests(suite) {
+  var instances = [
+    getAjv(false, false),
+    getAjv(false, true),
+    getAjv(true, false),
+    getAjv(true, true)
+  ];
+
+  instances.forEach(function (ajv) {
+    addRemoteRefs(ajv);
+    if (suite != 'draft-06') {
+      ajv._opts.defaultMeta = 'http://json-schema.org/draft-04/schema#';
+    }
+  });
+
+  var tests = {};
+  tests[suite] = suites[suite];
+
+  jsonSchemaTest(instances, {
+    description: 'Schema tests of ' + instances.length + ' ajv instances with option i18n',
+    suites: tests,
+    afterEach: afterEach,
+    skip: suite == 'draft-04' ? ['optional/zeroTerminatedFloats'] : [],
+    assert: assert,
+    cwd: __dirname,
+    hideFolder: 'draft4/',
+    timeout: 30000
+  });
+}
+
+
+function getAjv(allErrors, verbose) {
+  var ajv = new Ajv({
+    messages: false,
+    format: 'full',
+    patternGroups: true,
+    unknownFormats: ['allowedUnknown'],
+    allErrors: allErrors,
+    verbose: allErrors
+  });
+  ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04.json'));
+  ajvKeywords(ajv, ['switch', 'patternRequired', 'formatMinimum', 'formatMaximum']);
+  ajv.addKeyword('constant', { macro: function(x) { return { const: x }; } })
+  return ajv;
+}
+
 
 function testSuites() {
   if (typeof window == 'object') {
     var suites = {
-      'JSON-Schema tests draft4': require('./JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json', {mode: 'list'}),
+      'draft-04': require('./JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json', {mode: 'list'}),
+      'draft-06': require('./JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json', {mode: 'list'}),
       'ajv tests': require('./ajv/spec/v5/*.json', {mode: 'list'})
     };
     for (var suiteName in suites) {
@@ -47,7 +78,8 @@ function testSuites() {
     }
   } else {
     var suites = {
-      'JSON-Schema tests draft4': './JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json',
+      'draft-04': './JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json',
+      'draft-06': './JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json',
       'ajv tests': './ajv/spec/v5/*.json'
     }
   }

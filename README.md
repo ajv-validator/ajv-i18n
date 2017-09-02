@@ -1,28 +1,33 @@
 # ajv-i18n
+
 Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) - currently the fastest JSON-Schema validator
 
 [![Build Status](https://travis-ci.org/epoberezkin/ajv-i18n.svg?branch=master)](https://travis-ci.org/epoberezkin/ajv-i18n)
 [![npm version](https://badge.fury.io/js/ajv-i18n.svg)](http://badge.fury.io/js/ajv-i18n)
 [![Coverage Status](https://coveralls.io/repos/github/epoberezkin/ajv-i18n/badge.svg?branch=master)](https://coveralls.io/github/epoberezkin/ajv-i18n?branch=master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/epoberezkin/ajv-i18n.svg)](https://greenkeeper.io/)
+[![Gitter](https://img.shields.io/gitter/room/ajv-validator/ajv.svg)](https://gitter.im/ajv-validator/ajv)
 
 
 ## Supported locales
 
-|locale|language |contributor|draft-04|Ajv v5<sup>\*</sup>|
-|------|:-------:|:---------:|:------:|:------:|
-|🇬🇧 en|English  ||✓|✓|
-|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|
-|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|✓|
-|🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|
-|🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|✓|✓|
-|🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|
-|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|✓|-|
-|🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|
-|🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|✓|
-|🇷🇺 ru|Russian  ||✓|✓|
-|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|
-|🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|
-|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|✓|✓|
+|locale|language |contributor|draft-04|Ajv v5<sup>\*</sup>|draft-06|
+|------|:-------:|:---------:|:------:|:------:|:------:|
+|🇬🇧 en|English  | |✓|✓|✓|
+|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|✓|
+|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|✓|✓|
+|🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|-|
+|🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|✓|✓|-|
+|🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|
+|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|✓|-|-|
+|🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
+|🇳🇴 no|Norwegian|[mtramm](https://github.com/mtramm)|✓|✓|✓|
+|🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|✓|-|
+|🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)|✓|✓|-|
+|🇷🇺 ru|Russian  | |✓|✓|✓|
+|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|✓|
+|🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|✓|
+|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|✓|✓|-|
 
 <sup>\*</sup> v5 is a special mode in Ajv version 4.x.x
 
@@ -112,6 +117,8 @@ Functions that localize error messages are generated using doT templates in [mes
 [![jinzhubaofu](https://avatars2.githubusercontent.com/u/811195?v=3&s=40)](https://github.com/jinzhubaofu "jinzhubaofu")
 [![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=40)](https://github.com/kiskovacs "kiskovacs")
 [![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=40)](https://github.com/monlouisj "monlouisj")
+[![marcosrava](https://avatars2.githubusercontent.com/u/243790?v=3&s=40)](https://github.com/marcosrava "marcosrava")
+[![mtramm](https://avatars3.githubusercontent.com/u/3519541?v=3&s=40)](https://github.com/mtramm "mtramm")
 
 
 ## License

@@ -84,7 +84,7 @@ module.exports = {
     pl: '{{#def.n}}nie powinien mieć więcej niż {{=n}} element{{#def.mPlural}}',
     'pt-BR': 'Não são permitidos itens adicionais',
     ru: '{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}',
-    sk: '{{#def.n}}nemôže mať viac, než {{=n}} prv{{#def.mPlural}}',
+    sk: '{{#def.n}}nemôže obsahovať viac, než {{=n}} prv{{#def.mPlural}}',
     sv: '{{#def.n}}borde ha fler än {{=n}} sak{{#def.mPlural}}',
     zh: '{{#def.n}}不允许超过{{=n}}个元素'
     // en: 'Additional items not allowed',
@@ -104,7 +104,7 @@ module.exports = {
     pl: 'nie powinien zawierać dodatkowych pól',
     'pt-BR': 'Não são permitidas propriedades adicionais',
     ru: 'не должно иметь дополнительные поля',
-    sk: 'nemôže mať ďalšie položky',
+    sk: 'nemôže obsahovať ďalšie položky',
     sv: 'borde inte ha fler egenskaper',
     zh: '不允许有额外的属性'
     // en: 'Additional properties not allowed',
@@ -113,7 +113,7 @@ module.exports = {
   },
   anyOf: {
     en: 'should match some schema in "anyOf"',
-    cz: 'musí vyhovět alespoň jednému schématu v "anyOf"',
+    cz: 'musí vyhovět alespoň jednomu schématu v "anyOf"',
     de: 'sollte einem der Schemata in "anyOf" entsprechen',
     es: 'debe coincidir con algún esquema en "anyOf"',
     fr: 'doit correspondre à un schéma de "anyOf"',
@@ -147,7 +147,7 @@ module.exports = {
     pl: '{{#def.n}}powinien zawierać pol{{#def.propPlural}} {{=e.params.deps}} kiedy pole {{=e.params.property}} jest obecne',
     'pt-BR': '{{#def.n}} deve ter propriedade{{#def.propPlural}} {{=e.params.deps}} quando a propriedade {{=e.params.property}} estiver presente',
     ru: '{{#def.n}}должно иметь пол{{? n==1 }}е{{??}}я{{?}} {{=e.params.deps}}, когда присутствует поле {{=e.params.property}}',
-    sk: '{{#def.n}} musí mať polož{{#def.propPlural}}: {{=e.params.deps}}, ak obsahuje {{=e.params.property}}',
+    sk: '{{#def.n}} musí obsahovať polož{{#def.propPlural}}: {{=e.params.deps}}, ak obsahuje {{=e.params.property}}',
     sv: '{{#def.n}}borde ha egenskap{{#def.propPlural}} {{=e.params.deps}} när egenskap {{=e.params.property}} finns tillgängligt',
     zh: '{{#def.n}}应当拥有属性{{=e.params.property}}的依赖属性{{=e.params.deps}}'
     // en: 'Dependency failed - key must exist: {missing} (due to key: {key})',
@@ -187,7 +187,7 @@ module.exports = {
     pl: 'powinien zgadzać się z formatem "{{=e.params.format}}"',
     'pt-BR': 'A validação do formato falhou "{{=e.params.format}}"',
     ru: 'должно соответствовать формату "{{=e.params.format}}"',
-    sk: 'musí mať formát "{{=e.params.format}}"',
+    sk: 'musí obsahovať formát "{{=e.params.format}}"',
     sv: 'borde matcha formatet "{{=e.params.format}}"',
     zh: '应当匹配格式 "{{=e.params.format}}"'
     // en: 'Format validation failed ({message})',
@@ -242,7 +242,7 @@ module.exports = {
   },
   maxItems: {
     en: '{{#def.n}}should not have more than {{=n}} item{{#def.mPlural}}',
-    cz: '{{#def.n}}nesmí mýt víc než {{=n}} prv{{#def.mPlural}}',
+    cz: '{{#def.n}}nesmí obsahovat víc než {{=n}} prv{{#def.mPlural}}',
     de: '{{#def.n}}sollte nicht mehr als {{=n}} Element{{#def.mPlural}} haben',
     es: '{{#def.n}}no debe contener más de {{=n}} elemento{{#def.mPlural}}',
     fr: '{{#def.n}}ne doit pas contenir plus de {{=n}} élément{{#def.mPlural}}',
@@ -253,7 +253,7 @@ module.exports = {
     pl: '{{#def.n}}nie powinien mieć więcej niż {{=n}} element{{#def.mPlural}}',
     'pt-BR': '{{#def.n}}não deve ter mais que {{=n}} elemento{{#def.mPlural}}',
     ru: '{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}',
-    sk: '{{#def.n}}nesmie mať viac než {{=n}} prv{{#def.mPlural}}',
+    sk: '{{#def.n}}nesmie obsahovať viac než {{=n}} prv{{#def.mPlural}}',
     sv: '{{#def.n}}borde inte ha fler än {{=n}} sak{{#def.mPlural}}',
     zh: '{{#def.n}}不应多于 {{=n}} 个项'
     // en: 'Array is too long ({length}), maximum {maximum}',
@@ -262,7 +262,7 @@ module.exports = {
   },
   minItems: {
     en: '{{#def.n}}should not have less than {{=n}} item{{#def.mPlural}}',
-    cz: '{{#def.n}}nesmí mýt méně než {{=n}} prv{{#def.mPlural}}',
+    cz: '{{#def.n}}nesmí obsahovat méně než {{=n}} prv{{#def.mPlural}}',
     de: '{{#def.n}}sollte nicht weniger als {{=n}} Element{{#def.mPlural}} haben',
     es: '{{#def.n}}no debe contener menos de {{=n}} elemento{{#def.mPlural}}',
     fr: '{{#def.n}}ne doit pas contenir moins de {{=n}} élément{{#def.mPlural}}',
@@ -273,7 +273,7 @@ module.exports = {
     pl: '{{#def.n}}nie powinien mieć mniej niż {{=n}} element{{#def.mPlural}}',
     'pt-BR': '{{#def.n}}não deve ter menos que {{=n}} elemento{{#def.mPlural}}',
     ru: '{{#def.n}}должно иметь не менее, чем {{=n}} элемент{{#def.mPlural}}',
-    sk: '{{#def.n}}nesmie mať menej než {{=n}} prv{{#def.mPlural}}',
+    sk: '{{#def.n}}nesmie obsahovať menej než {{=n}} prv{{#def.mPlural}}',
     sv: '{{#def.n}}borde inte ha färre än {{=n}} sak{{#def.mPlural}}',
     zh: '{{#def.n}}不应少于 {{=n}} 个项'
     // en: 'Array is too short ({length}), minimum {minimum}',
@@ -333,7 +333,7 @@ module.exports = {
     pl: '{{#def.n}}nie powinien zawierać więcej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
     'pt-BR': '{{#def.n}}não deve ter mais que {{=n}} propriedade{{#def.propPlural}}',
     ru: '{{#def.n}}должно иметь не более, чем {{=n}} пол{{#def.propPlural}}',
-    sk: '{{#def.n}}nesmie mať viac než {{=n}} polož{{#def.propPlural}}',
+    sk: '{{#def.n}}nesmie obsahovať viac než {{=n}} polož{{#def.propPlural}}',
     sv: '{{#def.n}}borde inte ha fler än {{=n}} egenskap{{#def.propPlural}}',
     zh: '{{#def.n}}不应有多于 {{=n}} 个属性'
     // en: 'Too many properties defined ({propertyCount}), maximum {maximum}',
@@ -353,7 +353,7 @@ module.exports = {
     pl: '{{#def.n}}nie powinien zawierać mniej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
     'pt-BR': '{{#def.n}}não deve ter menos que {{=n}} propriedade{{#def.propPlural}}',
     ru: '{{#def.n}}должно иметь не менее, чем {{=n}} пол{{#def.propPlural}}',
-    sk: '{{#def.n}}nesmie mať menej než {{=n}} polož{{#def.propPlural}}',
+    sk: '{{#def.n}}nesmie obsahovať menej než {{=n}} polož{{#def.propPlural}}',
     sv: '{{#def.n}}borde inte ha färre än {{=n}} egenskap{{#def.propPlural}}',
     zh: '{{#def.n}}不应有少于 {{=n}} 个属性'
     // en: 'Too few properties defined ({propertyCount}), minimum {minimum}',
@@ -402,7 +402,7 @@ module.exports = {
   },
   oneOf: {
     en: 'should match exactly one schema in "oneOf"',
-    cz: 'musí vyhovět právě jednému schématu v "oneOf"',
+    cz: 'musí vyhovět právě jednomu schématu v "oneOf"',
     de: 'sollte genau einem der Schemata in "oneOf" entsprechen',
     es: 'debe coincidir con un solo esquema en "oneOf"',
     fr: 'doit correspondre à exactement un schéma de "oneOf"',
@@ -442,7 +442,7 @@ module.exports = {
   },
   required: {
     en: 'should have required property {{=e.params.missingProperty}}',
-    cz: 'musí mýt požadovanou položku {{=e.params.missingProperty}}',
+    cz: 'musí obsahovat požadovanou položku {{=e.params.missingProperty}}',
     de: 'sollte das erforderliche Attribut {{=e.params.missingProperty}} enthalten',
     es: 'debe tener la propiedad requerida {{=e.params.missingProperty}}',
     fr: 'requiert la propriété {{=e.params.missingProperty}}',
@@ -453,7 +453,7 @@ module.exports = {
     pl: 'powinien zawierać wymagane pole {{=e.params.missingProperty}}',
     'pt-BR': 'deve ter a propriedade requerida {{=e.params.missingProperty}}',
     ru: 'должно иметь обязательное поле {{=e.params.missingProperty}}',
-    sk: 'musí mať požadovanú položku {{=e.params.missingProperty}}',
+    sk: 'musí obsahovať požadovanú položku {{=e.params.missingProperty}}',
     sv: 'borde ha den nödvändiga egenskapen {{=e.params.missingProperty}}',
     zh: '应当有必需属性 {{=e.params.missingProperty}}'
     // en: 'Missing required property: {key}',
@@ -485,7 +485,7 @@ module.exports = {
   },
   uniqueItems: {
     en: 'should not have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)',
-    cz: 'nesmí mýt duplicitní prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} jsou stejné)',
+    cz: 'nesmí obsahovat duplicitní prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} jsou stejné)',
     de: 'sollte keine Duplikate enthalten (Elemente #{{=e.params.j}} und #{{=e.params.i}} sind gleich)',
     es: 'no debe contener elementos duplicados, (los elementos ## {{=e.params.j}} y {{=e.params.i}} son idénticos)',
     fr: 'ne doit pas contenir de doublons (les éléments ## {{=e.params.j}} et {{=e.params.i}} sont identiques)',
@@ -496,7 +496,7 @@ module.exports = {
     pl: 'nie powinien zawierać elementów które się powtarzają (elementy {{=e.params.j}} i {{=e.params.i}} są identyczne)',
     'pt-BR': 'não deve ter itens duplicados (os itens ## {{=e.params.j}} e {{=e.params.i}} são idênticos)',
     ru: 'не должно иметь повторяющихся элементов (элементы {{=e.params.j}} и {{=e.params.i}} идентичны)',
-    sk: 'nesmie mať duplicitné prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} sú rovnaké)',
+    sk: 'nesmie obsahovať duplicitné prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} sú rovnaké)',
     sv: 'borde inte ha duplicerade saker (sakerna ## {{=e.params.j}} och {{=e.params.i}} är identiska)',
     zh: '不应当含有重复项 (第 {{=e.params.j}} 项与第 {{=e.params.i}} 项是重复的)'
     // en: 'Array items are not unique (indices {match1} and {match2})',
@@ -519,7 +519,7 @@ module.exports = {
   },
   patternGroups: {
     en: '{{#def.n}}should have {{=e.params.reason}} {{=n}} propert{{#def.propPlural}} matching pattern "{{=e.params.pattern}}"',
-    cz: '{{#def.n}}musí mýt {{=e.params.reason}} {{=n}} polož{{#def.propPlural}} vyhovující regulárnímu výrazu "{{=e.params.pattern}}"',
+    cz: '{{#def.n}}musí obsahovat {{=e.params.reason}} {{=n}} polož{{#def.propPlural}} vyhovující regulárnímu výrazu "{{=e.params.pattern}}"',
     de: '{{#def.n}}sollte {{=e.params.reason}} {{=n}} Attribut{{#def.propPlural}} nach folgendem Muster haben "{{=e.params.pattern}}"',
     es: '{{#def.n}}debe tener {{=e.params.reason}} {{=n}} propiedad{{#def.propPlural}} coincidente{{#def.mPlural}} con el patrón "{{=e.params.pattern}}"',
     fr: '{{#def.n}}doit avoir {{=e.params.reason}} {{=n}} propriété{{#def.propPlural}} correspondant au format "{{=e.params.pattern}}"',
@@ -527,7 +527,7 @@ module.exports = {
     pl: '{{#def.n}}powinien mieć {{=e.params.reason}} {{=n}} pol{{#def.propPlural}} pasujące do wzorca "{{=e.params.pattern}}"',
     'pt-BR': '{{#def.n}}deve ter {{=e.params.reason}} {{=n}} propriedade{{# def.propPlural}} padrão de correspondência "{{=e.params.pattern}}"',
     ru: '{{#def.n}}должно иметь {{=e.params.reason}} {{=n}} пол{{#def.propPlural}}, соответствующих образцу "{{=e.params.pattern}}"',
-    sk: '{{#def.n}}musí mať {{=e.params.reason}} {{=n}} polož{{#def.propPlural}} splňjúcu regulárny výraz "{{=e.params.pattern}}"',
+    sk: '{{#def.n}}musí obsahovať {{=e.params.reason}} {{=n}} polož{{#def.propPlural}} splňjúcu regulárny výraz "{{=e.params.pattern}}"',
     sv: '{{#def.n}}bör ha {{=e.params.reason}} {{=n}} egenskap{{#def.propPlural}} som matchar mönstret "{{=e.params.pattern}}"',
     zh: '{{#def.n}}应当有 {{=n}} 个 {{=e.params.reason}} 属性满足模式 {{=e.params.pattern}}'
   },
@@ -542,7 +542,7 @@ module.exports = {
   },
   patternRequired: {
     en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
-    cz: 'musí mýt položku vyhovující regulárnímu výrazu "{{=e.params.missingPattern}}"',
+    cz: 'musí obsahovat položku vyhovující regulárnímu výrazu "{{=e.params.missingPattern}}"',
     de: 'sollte ein Attribut nach folgendem Muster haben "{{=e.params.missingPattern}}"',
     es: 'la propiedad debe coincidir con el patrón "{{=e.params.missingPattern}}"',
     fr: 'la propriété doit correspondre au format "{{=e.params.missingPattern}}"',
@@ -550,7 +550,7 @@ module.exports = {
     pl: 'powinien mieć pole pasujące do wzorca "{{=e.params.missingPattern}}"',
     'pt-BR': 'deve ter a propriedade de padrão de correspondência "{{=e.params.missingPattern}}"',
     ru: 'должно иметь поле, соответствующее образцу "{{=e.params.missingPattern}}"',
-    sk: 'musí mať položku splňjúcu regulárny výraz "{{=e.params.missingPattern}}"',
+    sk: 'musí obsahovať položku splňjúcu regulárny výraz "{{=e.params.missingPattern}}"',
     sv: 'bör ha en egenskap som matchar mönstret "{{=e.params.missingPattern}}"',
     zh: '应当有属性匹配模式 {{=e.params.missingPattern}}'
   },

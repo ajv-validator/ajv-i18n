@@ -464,7 +464,7 @@ module.exports = {
   },
   required: {
     en: 'should have required property {{=e.params.missingProperty}}',
-    ar: 'يحب أن يكون إلزامي {{=e.params.missingProperty}}',
+    ar: 'هذا الحقل إلزامي',
     cz: 'musí obsahovat požadovanou položku {{=e.params.missingProperty}}',
     de: 'sollte das erforderliche Attribut {{=e.params.missingProperty}} enthalten',
     es: 'debe tener la propiedad requerida {{=e.params.missingProperty}}',
@@ -488,7 +488,7 @@ module.exports = {
       t: '{{var t = e.params.type;}}'
     },
     en: 'should be {{=e.params.type}}',
-    ar: 'يجب أن يكون {{=e.params.type}}',
+    ar: 'قيمة هذا الحقل غير صالحة',
     cz: 'musí být {{=e.params.type}}',
     de: 'sollte sein: {{=e.params.type}}',
     es: 'debe ser {{=e.params.type}}',

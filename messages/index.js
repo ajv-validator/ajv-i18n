@@ -164,7 +164,7 @@ module.exports = {
   },
   enum: {
     en: 'should be equal to one of predefined values',
-    ar: 'يجب أن يكون مساوياً لأاحد القيم المعرفة مسبقاً',
+    ar: 'قيمة هذا الحقل يجب أن تكون مساوية لأحد القيم المعرفة مسبقاً',
     cz: 'musí být rovna jedné hodnotě z výčtu',
     de: 'sollte einem der vorgegebenen Werte entsprechen',
     es: 'deber ser igual a uno de los valores predefinidos',

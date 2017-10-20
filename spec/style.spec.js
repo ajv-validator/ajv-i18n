@@ -1,10 +1,15 @@
 'use strict';
 
 var messages = require('../messages');
+var localize = require('../localize');
 var assert = require('assert');
 
 
 describe('code style: ordering of locales', function() {
+  it('locales in index.js should be ordered (en first)', function() {
+    testLocalesProperties(localize);
+  });
+
   it('_locales should be ordered (en first)', function () {
     testLocalesOrder(messages._locales);
   });

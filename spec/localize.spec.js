@@ -4,7 +4,7 @@ var localize = require('../localize');
 
 var jsonSchemaTest = require('json-schema-test');
 var Ajv = require('ajv');
-var ajvKeywords = require('ajv-keywords')
+var ajvKeywords = require('ajv-keywords');
 var assert = require('assert');
 
 var remoteRefs = {
@@ -15,7 +15,7 @@ var remoteRefs = {
 };
 
 var suites = testSuites();
-for (var suite in suites) runTests(suite);
+for (var s in suites) runTests(s);
 
 function runTests(suite) {
   var instances = [
@@ -27,9 +27,8 @@ function runTests(suite) {
 
   instances.forEach(function (ajv) {
     addRemoteRefs(ajv);
-    if (suite != 'draft-06') {
+    if (suite != 'draft-06')
       ajv._opts.defaultMeta = 'http://json-schema.org/draft-04/schema#';
-    }
   });
 
   var tests = {};
@@ -55,35 +54,36 @@ function getAjv(allErrors, verbose) {
     patternGroups: true,
     unknownFormats: ['allowedUnknown'],
     allErrors: allErrors,
-    verbose: allErrors
+    verbose: verbose
   });
   ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04.json'));
   ajvKeywords(ajv, ['switch', 'patternRequired', 'formatMinimum', 'formatMaximum']);
-  ajv.addKeyword('constant', { macro: function(x) { return { const: x }; } })
+  ajv.addKeyword('constant', { macro: function(x) { return { const: x }; } });
   return ajv;
 }
 
 
 function testSuites() {
+  var _suites;
   if (typeof window == 'object') {
-    var suites = {
+    _suites = {
       'draft-04': require('./JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json', {mode: 'list'}),
       'draft-06': require('./JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json', {mode: 'list'}),
       'ajv tests': require('./ajv/spec/v5/*.json', {mode: 'list'})
     };
-    for (var suiteName in suites) {
-      suites[suiteName].forEach(function(suite) {
+    for (var suiteName in _suites) {
+      _suites[suiteName].forEach(function(suite) {
         suite.test = suite.module;
       });
     }
   } else {
-    var suites = {
+    _suites = {
       'draft-04': './JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json',
       'draft-06': './JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json',
       'ajv tests': './ajv/spec/v5/*.json'
-    }
+    };
   }
-  return suites;
+  return _suites;
 }
 
 function afterEach(res) {

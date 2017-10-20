@@ -1,0 +1,4 @@
+rules:
+  no-console: 0
+  no-empty: [2, allowEmptyCatch: true]
+  dot-notation: [2, allowPattern: "^en$"]

@@ -59,7 +59,7 @@ function localeMessages(locale) {
 
   locMsgs.sort(byKeyword);
   return locMsgs;
-};
+}
 
 
 function getLocalDefs(defs, locale) {

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	ar: require('./ar'),
+    ar: require('./ar'),
     cz: require('./cz'),
     de: require('./de'),
     en: require('./en'),

@@ -14,6 +14,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |locale|language |contributor|draft-04|Ajv v5<sup>\*</sup>|draft-06|
 |------|:-------:|:---------:|:------:|:------:|:------:|
 |🇬🇧 en|English  | |✓|✓|✓|
+|AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|✓|
 |🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|✓|
 |🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|✓|✓|
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|-|
@@ -21,6 +22,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|
 |🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|✓|-|-|
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
+|🇳🇴 no|Norwegian|[mtramm](https://github.com/mtramm)|✓|✓|✓|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|✓|-|
 |🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)|✓|✓|-|
 |🇷🇺 ru|Russian  | |✓|✓|✓|
@@ -115,8 +117,10 @@ Functions that localize error messages are generated using doT templates in [mes
 [![limmen](https://avatars2.githubusercontent.com/u/8254791?v=3&s=40)](https://github.com/Limmen "Limmen")
 [![jinzhubaofu](https://avatars2.githubusercontent.com/u/811195?v=3&s=40)](https://github.com/jinzhubaofu "jinzhubaofu")
 [![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=40)](https://github.com/kiskovacs "kiskovacs")
+[![mahmoud-mardeni](https://avatars2.githubusercontent.com/u/19661270?s=40&v=3)](https://github.com/Mahmoud-Mardeni "mahmoud-mardeni")
 [![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=40)](https://github.com/monlouisj "monlouisj")
 [![marcosrava](https://avatars2.githubusercontent.com/u/243790?v=3&s=40)](https://github.com/marcosrava "marcosrava")
+[![mtramm](https://avatars3.githubusercontent.com/u/3519541?v=3&s=40)](https://github.com/mtramm "mtramm")
 
 
 ## License

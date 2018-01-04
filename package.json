@@ -43,7 +43,7 @@
     "ajv": "^5.1.5",
     "ajv-keywords": "^2.1.0",
     "brfs": "^1.4.3",
-    "browserify": "^14.1.0",
+    "browserify": "^15.0.0",
     "coveralls": "^3.0.0",
     "dot": "^1.0.3",
     "eslint": "^4.9.0",

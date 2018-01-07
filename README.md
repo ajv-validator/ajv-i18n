@@ -118,7 +118,7 @@ Functions that localize error messages are generated using doT templates in [mes
 [![jpablom](https://avatars0.githubusercontent.com/u/3935083?v=3&s=40)](https://github.com/jpablom "jpablom")
 [![limmen](https://avatars2.githubusercontent.com/u/8254791?v=3&s=40)](https://github.com/Limmen "Limmen")
 [![jinzhubaofu](https://avatars2.githubusercontent.com/u/811195?v=3&s=40)](https://github.com/jinzhubaofu "jinzhubaofu")
-[![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=40)](https://github.com/kiskovacs "kiskovacs")
+[<img src="https://avatars1.githubusercontent.com/u/2733311?v=3&s=40" width="40" height="40">](https://github.com/kiskovacs "kiskovacs")
 [![mahmoud-mardeni](https://avatars2.githubusercontent.com/u/19661270?s=40&v=3)](https://github.com/Mahmoud-Mardeni "mahmoud-mardeni")
 [![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=40)](https://github.com/monlouisj "monlouisj")
 [![marcosrava](https://avatars2.githubusercontent.com/u/243790?v=3&s=40)](https://github.com/marcosrava "marcosrava")

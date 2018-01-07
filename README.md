@@ -11,24 +11,28 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 
 ## Supported locales
 
-|locale|language |contributor|draft-04|draft-06|
-|------|:-------:|:---------:|:------:|:------:|
-|🇬🇧 en|English  | |✓|✓|
-|AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|
-|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|
-|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|✓|
-|🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|-|
-|🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|✓|-|
-|🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|
-|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|✓|-|
-|🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|
-|🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|
-|🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|
-|🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)|✓|-|
-|🇷🇺 ru|Russian  | |✓|✓|
-|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|
-|🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|
-|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|✓|-|
+|locale|language |contributor|draft-04|draft-06<sup>\*</sup>|draft-07<sup>\*\*</sup>|
+|------|:-------:|:---------:|:------:|:------:|:------:|
+|🇬🇧 en|English  | |✓|✓|✓|
+|AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|-|
+|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
+|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|✓|-|
+|🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|-|-|
+|🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|✓|-|-|
+|🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|
+|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|✓|-|-|
+|🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
+|🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|
+|🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|
+|🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)|✓|-|-|
+|🇷🇺 ru|Russian  | |✓|✓|✓|
+|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
+|🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|
+|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|✓|-|-|
+
+<sup>\*</sup> added boolean schema, keywords `const`, `contains`, `propertyNames`
+
+<sup>\*\*</sup> added keywords `if`/`then`/`else`
 
 Please contribute locales that you need to use if they are missing or incomplete.
 

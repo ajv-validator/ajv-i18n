@@ -14,6 +14,22 @@ var remoteRefs = {
   'http://localhost:1234/name.json': require('./JSON-Schema-Test-Suite/remotes/name.json')
 };
 
+var SKIP = {
+  'draft-04': ['optional/zeroTerminatedFloats'],
+  'draft-07': [
+    'format/idn-email',
+    'format/idn-hostname',
+    'format/iri',
+    'format/iri-reference',
+    'optional/content'
+  ]
+};
+
+var DEFAULT_META = {
+  'draft-04': 'http://json-schema.org/draft-04/schema#',
+  'draft-06': 'http://json-schema.org/draft-06/schema#'
+};
+
 var suites = testSuites();
 for (var s in suites) runTests(s);
 
@@ -27,8 +43,8 @@ function runTests(suite) {
 
   instances.forEach(function (ajv) {
     addRemoteRefs(ajv);
-    if (suite != 'draft-06')
-      ajv._opts.defaultMeta = 'http://json-schema.org/draft-04/schema#';
+    if (DEFAULT_META[suite])
+      ajv._opts.defaultMeta = DEFAULT_META[suite];
   });
 
   var tests = {};
@@ -38,7 +54,7 @@ function runTests(suite) {
     description: 'Schema tests of ' + instances.length + ' ajv instances with option i18n',
     suites: tests,
     afterEach: afterEach,
-    skip: suite == 'draft-04' ? ['optional/zeroTerminatedFloats'] : [],
+    skip: SKIP[suite],
     assert: assert,
     cwd: __dirname,
     hideFolder: 'draft4/',
@@ -54,11 +70,12 @@ function getAjv(allErrors, verbose) {
     patternGroups: true,
     unknownFormats: ['allowedUnknown'],
     allErrors: allErrors,
-    verbose: verbose
+    verbose: verbose,
+    schemaId: 'auto'
   });
   ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04.json'));
+  ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-06.json'));
   ajvKeywords(ajv, ['switch', 'patternRequired', 'formatMinimum', 'formatMaximum']);
-  ajv.addKeyword('constant', { macro: function(x) { return { const: x }; } });
   return ajv;
 }
 
@@ -69,10 +86,12 @@ function testSuites() {
     _suites = {
       'draft-04': require('./JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json', {mode: 'list'}),
       'draft-06': require('./JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json', {mode: 'list'}),
-      'ajv tests': require('./ajv/spec/v5/*.json', {mode: 'list'})
+      'draft-07': require('./JSON-Schema-Test-Suite/tests/draft7/{**/,}*.json', {mode: 'list'})
     };
     for (var suiteName in _suites) {
       _suites[suiteName].forEach(function(suite) {
+        if (suite.name.indexOf('optional/format') == 0)
+          suite.name = suite.name.replace('optional/', '');
         suite.test = suite.module;
       });
     }
@@ -80,7 +99,8 @@ function testSuites() {
     _suites = {
       'draft-04': './JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json',
       'draft-06': './JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json',
-      'ajv tests': './ajv/spec/v5/*.json'
+      'draft-07': './JSON-Schema-Test-Suite/tests/draft7/{**/,}*.json',
+      'ajv-keywords': './ajv-keywords/spec/tests/{format*,patternRequired,switch}.json'
     };
   }
   return _suites;

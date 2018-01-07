@@ -543,21 +543,6 @@ module.exports = {
     sv: 'bör passera "{{=e.keyword}}" nyckelord validering',
     zh: '应当通过 "{{=e.keyword}} 关键词校验"'
   },
-  patternGroups: {
-    en: '{{#def.n}}should have {{=e.params.reason}} {{=n}} propert{{#def.propPlural}} matching pattern "{{=e.params.pattern}}"',
-    ar: '{{#def.n}} يجب أن يحوي {{=e.params.reason}}{{=n}} خصائص توافق النمط "{{=e.params.pattern}}"',
-    cz: '{{#def.n}}musí obsahovat {{=e.params.reason}} {{=n}} polož{{#def.propPlural}} vyhovující regulárnímu výrazu "{{=e.params.pattern}}"',
-    de: '{{#def.n}}sollte {{=e.params.reason}} {{=n}} Attribut{{#def.propPlural}} nach folgendem Muster haben "{{=e.params.pattern}}"',
-    es: '{{#def.n}}debe tener {{=e.params.reason}} {{=n}} propiedad{{#def.propPlural}} coincidente{{#def.mPlural}} con el patrón "{{=e.params.pattern}}"',
-    fr: '{{#def.n}}doit avoir {{=e.params.reason}} {{=n}} propriété{{#def.propPlural}} correspondant au format "{{=e.params.pattern}}"',
-    no: '{{#def.n}}må ha {{=e.params.reason}} {{=n}} egenskap{{#def.mPlural}} som samsvarer med mønsteret "{{=e.params.pattern}}"',
-    pl: '{{#def.n}}powinien mieć {{=e.params.reason}} {{=n}} pol{{#def.propPlural}} pasujące do wzorca "{{=e.params.pattern}}"',
-    'pt-BR': '{{#def.n}}deve ter {{=e.params.reason}} {{=n}} propriedade{{# def.propPlural}} padrão de correspondência "{{=e.params.pattern}}"',
-    ru: '{{#def.n}}должно иметь {{=e.params.reason}} {{=n}} пол{{#def.propPlural}}, соответствующих образцу "{{=e.params.pattern}}"',
-    sk: '{{#def.n}}musí obsahovať {{=e.params.reason}} {{=n}} polož{{#def.propPlural}} splňjúcu regulárny výraz "{{=e.params.pattern}}"',
-    sv: '{{#def.n}}bör ha {{=e.params.reason}} {{=n}} egenskap{{#def.propPlural}} som matchar mönstret "{{=e.params.pattern}}"',
-    zh: '{{#def.n}}应当有 {{=n}} 个 {{=e.params.reason}} 属性满足模式 {{=e.params.pattern}}'
-  },
   propertyNames: {
     en: 'property name \'{{=e.params.propertyName}}\' is invalid',
     ar: 'اسم الخاصية \'{{=e.params.propertyName}}\' غير صالح',

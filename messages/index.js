@@ -597,21 +597,6 @@ module.exports = {
     sv: 'bör vara en konstant',
     zh: '应当等于常量'
   },
-  constant: {
-    en: 'should be equal to constant',
-    ar: 'يجب أن يكون غير ثاباً',
-    cz: 'musí být konstantní',
-    de: 'sollte der Konstante entsprechen',
-    es: 'debe ser igual a la constante',
-    fr: 'doit être égal à la constante',
-    nb: 'må være lik konstanten',
-    pl: 'powinien być równy stałej',
-    'pt-BR': 'deve ser igual à constante',
-    ru: 'должно быть равно заданному значению',
-    sk: 'musí byť konštanta',
-    sv: 'bör vara en konstant',
-    zh: '应当等于常量'
-  },
   contains: {
     en: 'should contain a valid item',
     ar: 'يجب أن يحوي عنصرا صحيح',

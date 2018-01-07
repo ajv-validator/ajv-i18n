@@ -16,7 +16,6 @@ var remoteRefs = {
 
 var SKIP = {
   'draft-04': ['optional/zeroTerminatedFloats'],
-  'draft-06': [],
   'draft-07': [
     'format/idn-email',
     'format/idn-hostname',
@@ -24,6 +23,11 @@ var SKIP = {
     'format/iri-reference',
     'optional/content'
   ]
+};
+
+var DEFAULT_META = {
+  'draft-04': 'http://json-schema.org/draft-04/schema#',
+  'draft-06': 'http://json-schema.org/draft-06/schema#'
 };
 
 var suites = testSuites();
@@ -39,8 +43,8 @@ function runTests(suite) {
 
   instances.forEach(function (ajv) {
     addRemoteRefs(ajv);
-    if (suite != 'draft-07')
-      ajv._opts.defaultMeta = 'http://json-schema.org/' + suite + '/schema#';
+    if (DEFAULT_META[suite])
+      ajv._opts.defaultMeta = DEFAULT_META[suite];
   });
 
   var tests = {};
@@ -72,7 +76,6 @@ function getAjv(allErrors, verbose) {
   ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04.json'));
   ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-06.json'));
   ajvKeywords(ajv, ['switch', 'patternRequired', 'formatMinimum', 'formatMaximum']);
-  ajv.addKeyword('constant', { macro: function(x) { return { const: x }; } });
   return ajv;
 }
 
@@ -96,7 +99,8 @@ function testSuites() {
     _suites = {
       'draft-04': './JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json',
       'draft-06': './JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json',
-      'draft-07': './JSON-Schema-Test-Suite/tests/draft7/{**/,}*.json'
+      'draft-07': './JSON-Schema-Test-Suite/tests/draft7/{**/,}*.json',
+      'ajv-keywords': './ajv-keywords/spec/tests/{format*,patternRequired,switch}.json'
     };
   }
   return _suites;

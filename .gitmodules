@@ -1,3 +1,6 @@
 [submodule "spec/JSON-Schema-Test-Suite"]
 	path = spec/JSON-Schema-Test-Suite
 	url = https://github.com/json-schema/JSON-Schema-Test-Suite.git
+[submodule "spec/ajv-keywords"]
+	path = spec/ajv-keywords
+	url = https://github.com/epoberezkin/ajv-keywords.git

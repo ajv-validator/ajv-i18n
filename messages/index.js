@@ -703,6 +703,10 @@ module.exports = {
     sk: 'formatExclusiveMinimum musí byť boolean',
     sv: 'formatExclusiveMaximum bör vara en boolean',
     zh: 'formatExclusiveMinimum 应当是布尔值'
+  },
+  if: {
+    en: 'should match "{{=e.params.failingKeyword}}" schema',
+    ru: 'должно соответствовать схемe "{{=e.params.failingKeyword}}"'
   }
 };
 

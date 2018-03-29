@@ -687,8 +687,8 @@ module.exports = {
   },
   if: {
     en: 'should match "{{=e.params.failingKeyword}}" schema',
-    ru: 'должно соответствовать схемe "{{=e.params.failingKeyword}}"',
-    it: 'deve corrispondere allo schema "{{=e.params.failingKeyword}}"'
+    it: 'deve corrispondere allo schema "{{=e.params.failingKeyword}}"',
+    ru: 'должно соответствовать схемe "{{=e.params.failingKeyword}}"'
   }
 };
 

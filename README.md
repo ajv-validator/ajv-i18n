@@ -20,7 +20,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|-|-|
 |🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|✓|-|-|
 |🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|
-|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)|✓|-|-|
+|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>|<br>✓|<br>✓|
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
 |🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|
@@ -28,7 +28,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇷🇺 ru|Russian  | |✓|✓|✓|
 |🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|
-|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓|<br>✓|<br>✓|
+|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>|<br>✓|<br>✓|
 
 <sup>\*</sup> added boolean schema, keywords `const`, `contains`, `propertyNames`
 
@@ -125,6 +125,7 @@ Functions that localize error messages are generated using doT templates in [mes
 [![mtramm](https://avatars3.githubusercontent.com/u/3519541?v=3&s=40)](https://github.com/mtramm "mtramm")
 [![Mahmoud-Mardeni](https://avatars3.githubusercontent.com/u/19661270?v=3&s=40)](https://github.com/Mahmoud-Mardeni "Mahmoud-Mardeni")
 [![leuction](https://avatars3.githubusercontent.com/u/8056270?v=3&s=40)](https://github.com/leuction "leuction")
+[![lucacorti](https://avatars2.githubusercontent.com/u/1076999?v=3&s=40)](https://github.com/lucacorti "lucacorti")
 
 
 ## License

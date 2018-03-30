@@ -20,7 +20,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|-|-|
 |🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|✓|-|-|
 |🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|
-|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>|<br>✓|<br>✓|
+|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>&nbsp;|<br>✓|<br>✓|
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
 |🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|
@@ -28,7 +28,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇷🇺 ru|Russian  | |✓|✓|✓|
 |🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|
-|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>|<br>✓|<br>✓|
+|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>&nbsp;|<br>✓|<br>✓|
 
 <sup>\*</sup> added boolean schema, keywords `const`, `contains`, `propertyNames`
 

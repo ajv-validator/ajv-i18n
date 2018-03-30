@@ -28,7 +28,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇷🇺 ru|Russian  | |✓|✓|✓|
 |🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|
-|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)|✓|-|-|
+|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓|<br>✓|<br>✓|
 
 <sup>\*</sup> added boolean schema, keywords `const`, `contains`, `propertyNames`
 
@@ -124,6 +124,7 @@ Functions that localize error messages are generated using doT templates in [mes
 [![marcosrava](https://avatars2.githubusercontent.com/u/243790?v=3&s=40)](https://github.com/marcosrava "marcosrava")
 [![mtramm](https://avatars3.githubusercontent.com/u/3519541?v=3&s=40)](https://github.com/mtramm "mtramm")
 [![Mahmoud-Mardeni](https://avatars3.githubusercontent.com/u/19661270?v=3&s=40)](https://github.com/Mahmoud-Mardeni "Mahmoud-Mardeni")
+[![leuction](https://avatars3.githubusercontent.com/u/8056270?v=3&s=40)](https://github.com/leuction "leuction")
 
 
 ## License

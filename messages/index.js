@@ -55,7 +55,8 @@ module.exports = {
     nb: 'boolsk schema er usannt',
     ru: 'схема равна false',
     sk: 'schéma je false',
-    sv: 'boolean schema är falskt'
+    sv: 'boolean schema är falskt',
+    zh: '布尔模式出错'
   },
   $ref: {
     en: 'can\\\'t resolve reference {{=e.params.ref}}',
@@ -551,7 +552,8 @@ module.exports = {
     nb: 'egenskapen med navnet \'{{e.params.propertyName}}\' er ugyldig',
     ru: 'имя поля \'{{=e.params.propertyName}}\' не соответствует схеме',
     sk: 'názov položky \'{{=e.params.propertyName}}\' nezodpovedá schéme',
-    sv: 'egenskap med namnet \'{{=e.params.propertyName}}\' är inte giltig'
+    sv: 'egenskap med namnet \'{{=e.params.propertyName}}\' är inte giltig',
+    zh: '属性名 \'{{=e.params.propertyName}}\' 无效',
   },
   patternRequired: {
     en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
@@ -606,7 +608,8 @@ module.exports = {
     'pt-BR': 'deve conter um item válido',
     ru: 'должно содержать значение соответствующее схеме',
     sk: 'musí obsahovať prvok zodpovedajúci schéme',
-    sv: 'bör innehålla ett giltigt objekt'
+    sv: 'bör innehålla ett giltigt objekt',
+    zh: '应当包含一个有效项'
   },
   formatMaximum: {
     _defs: {
@@ -676,7 +679,8 @@ module.exports = {
   },
   if: {
     en: 'should match "{{=e.params.failingKeyword}}" schema',
-    ru: 'должно соответствовать схемe "{{=e.params.failingKeyword}}"'
+    ru: 'должно соответствовать схемe "{{=e.params.failingKeyword}}"',
+    zh: '应当匹配模式 "{{=e.params.failingKeyword}}" '
   }
 };
 

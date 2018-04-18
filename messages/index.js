@@ -690,6 +690,7 @@ module.exports = {
   },
   if: {
     en: 'should match "{{=e.params.failingKeyword}}" schema',
+    ar: 'يجب أن توافق المخطط "{{=e.params.failingKeyword}}"',
     it: 'deve corrispondere allo schema "{{=e.params.failingKeyword}}"',
     ru: 'должно соответствовать схемe "{{=e.params.failingKeyword}}"',
     zh: '应当匹配模式 "{{=e.params.failingKeyword}}" '

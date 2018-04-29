@@ -47,6 +47,7 @@ module.exports = {
     en: 'boolean schema is false',
     cz: 'schéma je false',
     de: 'boolsches Schema ist falsch',
+    fr: 'le schema est incorrect',
     ru: 'схема равна false',
     sk: 'schéma je false',
     sv: 'boolean schema är falskt'
@@ -505,6 +506,7 @@ module.exports = {
     en: 'property name \'{{=e.params.propertyName}}\' is invalid',
     cz: 'název položky \'{{=e.params.propertyName}}\' neodpovídá schématu',
     de: 'Attributname \'{{=e.params.propertyName}}\' ist ungültig',
+    fr: 'le nom de propriété \'{{=e.params.propertyName}}\' est invalide',
     ru: 'имя поля \'{{=e.params.propertyName}}\' не соответствует схеме',
     sk: 'názov položky \'{{=e.params.propertyName}}\' nezodpovedá schéme',
     sv: 'egenskap med namnet \'{{=e.params.propertyName}}\' är inte giltig'
@@ -564,6 +566,7 @@ module.exports = {
     en: 'should contain a valid item',
     cz: 'musí obsahovat prvek odpovídající schématu',
     de: 'sollte ein valides Element enthalten',
+    fr: 'doit contenir un élément valide',
     'pt-BR': 'deve conter um item válido',
     ru: 'должно содержать значение соответствующее схеме',
     sk: 'musí obsahovať prvok zodpovedajúci schéme',

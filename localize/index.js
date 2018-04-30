@@ -16,5 +16,6 @@ module.exports = {
     ru: require('./ru'),
     sk: require('./sk'),
     sv: require('./sv'),
-    zh: require('./zh')
+    zh: require('./zh'),
+    'zh-TW': require('./zh-TW'),
 };

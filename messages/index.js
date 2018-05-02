@@ -164,7 +164,7 @@ module.exports = {
     ru: '{{#def.n}}должно иметь пол{{? n==1 }}е{{??}}я{{?}} {{=e.params.deps}}, когда присутствует поле {{=e.params.property}}',
     sk: '{{#def.n}} musí obsahovať polož{{#def.propPlural}}: {{=e.params.deps}}, ak obsahuje {{=e.params.property}}',
     sv: '{{#def.n}}borde ha egenskap{{#def.propPlural}} {{=e.params.deps}} när egenskap {{=e.params.property}} finns tillgängligt',
-    th: 'เมื่อ {{#def.n}} มี property {{=e.params.property}} แล้วก็ควรมี property {{=e.params.deps}} ด้วย',
+    th: '{{#def.n}}เมื่อมี property {{=e.params.property}} แล้วก็ควรมี property {{=e.params.deps}} ด้วย',
     zh: '{{#def.n}}应当拥有属性{{=e.params.property}}的依赖属性{{=e.params.deps}}'
     // en: 'Dependency failed - key must exist: {missing} (due to key: {key})',
     // nb: 'Variabelen {missing} må være definert (på grunn av følgende variabel: {key})',
@@ -233,7 +233,7 @@ module.exports = {
     ru: '{{#def.c}}должно быть {{=cond}}',
     sk: '{{#def.c}}musí byť {{=cond}}',
     sv: '{{#def.c}}borde vara {{=cond}}',
-    th: '{{#def.c}}ควร{{=cond}}',
+    th: '{{#def.c}}ควร {{=cond}}',
     zh: '{{#def.c}}应当为 {{=cond}}'
     // en: 'Value {value} is greater than maximum {maximum}',
     // nb: 'Verdien {value} er større enn maksimalverdi {maximum}',
@@ -258,7 +258,7 @@ module.exports = {
     ru: '{{#def.c}}должно быть {{=cond}}',
     sk: '{{#def.c}}musí byť {{=cond}}',
     sv: '{{#def.c}}borde vara {{=cond}}',
-    th: '{{#def.c}}ควร{{=cond}}',
+    th: '{{#def.c}}ควร {{=cond}}',
     zh: '{{#def.c}}应当为 {{=cond}}'
     // en: 'Value {value} is less than minimum {minimum}',
     // nb: 'Verdien {value} er mindre enn minsteverdi {minimum}',
@@ -664,7 +664,7 @@ module.exports = {
     ru: '{{#def.c}}должно быть {{=cond}}',
     sk: '{{#def.c}}musí byť {{=cond}}',
     sv: '{{#def.c}}bör vara {{=cond}}',
-    th: '{{#def.c}}ควร{{=cond}}',
+    th: '{{#def.c}}ควร {{=cond}}',
     zh: '{{#def.c}}应当是 {{=cond}}'
   },
   formatMinimum: {
@@ -684,7 +684,7 @@ module.exports = {
     ru: '{{#def.c}}должно быть {{=cond}}',
     sk: '{{#def.c}}musí byť {{=cond}}',
     sv: '{{#def.c}}bör vara {{=cond}}',
-    th: '{{#def.c}}ควร{{=cond}}',
+    th: '{{#def.c}}ควร {{=cond}}',
     zh: '{{#def.c}}应当是 {{=cond}}'
   },
   formatExclusiveMaximum: {

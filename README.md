@@ -28,6 +28,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇷🇺 ru|Russian  | |✓|✓|✓|
 |🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|
+|🇹🇭 th|Thai     |[encX](https://github.com/encX)|✓|✓|✓|
 |🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>&nbsp;|<br>✓|<br>✓|
 |🇹🇼 zh-TW|Chinese - Taiwan|[minipai](https://github.com/minipai)|✓|✓|✓|
 
@@ -128,6 +129,7 @@ Functions that localize error messages are generated using doT templates in [mes
 [![Mahmoud-Mardeni](https://avatars3.githubusercontent.com/u/19661270?v=3&s=40)](https://github.com/Mahmoud-Mardeni "Mahmoud-Mardeni")
 [![leuction](https://avatars3.githubusercontent.com/u/8056270?v=3&s=40)](https://github.com/leuction "leuction")
 [![lucacorti](https://avatars2.githubusercontent.com/u/1076999?v=3&s=40)](https://github.com/lucacorti "lucacorti")
+[![encX](https://avatars3.githubusercontent.com/u/5965883?v=3&s=40)](https://github.com/encX "encX")
 
 
 ## License

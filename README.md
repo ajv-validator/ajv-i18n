@@ -130,7 +130,9 @@ Functions that localize error messages are generated using doT templates in [mes
 [![Mahmoud-Mardeni](https://avatars3.githubusercontent.com/u/19661270?v=3&s=40)](https://github.com/Mahmoud-Mardeni "Mahmoud-Mardeni")
 [![leuction](https://avatars3.githubusercontent.com/u/8056270?v=3&s=40)](https://github.com/leuction "leuction")
 [![lucacorti](https://avatars2.githubusercontent.com/u/1076999?v=3&s=40)](https://github.com/lucacorti "lucacorti")
+[![minipai](https://avatars2.githubusercontent.com/u/239570?s=40&v=4)](https://github.com/minipai "minipai")
 [![encX](https://avatars3.githubusercontent.com/u/5965883?v=3&s=40)](https://github.com/encX "encX")
+[<img src="https://avatars3.githubusercontent.com/u/1067403?s=40&v=4" alt="pimlie" width="40px"/>](https://github.com/pimlie "pimlie")
 
 
 ## License

@@ -54,7 +54,7 @@ module.exports = {
     ar: 'المخطط المنطقي غير صحيح',
     cz: 'schéma je false',
     de: 'boolsches Schema ist falsch',
-    fr: 'le schema est incorrect',
+    fr: 'le schema est "false"',
     it: 'lo schema booleano è falso',
     nb: 'boolsk schema er usannt',
     nl: 'boolean schema is fout',

@@ -795,6 +795,7 @@ module.exports = {
   if: {
     en: 'should match "{{=e.params.failingKeyword}}" schema',
     ar: 'يجب أن توافق المخطط "{{=e.params.failingKeyword}}"',
+    de: 'sollte dem Schema "{{=e.params.failingKeyword}}" entsprechen',
     it: 'deve corrispondere allo schema "{{=e.params.failingKeyword}}"',
     nl: 'moet overeenkomen met "{{=e.params.failingKeyword}}" schema',
     ru: 'должно соответствовать схемe "{{=e.params.failingKeyword}}"',

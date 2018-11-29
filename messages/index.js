@@ -565,7 +565,7 @@ module.exports = {
     it: 'deve essere di tipo {{=e.params.type}}',
     ja: '{{=e.params.type}}でなければいけない',
     nb: '{{#def.t}}må være {{? t == "number" }}et tall{{?? t == "integer"}}et heltall{{?? t == "string"}}en streng{{?? t == "boolean"}}ja eller nei{{??}}{{=t}}{{?}}',
-    nl: '{{#def.t}}moet een {{? t == "number" }}nummer{{?? t == "integer"}}geheel getal{{?? t == "string"}}tekenreeks{{?? t == "boolean"}}ja of nee waarde{{?}} ({{{=t}}) zijn',
+    nl: '{{#def.t}}moet een {{? t == "number" }}nummer{{?? t == "integer"}}geheel getal{{?? t == "string"}}tekenreeks{{?? t == "boolean"}}ja of nee waarde{{?}} ({{=t}}) zijn',
     pl: 'powinien być {{=e.params.type}}',
     'pt-BR': 'deve ser {{=e.params.type}}',
     ru: 'должно быть {{=e.params.type}}',

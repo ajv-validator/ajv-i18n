@@ -11,6 +11,7 @@ module.exports = {
     it: require('./it'),
     ja: require('./ja'),
     nb: require('./nb'),
+    nl: require('./nl'),
     pl: require('./pl'),
     'pt-BR': require('./pt-BR'),
     ru: require('./ru'),

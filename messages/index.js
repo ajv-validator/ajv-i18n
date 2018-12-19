@@ -679,7 +679,8 @@ module.exports = {
     sv: 'bör ha en egenskap som matchar mönstret "{{=e.params.missingPattern}}"',
     th: 'ควรมี property ที่มีชื่อตรงกับ pattern "{{=e.params.missingPattern}}"',
     zh: '应当有属性匹配模式 {{=e.params.missingPattern}}',
-    'zh-TW': '應該有屬性對應模式 {{=e.params.missingPattern}}'
+    'zh-TW': '應該有屬性對應模式 {{=e.params.missingPattern}}',
+    ko: '"{{=e.params.missingPattern}}"패턴과 일치하는 속성을 가져야 합니다'
   },
   switch: {
     en: 'should pass "switch" keyword validation, case {{=e.params.caseIndex}} fails',

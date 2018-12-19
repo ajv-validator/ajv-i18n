@@ -8,7 +8,7 @@
 
 module.exports = {
   // supported locales
-  _locales: ['en', 'ar', 'cz', 'de', 'es', 'fr', 'hu', 'it', 'ja', 'nb', 'nl', 'pl', 'pt-BR', 'ru', 'sk', 'sv', 'th', 'zh', 'zh-TW', 'ko'],
+  _locales: ['en', 'ar', 'cz', 'de', 'es', 'fr', 'hu', 'it', 'ja', 'ko', 'nb', 'nl', 'pl', 'pt-BR', 'ru', 'sk', 'sv', 'th', 'zh', 'zh-TW'],
 
   // shared defines
   _defs: {
@@ -56,6 +56,7 @@ module.exports = {
     de: 'boolsches Schema ist falsch',
     fr: 'le schema est "false"',
     it: 'lo schema booleano è falso',
+    ko: 'boolean 스키마는 올바르지 않습니다',
     nb: 'boolsk schema er usannt',
     nl: 'boolean schema is fout',
     ru: 'схема равна false',
@@ -63,8 +64,7 @@ module.exports = {
     sv: 'boolean schema är falskt',
     th: 'schema เป็น false',
     zh: '布尔模式出错',
-    'zh-TW': '布林模式不正確',
-    ko: 'boolean 스키마는 올바르지 않습니다'
+    'zh-TW': '布林模式不正確'
   },
   $ref: {
     en: 'can\\\'t resolve reference {{=e.params.ref}}',
@@ -76,6 +76,7 @@ module.exports = {
     hu: 'nem sikerült feloldani a hivatkozást {{=e.params.ref}}',
     it: 'non è possibile risolvere il riferimento {{=e.params.ref}}',
     ja: '{{=e.params.ref}}のスキーマを見つけることができない',
+    ko: '{{=e.params.ref}} 참조를 찾을 수 없습니다',
     nb: 'kan ikke finne referansen {{=e.params.ref}}',
     nl: 'referentie {{=e.params.ref}} niet gevonden',
     pl: 'nie można znaleść schematu {{=e.params.ref}}',
@@ -85,8 +86,7 @@ module.exports = {
     sv: 'kan inte lösa referens {{=e.params.ref}}',
     th: 'ไม่สามารถหา reference {{=e.params.ref}}',
     zh: '无法找到引用{{=e.params.ref}}',
-    'zh-TW': '無法找到引用{{=e.params.ref}}',
-    ko: '{{=e.params.ref}} 참조를 찾을 수 없습니다'
+    'zh-TW': '無法找到引用{{=e.params.ref}}'
   },
   additionalItems: {
     en: '{{#def.n}}should not have more than {{=n}} item{{#def.mPlural}}',
@@ -98,6 +98,7 @@ module.exports = {
     hu: '{{#def.n}}nem lehet több, mint {{=n}} eleme',
     it: '{{#def.n}}non dovrebbe avere più di {{=n}} element{{#def.mPlural}}',
     ja: '{{#def.n}}は{{=n}}以上あってはいけない',
+    ko: '{{#def.n}} 항목은 아이템을 {{=n}}개 이상 가질 수 없습니다',
     nb: '{{#def.n}}kan ikke ha mer enn {{=n}} element{{#def.mPlural}}',
     nl: '{{#def.n}}mag niet meer dan {{=n}} item{{#def.mPlural}} hebben',
     pl: '{{#def.n}}nie powinien mieć więcej niż {{=n}} element{{#def.mPlural}}',
@@ -107,8 +108,7 @@ module.exports = {
     sv: '{{#def.n}}borde ha fler än {{=n}} sak{{#def.mPlural}}',
     th: '{{#def.n}}ควรมีสมาชิกไม่เกิน {{=n}}',
     zh: '{{#def.n}}不允许超过{{=n}}个元素',
-    'zh-TW': '{{#def.n}}不可以超過{{=n}}個元素',
-    ko: '{{#def.n}} 항목은 아이템을 {{=n}}개 이상 가질 수 없습니다'
+    'zh-TW': '{{#def.n}}不可以超過{{=n}}個元素'
     // en: 'Additional items not allowed',
     // nb: 'Tillegselementer er ikke tillatt',
     // 'pt-PT': 'Não são permitidos itens adicionais',
@@ -123,6 +123,7 @@ module.exports = {
     hu: 'nem lehetnek további elemei',
     it: 'non deve avere attributi aggiuntivi',
     ja: '追加してはいけない',
+    ko: '추가적인 속성은 허용되지 않습니다',
     nb: 'kan ikke ha flere egenskaper',
     nl: 'mag geen extra eigenschappen hebben',
     pl: 'nie powinien zawierać dodatkowych pól',
@@ -132,8 +133,7 @@ module.exports = {
     sv: 'borde inte ha fler egenskaper',
     th: 'ไม่ควรมี property เกินที่กำหนดไว้',
     zh: '不允许有额外的属性',
-    'zh-TW': '不可以有額外的屬性',
-    ko: '추가적인 속성은 허용되지 않습니다'
+    'zh-TW': '不可以有額外的屬性'
     // en: 'Additional properties not allowed',
     // nb: 'Tilleggsvariabler er ikke tillatt',
     // 'pt-PT': 'Não são permitidas propriedades adicionais',
@@ -148,6 +148,7 @@ module.exports = {
     hu: 'meg kell feleljen legalább egy "anyOf" alaknak',
     it: 'deve corrispondere ad uno schema in "anyOf"',
     ja: '"anyOf"のスキーマとマッチしなくてはいけない',
+    ko: '"anyOf"의 스키마와 일치해야 합니다',
     nb: 'må samsvare med et schema i "anyOf"',
     nl: 'moet overeenkomen met een schema in "anyOf"',
     pl: 'powinien pasować do wzoru z sekcji "anyOf"',
@@ -157,8 +158,7 @@ module.exports = {
     sv: 'borde matcha något schema i "anyOf"',
     th: 'ควรมี schema บางอย่างตรงกับที่กำหนดไว้ใน "anyOf"',
     zh: '数据应为 anyOf 所指定的其中一个',
-    'zh-TW': '不符合 anyOf 指定的模式',
-    ko: '"anyOf"의 스키마와 일치해야 합니다'
+    'zh-TW': '不符合 anyOf 指定的模式'
     // en: 'Data does not match any schemas from "anyOf"',
     // nb: 'Data samsvarer ikke med noe skjema fra "anyOf"',
     // 'pt-PT': 'Os dados não correspondem a nenhum esquema de "anyOf"',
@@ -176,6 +176,7 @@ module.exports = {
     hu: '{{#def.n}}-nak kell legyen{{? n>1 }}ek{{?}} a következő tulajdonsága{{#def.propPlural}}: {{=e.params.deps}}, ha van {{=e.params.property}} tulajdonsága',
     it: '{{#def.n}}dovrebbe avere {{? n==1 }}l\'{{??}}gli {{?}}attribut{{#def.propPlural}} {{=e.params.deps}} quando l\'attributo {{=e.params.property}} è presente',
     ja: '{{=e.params.property}}がある場合、{{#def.n}}は{{=e.params.deps}}をつけなければいけない',
+    ko: '{{#def.n}}{{=e.params.property}}속성이 있는 경우, {{=e.params.deps}} 속성이 있어야합니다',
     nb: '{{#def.n}}må ha egenskapen{{? n != 1}}e{{?}} {{=e.params.deps}} når egenskapen {{=e.params.property}} er angitt',
     nl: '{{#def.n}}moet eigenschap{{#def.propPlural}} {{=e.params.deps}} hebben als eigenschap {{=e.params.property}} aanwezig is',
     pl: '{{#def.n}}powinien zawierać pol{{#def.propPlural}} {{=e.params.deps}} kiedy pole {{=e.params.property}} jest obecne',
@@ -185,8 +186,7 @@ module.exports = {
     sv: '{{#def.n}}borde ha egenskap{{#def.propPlural}} {{=e.params.deps}} när egenskap {{=e.params.property}} finns tillgängligt',
     th: '{{#def.n}}เมื่อมี property {{=e.params.property}} แล้วก็ควรมี property {{=e.params.deps}} ด้วย',
     zh: '{{#def.n}}应当拥有属性{{=e.params.property}}的依赖属性{{=e.params.deps}}',
-    'zh-TW': '{{#def.n}}應該要有屬性{{=e.params.property}}的依賴屬性{{=e.params.deps}}',
-    ko: '{{#def.n}}{{=e.params.property}}속성이 있는 경우, {{=e.params.deps}} 속성이 있어야합니다'
+    'zh-TW': '{{#def.n}}應該要有屬性{{=e.params.property}}的依賴屬性{{=e.params.deps}}'
     // en: 'Dependency failed - key must exist: {missing} (due to key: {key})',
     // nb: 'Variabelen {missing} må være definert (på grunn av følgende variabel: {key})',
     // 'pt-PT': 'Uma dependência falhou - tem de existir uma chave: {missing} (devido à chave: {key})',
@@ -201,6 +201,7 @@ module.exports = {
     hu: 'egyenlő kell legyen valamely előre meghatározott értékkel',
     it: 'dovrebbe essere uguale ad uno dei valori predefiniti',
     ja: '事前に定義された値のいずれかに等しくなければいけない',
+    ko: '미리 정의된 값중 하나여야 합니다',
     nb: 'må være lik en av de forhåndsdefinerte verdiene',
     nl: 'moet gelijk zijn aan één van de voorgedefinieerde waardes',
     pl: 'powinien być równy jednej z predefiniowanych wartości',
@@ -210,8 +211,7 @@ module.exports = {
     sv: 'borde vara ekvivalent med en av dess fördefinierade värden',
     th: 'ควรตรงกับค่าที่กำหนดไว้',
     zh: '应当是预设定的枚举值之一',
-    'zh-TW': '應該要在預設的值之中',
-    ko: '미리 정의된 값중 하나여야 합니다'
+    'zh-TW': '應該要在預設的值之中'
     // en: 'No enum match for: {value}',
     // nb: 'Ingen samsvarende enum verdi for: {value}',
     // 'pt-PT': 'Nenhuma correspondência \'enum\' para: {value}',
@@ -226,6 +226,7 @@ module.exports = {
     hu: 'meg kell feleljen a következő formátumnak: "{{=e.params.format}}"',
     it: 'deve corrispondere al formato "{{=e.params.format}}"',
     ja: '"{{=e.params.format}}"形式に揃えなければいけない',
+    ko: '"{{=e.params.format}}" 포맷과 일치해야 합니다',
     nb: 'må stemme overens med formatet "{{=e.params.format}}"',
     nl: 'moet overeenkomen met dit formaat: "{{=e.params.format}}"',
     pl: 'powinien zgadzać się z formatem "{{=e.params.format}}"',
@@ -235,8 +236,7 @@ module.exports = {
     sv: 'borde matcha formatet "{{=e.params.format}}"',
     th: 'ควรมีรูปแบบเป็น "{{=e.params.format}}"',
     zh: '应当匹配格式 "{{=e.params.format}}"',
-    'zh-TW': '應該要符合{{=e.params.format}}格式',
-    ko: '"{{=e.params.format}}" 포맷과 일치해야 합니다'
+    'zh-TW': '應該要符合{{=e.params.format}}格式'
     // en: 'Format validation failed ({message})',
     // nb: 'Formatteringen stemmer ikke ({message})',
     // 'pt-PT': 'A validação do formato falhou ({message})',
@@ -254,6 +254,7 @@ module.exports = {
     hu: '{{#def.c}}kell legyen {{=cond}}',
     it: '{{#def.c}}deve essere {{=cond}}',
     ja: '{{#def.c}}{{=cond}}でなければいけない',
+    ko: '{{#def.c}} {{=cond}} 이여야 합니다',
     nb: '{{#def.c}}må være {{=cond}}',
     nl: '{{#def.c}}moet {{=cond}} zijn',
     pl: '{{#def.c}}powinien być {{=cond}}',
@@ -263,8 +264,7 @@ module.exports = {
     sv: '{{#def.c}}borde vara {{=cond}}',
     th: '{{#def.c}}ควร {{=cond}}',
     zh: '{{#def.c}}应当为 {{=cond}}',
-    'zh-TW': '{{#def.c}}應該要 {{=cond}}',
-    ko: '{{#def.c}} {{=cond}} 이여야 합니다'
+    'zh-TW': '{{#def.c}}應該要 {{=cond}}'
     // en: 'Value {value} is greater than maximum {maximum}',
     // nb: 'Verdien {value} er større enn maksimalverdi {maximum}',
     // 'pt-PT': 'O valor {value} é maior que o máximo {maximum}',
@@ -282,6 +282,7 @@ module.exports = {
     hu: '{{#def.c}}kell legyen {{=cond}}',
     it: '{{#def.c}}deve essere {{=cond}}',
     ja: '{{#def.c}}{{=cond}}でなければいけない',
+    ko: '{{#def.c}} {{=cond}} 이여야 합니다',
     nb: '{{#def.c}}må være {{=cond}}',
     nl: '{{#def.c}}moet {{=cond}} zijn',
     pl: '{{#def.c}}powinien być {{=cond}}',
@@ -291,8 +292,7 @@ module.exports = {
     sv: '{{#def.c}}borde vara {{=cond}}',
     th: '{{#def.c}}ควร {{=cond}}',
     zh: '{{#def.c}}应当为 {{=cond}}',
-    'zh-TW': '{{#def.c}}應該要 {{=cond}}',
-    ko: '{{#def.c}} {{=cond}} 이여야 합니다'
+    'zh-TW': '{{#def.c}}應該要 {{=cond}}'
     // en: 'Value {value} is less than minimum {minimum}',
     // nb: 'Verdien {value} er mindre enn minsteverdi {minimum}',
     // 'pt-PT': 'O valor {value} é menor que o mínimo {minimum}',
@@ -307,6 +307,7 @@ module.exports = {
     hu: '{{#def.n}}nem lehet több, mint {{=n}} eleme',
     it: '{{#def.n}}non deve avere più di {{=n}} element{{#def.mPlural}}',
     ja: '{{#def.n}}は{{=n}}個以上であってはいけない',
+    ko: '{{#def.n}}아이템이 최대 {{=n}}개이여야 합니다',
     nb: '{{#def.n}}kan ikke ha fler enn {{=n}} element{{#def.mPlural}}',
     nl: '{{#def.n}}mag niet meer dan {{=n}} item{{#def.mPlural}} hebben',
     pl: '{{#def.n}}nie powinien mieć więcej niż {{=n}} element{{#def.mPlural}}',
@@ -316,8 +317,7 @@ module.exports = {
     sv: '{{#def.n}}borde inte ha fler än {{=n}} sak{{#def.mPlural}}',
     th: '{{#def.n}}ควรมีสมาชิกไม่เกิน {{=n}}',
     zh: '{{#def.n}}不应多于 {{=n}} 个项',
-    'zh-TW': '{{#def.n}}不應該多於 {{=n}} 個',
-    ko: '{{#def.n}}아이템이 최대 {{=n}}개이여야 합니다'
+    'zh-TW': '{{#def.n}}不應該多於 {{=n}} 個'
     // en: 'Array is too long ({length}), maximum {maximum}',
     // nb: 'Listen er for lang ({length} elementer), maksimalt {maximum}',
     // 'pt-PT': 'A \'array\' é muito longa ({length}), máximo {maximum}',
@@ -332,6 +332,7 @@ module.exports = {
     hu: '{{#def.n}}nem lehet kevesebb, mint {{=n}} eleme',
     it: '{{#def.n}}non deve avere meno di {{=n}} element{{#def.mPlural}}',
     ja: '{{#def.n}}は{{=n}}個以下であってはいけない',
+    ko: '{{#def.n}}아이템이 최소 {{=n}}개이여야 합니다',
     nb: '{{#def.n}}kan ikke ha færre enn {{=n}} element{{#def.mPlural}}',
     nl: '{{#def.n}}mag niet minder dan {{=n}} item{{#def.mPlural}} hebben',
     pl: '{{#def.n}}nie powinien mieć mniej niż {{=n}} element{{#def.mPlural}}',
@@ -341,8 +342,7 @@ module.exports = {
     sv: '{{#def.n}}borde inte ha färre än {{=n}} sak{{#def.mPlural}}',
     th: '{{#def.n}}ควรมีสมาชิกไม่น้อยกว่า {{=n}}',
     zh: '{{#def.n}}不应少于 {{=n}} 个项',
-    'zh-TW': '{{#def.n}}不應該少於 {{=n}} 個',
-    ko: '{{#def.n}}아이템이 최소 {{=n}}개이여야 합니다'
+    'zh-TW': '{{#def.n}}不應該少於 {{=n}} 個'
     // en: 'Array is too short ({length}), minimum {minimum}',
     // nb: 'Listen er for kort ({length} elementer), minst {minimum}',
     // 'pt-PT': 'A \'array\' é muito curta ({length}), mínimo {minimum}',
@@ -357,6 +357,7 @@ module.exports = {
     hu: '{{#def.n}}nem lehet hosszabb, mint {{=n}} szimbólum',
     it: '{{#def.n}}non deve essere più lungo di {{=n}} caratter{{? n==1 }}e{{??}}i{{?}}',
     ja: '{{#def.n}}は{{=n}}文字以上であってはいけない',
+    ko: '{{#def.n}}최대 {{=n}}글자여야 합니다',
     nb: '{{#def.n}}kan ikke være lengre enn {{=n}} tegn',
     nl: '{{#def.n}}mag niet langer dan {{=n}} karakter{{#def.mPlural}} zijn',
     pl: '{{#def.n}}nie powinien być dłuższy niż {{=n}} znak{{? n!=1 }}ów{{?}}',
@@ -366,8 +367,7 @@ module.exports = {
     sv: '{{#def.n}}borde inte vara längre än {{=n}} tecken',
     th: '{{#def.n}}ไม่ควรมากกว่า {{=n}} ตัวอักษร',
     zh: '{{#def.n}}不应多于 {{=n}} 个字符',
-    'zh-TW': '{{#def.n}}不應該多於 {{=n}} 個字元',
-    ko: '{{#def.n}}최대 {{=n}}글자여야 합니다'
+    'zh-TW': '{{#def.n}}不應該多於 {{=n}} 個字元'
     // en: 'String is too long ({length} chars), maximum {maximum}',
     // nb: 'Strengen er for lang ({length} tegn), maksimalt {maximum}',
     // 'pt-PT': 'A \'string\' é muito longa ({length} caracteres), máximo {maximum}',
@@ -382,6 +382,7 @@ module.exports = {
     hu: '{{#def.n}}nem lehet rövidebb, mint {{=n}} szimbólum',
     it: '{{#def.n}}non deve essere meno lungo di {{=n}} caratter{{? n==1 }}e{{??}}i{{?}}',
     ja: '{{#def.n}}は{{=n}}文字以下であってはいけない',
+    ko: '{{#def.n}}최소 {{=n}}글자여야 합니다',
     nb: '{{#def.n}}kan ikke være kortere enn {{=n}} tegn',
     nl: '{{#def.n}}mag niet korter dan {{=n}} karakter{{#def.mPlural}} zijn',
     pl: '{{#def.n}}nie powinien być krótszy niż {{=n}} znak{{? n!=1 }}ów{{?}}',
@@ -391,8 +392,7 @@ module.exports = {
     sv: '{{#def.n}}borde inte vara kortare än {{=n}} tecken',
     th: '{{#def.n}}ไม่ควรน้อยกว่า {{=n}} ตัวอักษร',
     zh: '{{#def.n}}不应少于 {{=n}} 个字符',
-    'zh-TW': '{{#def.n}}不應該少於 {{=n}} 個字元',
-    ko: '{{#def.n}}최소 {{=n}}글자여야 합니다'
+    'zh-TW': '{{#def.n}}不應該少於 {{=n}} 個字元'
     // en: 'String is too short ({length} chars), minimum {minimum}',
     // nb: 'Strengen er for kort ({length} tegn), minst {minimum}',
     // 'pt-PT': 'A \'string\' é muito curta ({length} caracteres), mínimo {minimum}',
@@ -407,6 +407,7 @@ module.exports = {
     hu: '{{#def.n}}nem lehet több, mint {{=n}} tulajdonsága',
     it: '{{#def.n}}non deve avere più di {{=n}} attribut{{#def.propPlural}}',
     ja: '{{#def.n}}は{{=n}}個以上のプロパティを有してはいけない',
+    ko: '{{#def.n}}속성은 최대 {{=n}}개 이내여야 합니다',
     nb: '{{#def.n}}kan ikke ha mer enn {{=n}} egenskap{{#def.mPlural}}',
     nl: '{{#def.n}}mag niet meer dan {{=n}} eigenschap{{#def.propPlural}} hebben',
     pl: '{{#def.n}}nie powinien zawierać więcej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
@@ -416,8 +417,7 @@ module.exports = {
     sv: '{{#def.n}}borde inte ha fler än {{=n}} egenskap{{#def.propPlural}}',
     th: '{{#def.n}}ไม่ควรมี property เกิน {{=n}}',
     zh: '{{#def.n}}不应有多于 {{=n}} 个属性',
-    'zh-TW': '{{#def.n}}不應該多於 {{=n}} 個屬性',
-    ko: '{{#def.n}}속성은 최대 {{=n}}개 이내여야 합니다'
+    'zh-TW': '{{#def.n}}不應該多於 {{=n}} 個屬性'
     // en: 'Too many properties defined ({propertyCount}), maximum {maximum}',
     // nb: 'For mange variabler definert ({propertyCount}), makismalt {maximum} er tillatt',
     // 'pt-PT': 'Muitas propriedades definidas ({propertyCount}), máximo {maximum}',
@@ -432,6 +432,7 @@ module.exports = {
     hu: '{{#def.n}}nem lehet kevesebb, mint {{=n}} tulajdonsága',
     it: '{{#def.n}}non deve avere meno di {{=n}} attribut{{#def.propPlural}}',
     ja: '{{#def.n}}は{{=n}}個以下のプロパティを有してはいけない',
+    ko: '{{#def.n}}속성은 최소 {{=n}}개 이상이여야 합니다',
     nb: '{{#def.n}}kan ikke ha mindre enn {{=n}} egenskap{{#def.mPlural}}',
     nl: '{{#def.n}}mag niet minder dan {{=n}} eigenschap{{#def.propPlural}} hebben',
     pl: '{{#def.n}}nie powinien zawierać mniej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
@@ -441,8 +442,7 @@ module.exports = {
     sv: '{{#def.n}}borde inte ha färre än {{=n}} egenskap{{#def.propPlural}}',
     th: '{{#def.n}}ไม่ควรมี property น้อยกว่า {{=n}}',
     zh: '{{#def.n}}不应有少于 {{=n}} 个属性',
-    'zh-TW': '{{#def.n}}不應該少於 {{=n}} 個屬性',
-    ko: '{{#def.n}}속성은 최소 {{=n}}개 이상이여야 합니다'
+    'zh-TW': '{{#def.n}}不應該少於 {{=n}} 個屬性'
     // en: 'Too few properties defined ({propertyCount}), minimum {minimum}',
     // nb: 'For få variabler definert ({propertyCount}), minst {minimum} er forventet',
     // 'pt-PT': 'Poucas propriedades definidas ({propertyCount}), mínimo {minimum}',
@@ -457,6 +457,7 @@ module.exports = {
     hu: 'a többszöröse kell legyen a következő számnak: {{=e.params.multipleOf}}',
     it: 'deve essere un multiplo di {{=e.params.multipleOf}}',
     ja: '{{=e.params.multipleOf}}の倍数でなければいけない',
+    ko: '{{=e.params.multipleOf}}의 배수여야 합니다',
     nb: 'må være et multiplum av {{=e.params.multipleOf}}',
     nl: 'moet een veelvoud van {{=e.params.multipleOf}} zijn',
     pl: 'powinien być wielokrotnością {{=e.params.multipleOf}}',
@@ -466,8 +467,7 @@ module.exports = {
     sv: 'borde vara en multipel av {{=e.params.multipleOf}}',
     th: 'ควรเป็นเลขที่หาร {{=e.params.multipleOf}} ลงตัว',
     zh: '应当是 {{=e.params.multipleOf}} 的整数倍',
-    'zh-TW': '應該是 {{=e.params.multipleOf}} 的整數倍',
-    ko: '{{=e.params.multipleOf}}의 배수여야 합니다',
+    'zh-TW': '應該是 {{=e.params.multipleOf}} 的整數倍'
     // en: 'Value {value} is not a multiple of {multipleOf}',
     // nb: 'Verdien {value} er ikke et multiplum av {multipleOf}',
     // 'pt-PT': 'O valor {value} não é um múltiplo de {multipleOf}',
@@ -482,6 +482,7 @@ module.exports = {
     hu: 'nem lehet érvényes a "not" alaknak megfelelően',
     it: 'non deve essere valido in base allo schema di "non"',
     ja: '"not"のスキーマに従って有効としてはいけない',
+    ko: '"not"스키마에 따라 유효하지 않아야 합니다',
     nb: 'kan ikke samsvare med schema i "not"',
     nl: 'mag niet overeenkomen met een schema in "not"',
     pl: 'nie powinien pasować do wzoru z sekcji "not"',
@@ -491,8 +492,7 @@ module.exports = {
     sv: 'borde inte vara giltigt enligt schema i "not"',
     th: 'ไม่ควรถูกต้องตาม schema ที่กำหนดไว้ใน "not"',
     zh: '不应当匹配 "not" schema',
-    'zh-TW': '不應該符合 "not" schema',
-    ko: '"not"스키마에 따라 유효하지 않아야 합니다'
+    'zh-TW': '不應該符合 "not" schema'
     // en: 'Data matches schema from "not"',
     // nb: 'Data samsvarer med skjema fra "not"',
     // 'pt-PT': 'Os dados correspondem a um esquema de "not"',
@@ -507,6 +507,7 @@ module.exports = {
     hu: 'meg kell feleljen pontosan egy "anyOf" alaknak',
     it: 'deve corrispondere esattamente ad uno schema in "oneOf"',
     ja: '"oneOf"のスキーマと完全に一致しなくてはいけない',
+    ko: '"oneOf" 스키마중 하나와 정확하게 일치해야 합니다',
     nb: 'må samsvare med nøyaktig ett schema i "oneOf"',
     nl: 'mag maar met één schema in "oneOf" overeenkomen',
     pl: 'powinien pasować do jednego wzoru z sekcji "oneOf"',
@@ -516,8 +517,7 @@ module.exports = {
     sv: 'borde matcha exakt ett schema i "oneOf"',
     th: 'ควรตรงกับเพียง schema เดียวใน "oneOf" เท่านั้น',
     zh: '只能匹配一个 "oneOf" 中的 schema',
-    'zh-TW': '只能符合一個 "oneOf" 中的 schema',
-    ko: '"oneOf" 스키마중 하나와 정확하게 일치해야 합니다'
+    'zh-TW': '只能符合一個 "oneOf" 中的 schema'
     // en: 'Data does not match any schemas from "oneOf"',
     // nb: 'Data samsvarer ikke med noe skjema fra "oneOf"',
     // 'pt-PT': 'Os dados não correspondem a nenhum esquema de "oneOf"',
@@ -532,6 +532,7 @@ module.exports = {
     hu: 'meg kell feleljen a következő mintának: "{{=e.params.pattern}}"',
     it: 'deve corrispondere al formato "{{=e.params.pattern}}"',
     ja: '"{{=e.params.pattern}}"のパターンと一致しなければいけない',
+    ko: '"{{=e.params.pattern}}"패턴과 일치해야 합니다',
     nb: 'må samsvare med mønsteret "{{=e.params.pattern}}"',
     nl: 'moet aan dit patroon voldoen "{{=e.params.pattern}}"',
     pl: 'powinien zgadzać się ze wzorem "{{=e.params.pattern}}"',
@@ -541,8 +542,7 @@ module.exports = {
     sv: 'borde matcha mönstret "{{=e.params.pattern}}"',
     th: 'ควรตรงกับแพทเทิร์น "{{=e.params.pattern}}"',
     zh: '应当匹配模式 "{{=e.params.pattern}}"',
-    'zh-TW': '應該符合模式 "{{=e.params.pattern}}"',
-    ko: '"{{=e.params.pattern}}"패턴과 일치해야 합니다'
+    'zh-TW': '應該符合模式 "{{=e.params.pattern}}"'
     // en: 'String does not match pattern: {pattern}',
     // nb: 'Strengen samsvarer ikke med regulært uttrykk: {pattern}',
     // 'pt-PT': 'A \'string\' não corresponde ao modelo: {pattern}',
@@ -557,6 +557,7 @@ module.exports = {
     hu: 'kell legyen {{=e.params.missingProperty}} tulajdonsága',
     it: 'deve avere l\'attributo obbligatorio {{=e.params.missingProperty}}',
     ja: '必要なプロパティ{{=e.params.missingProperty}}がなければいけない',
+    ko: '{{=e.params.missingProperty}} 속성은 필수입니다',
     nb: 'må ha den påkrevde egenskapen {{=e.params.missingProperty}}',
     nl: 'moet de verplichte eigenschap {{=e.params.missingProperty}} hebben',
     pl: 'powinien zawierać wymagane pole {{=e.params.missingProperty}}',
@@ -566,8 +567,7 @@ module.exports = {
     sv: 'borde ha den nödvändiga egenskapen {{=e.params.missingProperty}}',
     th: 'ควรมี property {{=e.params.missingProperty}} ที่บังคับไว้',
     zh: '应当有必需属性 {{=e.params.missingProperty}}',
-    'zh-TW': '應該有必須屬性 {{=e.params.missingProperty}}',
-    ko: '{{=e.params.missingProperty}} 속성은 필수입니다',
+    'zh-TW': '應該有必須屬性 {{=e.params.missingProperty}}'
     // en: 'Missing required property: {key}',
     // nb: 'Mangler obligatorisk variabel: {key}',
     // 'pt-PT': 'Propriedade necessária em falta: {key}',
@@ -585,6 +585,7 @@ module.exports = {
     hu: '{{=e.params.type}} kell legyen',
     it: 'deve essere di tipo {{=e.params.type}}',
     ja: '{{=e.params.type}}でなければいけない',
+    ko: '{{=e.params.type}}이여야 합니다',
     nb: '{{#def.t}}må være {{? t == "number" }}et tall{{?? t == "integer"}}et heltall{{?? t == "string"}}en streng{{?? t == "boolean"}}ja eller nei{{??}}{{=t}}{{?}}',
     nl: '{{#def.t}}moet een {{? t == "number" }}nummer{{?? t == "integer"}}geheel getal{{?? t == "string"}}tekenreeks{{?? t == "boolean"}}ja of nee waarde{{?}} ({{=t}}) zijn',
     pl: 'powinien być {{=e.params.type}}',
@@ -594,8 +595,7 @@ module.exports = {
     sv: 'borde vara {{=e.params.type}}',
     th: 'ควรเป็น {{=e.params.type}}',
     zh: '应当是 {{=e.params.type}} 类型',
-    'zh-TW': '應該是 {{=e.params.type}} 類型',
-    ko: '{{=e.params.type}}이여야 합니다'
+    'zh-TW': '應該是 {{=e.params.type}} 類型'
     // en: 'Invalid type: {type} (expected {expected})',
     // nb: 'Ugyldig type: {type} (forventet {expected})',
     // 'pt-PT': 'Tipo inválido: {type} (esperava {expected})',
@@ -610,6 +610,7 @@ module.exports = {
     hu: 'nem lehetnek azonos elemei ({{=e.params.j}} és {{=e.params.i}} elemek azonosak)',
     it: 'non deve avere duplicati (gli elementi ## {{=e.params.j}} e {{=e.params.i}} sono uguali)',
     ja: '重複するアイテムがあってはいけない（{{=e.params.j}}と{{=e.params.i}}は同じである）',
+    ko: '중복 아이템이 없어야 합니다 (아이템{{=e.params.j}}과 아이템{{=e.params.i}}가 동일합니다)',
     nb: 'kan ikke ha duplikate elemeneter (elementene ## {{=e.params.j}} og {{=e.params.i}} er identiske)',
     nl: 'mag geen dubbele items bevatten (items ## {{=e.params.j}} en {{=e.params.i}} zijn gelijk)',
     pl: 'nie powinien zawierać elementów które się powtarzają (elementy {{=e.params.j}} i {{=e.params.i}} są identyczne)',
@@ -619,8 +620,7 @@ module.exports = {
     sv: 'borde inte ha duplicerade saker (sakerna ## {{=e.params.j}} och {{=e.params.i}} är identiska)',
     th: 'ไม่ควรมีสมาชิกซ้ำักัน (ลำดับที่ {{=e.params.j}} และ {{=e.params.i}} ซ้ำ)',
     zh: '不应当含有重复项 (第 {{=e.params.j}} 项与第 {{=e.params.i}} 项是重复的)',
-    'zh-TW': '不應該有重複項目 (第 {{=e.params.j}} 項和第 {{=e.params.i}} 項是重複的)',
-    ko: '중복 아이템이 없어야 합니다 (아이템{{=e.params.j}}과 아이템{{=e.params.i}}가 동일합니다)'
+    'zh-TW': '不應該有重複項目 (第 {{=e.params.j}} 項和第 {{=e.params.i}} 項是重複的)'
     // en: 'Array items are not unique (indices {match1} and {match2})',
     // nb: 'Elementene er ikke unike (indeks {match1} og {match2} er like)',
     // 'pt-PT': 'Os itens da \'array\' não são únicos (índices {match1} e {match2})',
@@ -633,6 +633,7 @@ module.exports = {
     es: 'debe pasar la validación de palabra clave "{{=e.keyword}}"',
     fr: 'doit être valide selon le critère "{{=e.keyword}}"',
     it: 'deve essere valido secondo il criterio "{{=e.keyword}}"',
+    ko: '"{{=e.keyword}}"키워드 검사를 통과해야 합니다',
     nb: 'må samsvare med valideringen for {{=e.keyword}}',
     nl: 'moet sleutelwoord validatie "{{=e.keyword}}" doorstaan',
     pl: 'powinien przejść walidację "{{=e.keyword}}"',
@@ -642,8 +643,7 @@ module.exports = {
     sv: 'bör passera "{{=e.keyword}}" nyckelord validering',
     th: 'ควรผ่านคีย์เวิร์ด "{{=e.keyword}}"',
     zh: '应当通过 "{{=e.keyword}} 关键词校验"',
-    'zh-TW': '應該通過 "{{=e.keyword}} 關鍵詞檢驗"',
-    ko: '"{{=e.keyword}}"키워드 검사를 통과해야 합니다',
+    'zh-TW': '應該通過 "{{=e.keyword}} 關鍵詞檢驗"'
   },
   propertyNames: {
     en: 'property name \'{{=e.params.propertyName}}\' is invalid',
@@ -652,6 +652,7 @@ module.exports = {
     de: 'Attributname \'{{=e.params.propertyName}}\' ist ungültig',
     fr: 'le nom de propriété \'{{=e.params.propertyName}}\' est invalide',
     it: 'il nome dell\'attritbuto \'{{=e.params.propertyName}}\' non è valido',
+    ko: '\'{{=e.params.propertyName}}\' 속성명이 올바르지 않습니다',
     nb: 'egenskapen med navnet \'{{e.params.propertyName}}\' er ugyldig',
     nl: 'eigenschapnaam \'{{=e.params.propertyName}}\' is ongeldig',
     ru: 'имя поля \'{{=e.params.propertyName}}\' не соответствует схеме',
@@ -659,8 +660,7 @@ module.exports = {
     sv: 'egenskap med namnet \'{{=e.params.propertyName}}\' är inte giltig',
     th: 'property \'{{=e.params.propertyName}}\' ไม่ถูกต้อง',
     zh: '属性名 \'{{=e.params.propertyName}}\' 无效',
-    'zh-TW': '属性名 \'{{=e.params.propertyName}}\' 無效',
-    ko: '\'{{=e.params.propertyName}}\' 속성명이 올바르지 않습니다',
+    'zh-TW': '属性名 \'{{=e.params.propertyName}}\' 無效'
   },
   patternRequired: {
     en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
@@ -670,6 +670,7 @@ module.exports = {
     es: 'la propiedad debe coincidir con el patrón "{{=e.params.missingPattern}}"',
     fr: 'la propriété doit correspondre au format "{{=e.params.missingPattern}}"',
     it: 'deve avere un attributo che corrisponda al formato "{{=e.params.missingPattern}}"',
+    ko: '"{{=e.params.missingPattern}}"패턴과 일치하는 속성을 가져야 합니다',
     nb: 'må ha en egenskap som samsvarer med mønsteret "{{=e.params.missingPattern}}',
     nl: 'moet een eigenschap hebben met het volgende patroon "{{=e.params.missingPattern}}"',
     pl: 'powinien mieć pole pasujące do wzorca "{{=e.params.missingPattern}}"',
@@ -679,8 +680,7 @@ module.exports = {
     sv: 'bör ha en egenskap som matchar mönstret "{{=e.params.missingPattern}}"',
     th: 'ควรมี property ที่มีชื่อตรงกับ pattern "{{=e.params.missingPattern}}"',
     zh: '应当有属性匹配模式 {{=e.params.missingPattern}}',
-    'zh-TW': '應該有屬性對應模式 {{=e.params.missingPattern}}',
-    ko: '"{{=e.params.missingPattern}}"패턴과 일치하는 속성을 가져야 합니다'
+    'zh-TW': '應該有屬性對應模式 {{=e.params.missingPattern}}'
   },
   switch: {
     en: 'should pass "switch" keyword validation, case {{=e.params.caseIndex}} fails',
@@ -690,6 +690,7 @@ module.exports = {
     es: 'debe pasar la validación "switch" de palabra clave, el caso {{=e.params.caseIndex}} falló',
     fr: 'doit être valide selon le critère "switch":validation par mot-clé, le cas {{=e.params.caseIndex}} est invalide',
     it: 'deve passare la validazione del criterio "switch", il caso {{=e.params.caseIndex}} fallisce',
+    ko: '"switch"키워드 검증에 실패하였습니다. {{=e.params.caseIndex}} 실패',
     nb: 'må passere "switch" validering, tilfellet {{=e.params.caseIndex}} misslykkes',
     nl: 'moet "switch" sleutelwoord validatie doorstaan, geval {{=e.params.caseIndex}} gaat verkeerd',
     pl: 'powinien przejść walidacje pola "switch", przypadek {{=e.params.caseIndex}} zawiódł',
@@ -699,8 +700,7 @@ module.exports = {
     sv: 'bör passera "switch" nyckelord validering, fallet {{=e.params.caseIndex}} misslyckas',
     th: 'ควรผ่านคีย์เวิร์ด "switch", ผิดเคสที่ {{=e.params.caseIndex}}',
     zh: '由于 {{=e.params.caseIndex}} 失败，未通过 "switch" 校验, ',
-    'zh-TW': '因為 {{=e.params.caseIndex}} 失败，沒有通過 "switch" 檢驗, ',
-    ko: '"switch"키워드 검증에 실패하였습니다. {{=e.params.caseIndex}} 실패'
+    'zh-TW': '因為 {{=e.params.caseIndex}} 失败，沒有通過 "switch" 檢驗, '
   },
   const: {
     en: 'should be equal to constant',
@@ -710,6 +710,7 @@ module.exports = {
     es: 'debe ser igual a la constante',
     fr: 'doit être égal à la constante',
     it: 'deve essere uguale alla costante',
+    ko: '상수와 같아야합니다',
     nb: 'må være lik konstanten',
     nl: 'moet gelijk zijn aan constante',
     pl: 'powinien być równy stałej',
@@ -718,8 +719,7 @@ module.exports = {
     sv: 'bör vara en konstant',
     th: 'ควรมีค่าเหมือนกับค่าคงที่',
     zh: '应当等于常量',
-    'zh-TW': '應該等於常數',
-    ko: '상수와 같아야합니다'
+    'zh-TW': '應該等於常數'
   },
   contains: {
     en: 'should contain a valid item',
@@ -728,6 +728,7 @@ module.exports = {
     de: 'sollte ein valides Element enthalten',
     fr: 'doit contenir un élément valide',
     it: 'deve contentere un elemento valido',
+    ko: '올바른 아이템을 포함해야 합니다',
     nb: 'må inneholde et gyldig element',
     nl: 'moet een geldig item bevatten',
     'pt-BR': 'deve conter um item válido',
@@ -736,8 +737,7 @@ module.exports = {
     sv: 'bör innehålla ett giltigt objekt',
     th: 'ควรมีสมาชิกที่ถูกต้องอยู่',
     zh: '应当包含一个有效项',
-    'zh-TW': '應該包含一個有效元素',
-    ko: '올바른 아이템을 포함해야 합니다'
+    'zh-TW': '應該包含一個有效元素'
   },
   formatMaximum: {
     _defs: {
@@ -750,6 +750,7 @@ module.exports = {
     es: '{{#def.c}}debe ser {{=cond}}',
     fr: '{{#def.c}}doit être {{=cond}}',
     it: '{{#def.c}}deve essere {{=cond}}',
+    ko: '{{#def.c}} {{=cond}} 이여야 합니다',
     nb: '{{#def.c}}må være {{=cond}}',
     nl: '{{#def.c}}moet {{=cond}} zijn',
     pl: '{{#def.c}}powinien być {{=cond}}',
@@ -759,8 +760,7 @@ module.exports = {
     sv: '{{#def.c}}bör vara {{=cond}}',
     th: '{{#def.c}}ควร {{=cond}}',
     zh: '{{#def.c}}应当是 {{=cond}}',
-    'zh-TW': '{{#def.c}}應該是 {{=cond}}',
-    ko: '{{#def.c}} {{=cond}} 이여야 합니다'
+    'zh-TW': '{{#def.c}}應該是 {{=cond}}'
   },
   formatMinimum: {
     _defs: {
@@ -773,6 +773,7 @@ module.exports = {
     es: '{{#def.c}}debe ser {{=cond}}',
     fr: '{{#def.c}}doit être {{=cond}}',
     it: '{{#def.c}}deve essere {{=cond}}',
+    ko: '{{#def.c}} {{=cond}} 이여야 합니다',
     nb: '{{#def.c}}må være {{=cond}}',
     nl: '{{#def.c}}moet {{=cond}} zijn',
     pl: '{{#def.c}}powinien być {{=cond}}',
@@ -782,8 +783,7 @@ module.exports = {
     sv: '{{#def.c}}bör vara {{=cond}}',
     th: '{{#def.c}}ควร {{=cond}}',
     zh: '{{#def.c}}应当是 {{=cond}}',
-    'zh-TW': '{{#def.c}}應該是 {{=cond}}',
-    ko: '{{#def.c}} {{=cond}} 이여야 합니다'
+    'zh-TW': '{{#def.c}}應該是 {{=cond}}'
   },
   formatExclusiveMaximum: {
     en: 'formatExclusiveMaximum should be boolean',
@@ -793,6 +793,7 @@ module.exports = {
     es: 'formatExclusiveMaximum debe ser booleano',
     fr: 'formatExclusiveMaximum doit être un booléen',
     it: 'formatExclusiveMaximum deve essere booleano',
+    ko: 'formatExclusiveMaximum 은 boolean 값이여야 합니다',
     nb: 'formatExclusiveMaximum må være en boolsk verdi',
     nl: 'formatExclusiveMaximum moet een boolean zijn',
     pl: 'formatExclusiveMaximum powinien być boolean',
@@ -802,8 +803,7 @@ module.exports = {
     sv: 'formatExclusiveMaximum bör vara en boolean',
     th: 'formatExclusiveMaximum ควรเป็น boolean',
     zh: 'formatExclusiveMaximum 应当是布尔值',
-    'zh-TW': 'formatExclusiveMaximum 應該是布林值',
-    ko: 'formatExclusiveMaximum 은 boolean 값이여야 합니다'
+    'zh-TW': 'formatExclusiveMaximum 應該是布林值'
   },
   formatExclusiveMinimum: {
     en: 'formatExclusiveMinimum should be boolean',
@@ -813,6 +813,7 @@ module.exports = {
     es: 'formatExclusiveMinimum debe ser booleano',
     fr: 'formatExclusiveMinimum doit être un booléen',
     it: 'formatExclusiveMinimum deve essere booleano',
+    ko: 'formatExclusiveMinimum 은 boolean 값이여야 합니다',
     nb: 'formatExclusiveMinimum må være en boolsk verdi',
     nl: 'formatExclusiveMinimum moet een boolean zijn',
     pl: 'formatExclusiveMinimum powinień być boolean',
@@ -822,19 +823,18 @@ module.exports = {
     sv: 'formatExclusiveMaximum bör vara en boolean',
     th: 'formatExclusiveMinimum ควรเป็น boolean',
     zh: 'formatExclusiveMinimum 应当是布尔值',
-    'zh-TW': 'formatExclusiveMinimum 應該是布林值',
-    ko: 'formatExclusiveMinimum 은 boolean 값이여야 합니다'
+    'zh-TW': 'formatExclusiveMinimum 應該是布林值'
   },
   if: {
     en: 'should match "{{=e.params.failingKeyword}}" schema',
     ar: 'يجب أن توافق المخطط "{{=e.params.failingKeyword}}"',
     it: 'deve corrispondere allo schema "{{=e.params.failingKeyword}}"',
+    ko: '"{{=e.params.failingKeyword}}" 스키마와 일치해야 합니다',
     nl: 'moet overeenkomen met "{{=e.params.failingKeyword}}" schema',
     ru: 'должно соответствовать схемe "{{=e.params.failingKeyword}}"',
     th: 'ควรตรงกับ schema "{{=e.params.failingKeyword}}"',
     zh: '应当匹配模式 "{{=e.params.failingKeyword}}" ',
-    'zh-TW': '應該符合 "{{=e.params.failingKeyword}}" schema',
-    ko: '"{{=e.params.failingKeyword}}" 스키마와 일치해야 합니다'
+    'zh-TW': '應該符合 "{{=e.params.failingKeyword}}" schema'
   }
 };
 

@@ -16,7 +16,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇬🇧 en|English  | |✓|✓|✓|
 |AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|✓|
 |🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
-|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|✓|✓|
+|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)<br>[gflohr](https://github.com/gflohr)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|-|-|
 |🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|✓|✓|-|
 |🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|
@@ -115,26 +115,27 @@ Functions that localize error messages are generated using doT templates in [mes
 
 ## Contributors of locales
 
-[![danielzurawski](https://avatars3.githubusercontent.com/u/1625711?v=3&s=40)](https://github.com/danielzurawski "danielzurawski")
-[![szilveszter9](https://avatars0.githubusercontent.com/u/7540866?v=3&s=40)](https://github.com/szilveszter9 "szilveszter9")
-[![jmtoball](https://avatars0.githubusercontent.com/u/219950?v=3&s=40)](https://github.com/jmtoball "jmtoball")
-[![gilgongo](https://avatars2.githubusercontent.com/u/4561747?v=3&s=40)](https://github.com/gilgongo "gilgongo")
-[![jasoniangreen](https://avatars3.githubusercontent.com/u/3481367?v=3&s=40)](https://github.com/jasoniangreen "jasoniangreen")
-[![jpablom](https://avatars0.githubusercontent.com/u/3935083?v=3&s=40)](https://github.com/jpablom "jpablom")
-[![limmen](https://avatars2.githubusercontent.com/u/8254791?v=3&s=40)](https://github.com/Limmen "Limmen")
-[![jinzhubaofu](https://avatars2.githubusercontent.com/u/811195?v=3&s=40)](https://github.com/jinzhubaofu "jinzhubaofu")
-[<img src="https://avatars1.githubusercontent.com/u/2733311?v=3&s=40" width="40" height="40">](https://github.com/kiskovacs "kiskovacs")
-[![mahmoud-mardeni](https://avatars2.githubusercontent.com/u/19661270?s=40&v=3)](https://github.com/Mahmoud-Mardeni "mahmoud-mardeni")
-[![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=40)](https://github.com/monlouisj "monlouisj")
-[![marcosrava](https://avatars2.githubusercontent.com/u/243790?v=3&s=40)](https://github.com/marcosrava "marcosrava")
-[![mtramm](https://avatars3.githubusercontent.com/u/3519541?v=3&s=40)](https://github.com/mtramm "mtramm")
-[![Mahmoud-Mardeni](https://avatars3.githubusercontent.com/u/19661270?v=3&s=40)](https://github.com/Mahmoud-Mardeni "Mahmoud-Mardeni")
-[![leuction](https://avatars3.githubusercontent.com/u/8056270?v=3&s=40)](https://github.com/leuction "leuction")
-[![lucacorti](https://avatars2.githubusercontent.com/u/1076999?v=3&s=40)](https://github.com/lucacorti "lucacorti")
-[![minipai](https://avatars2.githubusercontent.com/u/239570?s=40&v=4)](https://github.com/minipai "minipai")
-[![encX](https://avatars3.githubusercontent.com/u/5965883?v=3&s=40)](https://github.com/encX "encX")
-[<img src="https://avatars3.githubusercontent.com/u/1067403?s=40&v=4" alt="pimlie" width="40px"/>](https://github.com/pimlie "pimlie")
-[![MinByeongDon](https://avatars2.githubusercontent.com/u/6141807?s=40&v=4)](https://github.com/MinByeongDon "MinByeongDon")
+[![danielzurawski](https://avatars3.githubusercontent.com/u/1625711?v=3&s=36)](https://github.com/danielzurawski "danielzurawski")
+[![szilveszter9](https://avatars0.githubusercontent.com/u/7540866?v=3&s=36)](https://github.com/szilveszter9 "szilveszter9")
+[![jmtoball](https://avatars0.githubusercontent.com/u/219950?v=3&s=36)](https://github.com/jmtoball "jmtoball")
+[![gilgongo](https://avatars2.githubusercontent.com/u/4561747?v=3&s=36)](https://github.com/gilgongo "gilgongo")
+[![jasoniangreen](https://avatars3.githubusercontent.com/u/3481367?v=3&s=36)](https://github.com/jasoniangreen "jasoniangreen")
+[![jpablom](https://avatars0.githubusercontent.com/u/3935083?v=3&s=36)](https://github.com/jpablom "jpablom")
+[![limmen](https://avatars2.githubusercontent.com/u/8254791?v=3&s=36)](https://github.com/Limmen "Limmen")
+[![jinzhubaofu](https://avatars2.githubusercontent.com/u/811195?v=3&s=36)](https://github.com/jinzhubaofu "jinzhubaofu")
+[![kiskovacs](https://avatars1.githubusercontent.com/u/2733311?v=3&s=36)](https://github.com/kiskovacs "kiskovacs")
+[![mahmoud-mardeni](https://avatars2.githubusercontent.com/u/19661270?s=36&v=3)](https://github.com/Mahmoud-Mardeni "mahmoud-mardeni")
+[![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=36)](https://github.com/monlouisj "monlouisj")
+[![marcosrava](https://avatars2.githubusercontent.com/u/243790?v=3&s=36)](https://github.com/marcosrava "marcosrava")
+[![mtramm](https://avatars3.githubusercontent.com/u/3519541?v=3&s=36)](https://github.com/mtramm "mtramm")
+[![Mahmoud-Mardeni](https://avatars3.githubusercontent.com/u/19661270?v=3&s=36)](https://github.com/Mahmoud-Mardeni "Mahmoud-Mardeni")
+[![leuction](https://avatars3.githubusercontent.com/u/8056270?v=3&s=36)](https://github.com/leuction "leuction")
+[![lucacorti](https://avatars2.githubusercontent.com/u/1076999?v=3&s=36)](https://github.com/lucacorti "lucacorti")
+[![minipai](https://avatars2.githubusercontent.com/u/239570?s=36&v=4)](https://github.com/minipai "minipai")
+[![encX](https://avatars3.githubusercontent.com/u/5965883?v=3&s=36)](https://github.com/encX "encX")
+[<img src="https://avatars3.githubusercontent.com/u/1067403?s=36&v=4" alt="pimlie" width="36px"/>](https://github.com/pimlie "pimlie")
+[![MinByeongDon](https://avatars2.githubusercontent.com/u/6141807?s=36&v=4)](https://github.com/MinByeongDon "MinByeongDon")
+[![gflohr](https://avatars0.githubusercontent.com/u/7126580?s=36&v=4)](https://github.com/gflohr "gflohr")
 
 
 ## License

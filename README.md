@@ -22,6 +22,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|
 |🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>&nbsp;|<br>✓|<br>✓|
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
+|KR ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|
 |🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|
 |🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie)|✓|✓|✓|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|
@@ -32,7 +33,6 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇹🇭 th|Thai     |[encX](https://github.com/encX)|✓|✓|✓|
 |🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>&nbsp;|<br>✓|<br>✓|
 |🇹🇼 zh-TW|Chinese - Taiwan|[minipai](https://github.com/minipai)|✓|✓|✓|
-|KR ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|
 
 
 <sup>\*</sup> added boolean schema, keywords `const`, `contains`, `propertyNames`
@@ -134,6 +134,7 @@ Functions that localize error messages are generated using doT templates in [mes
 [![minipai](https://avatars2.githubusercontent.com/u/239570?s=40&v=4)](https://github.com/minipai "minipai")
 [![encX](https://avatars3.githubusercontent.com/u/5965883?v=3&s=40)](https://github.com/encX "encX")
 [<img src="https://avatars3.githubusercontent.com/u/1067403?s=40&v=4" alt="pimlie" width="40px"/>](https://github.com/pimlie "pimlie")
+[![MinByeongDon](https://avatars2.githubusercontent.com/u/6141807?s=40&v=4)](https://github.com/MinByeongDon "MinByeongDon")
 
 
 ## License

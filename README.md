@@ -16,7 +16,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇬🇧 en|English  | |✓|✓|✓|
 |AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|✓|
 |🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
-|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|✓|-|
+|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)|✓|✓|✓|
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|-|-|
 |🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|✓|✓|-|
 |🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|

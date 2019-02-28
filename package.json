@@ -49,7 +49,7 @@
     "eslint": "^5.0.0",
     "js-beautify": "^1.7.4",
     "json-schema-test": "^2.0.0",
-    "karma": "^3.0.0",
+    "karma": "^4.0.1",
     "karma-mocha": "^1.3.0",
     "karma-phantomjs-launcher": "^1.0.0",
     "mocha": "^5.0.0",

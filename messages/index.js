@@ -8,12 +8,35 @@
 
 module.exports = {
   // supported locales
-  _locales: ['en', 'ar', 'cz', 'de', 'es', 'fr', 'hu', 'it', 'ja', 'ko', 'nb', 'nl', 'pl', 'pt-BR', 'ru', 'sk', 'sv', 'th', 'zh', 'zh-TW'],
+  _locales: [
+    'en',
+    'ar',
+    'cz',
+    'de',
+    'es',
+    'fr',
+    'hu',
+    'it',
+    'ja',
+    'ko',
+    'nb',
+    'nl',
+    'pl',
+    'pt-BR',
+    'ru',
+    'sk',
+    'sv',
+    'th',
+    'zh',
+    'zh-TW',
+    'fa'
+  ],
 
   // shared defines
   _defs: {
     n: '{{var n = e.params.limit;}}',
-    mPlural: { // plural for the words item (element) and character
+    mPlural: {
+      // plural for the words item (element) and character
       en: '{{? n!=1 }}s{{?}}',
       ar: '{{? n!=1 }}عناصر{{?}}',
       cz: '{{? n==1 }}ek{{??}}ků{{?}}',
@@ -27,9 +50,11 @@ module.exports = {
       'pt-BR': '{{? n!=1 }}s{{?}}',
       ru: '{{? n>=2 && n<=4 }}а{{?? n!=1 }}ов{{?}}',
       sk: '{{? n==1 }}ok{{??}}kov{{?}}',
-      sv: '{{? n!=1 }}er{{?}}'
+      sv: '{{? n!=1 }}er{{?}}',
+      fa: '{{? n!=1 }}ها{{?}}'
     },
-    propPlural: { // plural for the word property (attribute)
+    propPlural: {
+      // plural for the word property (attribute)
       en: '{{? n==1 }}y{{??}}ies{{?}}',
       ar: '{{? n!=1 }}خصائص{{?}}',
       cz: '{{? n>=2 && n<=4 }}ky{{?? n!=1 }}ek{{??}}ka{{?}}',
@@ -44,7 +69,8 @@ module.exports = {
       'pt-BR': '{{? n!=1 }}s{{?}}',
       ru: '{{? n==1 }}е{{?? n>=2 && n<=4 }}я{{??}}ей{{?}}',
       sk: '{{? n>=2 && n<=4 }}ky{{?? n!=1 }}iek{{??}}ka{{?}}',
-      sv: '{{? n!=1 }}er{{?}}'
+      sv: '{{? n!=1 }}er{{?}}',
+      fa: '{{? n!=1 }}ها{{?}}'
     }
   },
 
@@ -64,15 +90,16 @@ module.exports = {
     sv: 'boolean schema är falskt',
     th: 'schema เป็น false',
     zh: '布尔模式出错',
-    'zh-TW': '布林模式不正確'
+    'zh-TW': '布林模式不正確',
+    fa: 'الگو اشتباه است'
   },
   $ref: {
-    en: 'can\\\'t resolve reference {{=e.params.ref}}',
+    en: "can\\'t resolve reference {{=e.params.ref}}",
     ar: 'لا يمكن العثور على المرجع {{=e.params.ref}}',
     cz: 'reference {{=e.params.ref}} nenalezena',
     de: 'kann die Referenz {{=e.params.ref}} nicht auflösen',
     es: 'no se puede resolver la referencia {{=e.params.ref}}',
-    fr: 'impossible d\\\'accéder à la référénce {{=e.params.ref}}',
+    fr: "impossible d\\'accéder à la référénce {{=e.params.ref}}",
     hu: 'nem sikerült feloldani a hivatkozást {{=e.params.ref}}',
     it: 'non è possibile risolvere il riferimento {{=e.params.ref}}',
     ja: '{{=e.params.ref}}のスキーマを見つけることができない',
@@ -86,13 +113,15 @@ module.exports = {
     sv: 'kan inte lösa referens {{=e.params.ref}}',
     th: 'ไม่สามารถหา reference {{=e.params.ref}}',
     zh: '无法找到引用{{=e.params.ref}}',
-    'zh-TW': '無法找到引用{{=e.params.ref}}'
+    'zh-TW': '無法找到引用{{=e.params.ref}}',
+    fa: 'نمی توان به مرجع {{=e.params.ref}} اشاره کرد'
   },
   additionalItems: {
     en: '{{#def.n}}should not have more than {{=n}} item{{#def.mPlural}}',
     ar: '{{#def.n}} يجب أن لا يحوي أكثر من {{=n}} عنصر',
     cz: '{{#def.n}}nemůže mít víc, než {{=n}} prv{{#def.mPlural}}',
-    de: '{{#def.n}}darf nicht mehr als {{=n}} Element{{#def.mPlural}} enthalten',
+    de:
+      '{{#def.n}}darf nicht mehr als {{=n}} Element{{#def.mPlural}} enthalten',
     es: '{{#def.n}}no debe tener más de {{=n}} elemento{{#def.mPlural}}',
     fr: '{{#def.n}}ne doit pas contenir plus de {{=n}} élémént{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet több, mint {{=n}} eleme',
@@ -108,7 +137,8 @@ module.exports = {
     sv: '{{#def.n}}borde ha fler än {{=n}} sak{{#def.mPlural}}',
     th: '{{#def.n}}ควรมีสมาชิกไม่เกิน {{=n}}',
     zh: '{{#def.n}}不允许超过{{=n}}个元素',
-    'zh-TW': '{{#def.n}}不可以超過{{=n}}個元素'
+    'zh-TW': '{{#def.n}}不可以超過{{=n}}個元素',
+    fa: '{{#def.n}} نباید بیشتر از {{=n}} ایتم {{#def.mPlural}}'
     // en: 'Additional items not allowed',
     // nb: 'Tillegselementer er ikke tillatt',
     // 'pt-PT': 'Não são permitidos itens adicionais',
@@ -133,7 +163,8 @@ module.exports = {
     sv: 'borde inte ha fler egenskaper',
     th: 'ไม่ควรมี property เกินที่กำหนดไว้',
     zh: '不允许有额外的属性',
-    'zh-TW': '不可以有額外的屬性'
+    'zh-TW': '不可以有額外的屬性',
+    fa: 'نباید فیلد های اضافه داشته باشد.'
     // en: 'Additional properties not allowed',
     // nb: 'Tilleggsvariabler er ikke tillatt',
     // 'pt-PT': 'Não são permitidas propriedades adicionais',
@@ -167,26 +198,46 @@ module.exports = {
     _defs: {
       n: '{{var n = e.params.depsCount;}}'
     },
-    en: '{{#def.n}}should have propert{{#def.propPlural}} {{=e.params.deps}} when property {{=e.params.property}} is present',
-    ar: '{{#def.n}} يجب أن يحوي الخصائص {{=e.params.deps}} عندما تكون الخاصية {{=e.params.property}} موجودة',
-    cz: '{{#def.n}} musí mít polož{{#def.propPlural}}: {{=e.params.deps}}, pokud obsahuje {{=e.params.property}}',
-    de: '{{#def.n}}muss Attribut{{#def.propPlural}} {{=e.params.deps}} aufweisen, wenn Attribut {{=e.params.property}} gesetzt ist',
-    es: '{{#def.n}}debe contener la{{#def.mPlural}} propiedad{{#def.propPlural}} {{=e.params.deps}} cuando la propiedad {{=e.params.property}} se encuentra presente',
-    fr: '{{#def.n}}doit avoir la propriété {{=e.params.deps}} quand la propriété {{=e.params.property}} est présente',
-    hu: '{{#def.n}}-nak kell legyen{{? n>1 }}ek{{?}} a következő tulajdonsága{{#def.propPlural}}: {{=e.params.deps}}, ha van {{=e.params.property}} tulajdonsága',
-    it: '{{#def.n}}dovrebbe avere {{? n==1 }}l\'{{??}}gli {{?}}attribut{{#def.propPlural}} {{=e.params.deps}} quando l\'attributo {{=e.params.property}} è presente',
-    ja: '{{=e.params.property}}がある場合、{{#def.n}}は{{=e.params.deps}}をつけなければいけない',
-    ko: '{{#def.n}}{{=e.params.property}}속성이 있는 경우, {{=e.params.deps}} 속성이 있어야합니다',
-    nb: '{{#def.n}}må ha egenskapen{{? n != 1}}e{{?}} {{=e.params.deps}} når egenskapen {{=e.params.property}} er angitt',
-    nl: '{{#def.n}}moet eigenschap{{#def.propPlural}} {{=e.params.deps}} hebben als eigenschap {{=e.params.property}} aanwezig is',
-    pl: '{{#def.n}}powinien zawierać pol{{#def.propPlural}} {{=e.params.deps}} kiedy pole {{=e.params.property}} jest obecne',
-    'pt-BR': '{{#def.n}} deve ter propriedade{{#def.propPlural}} {{=e.params.deps}} quando a propriedade {{=e.params.property}} estiver presente',
-    ru: '{{#def.n}}должно иметь пол{{? n==1 }}е{{??}}я{{?}} {{=e.params.deps}}, когда присутствует поле {{=e.params.property}}',
-    sk: '{{#def.n}} musí obsahovať polož{{#def.propPlural}}: {{=e.params.deps}}, ak obsahuje {{=e.params.property}}',
-    sv: '{{#def.n}}borde ha egenskap{{#def.propPlural}} {{=e.params.deps}} när egenskap {{=e.params.property}} finns tillgängligt',
-    th: '{{#def.n}}เมื่อมี property {{=e.params.property}} แล้วก็ควรมี property {{=e.params.deps}} ด้วย',
-    zh: '{{#def.n}}应当拥有属性{{=e.params.property}}的依赖属性{{=e.params.deps}}',
-    'zh-TW': '{{#def.n}}應該要有屬性{{=e.params.property}}的依賴屬性{{=e.params.deps}}'
+    en:
+      '{{#def.n}}should have propert{{#def.propPlural}} {{=e.params.deps}} when property {{=e.params.property}} is present',
+    ar:
+      '{{#def.n}} يجب أن يحوي الخصائص {{=e.params.deps}} عندما تكون الخاصية {{=e.params.property}} موجودة',
+    cz:
+      '{{#def.n}} musí mít polož{{#def.propPlural}}: {{=e.params.deps}}, pokud obsahuje {{=e.params.property}}',
+    de:
+      '{{#def.n}}muss Attribut{{#def.propPlural}} {{=e.params.deps}} aufweisen, wenn Attribut {{=e.params.property}} gesetzt ist',
+    es:
+      '{{#def.n}}debe contener la{{#def.mPlural}} propiedad{{#def.propPlural}} {{=e.params.deps}} cuando la propiedad {{=e.params.property}} se encuentra presente',
+    fr:
+      '{{#def.n}}doit avoir la propriété {{=e.params.deps}} quand la propriété {{=e.params.property}} est présente',
+    hu:
+      '{{#def.n}}-nak kell legyen{{? n>1 }}ek{{?}} a következő tulajdonsága{{#def.propPlural}}: {{=e.params.deps}}, ha van {{=e.params.property}} tulajdonsága',
+    it:
+      "{{#def.n}}dovrebbe avere {{? n==1 }}l'{{??}}gli {{?}}attribut{{#def.propPlural}} {{=e.params.deps}} quando l'attributo {{=e.params.property}} è presente",
+    ja:
+      '{{=e.params.property}}がある場合、{{#def.n}}は{{=e.params.deps}}をつけなければいけない',
+    ko:
+      '{{#def.n}}{{=e.params.property}}속성이 있는 경우, {{=e.params.deps}} 속성이 있어야합니다',
+    nb:
+      '{{#def.n}}må ha egenskapen{{? n != 1}}e{{?}} {{=e.params.deps}} når egenskapen {{=e.params.property}} er angitt',
+    nl:
+      '{{#def.n}}moet eigenschap{{#def.propPlural}} {{=e.params.deps}} hebben als eigenschap {{=e.params.property}} aanwezig is',
+    pl:
+      '{{#def.n}}powinien zawierać pol{{#def.propPlural}} {{=e.params.deps}} kiedy pole {{=e.params.property}} jest obecne',
+    'pt-BR':
+      '{{#def.n}} deve ter propriedade{{#def.propPlural}} {{=e.params.deps}} quando a propriedade {{=e.params.property}} estiver presente',
+    ru:
+      '{{#def.n}}должно иметь пол{{? n==1 }}е{{??}}я{{?}} {{=e.params.deps}}, когда присутствует поле {{=e.params.property}}',
+    sk:
+      '{{#def.n}} musí obsahovať polož{{#def.propPlural}}: {{=e.params.deps}}, ak obsahuje {{=e.params.property}}',
+    sv:
+      '{{#def.n}}borde ha egenskap{{#def.propPlural}} {{=e.params.deps}} när egenskap {{=e.params.property}} finns tillgängligt',
+    th:
+      '{{#def.n}}เมื่อมี property {{=e.params.property}} แล้วก็ควรมี property {{=e.params.deps}} ด้วย',
+    zh:
+      '{{#def.n}}应当拥有属性{{=e.params.property}}的依赖属性{{=e.params.deps}}',
+    'zh-TW':
+      '{{#def.n}}應該要有屬性{{=e.params.property}}的依賴屬性{{=e.params.deps}}'
     // en: 'Dependency failed - key must exist: {missing} (due to key: {key})',
     // nb: 'Variabelen {missing} må være definert (på grunn av følgende variabel: {key})',
     // 'pt-PT': 'Uma dependência falhou - tem de existir uma chave: {missing} (devido à chave: {key})',
@@ -328,7 +379,8 @@ module.exports = {
     cz: '{{#def.n}}nesmí obsahovat méně než {{=n}} prv{{#def.mPlural}}',
     de: '{{#def.n}}darf nicht weniger als {{=n}} Element{{#def.mPlural}} haben',
     es: '{{#def.n}}no debe contener menos de {{=n}} elemento{{#def.mPlural}}',
-    fr: '{{#def.n}}ne doit pas contenir moins de {{=n}} élément{{#def.mPlural}}',
+    fr:
+      '{{#def.n}}ne doit pas contenir moins de {{=n}} élément{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet kevesebb, mint {{=n}} eleme',
     it: '{{#def.n}}non deve avere meno di {{=n}} element{{#def.mPlural}}',
     ja: '{{#def.n}}は{{=n}}個以下であってはいけない',
@@ -355,13 +407,15 @@ module.exports = {
     es: '{{#def.n}}no debe contener más de {{=n}} caracter{{? n!=1 }}es{{?}}',
     fr: '{{#def.n}}ne doit pas dépasser {{=n}} caractère{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet hosszabb, mint {{=n}} szimbólum',
-    it: '{{#def.n}}non deve essere più lungo di {{=n}} caratter{{? n==1 }}e{{??}}i{{?}}',
+    it:
+      '{{#def.n}}non deve essere più lungo di {{=n}} caratter{{? n==1 }}e{{??}}i{{?}}',
     ja: '{{#def.n}}は{{=n}}文字以上であってはいけない',
     ko: '{{#def.n}}최대 {{=n}}글자여야 합니다',
     nb: '{{#def.n}}kan ikke være lengre enn {{=n}} tegn',
     nl: '{{#def.n}}mag niet langer dan {{=n}} karakter{{#def.mPlural}} zijn',
     pl: '{{#def.n}}nie powinien być dłuższy niż {{=n}} znak{{? n!=1 }}ów{{?}}',
-    'pt-BR': '{{#def.n}}não deve ter mais que {{=n}} caracter{{? n!=1 }}es{{?}}',
+    'pt-BR':
+      '{{#def.n}}não deve ter mais que {{=n}} caracter{{? n!=1 }}es{{?}}',
     ru: '{{#def.n}}должно быть не длиннее, чем {{=n}} символ{{#def.mPlural}}',
     sk: '{{#def.n}}nesmie byť dlhší než {{=n}} znak{{? n!=1 }}ov{{?}}',
     sv: '{{#def.n}}borde inte vara längre än {{=n}} tecken',
@@ -380,13 +434,15 @@ module.exports = {
     es: '{{#def.n}}no debe contener menos de {{=n}} caracter{{? n!=1 }}es{{?}}',
     fr: '{{#def.n}}ne doit pas faire moins de {{=n}} caractère{{#def.mPlural}}',
     hu: '{{#def.n}}nem lehet rövidebb, mint {{=n}} szimbólum',
-    it: '{{#def.n}}non deve essere meno lungo di {{=n}} caratter{{? n==1 }}e{{??}}i{{?}}',
+    it:
+      '{{#def.n}}non deve essere meno lungo di {{=n}} caratter{{? n==1 }}e{{??}}i{{?}}',
     ja: '{{#def.n}}は{{=n}}文字以下であってはいけない',
     ko: '{{#def.n}}최소 {{=n}}글자여야 합니다',
     nb: '{{#def.n}}kan ikke være kortere enn {{=n}} tegn',
     nl: '{{#def.n}}mag niet korter dan {{=n}} karakter{{#def.mPlural}} zijn',
     pl: '{{#def.n}}nie powinien być krótszy niż {{=n}} znak{{? n!=1 }}ów{{?}}',
-    'pt-BR': '{{#def.n}}não deve ter menos que {{=n}} caracter{{? n!=1 }}es{{?}}',
+    'pt-BR':
+      '{{#def.n}}não deve ter menos que {{=n}} caracter{{? n!=1 }}es{{?}}',
     ru: '{{#def.n}}должно быть не короче, чем {{=n}} символ{{#def.mPlural}}',
     sk: '{{#def.n}}nesmie byť kratší než {{=n}} znak{{? n!=1 }}ov{{?}}',
     sv: '{{#def.n}}borde inte vara kortare än {{=n}} tecken',
@@ -401,17 +457,22 @@ module.exports = {
     en: '{{#def.n}}should not have more than {{=n}} propert{{#def.propPlural}}',
     ar: '{{#def.n}} يجب أن لا يحوي أكثر من {{=n}} خصائص',
     cz: '{{#def.n}}nesmí mít víc než {{=n}} polož{{#def.propPlural}}',
-    de: '{{#def.n}}darf nicht mehr als {{=n}} Attribut{{#def.propPlural}} haben',
+    de:
+      '{{#def.n}}darf nicht mehr als {{=n}} Attribut{{#def.propPlural}} haben',
     es: '{{#def.n}}no debe contener más de {{=n}} propiedad{{#def.propPlural}}',
-    fr: '{{#def.n}}ne doit pas contenir plus de {{=n}} propriété{{#def.propPlural}}',
+    fr:
+      '{{#def.n}}ne doit pas contenir plus de {{=n}} propriété{{#def.propPlural}}',
     hu: '{{#def.n}}nem lehet több, mint {{=n}} tulajdonsága',
     it: '{{#def.n}}non deve avere più di {{=n}} attribut{{#def.propPlural}}',
     ja: '{{#def.n}}は{{=n}}個以上のプロパティを有してはいけない',
     ko: '{{#def.n}}속성은 최대 {{=n}}개 이내여야 합니다',
     nb: '{{#def.n}}kan ikke ha mer enn {{=n}} egenskap{{#def.mPlural}}',
-    nl: '{{#def.n}}mag niet meer dan {{=n}} eigenschap{{#def.propPlural}} hebben',
-    pl: '{{#def.n}}nie powinien zawierać więcej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
-    'pt-BR': '{{#def.n}}não deve ter mais que {{=n}} propriedade{{#def.propPlural}}',
+    nl:
+      '{{#def.n}}mag niet meer dan {{=n}} eigenschap{{#def.propPlural}} hebben',
+    pl:
+      '{{#def.n}}nie powinien zawierać więcej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
+    'pt-BR':
+      '{{#def.n}}não deve ter mais que {{=n}} propriedade{{#def.propPlural}}',
     ru: '{{#def.n}}должно иметь не более, чем {{=n}} пол{{#def.propPlural}}',
     sk: '{{#def.n}}nesmie obsahovať viac než {{=n}} polož{{#def.propPlural}}',
     sv: '{{#def.n}}borde inte ha fler än {{=n}} egenskap{{#def.propPlural}}',
@@ -426,17 +487,23 @@ module.exports = {
     en: '{{#def.n}}should not have less than {{=n}} propert{{#def.propPlural}}',
     ar: '{{#def.n}} يجب أن لا يحوي أقل من {{=n}} خصائص',
     cz: '{{#def.n}}nesmí mít méně než {{=n}} polož{{#def.propPlural}}',
-    de: '{{#def.n}}darf nicht weniger als {{=n}} Attribut{{#def.propPlural}} haben',
-    es: '{{#def.n}}no debe contener menos de {{=n}} propiedad{{#def.propPlural}}',
-    fr: '{{#def.n}}ne doit pas contenir moins de {{=n}} propriété{{#def.propPlural}}',
+    de:
+      '{{#def.n}}darf nicht weniger als {{=n}} Attribut{{#def.propPlural}} haben',
+    es:
+      '{{#def.n}}no debe contener menos de {{=n}} propiedad{{#def.propPlural}}',
+    fr:
+      '{{#def.n}}ne doit pas contenir moins de {{=n}} propriété{{#def.propPlural}}',
     hu: '{{#def.n}}nem lehet kevesebb, mint {{=n}} tulajdonsága',
     it: '{{#def.n}}non deve avere meno di {{=n}} attribut{{#def.propPlural}}',
     ja: '{{#def.n}}は{{=n}}個以下のプロパティを有してはいけない',
     ko: '{{#def.n}}속성은 최소 {{=n}}개 이상이여야 합니다',
     nb: '{{#def.n}}kan ikke ha mindre enn {{=n}} egenskap{{#def.mPlural}}',
-    nl: '{{#def.n}}mag niet minder dan {{=n}} eigenschap{{#def.propPlural}} hebben',
-    pl: '{{#def.n}}nie powinien zawierać mniej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
-    'pt-BR': '{{#def.n}}não deve ter menos que {{=n}} propriedade{{#def.propPlural}}',
+    nl:
+      '{{#def.n}}mag niet minder dan {{=n}} eigenschap{{#def.propPlural}} hebben',
+    pl:
+      '{{#def.n}}nie powinien zawierać mniej niż {{=n}} {{? n==1 }}pole{{??}}pól{{?}}',
+    'pt-BR':
+      '{{#def.n}}não deve ter menos que {{=n}} propriedade{{#def.propPlural}}',
     ru: '{{#def.n}}должно иметь не менее, чем {{=n}} пол{{#def.propPlural}}',
     sk: '{{#def.n}}nesmie obsahovať menej než {{=n}} polož{{#def.propPlural}}',
     sv: '{{#def.n}}borde inte ha färre än {{=n}} egenskap{{#def.propPlural}}',
@@ -454,7 +521,8 @@ module.exports = {
     de: 'muss ein Vielfaches von {{=e.params.multipleOf}} sein',
     es: 'debe ser múltiplo de {{=e.params.multipleOf}}',
     fr: 'doit être un multiple de {{=e.params.multipleOf}}',
-    hu: 'a többszöröse kell legyen a következő számnak: {{=e.params.multipleOf}}',
+    hu:
+      'a többszöröse kell legyen a következő számnak: {{=e.params.multipleOf}}',
     it: 'deve essere un multiplo di {{=e.params.multipleOf}}',
     ja: '{{=e.params.multipleOf}}の倍数でなければいけない',
     ko: '{{=e.params.multipleOf}}의 배수여야 합니다',
@@ -551,11 +619,12 @@ module.exports = {
     en: 'should have required property {{=e.params.missingProperty}}',
     ar: 'هذا الحقل إلزامي',
     cz: 'musí obsahovat požadovanou položku {{=e.params.missingProperty}}',
-    de: 'muss das erforderliche Attribut {{=e.params.missingProperty}} enthalten',
+    de:
+      'muss das erforderliche Attribut {{=e.params.missingProperty}} enthalten',
     es: 'debe tener la propiedad requerida {{=e.params.missingProperty}}',
     fr: 'requiert la propriété {{=e.params.missingProperty}}',
     hu: 'kell legyen {{=e.params.missingProperty}} tulajdonsága',
-    it: 'deve avere l\'attributo obbligatorio {{=e.params.missingProperty}}',
+    it: "deve avere l'attributo obbligatorio {{=e.params.missingProperty}}",
     ja: '必要なプロパティ{{=e.params.missingProperty}}がなければいけない',
     ko: '{{=e.params.missingProperty}} 속성은 필수입니다',
     nb: 'må ha den påkrevde egenskapen {{=e.params.missingProperty}}',
@@ -567,7 +636,8 @@ module.exports = {
     sv: 'borde ha den nödvändiga egenskapen {{=e.params.missingProperty}}',
     th: 'ควรมี property {{=e.params.missingProperty}} ที่บังคับไว้',
     zh: '应当有必需属性 {{=e.params.missingProperty}}',
-    'zh-TW': '應該有必須屬性 {{=e.params.missingProperty}}'
+    'zh-TW': '應該有必須屬性 {{=e.params.missingProperty}}',
+    fa: 'فیلد {{=e.params.missingProperty}} الزامی می‌باشد.'
     // en: 'Missing required property: {key}',
     // nb: 'Mangler obligatorisk variabel: {key}',
     // 'pt-PT': 'Propriedade necessária em falta: {key}',
@@ -586,8 +656,10 @@ module.exports = {
     it: 'deve essere di tipo {{=e.params.type}}',
     ja: '{{=e.params.type}}でなければいけない',
     ko: '{{=e.params.type}}이여야 합니다',
-    nb: '{{#def.t}}må være {{? t == "number" }}et tall{{?? t == "integer"}}et heltall{{?? t == "string"}}en streng{{?? t == "boolean"}}ja eller nei{{??}}{{=t}}{{?}}',
-    nl: '{{#def.t}}moet een {{? t == "number" }}nummer{{?? t == "integer"}}geheel getal{{?? t == "string"}}tekenreeks{{?? t == "boolean"}}ja of nee waarde{{?}} ({{=t}}) zijn',
+    nb:
+      '{{#def.t}}må være {{? t == "number" }}et tall{{?? t == "integer"}}et heltall{{?? t == "string"}}en streng{{?? t == "boolean"}}ja eller nei{{??}}{{=t}}{{?}}',
+    nl:
+      '{{#def.t}}moet een {{? t == "number" }}nummer{{?? t == "integer"}}geheel getal{{?? t == "string"}}tekenreeks{{?? t == "boolean"}}ja of nee waarde{{?}} ({{=t}}) zijn',
     pl: 'powinien być {{=e.params.type}}',
     'pt-BR': 'deve ser {{=e.params.type}}',
     ru: 'должно быть {{=e.params.type}}',
@@ -601,26 +673,46 @@ module.exports = {
     // 'pt-PT': 'Tipo inválido: {type} (esperava {expected})',
   },
   uniqueItems: {
-    en: 'should not have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)',
-    ar: 'يجب أن لا يحوي عناصر مكررة (العنصر ## {{=e.params.j}} و {{=e.params.i}} متطابقة)',
-    cz: 'nesmí obsahovat duplicitní prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} jsou stejné)',
-    de: 'darf keine Duplikate enthalten (Elemente #{{=e.params.j}} und #{{=e.params.i}} sind gleich)',
-    es: 'no debe contener elementos duplicados, (los elementos ## {{=e.params.j}} y {{=e.params.i}} son idénticos)',
-    fr: 'ne doit pas contenir de doublons (les éléments ## {{=e.params.j}} et {{=e.params.i}} sont identiques)',
-    hu: 'nem lehetnek azonos elemei ({{=e.params.j}} és {{=e.params.i}} elemek azonosak)',
-    it: 'non deve avere duplicati (gli elementi ## {{=e.params.j}} e {{=e.params.i}} sono uguali)',
-    ja: '重複するアイテムがあってはいけない（{{=e.params.j}}と{{=e.params.i}}は同じである）',
-    ko: '중복 아이템이 없어야 합니다 (아이템{{=e.params.j}}과 아이템{{=e.params.i}}가 동일합니다)',
-    nb: 'kan ikke ha duplikate elemeneter (elementene ## {{=e.params.j}} og {{=e.params.i}} er identiske)',
-    nl: 'mag geen dubbele items bevatten (items ## {{=e.params.j}} en {{=e.params.i}} zijn gelijk)',
-    pl: 'nie powinien zawierać elementów które się powtarzają (elementy {{=e.params.j}} i {{=e.params.i}} są identyczne)',
-    'pt-BR': 'não deve ter itens duplicados (os itens ## {{=e.params.j}} e {{=e.params.i}} são idênticos)',
-    ru: 'не должно иметь повторяющихся элементов (элементы {{=e.params.j}} и {{=e.params.i}} идентичны)',
-    sk: 'nesmie obsahovať duplicitné prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} sú rovnaké)',
-    sv: 'borde inte ha duplicerade saker (sakerna ## {{=e.params.j}} och {{=e.params.i}} är identiska)',
-    th: 'ไม่ควรมีสมาชิกซ้ำักัน (ลำดับที่ {{=e.params.j}} และ {{=e.params.i}} ซ้ำ)',
-    zh: '不应当含有重复项 (第 {{=e.params.j}} 项与第 {{=e.params.i}} 项是重复的)',
-    'zh-TW': '不應該有重複項目 (第 {{=e.params.j}} 項和第 {{=e.params.i}} 項是重複的)'
+    en:
+      'should not have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)',
+    ar:
+      'يجب أن لا يحوي عناصر مكررة (العنصر ## {{=e.params.j}} و {{=e.params.i}} متطابقة)',
+    cz:
+      'nesmí obsahovat duplicitní prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} jsou stejné)',
+    de:
+      'darf keine Duplikate enthalten (Elemente #{{=e.params.j}} und #{{=e.params.i}} sind gleich)',
+    es:
+      'no debe contener elementos duplicados, (los elementos ## {{=e.params.j}} y {{=e.params.i}} son idénticos)',
+    fr:
+      'ne doit pas contenir de doublons (les éléments ## {{=e.params.j}} et {{=e.params.i}} sont identiques)',
+    hu:
+      'nem lehetnek azonos elemei ({{=e.params.j}} és {{=e.params.i}} elemek azonosak)',
+    it:
+      'non deve avere duplicati (gli elementi ## {{=e.params.j}} e {{=e.params.i}} sono uguali)',
+    ja:
+      '重複するアイテムがあってはいけない（{{=e.params.j}}と{{=e.params.i}}は同じである）',
+    ko:
+      '중복 아이템이 없어야 합니다 (아이템{{=e.params.j}}과 아이템{{=e.params.i}}가 동일합니다)',
+    nb:
+      'kan ikke ha duplikate elemeneter (elementene ## {{=e.params.j}} og {{=e.params.i}} er identiske)',
+    nl:
+      'mag geen dubbele items bevatten (items ## {{=e.params.j}} en {{=e.params.i}} zijn gelijk)',
+    pl:
+      'nie powinien zawierać elementów które się powtarzają (elementy {{=e.params.j}} i {{=e.params.i}} są identyczne)',
+    'pt-BR':
+      'não deve ter itens duplicados (os itens ## {{=e.params.j}} e {{=e.params.i}} são idênticos)',
+    ru:
+      'не должно иметь повторяющихся элементов (элементы {{=e.params.j}} и {{=e.params.i}} идентичны)',
+    sk:
+      'nesmie obsahovať duplicitné prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} sú rovnaké)',
+    sv:
+      'borde inte ha duplicerade saker (sakerna ## {{=e.params.j}} och {{=e.params.i}} är identiska)',
+    th:
+      'ไม่ควรมีสมาชิกซ้ำักัน (ลำดับที่ {{=e.params.j}} และ {{=e.params.i}} ซ้ำ)',
+    zh:
+      '不应当含有重复项 (第 {{=e.params.j}} 项与第 {{=e.params.i}} 项是重复的)',
+    'zh-TW':
+      '不應該有重複項目 (第 {{=e.params.j}} 項和第 {{=e.params.i}} 項是重複的)'
     // en: 'Array items are not unique (indices {match1} and {match2})',
     // nb: 'Elementene er ikke unike (indeks {match1} og {match2} er like)',
     // 'pt-PT': 'Os itens da \'array\' não são únicos (índices {match1} e {match2})',
@@ -646,58 +738,82 @@ module.exports = {
     'zh-TW': '應該通過 "{{=e.keyword}} 關鍵詞檢驗"'
   },
   propertyNames: {
-    en: 'property name \'{{=e.params.propertyName}}\' is invalid',
-    ar: 'اسم الخاصية \'{{=e.params.propertyName}}\' غير صالح',
-    cz: 'název položky \'{{=e.params.propertyName}}\' neodpovídá schématu',
-    de: 'Attributname \'{{=e.params.propertyName}}\' ist ungültig',
-    fr: 'le nom de propriété \'{{=e.params.propertyName}}\' est invalide',
-    it: 'il nome dell\'attritbuto \'{{=e.params.propertyName}}\' non è valido',
-    ko: '\'{{=e.params.propertyName}}\' 속성명이 올바르지 않습니다',
-    nb: 'egenskapen med navnet \'{{e.params.propertyName}}\' er ugyldig',
-    nl: 'eigenschapnaam \'{{=e.params.propertyName}}\' is ongeldig',
-    ru: 'имя поля \'{{=e.params.propertyName}}\' не соответствует схеме',
-    sk: 'názov položky \'{{=e.params.propertyName}}\' nezodpovedá schéme',
-    sv: 'egenskap med namnet \'{{=e.params.propertyName}}\' är inte giltig',
-    th: 'property \'{{=e.params.propertyName}}\' ไม่ถูกต้อง',
-    zh: '属性名 \'{{=e.params.propertyName}}\' 无效',
-    'zh-TW': '属性名 \'{{=e.params.propertyName}}\' 無效'
+    en: "property name '{{=e.params.propertyName}}' is invalid",
+    ar: "اسم الخاصية '{{=e.params.propertyName}}' غير صالح",
+    cz: "název položky '{{=e.params.propertyName}}' neodpovídá schématu",
+    de: "Attributname '{{=e.params.propertyName}}' ist ungültig",
+    fr: "le nom de propriété '{{=e.params.propertyName}}' est invalide",
+    it: "il nome dell'attritbuto '{{=e.params.propertyName}}' non è valido",
+    ko: "'{{=e.params.propertyName}}' 속성명이 올바르지 않습니다",
+    nb: "egenskapen med navnet '{{e.params.propertyName}}' er ugyldig",
+    nl: "eigenschapnaam '{{=e.params.propertyName}}' is ongeldig",
+    ru: "имя поля '{{=e.params.propertyName}}' не соответствует схеме",
+    sk: "názov položky '{{=e.params.propertyName}}' nezodpovedá schéme",
+    sv: "egenskap med namnet '{{=e.params.propertyName}}' är inte giltig",
+    th: "property '{{=e.params.propertyName}}' ไม่ถูกต้อง",
+    zh: "属性名 '{{=e.params.propertyName}}' 无效",
+    'zh-TW': "属性名 '{{=e.params.propertyName}}' 無效"
   },
   patternRequired: {
     en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
     ar: 'يجب أن يحوي خاصية توافق النمط "{{=e.params.missingPattern}}"',
-    cz: 'musí obsahovat položku vyhovující regulárnímu výrazu "{{=e.params.missingPattern}}"',
-    de: 'muss ein Attribut nach folgendem Muster haben "{{=e.params.missingPattern}}"',
-    es: 'la propiedad debe coincidir con el patrón "{{=e.params.missingPattern}}"',
-    fr: 'la propriété doit correspondre au format "{{=e.params.missingPattern}}"',
-    it: 'deve avere un attributo che corrisponda al formato "{{=e.params.missingPattern}}"',
+    cz:
+      'musí obsahovat položku vyhovující regulárnímu výrazu "{{=e.params.missingPattern}}"',
+    de:
+      'muss ein Attribut nach folgendem Muster haben "{{=e.params.missingPattern}}"',
+    es:
+      'la propiedad debe coincidir con el patrón "{{=e.params.missingPattern}}"',
+    fr:
+      'la propriété doit correspondre au format "{{=e.params.missingPattern}}"',
+    it:
+      'deve avere un attributo che corrisponda al formato "{{=e.params.missingPattern}}"',
     ko: '"{{=e.params.missingPattern}}"패턴과 일치하는 속성을 가져야 합니다',
-    nb: 'må ha en egenskap som samsvarer med mønsteret "{{=e.params.missingPattern}}',
-    nl: 'moet een eigenschap hebben met het volgende patroon "{{=e.params.missingPattern}}"',
+    nb:
+      'må ha en egenskap som samsvarer med mønsteret "{{=e.params.missingPattern}}',
+    nl:
+      'moet een eigenschap hebben met het volgende patroon "{{=e.params.missingPattern}}"',
     pl: 'powinien mieć pole pasujące do wzorca "{{=e.params.missingPattern}}"',
-    'pt-BR': 'deve ter a propriedade de padrão de correspondência "{{=e.params.missingPattern}}"',
-    ru: 'должно иметь поле, соответствующее образцу "{{=e.params.missingPattern}}"',
-    sk: 'musí obsahovať položku splňjúcu regulárny výraz "{{=e.params.missingPattern}}"',
-    sv: 'bör ha en egenskap som matchar mönstret "{{=e.params.missingPattern}}"',
+    'pt-BR':
+      'deve ter a propriedade de padrão de correspondência "{{=e.params.missingPattern}}"',
+    ru:
+      'должно иметь поле, соответствующее образцу "{{=e.params.missingPattern}}"',
+    sk:
+      'musí obsahovať položku splňjúcu regulárny výraz "{{=e.params.missingPattern}}"',
+    sv:
+      'bör ha en egenskap som matchar mönstret "{{=e.params.missingPattern}}"',
     th: 'ควรมี property ที่มีชื่อตรงกับ pattern "{{=e.params.missingPattern}}"',
     zh: '应当有属性匹配模式 {{=e.params.missingPattern}}',
     'zh-TW': '應該有屬性對應模式 {{=e.params.missingPattern}}'
   },
   switch: {
-    en: 'should pass "switch" keyword validation, case {{=e.params.caseIndex}} fails',
-    ar: 'يجب أن تمرر كلمة التحقق المفتاحية "switch"، الحالة {{=e.params.caseIndex}}  خاطئة',
-    cz: 'musí projít validácí "switch", případ {{=e.params.caseIndex}} je neúspěšný',
-    de: 'muss der "switch"-Validierung entsprechen, der Fall {{=e.params.caseIndex}} schlägt fehl',
-    es: 'debe pasar la validación "switch" de palabra clave, el caso {{=e.params.caseIndex}} falló',
-    fr: 'doit être valide selon le critère "switch":validation par mot-clé, le cas {{=e.params.caseIndex}} est invalide',
-    it: 'deve passare la validazione del criterio "switch", il caso {{=e.params.caseIndex}} fallisce',
+    en:
+      'should pass "switch" keyword validation, case {{=e.params.caseIndex}} fails',
+    ar:
+      'يجب أن تمرر كلمة التحقق المفتاحية "switch"، الحالة {{=e.params.caseIndex}}  خاطئة',
+    cz:
+      'musí projít validácí "switch", případ {{=e.params.caseIndex}} je neúspěšný',
+    de:
+      'muss der "switch"-Validierung entsprechen, der Fall {{=e.params.caseIndex}} schlägt fehl',
+    es:
+      'debe pasar la validación "switch" de palabra clave, el caso {{=e.params.caseIndex}} falló',
+    fr:
+      'doit être valide selon le critère "switch":validation par mot-clé, le cas {{=e.params.caseIndex}} est invalide',
+    it:
+      'deve passare la validazione del criterio "switch", il caso {{=e.params.caseIndex}} fallisce',
     ko: '"switch"키워드 검증에 실패하였습니다. {{=e.params.caseIndex}} 실패',
-    nb: 'må passere "switch" validering, tilfellet {{=e.params.caseIndex}} misslykkes',
-    nl: 'moet "switch" sleutelwoord validatie doorstaan, geval {{=e.params.caseIndex}} gaat verkeerd',
-    pl: 'powinien przejść walidacje pola "switch", przypadek {{=e.params.caseIndex}} zawiódł',
-    'pt-BR': 'deve passar a validação "switch" de palavra-chave, o caso {{=e.params.caseIndex}} falha',
+    nb:
+      'må passere "switch" validering, tilfellet {{=e.params.caseIndex}} misslykkes',
+    nl:
+      'moet "switch" sleutelwoord validatie doorstaan, geval {{=e.params.caseIndex}} gaat verkeerd',
+    pl:
+      'powinien przejść walidacje pola "switch", przypadek {{=e.params.caseIndex}} zawiódł',
+    'pt-BR':
+      'deve passar a validação "switch" de palavra-chave, o caso {{=e.params.caseIndex}} falha',
     ru: 'должно соответствовать правилу {{=e.params.caseIndex}} в "switch"',
-    sk: 'musí prejsť validáciou "switch", prípad {{=e.params.caseIndex}} je neúspešný',
-    sv: 'bör passera "switch" nyckelord validering, fallet {{=e.params.caseIndex}} misslyckas',
+    sk:
+      'musí prejsť validáciou "switch", prípad {{=e.params.caseIndex}} je neúspešný',
+    sv:
+      'bör passera "switch" nyckelord validering, fallet {{=e.params.caseIndex}} misslyckas',
     th: 'ควรผ่านคีย์เวิร์ด "switch", ผิดเคสที่ {{=e.params.caseIndex}}',
     zh: '由于 {{=e.params.caseIndex}} 失败，未通过 "switch" 校验, ',
     'zh-TW': '因為 {{=e.params.caseIndex}} 失败，沒有通過 "switch" 檢驗, '

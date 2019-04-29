@@ -17,6 +17,8 @@
     "uglify": "uglifyjs ./dist/ajv-i18n.bundle.js -o ./dist/ajv-i18n.min.js -m -c --warn",
     "uglify-test": "uglifyjs ./dist/ajv-i18n.test.bundle.js -o ./dist/ajv-i18n.test.min.js -m -c --warn",
     "prepublish": "npm run build",
+    "prepack": "npm run build",
+    "prepare": "npm run build",
     "test": "npm run eslint && npm run build && npm run test-cov && npm run test-browser",
     "test-spec": "mocha spec/*.spec.js -R spec",
     "test-cov": "nyc npm run test-spec",

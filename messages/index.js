@@ -239,6 +239,7 @@ module.exports = {
       '{{#def.n}}应当拥有属性{{=e.params.property}}的依赖属性{{=e.params.deps}}',
     'zh-TW':
       '{{#def.n}}應該要有屬性{{=e.params.property}}的依賴屬性{{=e.params.deps}}'
+
     // en: 'Dependency failed - key must exist: {missing} (due to key: {key})',
     // nb: 'Variabelen {missing} må være definert (på grunn av følgende variabel: {key})',
     // 'pt-PT': 'Uma dependência falhou - tem de existir uma chave: {missing} (devido à chave: {key})',
@@ -263,7 +264,8 @@ module.exports = {
     sv: 'borde vara ekvivalent med en av dess fördefinierade värden',
     th: 'ควรตรงกับค่าที่กำหนดไว้',
     zh: '应当是预设定的枚举值之一',
-    'zh-TW': '應該要在預設的值之中'
+    'zh-TW': '應該要在預設的值之中',
+    en: 'مقدار باید با یکی از مقادیر تعریف شده همخوانی داشته باشد'
     // en: 'No enum match for: {value}',
     // nb: 'Ingen samsvarende enum verdi for: {value}',
     // 'pt-PT': 'Nenhuma correspondência \'enum\' para: {value}',
@@ -288,7 +290,8 @@ module.exports = {
     sv: 'borde matcha formatet "{{=e.params.format}}"',
     th: 'ควรมีรูปแบบเป็น "{{=e.params.format}}"',
     zh: '应当匹配格式 "{{=e.params.format}}"',
-    'zh-TW': '應該要符合{{=e.params.format}}格式'
+    'zh-TW': '應該要符合{{=e.params.format}}格式',
+    fa: 'باید با فرمت "{{=e.params.format}}" مطابقت داشته باشد'
     // en: 'Format validation failed ({message})',
     // nb: 'Formatteringen stemmer ikke ({message})',
     // 'pt-PT': 'A validação do formato falhou ({message})',
@@ -316,7 +319,8 @@ module.exports = {
     sv: '{{#def.c}}borde vara {{=cond}}',
     th: '{{#def.c}}ควร {{=cond}}',
     zh: '{{#def.c}}应当为 {{=cond}}',
-    'zh-TW': '{{#def.c}}應該要 {{=cond}}'
+    'zh-TW': '{{#def.c}}應該要 {{=cond}}',
+    fa: '{{#def.c}} باید {{=cond}} باشد'
     // en: 'Value {value} is greater than maximum {maximum}',
     // nb: 'Verdien {value} er større enn maksimalverdi {maximum}',
     // 'pt-PT': 'O valor {value} é maior que o máximo {maximum}',
@@ -344,7 +348,8 @@ module.exports = {
     sv: '{{#def.c}}borde vara {{=cond}}',
     th: '{{#def.c}}ควร {{=cond}}',
     zh: '{{#def.c}}应当为 {{=cond}}',
-    'zh-TW': '{{#def.c}}應該要 {{=cond}}'
+    'zh-TW': '{{#def.c}}應該要 {{=cond}}',
+    fa: '{{#def.c}} باید {{=cond}} باشد'
     // en: 'Value {value} is less than minimum {minimum}',
     // nb: 'Verdien {value} er mindre enn minsteverdi {minimum}',
     // 'pt-PT': 'O valor {value} é menor que o mínimo {minimum}',

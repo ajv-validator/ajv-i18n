@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.jst": "javascript"
+  }
+  // "emmet.triggerExpansionOnTab": true,
+  // "prettier.semi": true
+}

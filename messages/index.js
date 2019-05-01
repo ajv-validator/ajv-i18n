@@ -164,7 +164,7 @@ module.exports = {
     th: 'ไม่ควรมี property เกินที่กำหนดไว้',
     zh: '不允许有额外的属性',
     'zh-TW': '不可以有額外的屬性',
-    fa: 'نباید فیلد های اضافه داشته باشد.'
+    fa: 'فیلد مازاد مجاز نمی‌باشد'
     // en: 'Additional properties not allowed',
     // nb: 'Tilleggsvariabler er ikke tillatt',
     // 'pt-PT': 'Não são permitidas propriedades adicionais',
@@ -189,7 +189,8 @@ module.exports = {
     sv: 'borde matcha något schema i "anyOf"',
     th: 'ควรมี schema บางอย่างตรงกับที่กำหนดไว้ใน "anyOf"',
     zh: '数据应为 anyOf 所指定的其中一个',
-    'zh-TW': '不符合 anyOf 指定的模式'
+    'zh-TW': '不符合 anyOf 指定的模式',
+    fa: 'الزام به همخوانی داشتن فیلد ها در "anyOf" است.'
     // en: 'Data does not match any schemas from "anyOf"',
     // nb: 'Data samsvarer ikke med noe skjema fra "anyOf"',
     // 'pt-PT': 'Os dados não correspondem a nenhum esquema de "anyOf"',

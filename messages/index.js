@@ -138,7 +138,7 @@ module.exports = {
     th: '{{#def.n}}ควรมีสมาชิกไม่เกิน {{=n}}',
     zh: '{{#def.n}}不允许超过{{=n}}个元素',
     'zh-TW': '{{#def.n}}不可以超過{{=n}}個元素',
-    fa: '{{#def.n}} نباید بیشتر از {{=n}} ایتم {{#def.mPlural}}'
+    fa: '{{#def.n}} نباید بیشتر از {{=n}} ایتم باشد {{#def.mPlural}}'
     // en: 'Additional items not allowed',
     // nb: 'Tillegselementer er ikke tillatt',
     // 'pt-PT': 'Não são permitidos itens adicionais',
@@ -374,7 +374,8 @@ module.exports = {
     sv: '{{#def.n}}borde inte ha fler än {{=n}} sak{{#def.mPlural}}',
     th: '{{#def.n}}ควรมีสมาชิกไม่เกิน {{=n}}',
     zh: '{{#def.n}}不应多于 {{=n}} 个项',
-    'zh-TW': '{{#def.n}}不應該多於 {{=n}} 個'
+    'zh-TW': '{{#def.n}}不應該多於 {{=n}} 個',
+    fa: '{{#def.n}} نباید بیشتر از {{=n}} ایتم باشد{{#def.mPlural}}'
     // en: 'Array is too long ({length}), maximum {maximum}',
     // nb: 'Listen er for lang ({length} elementer), maksimalt {maximum}',
     // 'pt-PT': 'A \'array\' é muito longa ({length}), máximo {maximum}',
@@ -400,7 +401,8 @@ module.exports = {
     sv: '{{#def.n}}borde inte ha färre än {{=n}} sak{{#def.mPlural}}',
     th: '{{#def.n}}ควรมีสมาชิกไม่น้อยกว่า {{=n}}',
     zh: '{{#def.n}}不应少于 {{=n}} 个项',
-    'zh-TW': '{{#def.n}}不應該少於 {{=n}} 個'
+    'zh-TW': '{{#def.n}}不應該少於 {{=n}} 個',
+    fa: '{{#def.n}} نباید کمتر از {{=n}} ایتم باشد{{#def.mPlural}}'
     // en: 'Array is too short ({length}), minimum {minimum}',
     // nb: 'Listen er for kort ({length} elementer), minst {minimum}',
     // 'pt-PT': 'A \'array\' é muito curta ({length}), mínimo {minimum}',
@@ -427,7 +429,8 @@ module.exports = {
     sv: '{{#def.n}}borde inte vara längre än {{=n}} tecken',
     th: '{{#def.n}}ไม่ควรมากกว่า {{=n}} ตัวอักษร',
     zh: '{{#def.n}}不应多于 {{=n}} 个字符',
-    'zh-TW': '{{#def.n}}不應該多於 {{=n}} 個字元'
+    'zh-TW': '{{#def.n}}不應該多於 {{=n}} 個字元',
+    fa: '{{#def.n}}نباید بیشتر از  {{=n}} کارکتر باشد{{#def.mPlural}}'
     // en: 'String is too long ({length} chars), maximum {maximum}',
     // nb: 'Strengen er for lang ({length} tegn), maksimalt {maximum}',
     // 'pt-PT': 'A \'string\' é muito longa ({length} caracteres), máximo {maximum}',
@@ -484,7 +487,8 @@ module.exports = {
     sv: '{{#def.n}}borde inte ha fler än {{=n}} egenskap{{#def.propPlural}}',
     th: '{{#def.n}}ไม่ควรมี property เกิน {{=n}}',
     zh: '{{#def.n}}不应有多于 {{=n}} 个属性',
-    'zh-TW': '{{#def.n}}不應該多於 {{=n}} 個屬性'
+    'zh-TW': '{{#def.n}}不應該多於 {{=n}} 個屬性',
+    fa: '{{#def.n}}نباید بیشتر از  {{=n}} ایتم باشد{{#def.mPlural}}'
     // en: 'Too many properties defined ({propertyCount}), maximum {maximum}',
     // nb: 'For mange variabler definert ({propertyCount}), makismalt {maximum} er tillatt',
     // 'pt-PT': 'Muitas propriedades definidas ({propertyCount}), máximo {maximum}',
@@ -515,7 +519,8 @@ module.exports = {
     sv: '{{#def.n}}borde inte ha färre än {{=n}} egenskap{{#def.propPlural}}',
     th: '{{#def.n}}ไม่ควรมี property น้อยกว่า {{=n}}',
     zh: '{{#def.n}}不应有少于 {{=n}} 个属性',
-    'zh-TW': '{{#def.n}}不應該少於 {{=n}} 個屬性'
+    'zh-TW': '{{#def.n}}不應該少於 {{=n}} 個屬性',
+    fa: '{{#def.n}}نباید کمتر از  {{=n}} ایتم باشد{{#def.mPlural}}'
     // en: 'Too few properties defined ({propertyCount}), minimum {minimum}',
     // nb: 'For få variabler definert ({propertyCount}), minst {minimum} er forventet',
     // 'pt-PT': 'Poucas propriedades definidas ({propertyCount}), mínimo {minimum}',
@@ -542,6 +547,7 @@ module.exports = {
     th: 'ควรเป็นเลขที่หาร {{=e.params.multipleOf}} ลงตัว',
     zh: '应当是 {{=e.params.multipleOf}} 的整数倍',
     'zh-TW': '應該是 {{=e.params.multipleOf}} 的整數倍'
+
     // en: 'Value {value} is not a multiple of {multipleOf}',
     // nb: 'Verdien {value} er ikke et multiplum av {multipleOf}',
     // 'pt-PT': 'O valor {value} não é um múltiplo de {multipleOf}',
@@ -591,7 +597,8 @@ module.exports = {
     sv: 'borde matcha exakt ett schema i "oneOf"',
     th: 'ควรตรงกับเพียง schema เดียวใน "oneOf" เท่านั้น',
     zh: '只能匹配一个 "oneOf" 中的 schema',
-    'zh-TW': '只能符合一個 "oneOf" 中的 schema'
+    'zh-TW': '只能符合一個 "oneOf" 中的 schema',
+    en: 'باید حداقل با یکی از طرح های "oneOf" مطابقت داشته'
     // en: 'Data does not match any schemas from "oneOf"',
     // nb: 'Data samsvarer ikke med noe skjema fra "oneOf"',
     // 'pt-PT': 'Os dados não correspondem a nenhum esquema de "oneOf"',
@@ -617,6 +624,7 @@ module.exports = {
     th: 'ควรตรงกับแพทเทิร์น "{{=e.params.pattern}}"',
     zh: '应当匹配模式 "{{=e.params.pattern}}"',
     'zh-TW': '應該符合模式 "{{=e.params.pattern}}"'
+
     // en: 'String does not match pattern: {pattern}',
     // nb: 'Strengen samsvarer ikke med regulært uttrykk: {pattern}',
     // 'pt-PT': 'A \'string\' não corresponde ao modelo: {pattern}',

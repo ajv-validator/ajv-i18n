@@ -24,7 +24,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
 |KR ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|
 |🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|
-|🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie)|✓|✓|✓|
+|🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie) & [niekvb](https://github.com/niekvb)|✓|✓|✓|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|
 |🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)|✓|-|-|
 |🇷🇺 ru|Russian  | |✓|✓|✓|
@@ -128,7 +128,7 @@ Functions that localize error messages are generated using doT templates in [mes
 [![monlouisj](https://avatars0.githubusercontent.com/u/5998380?v=3&s=36)](https://github.com/monlouisj "monlouisj")
 [![marcosrava](https://avatars2.githubusercontent.com/u/243790?v=3&s=36)](https://github.com/marcosrava "marcosrava")
 [![mtramm](https://avatars3.githubusercontent.com/u/3519541?v=3&s=36)](https://github.com/mtramm "mtramm")
-[![Mahmoud-Mardeni](https://avatars3.githubusercontent.com/u/19661270?v=3&s=36)](https://github.com/Mahmoud-Mardeni "Mahmoud-Mardeni")
+[![niekvb](https://avatars3.githubusercontent.com/u/37668320?s=36&v=4)](https://github.com/niekvb "niekvb")
 [![leuction](https://avatars3.githubusercontent.com/u/8056270?v=3&s=36)](https://github.com/leuction "leuction")
 [![lucacorti](https://avatars2.githubusercontent.com/u/1076999?v=3&s=36)](https://github.com/lucacorti "lucacorti")
 [![minipai](https://avatars2.githubusercontent.com/u/239570?s=36&v=4)](https://github.com/minipai "minipai")

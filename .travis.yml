@@ -2,9 +2,8 @@ language: node_js
 before_script:
   - git submodule update --init
 node_js:
-  - "6"
-  - "8"
   - "10"
   - "11"
+  - "12"
 after_script:
   - coveralls < coverage/lcov.info

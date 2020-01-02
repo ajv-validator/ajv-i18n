@@ -16,7 +16,7 @@ module.exports = {
     mPlural: { // plural for the words item (element) and character
       en: '{{? n!=1 }}s{{?}}',
       ar: '{{? n!=1 }}عناصر{{?}}',
-      cz: '{{? n==1 }}ek{{??}}ků{{?}}',
+      cz: '{{? n>=2 && n<=4 }}ky{{?? n!=1 }}ek{{??}}ků{{?}}',
       de: '{{? n!=1 }}e{{?}}',
       es: '{{? n!=1 }}s{{?}}', //only item (element)
       fr: '{{? n!=1 }}s{{?}}',
@@ -175,7 +175,7 @@ module.exports = {
     },
     en: '{{#def.n}}should have propert{{#def.propPlural}} {{=e.params.deps}} when property {{=e.params.property}} is present',
     ar: '{{#def.n}} يجب أن يحوي الخصائص {{=e.params.deps}} عندما تكون الخاصية {{=e.params.property}} موجودة',
-    cz: '{{#def.n}} musí mít polož{{#def.propPlural}}: {{=e.params.deps}}, pokud obsahuje {{=e.params.property}}',
+    cz: '{{#def.n}}musí mít polož{{#def.propPlural}}: {{=e.params.deps}}, pokud obsahuje {{=e.params.property}}',
     de: '{{#def.n}}muss Attribut{{#def.propPlural}} {{=e.params.deps}} aufweisen, wenn Attribut {{=e.params.property}} gesetzt ist',
     es: '{{#def.n}}debe contener la{{#def.mPlural}} propiedad{{#def.propPlural}} {{=e.params.deps}} cuando la propiedad {{=e.params.property}} se encuentra presente',
     fr: '{{#def.n}}doit avoir la propriété {{=e.params.deps}} quand la propriété {{=e.params.property}} est présente',
@@ -201,7 +201,7 @@ module.exports = {
   enum: {
     en: 'should be equal to one of predefined values',
     ar: 'قيمة هذا الحقل يجب أن تكون مساوية لأحد القيم المعرفة مسبقاً',
-    cz: 'musí být rovna jedné hodnotě z výčtu',
+    cz: 'musí být rovno jedné hodnotě z výčtu',
     de: 'muss einem der vorgegebenen Werte entsprechen',
     es: 'deber ser igual a uno de los valores predefinidos',
     fr: 'doit être égal à une des valeurs prédéfinies',
@@ -363,7 +363,7 @@ module.exports = {
   maxLength: {
     en: '{{#def.n}}should not be longer than {{=n}} character{{#def.mPlural}}',
     ar: '{{#def.n}} يجب أن لا يحوي أكثر من {{=n}} محرف',
-    cz: '{{#def.n}}nesmí být delší než {{=n}} znak{{? n!=1 }}ů{{?}}',
+    cz: '{{#def.n}}nesmí být delší než {{=n}} zna{{? n>=2 && n<=4 }}ky{{?? n!=1 }}k{{??}}ků{{?}}',
     de: '{{#def.n}}darf nicht länger als {{=n}} Zeichen sein',
     es: '{{#def.n}}no debe contener más de {{=n}} caracter{{? n!=1 }}es{{?}}',
     fr: '{{#def.n}}ne doit pas dépasser {{=n}} caractère{{#def.mPlural}}',
@@ -389,7 +389,7 @@ module.exports = {
   minLength: {
     en: '{{#def.n}}should not be shorter than {{=n}} character{{#def.mPlural}}',
     ar: '{{#def.n}} يجب أن لا يحوي أقل من {{=n}} محرف',
-    cz: '{{#def.n}}nesmí být kratší než {{=n}} znak{{? n!=1 }}ů{{?}}',
+    cz: '{{#def.n}}nesmí být kratší než {{=n}} zna{{? n>=2 && n<=4 }}ky{{?? n!=1 }}k{{??}}ků{{?}}',
     de: '{{#def.n}}darf nicht kürzer als {{=n}} Zeichen sein',
     es: '{{#def.n}}no debe contener menos de {{=n}} caracter{{? n!=1 }}es{{?}}',
     fr: '{{#def.n}}ne doit pas faire moins de {{=n}} caractère{{#def.mPlural}}',
@@ -626,7 +626,7 @@ module.exports = {
   uniqueItems: {
     en: 'should not have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)',
     ar: 'يجب أن لا يحوي عناصر مكررة (العنصر ## {{=e.params.j}} و {{=e.params.i}} متطابقة)',
-    cz: 'nesmí obsahovat duplicitní prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} jsou stejné)',
+    cz: 'nesmí obsahovat duplicitní prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} jsou identické)',
     de: 'darf keine Duplikate enthalten (Elemente #{{=e.params.j}} und #{{=e.params.i}} sind gleich)',
     es: 'no debe contener elementos duplicados, (los elementos ## {{=e.params.j}} y {{=e.params.i}} son idénticos)',
     fr: 'ne doit pas contenir de doublons (les éléments ## {{=e.params.j}} et {{=e.params.i}} sont identiques)',
@@ -673,7 +673,7 @@ module.exports = {
   propertyNames: {
     en: 'property name \'{{=e.params.propertyName}}\' is invalid',
     ar: 'اسم الخاصية \'{{=e.params.propertyName}}\' غير صالح',
-    cz: 'název položky \'{{=e.params.propertyName}}\' neodpovídá schématu',
+    cz: 'název položky \'{{=e.params.propertyName}}\' není platný',
     de: 'Attributname \'{{=e.params.propertyName}}\' ist ungültig',
     fr: 'le nom de propriété \'{{=e.params.propertyName}}\' est invalide',
     id: 'nama properti \'{{=e.params.propertyName}}\' tidak valid',
@@ -713,7 +713,7 @@ module.exports = {
   switch: {
     en: 'should pass "switch" keyword validation, case {{=e.params.caseIndex}} fails',
     ar: 'يجب أن تمرر كلمة التحقق المفتاحية "switch"، الحالة {{=e.params.caseIndex}}  خاطئة',
-    cz: 'musí projít validácí "switch", případ {{=e.params.caseIndex}} je neúspěšný',
+    cz: 'musí projít validací "switch", případ {{=e.params.caseIndex}} je neúspěšný',
     de: 'muss der "switch"-Validierung entsprechen, der Fall {{=e.params.caseIndex}} schlägt fehl',
     es: 'debe pasar la validación "switch" de palabra clave, el caso {{=e.params.caseIndex}} falló',
     fr: 'doit être valide selon le critère "switch":validation par mot-clé, le cas {{=e.params.caseIndex}} est invalide',
@@ -734,7 +734,7 @@ module.exports = {
   const: {
     en: 'should be equal to constant',
     ar: 'يجب أن يكون ثابتاً',
-    cz: 'musí být konstantní',
+    cz: 'musí být roven konstantě',
     de: 'muss gleich der Konstanten sein',
     es: 'debe ser igual a la constante',
     fr: 'doit être égal à la constante',

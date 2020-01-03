@@ -20,13 +20,14 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|-|-|
 |🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)|✓|✓|-|
 |🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|
+|🇮🇩 id|Indonesian|[Eko Eryanto](https://github.com/ekoeryanto)|✓|✓|✓|
 |🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>&nbsp;|<br>✓|<br>✓|
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
-|KR ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|
+|🇰🇷 ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|
 |🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|
 |🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie) & [niekvb](https://github.com/niekvb)|✓|✓|✓|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|
-|🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)|✓|-|-|
+|🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)|✓|✓|✓|
 |🇷🇺 ru|Russian  | |✓|✓|✓|
 |🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|
@@ -136,6 +137,19 @@ Functions that localize error messages are generated using doT templates in [mes
 [<img src="https://avatars3.githubusercontent.com/u/1067403?s=36&v=4" alt="pimlie" width="36px"/>](https://github.com/pimlie "pimlie")
 [![MinByeongDon](https://avatars2.githubusercontent.com/u/6141807?s=36&v=4)](https://github.com/MinByeongDon "MinByeongDon")
 [![gflohr](https://avatars0.githubusercontent.com/u/7126580?s=36&v=4)](https://github.com/gflohr "gflohr")
+[![ekoeryanto](https://avatars2.githubusercontent.com/u/36023898?s=36&v=4)](https://github.com/ekoeryanto "ekoeryanto")
+
+
+## Enterprise support
+
+ajv-i18n package is a part of [Tidelift enterprise subscription](https://tidelift.com/subscription/pkg/npm-ajv-i18n?utm_source=npm-ajv-i18n&utm_medium=referral&utm_campaign=enterprise&utm_term=repo) - it provides a centralised commercial support to open-source software users, in addition to the support provided by software maintainers.
+
+
+## Security contact
+
+To report a security vulnerability, please use the
+[Tidelift security contact](https://tidelift.com/security).
+Tidelift will coordinate the fix and disclosure. Please do NOT report security vulnerability via GitHub issues.
 
 
 ## License

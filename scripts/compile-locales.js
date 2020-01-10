@@ -9,6 +9,7 @@ var messages = require('../messages')
   , totalMissing = 0;
 
 var localize = getLocalizeTemplate();
+var localizeDefinition = getLocalizeDefinitionTemplate();
 
 messages._locales.forEach(compileMessages);
 console.log('Total missing messages:', totalMissing);
@@ -21,6 +22,10 @@ function compileMessages(locale) {
   code = beautify(code, { indent_size: 2 }) + '\n';
   var targetPath = path.join(localePath, 'index.js');
   fs.writeFileSync(targetPath, code);
+  var definitionCode = localizeDefinition();
+  definitionCode = beautify(definitionCode, { indent_size: 2 }) + '\n';
+  var definitionTargetPath = path.join(localePath, 'index.d.ts');
+  fs.writeFileSync(definitionTargetPath, definitionCode);
 }
 
 
@@ -79,5 +84,11 @@ function byKeyword(a, b) {
 
 function getLocalizeTemplate() {
   var tmplStr = fs.readFileSync(path.join(__dirname, '..', 'localize', 'localize.jst'));
+  return doT.compile(tmplStr);
+}
+
+
+function getLocalizeDefinitionTemplate() {
+  var tmplStr = fs.readFileSync(path.join(__dirname, '..', 'localize', 'localize-definition.jst'));
   return doT.compile(tmplStr);
 }

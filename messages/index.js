@@ -865,6 +865,7 @@ module.exports = {
     en: 'should match "{{=e.params.failingKeyword}}" schema',
     ar: 'يجب أن توافق المخطط "{{=e.params.failingKeyword}}"',
     de: 'muss dem Schema "{{=e.params.failingKeyword}}" entsprechen',
+    fr: 'doit correspondre au schéma "{{=e.params.failingKeyword}}"',
     id: 'harus cocok dengan skema "{{=e.params.failingKeyword}}"',
     it: 'deve corrispondere allo schema "{{=e.params.failingKeyword}}"',
     ko: '"{{=e.params.failingKeyword}}" 스키마와 일치해야 합니다',

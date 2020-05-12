@@ -855,8 +855,8 @@ module.exports = {
   formatExclusiveMaximum: {
     en: 'formatExclusiveMaximum should be boolean',
     ar: 'formatExclusiveMaximum يجب أن يكون منطقياً',
-    cz: 'formatExclusiveMaximum musí být boolean',
     ca: 'formatExclusiveMaximum ha de ser booleà',
+    cz: 'formatExclusiveMaximum musí být boolean',
     de: 'formatExclusiveMaximum muss ein boolescher Wert sein',
     es: 'formatExclusiveMaximum debe ser booleano',
     fr: 'formatExclusiveMaximum doit être un booléen',
@@ -877,8 +877,8 @@ module.exports = {
   formatExclusiveMinimum: {
     en: 'formatExclusiveMinimum should be boolean',
     ar: 'formatExclusiveMinimum يجب أن يكون منطقياً',
-    cz: 'formatExclusiveMinimum musí být boolean',
     ca: 'formatExclusiveMinimum ha de ser booleà',
+    cz: 'formatExclusiveMinimum musí být boolean',
     de: 'formatExclusiveMinimum muss ein boolescher Wert sein',
     es: 'formatExclusiveMinimum debe ser booleano',
     fr: 'formatExclusiveMinimum doit être un booléen',

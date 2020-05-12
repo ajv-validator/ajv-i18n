@@ -7,21 +7,27 @@
 }}
 
 {{ var name = 'localize_' + it.locale.replace('-','_'); }}
-module.exports = function {{=name}}(errors) {
+var {{=name}} = function {{=name}}(errors) {
   if (!(errors && errors.length)) return;
   for (var i=0; i<errors.length; i++) {
     var e = errors[i];
     var out;
     switch (e.keyword) {
       {{~ it.messages:msg }}
+        {{ if(msg.keyword == 'custom') var custom = msg; }}
         case '{{= msg.keyword }}':
           {{= stripFunction(msg.msgFunc) }}
           break;
       {{~}}
-      default: continue;
+      case 'errorMessage':
+        {{=name}}(e.params.errors);
+        continue;
+      default:
+        {{= stripFunction(custom.msgFunc) }}
     }
     e.message = out;
   }
+  module.exports = {{=name}};
 };
 
 {{

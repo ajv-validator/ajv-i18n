@@ -27,7 +27,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|
 |🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie)|✓|✓|✓|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|
-|🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)|✓|✓|✓|
+|🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)<br>[ggondim](https://github.com/ggondim)|✓|✓|✓|
 |🇷🇺 ru|Russian  | |✓|✓|✓|
 |🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|

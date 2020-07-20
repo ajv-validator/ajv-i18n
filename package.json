@@ -46,7 +46,7 @@
     "browserify": "^16.0.0",
     "coveralls": "^3.0.0",
     "dot": "^1.0.3",
-    "eslint": "^6.0.0",
+    "eslint": "^7.5.0",
     "js-beautify": "^1.7.4",
     "json-schema-test": "^2.0.0",
     "karma": "^4.0.1",

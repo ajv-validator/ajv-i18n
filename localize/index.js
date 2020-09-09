@@ -10,6 +10,7 @@ module.exports = {
     hu: require('./hu'),
     it: require('./it'),
     ja: require('./ja'),
+    ko: require('./ko'),
     nb: require('./nb'),
     nl: require('./nl'),
     pl: require('./pl'),

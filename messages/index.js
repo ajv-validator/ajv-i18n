@@ -99,7 +99,7 @@ module.exports = {
   additionalItems: {
     en: '{{#def.n}}should not have more than {{=n}} item{{#def.mPlural}}',
     ar: '{{#def.n}} يجب أن لا يحوي أكثر من {{=n}} عنصر',
-    ca: '«{{#def.n}}» no ha de tenir més de {{=n}} element{{#def.mPlural}}',
+    ca: '{{#def.n}} no ha de tenir més de {{=n}} element{{#def.mPlural}}',
     cz: '{{#def.n}}nemůže mít víc, než {{=n}} prv{{#def.mPlural}}',
     de: '{{#def.n}}darf nicht mehr als {{=n}} Element{{#def.mPlural}} enthalten',
     es: '{{#def.n}}no debe tener más de {{=n}} elemento{{#def.mPlural}}',

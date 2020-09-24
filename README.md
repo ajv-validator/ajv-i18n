@@ -26,7 +26,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
 |🇰🇷 ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|
 |🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|
-|🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie)|✓|✓|✓|
+|🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie)<br>[niekvb](https://github.com/niekvb)|✓|✓|✓|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|
 |🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)<br>[ggondim](https://github.com/ggondim)|✓|✓|✓|
 |🇷🇺 ru|Russian  | |✓|✓|✓|
@@ -142,6 +142,7 @@ Functions that localize error messages are generated using doT templates in [mes
 [![Telokis](https://avatars3.githubusercontent.com/u/6382729?s=40&v=4)](https://github.com/Telokis "Telokis")
 [<img src="https://avatars3.githubusercontent.com/u/15526814?s=40&v=4" alt="alexandreec" width="40px">](https://github.com/alexandreec "alexandreec")
 [![ggondim](https://avatars2.githubusercontent.com/u/2074685?s=40&v=4)](https://github.com/ggondim "ggondim")
+[![niekvb](https://avatars3.githubusercontent.com/u/37668320?s=36&v=4)](https://github.com/niekvb "niekvb")
 
 
 ## Enterprise support

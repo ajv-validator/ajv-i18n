@@ -15,7 +15,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 |🇬🇧 en|English  | |✓|✓|✓|
 |AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|✓|
 |CA ca|Catalan   |[alexandreec](https://github.com/alexandreec)|✓|✓|✓|
-|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
+|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)<br>[NAM0007](https://github.com/NAM0007)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|
 |🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)<br>[gflohr](https://github.com/gflohr)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|✓|
 |🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)<br>[Telokis](https://github.com/Telokis)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|
@@ -141,7 +141,8 @@ Functions that localize error messages are generated using doT templates in [mes
 [![Telokis](https://avatars3.githubusercontent.com/u/6382729?s=40&v=4)](https://github.com/Telokis "Telokis")
 [<img src="https://avatars3.githubusercontent.com/u/15526814?s=40&v=4" alt="alexandreec" width="40px">](https://github.com/alexandreec "alexandreec")
 [![ggondim](https://avatars2.githubusercontent.com/u/2074685?s=40&v=4)](https://github.com/ggondim "ggondim")
-[![niekvb](https://avatars3.githubusercontent.com/u/37668320?s=36&v=4)](https://github.com/niekvb "niekvb")
+[![niekvb](https://avatars3.githubusercontent.com/u/37668320?s=40&v=4)](https://github.com/niekvb "niekvb")
+[![NAM0007](https://avatars1.githubusercontent.com/u/47188486?s=40&v=4)](https://github.com/NAM0007 "NAM0007")
 
 
 ## Enterprise support

@@ -135,11 +135,12 @@ Functions that localize error messages are generated using doT templates in [mes
 [![lucacorti](https://avatars2.githubusercontent.com/u/1076999?v=3&s=40)](https://github.com/lucacorti "lucacorti")
 [![minipai](https://avatars2.githubusercontent.com/u/239570?s=40&v=4)](https://github.com/minipai "minipai")
 [![encX](https://avatars3.githubusercontent.com/u/5965883?v=3&s=40)](https://github.com/encX "encX")
-[<img src="https://avatars3.githubusercontent.com/u/1067403?s=40&v=4" alt="pimlie" width="36px"/>](https://github.com/pimlie "pimlie")
+[<img src="https://avatars3.githubusercontent.com/u/1067403?s=40&v=4" alt="pimlie" width="40px"/>](https://github.com/pimlie "pimlie")
 [![MinByeongDon](https://avatars2.githubusercontent.com/u/6141807?s=40&v=4)](https://github.com/MinByeongDon "MinByeongDon")
 [![gflohr](https://avatars0.githubusercontent.com/u/7126580?s=40&v=4)](https://github.com/gflohr "gflohr")
 [![ekoeryanto](https://avatars2.githubusercontent.com/u/36023898?s=40&v=4)](https://github.com/ekoeryanto "ekoeryanto")
 [![Telokis](https://avatars3.githubusercontent.com/u/6382729?s=40&v=4)](https://github.com/Telokis "Telokis")
+[<img src="https://avatars3.githubusercontent.com/u/15526814?s=40&v=4" alt="alexandreec" width="40px">](https://github.com/alexandreec "alexandreec")
 
 
 ## Enterprise support

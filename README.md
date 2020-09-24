@@ -141,6 +141,7 @@ Functions that localize error messages are generated using doT templates in [mes
 [![ekoeryanto](https://avatars2.githubusercontent.com/u/36023898?s=40&v=4)](https://github.com/ekoeryanto "ekoeryanto")
 [![Telokis](https://avatars3.githubusercontent.com/u/6382729?s=40&v=4)](https://github.com/Telokis "Telokis")
 [<img src="https://avatars3.githubusercontent.com/u/15526814?s=40&v=4" alt="alexandreec" width="40px">](https://github.com/alexandreec "alexandreec")
+[![ggondim](https://avatars2.githubusercontent.com/u/2074685?s=40&v=4)](https://github.com/ggondim "ggondim")
 
 
 ## Enterprise support

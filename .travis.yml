@@ -1,6 +1,7 @@
 language: node_js
 before_script:
   - git submodule update --init
+  - npm install -g coveralls
 node_js:
   - "10"
   - "12"

@@ -6,7 +6,7 @@
  * Tests will fail otherwise.
  */
 
-module.exports = {
+const messages = (module.exports = {
   // supported locales
   _locales: [
     "en",
@@ -634,6 +634,17 @@ module.exports = {
     zh: "应当是 {{=e.params.type}} 类型",
     "zh-TW": "應該是 {{=e.params.type}} 類型",
   },
+  unevaluatedProperties: {
+    en: "should NOT have unevaluated properties",
+    ru: "не должно иметь непроверенных полей",
+  },
+  unevaluatedItems: {
+    _defs: {
+      n: "{{var n = e.params.len;}}",
+    },
+    en: "{{#def.n}}should NOT have more than {{=n}} item{{#def.mPlural}}",
+    ru: "{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}",
+  },
   uniqueItems: {
     en:
       "should not have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)",
@@ -891,7 +902,8 @@ module.exports = {
     zh: '应当匹配模式 "{{=e.params.failingKeyword}}" ',
     "zh-TW": '應該符合 "{{=e.params.failingKeyword}}" schema',
   },
-}
+})
 
-module.exports.exclusiveMaximum = module.exports.maximum
-module.exports.exclusiveMinimum = module.exports.minimum
+module.exports.exclusiveMaximum = messages.maximum
+module.exports.exclusiveMinimum = messages.minimum
+module.exports.dependentRequired = messages.dependencies

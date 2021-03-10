@@ -299,7 +299,7 @@ const messages = (module.exports = {
     ja: '"{{=e.params.format}}"形式に揃えなければいけない',
     ko: '"{{=e.params.format}}" 포맷과 일치해야 합니다',
     nb: 'må stemme overens med formatet "{{=e.params.format}}"',
-    nl: 'moet overeenkomen met het voglende formaat: "{{=e.params.format}}"',
+    nl: 'moet overeenkomen met het volgende formaat: "{{=e.params.format}}"',
     pl: 'powinien zgadzać się z formatem "{{=e.params.format}}"',
     "pt-BR": 'a validação do formato falhou "{{=e.params.format}}"',
     ru: 'должно соответствовать формату "{{=e.params.format}}"',

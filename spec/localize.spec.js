@@ -103,7 +103,8 @@ function testSuites() {
     _suites = {
       "draft-06": "./JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json",
       "draft-07": "./JSON-Schema-Test-Suite/tests/draft7/{**/,}*.json",
-      "ajv-keywords": "./ajv-keywords/spec/tests/{format*,patternRequired,switch}.json",
+      "ajv-keywords": "./ajv-keywords/spec/tests/patternRequired.json",
+      "ajv-formats": "./ajv-formats/tests/extras/format{Minimum,Maximum}.json",
     }
   }
   return _suites

@@ -4,3 +4,6 @@
 [submodule "spec/ajv-keywords"]
 	path = spec/ajv-keywords
 	url = https://github.com/epoberezkin/ajv-keywords.git
+[submodule "spec/ajv-formats"]
+	path = spec/ajv-formats
+	url = gh:ajv-validator/ajv-formats

@@ -10,7 +10,7 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 
 ## Supported locales
 
-|locale|language |contributor|draft-04|draft-06<sup>1</sup>|draft-07<sup>2</sup>|draft-2019-09<sup>3</sup>|
+|locale|language |contributor|draft-04|draft-06<sup>1</sup>|draft-07<sup>2</sup>|draft-2019-09<br>draft-2020-12<sup>3</sup>|
 |------|:-------:|:---------:|:------:|:------:|:------:|:------:|
 |🇬🇧 en|English  | |✓|✓|✓|✓|
 |AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|✓|-|

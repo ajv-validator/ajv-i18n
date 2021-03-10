@@ -30,6 +30,6 @@ function testLocalesOrder(locales, message) {
 
 function testLocalesProperties(obj, message) {
   const props = Object.keys(obj)
-  if (props[0][0] === "_") props.shift()
+  while (props[0][0] === "_") props.shift()
   testLocalesOrder(props, message)
 }

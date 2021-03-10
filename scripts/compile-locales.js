@@ -31,7 +31,7 @@ function localeMessages(locale) {
   for (const keyword in errorMessages) {
     if (keyword[0] === "_") continue
     const msgFunc = compileMessage(keyword)
-    if (msgFunc) messages.push({keyword, msgFunc})
+    if (msgFunc) messages.push({keyword, msgFunc, keywords: errorMessages[keyword]._keywords})
   }
   messages.sort(byKeyword)
   return {
@@ -52,12 +52,11 @@ function localeMessages(locale) {
       defs = enDefs
       totalMissing++
       msg = keyMsgs["en"]
-      const errorMsg = 'message for locale "' + locale + '" keyword "' + keyword + '"'
+      const errorMsg = `message for locale "${locale}" keyword "${keyword}"`
       if (msg) {
-        console.warn('Warning: Replaced with "en"', errorMsg)
+        console.warn(`Warning: Replaced with "en" ${errorMsg}`)
       } else {
-        console.error("Error: No", errorMsg)
-        return undefined
+        throw new Error(`Error: No ${errorMsg}`)
       }
     }
 

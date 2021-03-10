@@ -6,7 +6,7 @@
  * Tests will fail otherwise.
  */
 
-const messages = (module.exports = {
+module.exports = {
   // supported locales
   _locales: [
     "en",
@@ -217,6 +217,7 @@ const messages = (module.exports = {
     "zh-TW": "不符合 anyOf 指定的模式",
   },
   dependencies: {
+    _keywords: ["dependentRequired"],
     _defs: {
       n: "{{var n = e.params.depsCount;}}",
     },
@@ -310,6 +311,7 @@ const messages = (module.exports = {
     "zh-TW": "應該要符合{{=e.params.format}}格式",
   },
   maximum: {
+    _keywords: ["exclusiveMaximum"],
     _defs: {
       c: '{{var cond = e.params.comparison + " " + e.params.limit;}}',
     },
@@ -337,6 +339,7 @@ const messages = (module.exports = {
     "zh-TW": "{{#def.c}}應該要 {{=cond}}",
   },
   minimum: {
+    _keywords: ["exclusiveMinimum"],
     _defs: {
       c: '{{var cond = e.params.comparison + " " + e.params.limit;}}',
     },
@@ -792,6 +795,7 @@ const messages = (module.exports = {
     "zh-TW": "應該包含一個有效元素",
   },
   formatMaximum: {
+    _keywords: ["formatExclusiveMaximum"],
     _defs: {
       c: '{{var cond = e.params.comparison + " " + e.params.limit;}}',
     },
@@ -817,6 +821,7 @@ const messages = (module.exports = {
     "zh-TW": "{{#def.c}}應該是 {{=cond}}",
   },
   formatMinimum: {
+    _keywords: ["formatExclusiveMinimum"],
     _defs: {
       c: '{{var cond = e.params.comparison + " " + e.params.limit;}}',
     },
@@ -859,10 +864,4 @@ const messages = (module.exports = {
     zh: '应当匹配模式 "{{=e.params.failingKeyword}}" ',
     "zh-TW": '應該符合 "{{=e.params.failingKeyword}}" schema',
   },
-})
-
-module.exports.exclusiveMaximum = messages.maximum
-module.exports.exclusiveMinimum = messages.minimum
-module.exports.dependentRequired = messages.dependencies
-module.exports.formatExclusiveMaximum = messages.formatMaximum
-module.exports.formatExclusiveMinimum = messages.formatMinimum
+}

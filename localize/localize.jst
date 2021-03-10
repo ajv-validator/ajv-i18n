@@ -18,7 +18,8 @@ module.exports = function {{=name}}(errors) {
           {{= stripFunction(msg.msgFunc) }}
           break;
       {{~}}
-      default: continue;
+      default:
+        {{= stripFunction(it.defaultMessage) }}
     }
     e.message = out;
   }

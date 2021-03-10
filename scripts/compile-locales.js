@@ -1,15 +1,15 @@
 "use strict"
 
-const messages = require("../messages"),
-  doT = require("dot"),
-  beautify = require("js-beautify"),
-  fs = require("fs"),
-  path = require("path")
+const errorMessages = require("../messages")
+const doT = require("dot")
+const beautify = require("js-beautify")
+const fs = require("fs")
+const path = require("path")
 let totalMissing = 0
 
 const localize = getLocalizeTemplate()
 
-messages._locales.forEach(compileMessages)
+errorMessages._locales.forEach(compileMessages)
 console.log("Total missing messages:", totalMissing)
 
 function compileMessages(locale) {
@@ -17,21 +17,31 @@ function compileMessages(locale) {
   try {
     fs.mkdirSync(localePath)
   } catch (e) {}
-  const locMsgs = localeMessages(locale)
-  let code = localize({messages: locMsgs, locale: locale})
+  let code = localize(localeMessages(locale))
   code = beautify(code, {indent_size: 2}) + "\n"
   const targetPath = path.join(localePath, "index.js")
   fs.writeFileSync(targetPath, code)
 }
 
 function localeMessages(locale) {
-  const locMsgs = []
-  const localeDefs = getLocalDefs(messages._defs, locale)
-  const enDefs = getLocalDefs(messages._defs, "en")
+  const messages = []
+  const localeDefs = getLocalDefs(errorMessages._defs, locale)
+  const enDefs = getLocalDefs(errorMessages._defs, "en")
 
-  for (const keyword in messages) {
+  for (const keyword in errorMessages) {
     if (keyword[0] === "_") continue
-    const keyMsgs = messages[keyword]
+    const msgFunc = compileMessage(keyword)
+    if (msgFunc) messages.push({keyword, msgFunc})
+  }
+  messages.sort(byKeyword)
+  return {
+    locale,
+    messages,
+    defaultMessage: compileMessage("_defaultMessage"),
+  }
+
+  function compileMessage(keyword) {
+    const keyMsgs = errorMessages[keyword]
     let msg = keyMsgs[locale]
     const keyDefs = keyMsgs._defs
     let defs
@@ -47,18 +57,14 @@ function localeMessages(locale) {
         console.warn('Warning: Replaced with "en"', errorMsg)
       } else {
         console.error("Error: No", errorMsg)
-        continue
+        return undefined
       }
     }
 
     if (keyDefs) defs = {...defs, ...keyDefs}
 
-    const msgFunc = doT.compile(msg, defs)
-    locMsgs.push({keyword: keyword, msgFunc: msgFunc})
+    return doT.compile(msg, defs)
   }
-
-  locMsgs.sort(byKeyword)
-  return locMsgs
 }
 
 function getLocalDefs(defs, locale) {

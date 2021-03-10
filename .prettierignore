@@ -1,0 +1,7 @@
+spec/JSON-Schema-Test-Suite
+spec/ajv-keywords
+.browser
+coverage
+bundle
+.nyc_output
+localize

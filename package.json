@@ -17,10 +17,12 @@
     "uglify": "uglifyjs ./dist/ajv-i18n.bundle.js -o ./dist/ajv-i18n.min.js -m -c --warn",
     "uglify-test": "uglifyjs ./dist/ajv-i18n.test.bundle.js -o ./dist/ajv-i18n.test.min.js -m -c --warn",
     "prepublish": "npm run build",
-    "test": "npm run eslint && npm run build && npm run test-cov",
+    "test": "npm run prettier:check && npm run eslint && npm run build && npm run test-cov",
     "test-spec": "mocha spec/*.spec.js -R dot",
     "test-cov": "nyc npm run test-spec",
-    "test-browser": "npm run bundle-test && scripts/prepare-tests && karma start --single-run --browsers PhantomJS"
+    "test-browser": "npm run bundle-test && scripts/prepare-tests && karma start --single-run --browsers PhantomJS",
+    "prettier:write": "prettier --write \"./**/*.{json,yaml,js,ts}\"",
+    "prettier:check": "prettier --list-different \"./**/*.{json,yaml,js,ts}\""
   },
   "repository": {
     "type": "git",
@@ -40,6 +42,7 @@
   },
   "homepage": "https://github.com/epoberezkin/ajv-i18n#readme",
   "devDependencies": {
+    "@ajv-validator/config": "^0.3.0",
     "ajv": "^7.2.1",
     "ajv-formats": "^1.5.1",
     "ajv-keywords": "^4.0.0",
@@ -47,15 +50,18 @@
     "browserify": "^16.0.0",
     "dot": "^1.0.3",
     "eslint": "^7.8.1",
+    "eslint-config-prettier": "^8.1.0",
+    "husky": "^5.1.3",
     "js-beautify": "^1.7.4",
     "json-schema-test": "^2.0.0",
     "karma": "^5.0.0",
     "karma-mocha": "^2.0.0",
     "karma-phantomjs-launcher": "^1.0.0",
+    "lint-staged": "^10.5.4",
     "mocha": "^8.0.1",
     "nyc": "^15.0.0",
     "phantomjs-prebuilt": "^2.1.4",
-    "pre-commit": "^1.1.1",
+    "prettier": "^2.2.1",
     "require-globify": "^1.3.0",
     "uglify-js": "^3.0.10"
   },
@@ -71,5 +77,14 @@
       "lcov",
       "text-summary"
     ]
+  },
+  "prettier": "@ajv-validator/config/prettierrc.json",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm test"
+    }
+  },
+  "lint-staged": {
+    "*.{json,yaml,js,ts}": "prettier --write"
   }
 }

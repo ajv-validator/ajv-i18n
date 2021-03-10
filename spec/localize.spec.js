@@ -31,16 +31,23 @@ const SKIP_DRAFT7 = [
 ]
 
 const SKIP = {
-  "draft-06": ["optional/float-overflow"],
-  "draft-07": SKIP_DRAFT7,
-  "draft-2019-09": [...SKIP_DRAFT7, "draft2019-09/recursiveRef"],
+  draft6: ["optional/float-overflow"],
+  draft7: SKIP_DRAFT7,
+  "draft2019-09": [...SKIP_DRAFT7, "recursiveRef"],
 }
 
 const DEFAULT_META = {
-  "draft-06": "http://json-schema.org/draft-06/schema#",
+  draft6: "http://json-schema.org/draft-06/schema#",
 }
 
-const suites = testSuites()
+const suites = {
+  draft6: "./JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json",
+  draft7: "./JSON-Schema-Test-Suite/tests/draft7/{**/,}*.json",
+  "draft2019-09": "./JSON-Schema-Test-Suite/tests/draft2019-09/{**/,}*.json",
+  "ajv-keywords": "./ajv-keywords/spec/tests/patternRequired.json",
+  "ajv-formats": "./ajv-formats/tests/extras/format{Minimum,Maximum}.json",
+}
+
 for (const s in suites) runTests(s)
 
 function runTests(suite) {
@@ -68,7 +75,7 @@ function runTests(suite) {
     skip: SKIP[suite],
     assert: assert,
     cwd: __dirname,
-    hideFolder: "draft4/",
+    hideFolder: `${suite}/`,
     timeout: 30000,
   })
 }
@@ -84,7 +91,7 @@ function getAjv(suite, allErrors, verbose) {
     formats: toHash(["idn-email", "idn-hostname", "iri", "iri-reference"]),
   }
   switch (suite) {
-    case "draft-2019-09":
+    case "draft2019-09":
       ajv = new Ajv2019(options)
       break
     default:
@@ -93,33 +100,6 @@ function getAjv(suite, allErrors, verbose) {
   }
   ajvFormats(ajvKeywords(ajv, ["patternRequired"]), {keywords: true})
   return ajv
-}
-
-function testSuites() {
-  let _suites
-  if (typeof window == "object") {
-    _suites = {
-      "draft-06": require("./JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json", {mode: "list"}),
-      "draft-07": require("./JSON-Schema-Test-Suite/tests/draft7/{**/,}*.json", {mode: "list"}),
-    }
-    for (const suiteName in _suites) {
-      _suites[suiteName].forEach((suite) => {
-        if (suite.name.indexOf("optional/format") === 0) {
-          suite.name = suite.name.replace("optional/", "")
-        }
-        suite.test = suite.module
-      })
-    }
-  } else {
-    _suites = {
-      "draft-06": "./JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json",
-      "draft-07": "./JSON-Schema-Test-Suite/tests/draft7/{**/,}*.json",
-      "draft-2019-09": "./JSON-Schema-Test-Suite/tests/draft2019-09/{**/,}*.json",
-      "ajv-keywords": "./ajv-keywords/spec/tests/patternRequired.json",
-      "ajv-formats": "./ajv-formats/tests/extras/format{Minimum,Maximum}.json",
-    }
-  }
-  return _suites
 }
 
 function afterEach(res) {

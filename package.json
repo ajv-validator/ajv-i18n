@@ -18,7 +18,7 @@
     "uglify-test": "uglifyjs ./dist/ajv-i18n.test.bundle.js -o ./dist/ajv-i18n.test.min.js -m -c --warn",
     "prepublish": "npm run build",
     "test": "npm run eslint && npm run build && npm run test-cov",
-    "test-spec": "mocha spec/*.spec.js -R spec",
+    "test-spec": "mocha spec/*.spec.js -R dot",
     "test-cov": "nyc npm run test-spec",
     "test-browser": "npm run bundle-test && scripts/prepare-tests && karma start --single-run --browsers PhantomJS"
   },
@@ -40,8 +40,9 @@
   },
   "homepage": "https://github.com/epoberezkin/ajv-i18n#readme",
   "devDependencies": {
-    "ajv": "^6.0.0",
-    "ajv-keywords": "^3.0.0",
+    "ajv": "^7.2.1",
+    "ajv-formats": "^1.5.1",
+    "ajv-keywords": "^4.0.0",
     "brfs": "^2.0.0",
     "browserify": "^16.0.0",
     "dot": "^1.0.3",

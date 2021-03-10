@@ -3,7 +3,6 @@
 var messages = require('../messages')
   , doT = require('dot')
   , beautify = require('js-beautify')
-  , copy = require('ajv/lib/compile/util').copy
   , fs = require('fs')
   , path = require('path')
   , totalMissing = 0;
@@ -51,7 +50,7 @@ function localeMessages(locale) {
       }
     }
 
-    if (keyDefs) defs = copy(keyDefs, copy(defs));
+    if (keyDefs) defs = {...defs, ...keyDefs};
 
     var msgFunc = doT.compile(msg, defs);
     locMsgs.push({ keyword: keyword, msgFunc: msgFunc });

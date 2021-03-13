@@ -2,7 +2,7 @@
 
 /**
  * When adding new locales, please maintain alphabetic ordering.
- * "en" should remain in the first position.
+ * "en" must remain in the first position.
  * Tests will fail otherwise.
  */
 
@@ -77,7 +77,7 @@ module.exports = {
 
   // error messages
   _defaultMessage: {
-    en: 'should pass "{{=e.keyword}}" keyword validation',
+    en: 'must pass "{{=e.keyword}}" keyword validation',
     ar: 'يجب أن تمرر كلمة التحقق المفتاحية "{{=e.keyword}}"',
     ca: 'ha de passar la validació de la clau "{{=e.keyword}}"',
     cs: 'musí vyhovět "{{=e.keyword}}" validaci',
@@ -121,7 +121,7 @@ module.exports = {
     "zh-TW": "布林模式不正確",
   },
   additionalItems: {
-    en: "{{#def.n}}should not have more than {{=n}} item{{#def.mPlural}}",
+    en: "{{#def.n}}must NOT have more than {{=n}} item{{#def.mPlural}}",
     ar: "{{#def.n}} يجب أن لا يحوي أكثر من {{=n}} عنصر",
     ca: "{{#def.n}}no ha de tenir més de {{=n}} element{{#def.mPlural}}",
     cs: "{{#def.n}}nemůže mít víc, než {{=n}} prv{{#def.mPlural}}",
@@ -145,7 +145,7 @@ module.exports = {
     "zh-TW": "{{#def.n}}不可以超過{{=n}}個元素",
   },
   additionalProperties: {
-    en: "should not have additional properties",
+    en: "must NOT have additional properties",
     ar: "يجب أن لا يحوي خصائص إضافية",
     ca: "no ha de tenir propietats addicionals",
     cs: "nemůže mít další položky",
@@ -198,7 +198,7 @@ module.exports = {
       n: "{{var n = e.params.depsCount;}}",
     },
     en:
-      "{{#def.n}}should have propert{{#def.propPlural}} {{=e.params.deps}} when property {{=e.params.property}} is present",
+      "{{#def.n}}must have propert{{#def.propPlural}} {{=e.params.deps}} when property {{=e.params.property}} is present",
     ar:
       "{{#def.n}} يجب أن يحوي الخصائص {{=e.params.deps}} عندما تكون الخاصية {{=e.params.property}} موجودة",
     ca:
@@ -263,7 +263,7 @@ module.exports = {
     "zh-TW": "應該要在預設的值之中",
   },
   format: {
-    en: 'should match format "{{=e.params.format}}"',
+    en: 'must match format "{{=e.params.format}}"',
     ar: 'يجب أن يوافق الصيغة "{{=e.params.format}}"',
     ca: 'ha de coincidir amb el format "{{=e.params.format}}"',
     cs: 'musí být ve formátu "{{=e.params.format}}"',
@@ -291,7 +291,7 @@ module.exports = {
     _defs: {
       c: '{{var cond = e.params.comparison + " " + e.params.limit;}}',
     },
-    en: "{{#def.c}}should be {{=cond}}",
+    en: "{{#def.c}}must be {{=cond}}",
     ar: "{{#def.c}} يجب أن يكون {{=cond}}",
     ca: "{{#def.c}}ha de ser {{=cond}}",
     cs: "{{#def.c}}musí být {{=cond}}",
@@ -319,7 +319,7 @@ module.exports = {
     _defs: {
       c: '{{var cond = e.params.comparison + " " + e.params.limit;}}',
     },
-    en: "{{#def.c}}should be {{=cond}}",
+    en: "{{#def.c}}must be {{=cond}}",
     ar: "{{#def.c}} يجب أن يكون {{=cond}}",
     ca: "{{#def.c}}ha de ser {{=cond}}",
     cs: "{{#def.c}}musí být {{=cond}}",
@@ -343,7 +343,7 @@ module.exports = {
     "zh-TW": "{{#def.c}}應該要 {{=cond}}",
   },
   maxItems: {
-    en: "{{#def.n}}should not have more than {{=n}} item{{#def.mPlural}}",
+    en: "{{#def.n}}must NOT have more than {{=n}} item{{#def.mPlural}}",
     ar: "{{#def.n}} يجب أن لا يحوي أكثر من {{=n}} عنصر",
     ca: "{{#def.n}}no ha de tenir més de {{=n}} ítem{{#def.mPlural}}",
     cs: "{{#def.n}}nesmí obsahovat víc než {{=n}} prv{{#def.mPlural}}",
@@ -367,7 +367,7 @@ module.exports = {
     "zh-TW": "{{#def.n}}不應該多於 {{=n}} 個",
   },
   minItems: {
-    en: "{{#def.n}}should not have less than {{=n}} item{{#def.mPlural}}",
+    en: "{{#def.n}}must NOT have less than {{=n}} item{{#def.mPlural}}",
     ar: "{{#def.n}} يجب أن لا يحوي أقل من {{=n}} عنصر",
     ca: "{{#def.n}}no ha de tenir menys de {{=n}} ítem{{#def.mPlural}}",
     cs: "{{#def.n}}nesmí obsahovat méně než {{=n}} prv{{#def.mPlural}}",
@@ -391,7 +391,7 @@ module.exports = {
     "zh-TW": "{{#def.n}}不應該少於 {{=n}} 個",
   },
   maxLength: {
-    en: "{{#def.n}}should not be longer than {{=n}} character{{#def.mPlural}}",
+    en: "{{#def.n}}must NOT be longer than {{=n}} character{{#def.mPlural}}",
     ar: "{{#def.n}} يجب أن لا يحوي أكثر من {{=n}} محرف",
     ca: "{{#def.n}}no pot contenir més de {{=n}} caràcter{{#def.mPlural}}",
     cs: "{{#def.n}}nesmí být delší než {{=n}} zna{{? n>=2 && n<=4 }}ky{{?? n!=1 }}k{{??}}ků{{?}}",
@@ -415,7 +415,7 @@ module.exports = {
     "zh-TW": "{{#def.n}}不應該多於 {{=n}} 個字元",
   },
   minLength: {
-    en: "{{#def.n}}should not be shorter than {{=n}} character{{#def.mPlural}}",
+    en: "{{#def.n}}must NOT be shorter than {{=n}} character{{#def.mPlural}}",
     ar: "{{#def.n}} يجب أن لا يحوي أقل من {{=n}} محرف",
     ca: "{{#def.n}}no pot contenir menys de {{=n}} caràcter{{#def.mPlural}}",
     cs: "{{#def.n}}nesmí být kratší než {{=n}} zna{{? n>=2 && n<=4 }}ky{{?? n!=1 }}k{{??}}ků{{?}}",
@@ -439,7 +439,7 @@ module.exports = {
     "zh-TW": "{{#def.n}}不應該少於 {{=n}} 個字元",
   },
   maxProperties: {
-    en: "{{#def.n}}should not have more than {{=n}} propert{{#def.propPlural}}",
+    en: "{{#def.n}}must NOT have more than {{=n}} propert{{#def.propPlural}}",
     ar: "{{#def.n}} يجب أن لا يحوي أكثر من {{=n}} خصائص",
     ca: "{{#def.n}}no pot contenir més de {{=n}} propietat{{#def.mPlural}}",
     cs: "{{#def.n}}nesmí mít víc než {{=n}} polož{{#def.propPlural}}",
@@ -463,7 +463,7 @@ module.exports = {
     "zh-TW": "{{#def.n}}不應該多於 {{=n}} 個屬性",
   },
   minProperties: {
-    en: "{{#def.n}}should not have less than {{=n}} propert{{#def.propPlural}}",
+    en: "{{#def.n}}must NOT have less than {{=n}} propert{{#def.propPlural}}",
     ar: "{{#def.n}} يجب أن لا يحوي أقل من {{=n}} خصائص",
     ca: "{{#def.n}}no pot contenir menys de {{=n}} propietat{{#def.mPlural}}",
     cs: "{{#def.n}}nesmí mít méně než {{=n}} polož{{#def.propPlural}}",
@@ -487,7 +487,7 @@ module.exports = {
     "zh-TW": "{{#def.n}}不應該少於 {{=n}} 個屬性",
   },
   multipleOf: {
-    en: "should be a multiple of {{=e.params.multipleOf}}",
+    en: "must be a multiple of {{=e.params.multipleOf}}",
     ar: " يجب أن يحوي أكثر من {{=e.params.multipleOf}}",
     ca: "ha de ser múltiple de {{=e.params.multipleOf}}",
     cs: "musí být násobkem {{=e.params.multipleOf}}",
@@ -511,7 +511,7 @@ module.exports = {
     "zh-TW": "應該是 {{=e.params.multipleOf}} 的整數倍",
   },
   not: {
-    en: 'should not be valid according to schema in "not"',
+    en: 'must NOT be valid according to schema in "not"',
     ar: 'يجب أن يكون غير صحيح وفقاً للمخطط "not"',
     ca: 'no ha de ser vàlid d’acord amb l’esquema definit a "not"',
     cs: 'nesmí vyhovět schématu v "not"',
@@ -535,7 +535,7 @@ module.exports = {
     "zh-TW": '不應該符合 "not" schema',
   },
   oneOf: {
-    en: 'should match exactly one schema in "oneOf"',
+    en: 'must match exactly one schema in "oneOf"',
     ar: 'يجب أن يوافق مخطط واحد فقط موجود في "oneOf"',
     ca: 'ha de coincidir només amb un esquema definit a "oneOf"',
     cs: 'musí vyhovět právě jednomu schématu v "oneOf"',
@@ -559,7 +559,7 @@ module.exports = {
     "zh-TW": '只能符合一個 "oneOf" 中的 schema',
   },
   pattern: {
-    en: 'should match pattern "{{=e.params.pattern}}"',
+    en: 'must match pattern "{{=e.params.pattern}}"',
     ar: 'يجب أن يوافق النمط "{{=e.params.pattern}}"',
     ca: 'ha de coincidir amb el patró "{{=e.params.pattern}}"',
     cs: 'musí vyhovět regulárnímu výrazu "{{=e.params.pattern}}"',
@@ -583,7 +583,7 @@ module.exports = {
     "zh-TW": '應該符合模式 "{{=e.params.pattern}}"',
   },
   required: {
-    en: "should have required property {{=e.params.missingProperty}}",
+    en: "must have required property {{=e.params.missingProperty}}",
     ar: "هذا الحقل إلزامي",
     ca: "ha de tenir la propietat requerida {{=e.params.missingProperty}}",
     cs: "musí obsahovat požadovanou položku {{=e.params.missingProperty}}",
@@ -637,19 +637,19 @@ module.exports = {
     "zh-TW": "應該是 {{=e.params.type}} 類型",
   },
   unevaluatedProperties: {
-    en: "should NOT have unevaluated properties",
+    en: "must NOT have unevaluated properties",
     ru: "не должно иметь непроверенных полей",
   },
   unevaluatedItems: {
     _defs: {
       n: "{{var n = e.params.len;}}",
     },
-    en: "{{#def.n}}should NOT have more than {{=n}} item{{#def.mPlural}}",
+    en: "{{#def.n}}must NOT have more than {{=n}} item{{#def.mPlural}}",
     ru: "{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}",
   },
   uniqueItems: {
     en:
-      "should not have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)",
+      "must NOT have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)",
     ar: "يجب أن لا يحوي عناصر مكررة (العنصر ## {{=e.params.j}} و {{=e.params.i}} متطابقة)",
     ca:
       "no ha de tenir ítems duplicats (els ítems ## {{=e.params.j}} i {{=e.params.i}} són idèntics)",
@@ -684,28 +684,28 @@ module.exports = {
     "zh-TW": "不應該有重複項目 (第 {{=e.params.j}} 項和第 {{=e.params.i}} 項是重複的)",
   },
   propertyNames: {
-    en: "property name '{{=e.params.propertyName}}' is invalid",
-    ar: "اسم الخاصية '{{=e.params.propertyName}}' غير صالح",
-    ca: "la propietat '{{=e.params.propertyName}}' no és vàlida",
-    cs: "název položky '{{=e.params.propertyName}}' není platný",
-    de: "Attributname '{{=e.params.propertyName}}' ist ungültig",
-    es: "la propiedad '{{=e.params.propertyName}}' no és válida",
-    fr: "le nom de propriété '{{=e.params.propertyName}}' est invalide",
-    id: "nama properti '{{=e.params.propertyName}}' tidak valid",
-    it: "il nome dell'attritbuto '{{=e.params.propertyName}}' non è valido",
-    ko: "'{{=e.params.propertyName}}' 속성명이 올바르지 않습니다",
+    en: "property name is invalid",
+    ar: "اسم الخاصية غير صالح",
+    ca: "la propietat no és vàlida",
+    cs: "název položky není platný",
+    de: "Attributname ist ungültig",
+    es: "la propiedad no és válida",
+    fr: "le nom de propriété est invalide",
+    id: "nama properti tidak valid",
+    it: "il nome dell'attritbuto non è valido",
+    ko: "속성명이 올바르지 않습니다",
     nb: "egenskapen med navnet '{{e.params.propertyName}}' er ugyldig",
-    nl: "eigenschapnaam '{{=e.params.propertyName}}' is ongeldig",
-    "pt-BR": "o nome da propriedade '{{=e.params.propertyName}}' é inválido",
-    ru: "имя поля '{{=e.params.propertyName}}' не соответствует схеме",
-    sk: "názov položky '{{=e.params.propertyName}}' nezodpovedá schéme",
-    sv: "egenskap med namnet '{{=e.params.propertyName}}' är inte giltig",
-    th: "property '{{=e.params.propertyName}}' ไม่ถูกต้อง",
-    zh: "属性名 '{{=e.params.propertyName}}' 无效",
-    "zh-TW": "属性名 '{{=e.params.propertyName}}' 無效",
+    nl: "eigenschapnaam is ongeldig",
+    "pt-BR": "o nome da propriedade é inválido",
+    ru: "имя поля не соответствует схеме",
+    sk: "názov položky nezodpovedá schéme",
+    sv: "egenskap med namnet är inte giltig",
+    th: "property ไม่ถูกต้อง",
+    zh: "属性名 无效",
+    "zh-TW": "属性名 無效",
   },
   patternRequired: {
-    en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
+    en: 'must have property matching pattern "{{=e.params.missingPattern}}"',
     ar: 'يجب أن يحوي خاصية توافق النمط "{{=e.params.missingPattern}}"',
     ca: 'la propietat ha de coincidir amb el patró "{{=e.params.missingPattern}}"',
     cs: 'musí obsahovat položku vyhovující regulárnímu výrazu "{{=e.params.missingPattern}}"',
@@ -728,7 +728,7 @@ module.exports = {
     "zh-TW": "應該有屬性對應模式 {{=e.params.missingPattern}}",
   },
   const: {
-    en: "should be equal to constant",
+    en: "must be equal to constant",
     ar: "يجب أن يكون ثابتاً",
     ca: "ha de ser igual a la constant",
     cs: "musí být roven konstantě",
@@ -750,7 +750,7 @@ module.exports = {
     "zh-TW": "應該等於常數",
   },
   contains: {
-    en: "should contain a valid item",
+    en: "must contain a valid item",
     ar: "يجب أن يحوي عنصرا صحيح",
     ca: "ha de contenir un ítem vàlid",
     cs: "musí obsahovat prvek odpovídající schématu",
@@ -775,7 +775,7 @@ module.exports = {
     _defs: {
       c: '{{var cond = e.params.comparison + " " + e.params.limit;}}',
     },
-    en: "{{#def.c}}should be {{=cond}}",
+    en: "{{#def.c}}must be {{=cond}}",
     ar: "{{#def.c}} يجب أن يكون {{=cond}}",
     ca: "{{#def.c}}ha de ser {{=cond}}",
     cs: "{{#def.c}}musí být {{=cond}}",
@@ -801,7 +801,7 @@ module.exports = {
     _defs: {
       c: '{{var cond = e.params.comparison + " " + e.params.limit;}}',
     },
-    en: "{{#def.c}}should be {{=cond}}",
+    en: "{{#def.c}}must be {{=cond}}",
     ar: "{{#def.c}} يجب أن يكون {{=cond}}",
     ca: "{{#def.c}}ha de ser {{=cond}}",
     cs: "{{#def.c}}musí být {{=cond}}",
@@ -823,7 +823,7 @@ module.exports = {
     "zh-TW": "{{#def.c}}應該是 {{=cond}}",
   },
   if: {
-    en: 'should match "{{=e.params.failingKeyword}}" schema',
+    en: 'must match "{{=e.params.failingKeyword}}" schema',
     ar: 'يجب أن توافق المخطط "{{=e.params.failingKeyword}}"',
     ca: 'ha de correspondre’s amb l’esquema "{{=e.params.failingKeyword}}"',
     cs: 'musí vyhovět "{{=e.params.failingKeyword}}" schématu',

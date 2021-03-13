@@ -37,7 +37,7 @@ module.exports = {
 
   // error messages
   _defaultMessage: {
-    en: 'should pass "{{=e.keyword}}" keyword validation',
+    en: 'must pass "{{=e.keyword}}" keyword validation',
     ca: 'ha de passar la validació de la clau "{{=e.keyword}}"',
     cs: 'musí vyhovět "{{=e.keyword}}" validaci',
     de: 'muss die Validierung "{{=e.keyword}}" bestehen',

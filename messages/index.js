@@ -638,6 +638,7 @@ module.exports = {
   },
   unevaluatedProperties: {
     en: "must NOT have unevaluated properties",
+    nl: "mag geen ongecontroleerde eigenschappen bevatten",
     ru: "не должно иметь непроверенных полей",
   },
   unevaluatedItems: {
@@ -645,6 +646,7 @@ module.exports = {
       n: "{{var n = e.params.len;}}",
     },
     en: "{{#def.n}}must NOT have more than {{=n}} item{{#def.mPlural}}",
+    nl: "{{#def.n}}mag niet meer dan {{= n}} item{{#def.mPlural}} bevatten",
     ru: "{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}",
   },
   uniqueItems: {

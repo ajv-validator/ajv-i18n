@@ -38,9 +38,9 @@
   "homepage": "https://github.com/epoberezkin/ajv-i18n#readme",
   "devDependencies": {
     "@ajv-validator/config": "^0.3.0",
-    "ajv": "^7.2.1",
-    "ajv-formats": "^1.5.1",
-    "ajv-keywords": "^4.0.0",
+    "ajv": "^8.0.0-beta.0",
+    "ajv-formats": "^2.0.0-beta.0",
+    "ajv-keywords": "^5.0.0-beta.0",
     "dot": "^1.0.3",
     "eslint": "^7.8.1",
     "eslint-config-prettier": "^8.1.0",
@@ -53,7 +53,7 @@
     "prettier": "^2.2.1"
   },
   "peerDependencies": {
-    "ajv": "^6.0.0"
+    "ajv": "^8.0.0-beta.0"
   },
   "nyc": {
     "exclude": [

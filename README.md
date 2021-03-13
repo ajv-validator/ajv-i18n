@@ -10,30 +10,30 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 
 ## Supported locales
 
-|locale|language |contributor|draft-04|draft-06<sup>1</sup>|draft-07<sup>2</sup>|draft<br>2019-09<br>2020-12<sup>3</sup>|
-|------|:-------:|:---------:|:------:|:------:|:------:|:------:|
-|🇬🇧 en|English  | |✓|✓|✓|✓|
-|AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|✓|-|
-|CA ca|Catalan   |[alexandreec](https://github.com/alexandreec)|✓|✓|✓|-|
-|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)<br>[NAM0007](https://github.com/NAM0007)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|
-|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)<br>[gflohr](https://github.com/gflohr)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|
-|🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|✓|-|
-|🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)<br>[Telokis](https://github.com/Telokis)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|
-|🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|-|
-|🇮🇩 id|Indonesian|[Eko Eryanto](https://github.com/ekoeryanto)|✓|✓|✓|-|
-|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>&nbsp;|<br>✓|<br>✓|-|
-|🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|-|
-|🇰🇷 ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|-|
-|🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|-|
-|🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie)<br>[niekvb](https://github.com/niekvb)|✓|✓|✓|-|
-|🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|-|
-|🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)<br>[ggondim](https://github.com/ggondim)|✓|✓|✓|-|
-|🇷🇺 ru|Russian  | |✓|✓|✓|✓|
-|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|-|
-|🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|-|
-|🇹🇭 th|Thai     |[encX](https://github.com/encX)|✓|✓|✓|-|
-|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>&nbsp;|<br>✓|<br>✓|-|
-|🇹🇼 zh-TW|Chinese - Taiwan|[minipai](https://github.com/minipai)|✓|✓|✓|-|
+|locale|language |contributor|draft-04|draft-06<sup>1</sup>|draft-07<sup>2</sup>|draft<br>2019-09<br>2020-12<sup>3</sup>|JTD<sup>4</sup>
+|------|:-------:|:---------:|:------:|:------:|:------:|:------:|:------:|
+|🇬🇧 en|English  | |✓|✓|✓|✓|✓|
+|AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|✓|-|-|
+|CA ca|Catalan   |[alexandreec](https://github.com/alexandreec)|✓|✓|✓|-|*|
+|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)<br>[NAM0007](https://github.com/NAM0007)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|*|
+|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)<br>[gflohr](https://github.com/gflohr)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|*|
+|🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|✓|-|*|
+|🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)<br>[Telokis](https://github.com/Telokis)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|*|
+|🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|-|*|
+|🇮🇩 id|Indonesian|[Eko Eryanto](https://github.com/ekoeryanto)|✓|✓|✓|-|*|
+|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>&nbsp;|<br>✓|<br>✓|-|*|
+|🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|-|*|
+|🇰🇷 ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|-|*|
+|🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|-|*|
+|🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie)<br>[niekvb](https://github.com/niekvb)|✓|✓|✓|-|*|
+|🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|-|*|
+|🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)<br>[ggondim](https://github.com/ggondim)|✓|✓|✓|-|*|
+|🇷🇺 ru|Russian  | |✓|✓|✓|✓|✓|
+|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|-|*|
+|🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|-|*|
+|🇹🇭 th|Thai     |[encX](https://github.com/encX)|✓|✓|✓|-|*|
+|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>&nbsp;|<br>✓|<br>✓|-|*|
+|🇹🇼 zh-TW|Chinese - Taiwan|[minipai](https://github.com/minipai)|✓|✓|✓|-|*|
 
 
 <sup>1</sup> added boolean schema, keywords `const`, `contains`, `propertyNames`
@@ -41,6 +41,10 @@ Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) -
 <sup>2</sup> added keywords `if`/`then`/`else`
 
 <sup>3</sup> added keywords `unevaluatedProperties`, `unevaluatedItems`, `dependentRequired`
+
+<sup>4</sup> JSON Type Definition
+
+\* `discriminator` form messages are not translated
 
 Please contribute locales that you need to use if they are missing or incomplete.
 

@@ -1,4 +1,6 @@
 spec/JSON-Schema-Test-Suite
+spec/json-typedef-spec
+spec/ajv-keywords
 spec/ajv-keywords
 .browser
 coverage

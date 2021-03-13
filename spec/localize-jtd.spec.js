@@ -5,8 +5,9 @@ const localize = require("../localize/jtd")
 
 const ONLY = []
 
-describe("JSON Type Definition errors with ajv-i18n", () => {
+describe("JSON Type Definition errors with ajv-i18n", function () {
   let ajvs
+  this.timeout(30000)
 
   before(() => {
     ajvs = [getAjv(false, false), getAjv(false, true), getAjv(true, false), getAjv(true, true)]

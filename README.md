@@ -19,7 +19,7 @@ Internationalised error messages for [Ajv](https://github.com/ajv-validator/ajv)
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|✓|-|*|
 |🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)<br>[Telokis](https://github.com/Telokis)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|*|
 |🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|-|*|
-|🇮🇩 id|Indonesian|[Eko Eryanto](https://github.com/ekoeryanto)|✓|✓|✓|-|*|
+|🇮🇩 id|Indonesian|[ekoeryanto](https://github.com/ekoeryanto)|✓|✓|✓|-|*|
 |🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>&nbsp;|<br>✓|<br>✓|-|*|
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|-|*|
 |🇰🇷 ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|-|*|

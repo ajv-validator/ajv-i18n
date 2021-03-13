@@ -69,7 +69,7 @@ function runTests(suite) {
   tests[suite] = suites[suite]
 
   jsonSchemaTest(instances, {
-    description: "Schema tests of " + instances.length + " ajv instances with option i18n",
+    description: "Schema tests of " + instances.length + " ajv instances with ajv-i18n",
     suites: tests,
     afterEach: afterEach,
     skip: SKIP[suite],

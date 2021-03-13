@@ -13,11 +13,25 @@ module.exports = function {{=name}}(errors) {
     let out;
     switch (e.keyword) {
       {{~ it.messages:msg }}
-        case '{{= msg.keyword }}':
+        case "{{= msg.keyword }}":
           {{~ msg.keywords:kwd }}
             case '{{= kwd }}':
           {{~}}
-          {{= stripFunction(msg.msgFunc) }}
+          {{? typeof msg.msgFunc == "function" }}
+            {{= stripFunction(msg.msgFunc) }}
+          {{?? msg.msgFunc.length }}
+            switch (e.params.error) {
+              {{~ msg.msgFunc:err }}
+                case "{{= err.error }}":
+                  {{= stripFunction(err.func) }}
+                  break;
+              {{~}}
+              default:
+                {{= stripFunction(it.typeMessage) }}
+            }
+          {{??}}
+            {{= stripFunction(it.typeMessage) }}
+          {{?}}
           break;
       {{~}}
       default:

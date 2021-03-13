@@ -8,7 +8,9 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "node scripts/compile-locales.js",
+    "build": "npm run build:json-schema && npm run build:jtd",
+    "build:json-schema": "node scripts/compile-locales.js ./messages index.js",
+    "build:jtd": "node scripts/compile-locales.js ./messages/jtd jtd.js",
     "eslint": "eslint messages scripts spec/*.js",
     "prepublish": "npm run build",
     "test": "npm run prettier:check && npm run eslint && npm run build && npm run test-cov",

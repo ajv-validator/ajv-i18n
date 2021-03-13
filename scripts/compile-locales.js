@@ -1,11 +1,14 @@
 "use strict"
 
-const errorMessages = require("../messages")
 const doT = require("dot")
 const beautify = require("js-beautify")
 const fs = require("fs")
 const path = require("path")
 let totalMissing = 0
+
+const [, , messagesFile, localeFile] = process.argv
+
+const errorMessages = require(path.join("..", messagesFile))
 
 const localize = getLocalizeTemplate()
 
@@ -19,14 +22,14 @@ function compileMessages(locale) {
   } catch (e) {}
   let code = localize(localeMessages(locale))
   code = beautify(code, {indent_size: 2}) + "\n"
-  const targetPath = path.join(localePath, "index.js")
+  const targetPath = path.join(localePath, localeFile)
   fs.writeFileSync(targetPath, code)
 }
 
 function localeMessages(locale) {
   const messages = []
-  const localeDefs = getLocalDefs(errorMessages._defs, locale)
-  const enDefs = getLocalDefs(errorMessages._defs, "en")
+  const localeDefs = getLocaleDefs(errorMessages._defs, locale)
+  const enDefs = getLocaleDefs(errorMessages._defs, "en")
 
   for (const keyword in errorMessages) {
     if (keyword[0] === "_") continue
@@ -38,12 +41,28 @@ function localeMessages(locale) {
     locale,
     messages,
     defaultMessage: compileMessage("_defaultMessage"),
+    typeMessage: compileMessage("_type"),
   }
 
   function compileMessage(keyword) {
     const keyMsgs = errorMessages[keyword]
-    let msg = keyMsgs[locale]
-    const keyDefs = keyMsgs._defs
+    if (!keyMsgs) return undefined
+    if (keyMsgs._type) {
+      const msgFuncs = []
+      for (const error in keyMsgs) {
+        if (error[0] === "_") continue
+        const func = compileMsgFunc(keyMsgs[error])
+        msgFuncs.push({error, func})
+      }
+      return msgFuncs
+    } else {
+      return compileMsgFunc(keyMsgs)
+    }
+  }
+
+  function compileMsgFunc(_keyMsgs, keyword) {
+    const keyDefs = _keyMsgs._defs
+    let msg = _keyMsgs[locale]
     let defs
 
     if (msg) {
@@ -51,7 +70,7 @@ function localeMessages(locale) {
     } else {
       defs = enDefs
       totalMissing++
-      msg = keyMsgs["en"]
+      msg = _keyMsgs["en"]
       const errorMsg = `message for locale "${locale}" keyword "${keyword}"`
       if (msg) {
         console.warn(`Warning: Replaced with "en" ${errorMsg}`)
@@ -66,7 +85,7 @@ function localeMessages(locale) {
   }
 }
 
-function getLocalDefs(defs, locale) {
+function getLocaleDefs(defs, locale) {
   const localeDefs = {}
   for (const key in defs) {
     const def = defs[key]

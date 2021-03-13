@@ -6,13 +6,14 @@ const fs = require("fs")
 const path = require("path")
 let totalMissing = 0
 
-const [, , messagesFile, localeFile] = process.argv
+const [, , importFile, localeFile] = process.argv
 
-const errorMessages = require(path.join("..", messagesFile))
+const errorMessages = require(path.join("../messages", importFile))
 
-const localize = getLocalizeTemplate()
+const localize = getTemplate("localize.jst")
 
 errorMessages._locales.forEach(compileMessages)
+saveLocales()
 console.log("Total missing messages:", totalMissing)
 
 function compileMessages(locale) {
@@ -20,9 +21,20 @@ function compileMessages(locale) {
   try {
     fs.mkdirSync(localePath)
   } catch (e) {}
-  let code = localize(localeMessages(locale))
+  const code = localize(localeMessages(locale))
+  saveCode(localePath, code)
+}
+
+function saveLocales() {
+  const indexPath = path.join(__dirname, "..", "localize")
+  const renderIndex = getTemplate("index.jst")
+  const code = renderIndex({locales: errorMessages._locales, importFile})
+  saveCode(indexPath, code)
+}
+
+function saveCode(filePath, code) {
   code = beautify(code, {indent_size: 2}) + "\n"
-  const targetPath = path.join(localePath, localeFile)
+  const targetPath = path.join(filePath, localeFile)
   fs.writeFileSync(targetPath, code)
 }
 
@@ -51,12 +63,12 @@ function localeMessages(locale) {
       const msgFuncs = []
       for (const error in keyMsgs) {
         if (error[0] === "_") continue
-        const func = compileMsgFunc(keyMsgs[error])
+        const func = compileMsgFunc(keyMsgs[error], `${keyword}/${error}`)
         msgFuncs.push({error, func})
       }
       return msgFuncs
     } else {
-      return compileMsgFunc(keyMsgs)
+      return compileMsgFunc(keyMsgs, keyword)
     }
   }
 
@@ -98,7 +110,7 @@ function byKeyword(a, b) {
   return a.keyword.localeCompare(b.keyword)
 }
 
-function getLocalizeTemplate() {
-  const tmplStr = fs.readFileSync(path.join(__dirname, "..", "localize", "localize.jst"))
+function getTemplate(fileName) {
+  const tmplStr = fs.readFileSync(path.join(__dirname, "..", "localize", fileName))
   return doT.compile(tmplStr)
 }

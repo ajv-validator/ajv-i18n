@@ -147,10 +147,12 @@ module.exports = {
     _type: true,
     tag: {
       en: 'tag "{{=e.params.tag}}" must be string',
+      nl: 'tag "{{=e.params.tag}}" moet een tekenreeks zijn',
       ru: 'поле "{{=e.params.tag}}" должно быть строкой',
     },
     mapping: {
       en: 'value of tag "{{=e.params.tag}}" must be in mapping',
+      nl: 'de waarde van het veld "{{= e.params.tag}}" moet voorkomen in de mapping',
       ru: 'значение поля "{{=e.params.tag}}" должно быть ключом одной из схем',
     },
   },

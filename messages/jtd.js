@@ -11,7 +11,7 @@ module.exports = {
   _locales: [
     "en",
     "ca",
-    "cz",
+    "cs",
     "de",
     "es",
     "fr",
@@ -39,7 +39,7 @@ module.exports = {
   _defaultMessage: {
     en: 'should pass "{{=e.keyword}}" keyword validation',
     ca: 'ha de passar la validació de la clau "{{=e.keyword}}"',
-    cz: 'musí vyhovět "{{=e.keyword}}" validaci',
+    cs: 'musí vyhovět "{{=e.keyword}}" validaci',
     de: 'muss die Validierung "{{=e.keyword}}" bestehen',
     es: 'debe pasar la validación de palabra clave "{{=e.keyword}}"',
     fr: 'doit être valide selon le critère "{{=e.keyword}}"',
@@ -64,7 +64,7 @@ module.exports = {
     },
     en: "{{#def.t}}must be {{=t+n}}",
     ca: "{{#def.t}}ha de ser del tipus {{=t+n}}",
-    cz: "{{#def.t}}musí být {{=t+n}}",
+    cs: "{{#def.t}}musí být {{=t+n}}",
     de: "{{#def.t}}muss sein: {{=t+n}}",
     es: "{{#def.t}}debe ser {{=t+n}}",
     fr: "{{#def.t}}doit être de type {{=t+n}}",
@@ -98,7 +98,7 @@ module.exports = {
     additional: {
       en: "must NOT have additional properties",
       ca: "no ha de tenir propietats addicionals",
-      cz: "nemůže mít další položky",
+      cs: "nemůže mít další položky",
       de: "darf keine zusätzlichen Attribute haben",
       es: "no debe tener propiedades adicionales",
       fr: "ne doit pas contenir de propriétés additionnelles",
@@ -121,7 +121,7 @@ module.exports = {
     missing: {
       en: "must have property {{=e.params.missingProperty}}",
       ca: "ha de tenir la propietat requerida {{=e.params.missingProperty}}",
-      cz: "musí obsahovat požadovanou položku {{=e.params.missingProperty}}",
+      cs: "musí obsahovat požadovanou položku {{=e.params.missingProperty}}",
       de: "muss das erforderliche Attribut {{=e.params.missingProperty}} enthalten",
       es: "debe tener la propiedad requerida {{=e.params.missingProperty}}",
       fr: "requiert la propriété {{=e.params.missingProperty}}",
@@ -158,7 +158,7 @@ module.exports = {
   enum: {
     en: "must be equal to one of the allowed values",
     ca: "ha de ser igual a un dels valors predefinits",
-    cz: "musí být rovno jedné hodnotě z výčtu",
+    cs: "musí být rovno jedné hodnotě z výčtu",
     de: "muss einem der vorgegebenen Werte entsprechen",
     es: "deber ser igual a uno de los valores predefinidos",
     fr: "doit être égal à une des valeurs prédéfinies",
@@ -182,7 +182,7 @@ module.exports = {
   union: {
     en: 'must match a schema in "union"',
     ca: 'ha de coincidir amb algun esquema definit a "union"',
-    cz: 'musí vyhovět alespoň jednomu schématu v "union"',
+    cs: 'musí vyhovět alespoň jednomu schématu v "union"',
     de: 'muss einem der Schemata in "union" entsprechen',
     es: 'debe coincidir con algún esquema en "union"',
     fr: 'doit correspondre à un schéma de "union"',

@@ -14,7 +14,7 @@ Internationalised error messages for [Ajv](https://github.com/ajv-validator/ajv)
 |🇬🇧 en|English  | |✓|✓|✓|✓|✓|
 |AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|✓|-|-|
 |CA ca|Catalan   |[alexandreec](https://github.com/alexandreec)|✓|✓|✓|-|*|
-|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)<br>[NAM0007](https://github.com/NAM0007)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|*|
+|🇨🇿 cs|Czech    |[kiskovacs](https://github.com/kiskovacs)<br>[NAM0007](https://github.com/NAM0007)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|*|
 |🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)<br>[gflohr](https://github.com/gflohr)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|*|
 |🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|✓|-|*|
 |🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)<br>[Telokis](https://github.com/Telokis)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|*|

@@ -59,7 +59,7 @@
     "uglify-js": "^3.0.10"
   },
   "peerDependencies": {
-    "ajv": "^6.0.0"
+    "ajv": "6 - 7"
   },
   "nyc": {
     "exclude": [

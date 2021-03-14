@@ -104,7 +104,7 @@ module.exports = {
       fr: "ne doit pas contenir de propriétés additionnelles",
       hu: "nem lehetnek további elemei",
       id: "tidak boleh memiliki properti tambahan",
-      it: "non deve avere attributi aggiuntivi",
+      it: "non deve avere attributi addizionali",
       ja: "追加してはいけない",
       ko: "추가적인 속성은 허용되지 않습니다",
       nb: "kan ikke ha flere egenskaper",
@@ -147,11 +147,13 @@ module.exports = {
     _type: true,
     tag: {
       en: 'tag "{{=e.params.tag}}" must be string',
+      it: 'il tag "{{=e.params.tag}}" deve essere di tipo stringa',
       nl: 'tag "{{=e.params.tag}}" moet een tekenreeks zijn',
       ru: 'поле "{{=e.params.tag}}" должно быть строкой',
     },
     mapping: {
       en: 'value of tag "{{=e.params.tag}}" must be in mapping',
+      it: 'il valore del tag "{{=e.params.tag}}" deve essere nei mapping',
       nl: 'de waarde van het veld "{{= e.params.tag}}" moet voorkomen in de mapping',
       ru: 'значение поля "{{=e.params.tag}}" должно быть ключом одной из схем',
     },

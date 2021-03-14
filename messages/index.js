@@ -640,6 +640,7 @@ module.exports = {
     en: "must NOT have unevaluated properties",
     nl: "mag geen ongecontroleerde eigenschappen bevatten",
     ru: "не должно иметь непроверенных полей",
+    zh: "不允许存在未求值的属性",
   },
   unevaluatedItems: {
     _defs: {
@@ -648,6 +649,7 @@ module.exports = {
     en: "{{#def.n}}must NOT have more than {{=n}} item{{#def.mPlural}}",
     nl: "{{#def.n}}mag niet meer dan {{= n}} item{{#def.mPlural}} bevatten",
     ru: "{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}",
+    zh: "{{#def.n}} 不允许有超过 {{=n}} 个元素",
   },
   uniqueItems: {
     en:

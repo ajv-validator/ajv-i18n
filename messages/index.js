@@ -178,7 +178,7 @@ module.exports = {
     fr: 'doit correspondre à un schéma de "anyOf"',
     hu: 'meg kell feleljen legalább egy "anyOf" alaknak',
     id: 'harus cocok dengan beberapa skema pada "anyOf"',
-    it: 'deve corrispondere ad uno schema in "anyOf"',
+    it: 'deve corrispondere ad uno degli schema in "anyOf"',
     ja: '"anyOf"のスキーマとマッチしなくてはいけない',
     ko: '"anyOf"의 스키마와 일치해야 합니다',
     nb: 'må samsvare med et schema i "anyOf"',
@@ -248,7 +248,7 @@ module.exports = {
     fr: "doit être égal à une des valeurs prédéfinies",
     hu: "egyenlő kell legyen valamely előre meghatározott értékkel",
     id: "harus sama dengan salah satu dari nilai yang telah ditentukan",
-    it: "dovrebbe essere uguale ad uno dei valori predefiniti",
+    it: "deve essere uguale ad uno dei valori consentiti",
     ja: "事前に定義された値のいずれかに等しくなければいけない",
     ko: "미리 정의된 값중 하나여야 합니다",
     nb: "må være lik en av de forhåndsdefinerte verdiene",
@@ -544,7 +544,7 @@ module.exports = {
     fr: 'doit correspondre à exactement un schéma de "oneOf"',
     hu: 'meg kell feleljen pontosan egy "oneOf" alaknak',
     id: 'harus sama persis dengan satu skema pada "oneOf"',
-    it: 'deve corrispondere esattamente ad uno schema in "oneOf"',
+    it: 'deve corrispondere esattamente ad uno degli schema in "oneOf"',
     ja: '"oneOf"のスキーマと完全に一致しなくてはいけない',
     ko: '"oneOf" 스키마중 하나와 정확하게 일치해야 합니다',
     nb: 'må samsvare med nøyaktig ett schema i "oneOf"',
@@ -638,18 +638,22 @@ module.exports = {
   },
   unevaluatedProperties: {
     en: "must NOT have unevaluated properties",
+    it: "non deve avere attributi non valutati",
     nl: "mag geen ongecontroleerde eigenschappen bevatten",
+    "pt-BR": "não pode possuir propridades não avaliadas",
     ru: "не должно иметь непроверенных полей",
-    "pt-BR": "não pode possuir propridades não avaliadas"
+    zh: "不允许存在未求值的属性",
   },
   unevaluatedItems: {
     _defs: {
       n: "{{var n = e.params.len;}}",
     },
     en: "{{#def.n}}must NOT have more than {{=n}} item{{#def.mPlural}}",
+    it: "{{#def.n}}non deve avere più di {{=n}} elementi{{#def.mPlural}}",
     nl: "{{#def.n}}mag niet meer dan {{= n}} item{{#def.mPlural}} bevatten",
-    ru: "{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}",
     "pt-BR": "{{#def.n}}não pode possuir mais que {{=n}} {{? n==1 }}item{{??}}itens{{?}}",
+    ru: "{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}",
+    zh: "{{#def.n}} 不允许有超过 {{=n}} 个元素",
   },
   uniqueItems: {
     en:

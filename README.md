@@ -20,18 +20,18 @@ Internationalised error messages for [Ajv](https://github.com/ajv-validator/ajv)
 |🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)<br>[Telokis](https://github.com/Telokis)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|*|
 |🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|-|*|
 |🇮🇩 id|Indonesian|[ekoeryanto](https://github.com/ekoeryanto)|✓|✓|✓|-|*|
-|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>&nbsp;|<br>✓|<br>✓|-|*|
+|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>&nbsp;|<br>✓|<br>✓|<br>✓|<br>✓|
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|-|*|
 |🇰🇷 ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|-|*|
 |🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|-|*|
 |🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie)<br>[niekvb](https://github.com/niekvb)|✓|✓|✓|<br>✓|<br>✓|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|-|*|
-|🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)<br>[ggondim](https://github.com/ggondim)|✓|✓|✓|-|*|
+|🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)<br>[ggondim](https://github.com/ggondim)|✓|✓|✓|<br>✓|*|
 |🇷🇺 ru|Russian  | |✓|✓|✓|✓|✓|
 |🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|-|*|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|-|*|
 |🇹🇭 th|Thai     |[encX](https://github.com/encX)|✓|✓|✓|-|*|
-|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>&nbsp;|<br>✓|<br>✓|-|*|
+|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>&nbsp;|<br>✓|<br>✓|<br>✓|<br>✓|
 |🇹🇼 zh-TW|Chinese - Taiwan|[minipai](https://github.com/minipai)|✓|✓|✓|-|*|
 
 

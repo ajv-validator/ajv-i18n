@@ -136,7 +136,7 @@ module.exports = {
     nb: "{{#def.n}}kan ikke ha mer enn {{=n}} element{{#def.mPlural}}",
     nl: "{{#def.n}}mag niet meer dan {{=n}} item{{#def.mPlural}} bevatten",
     pl: "{{#def.n}}nie powinien mieć więcej niż {{=n}} element{{#def.mPlural}}",
-    "pt-BR": "não são permitidos itens adicionais",
+    "pt-BR": "não são permitidos itens adicionais (mais do que {{=n}})",
     ru: "{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}",
     sk: "{{#def.n}}nemôže obsahovať viac, než {{=n}} prv{{#def.mPlural}}",
     sv: "{{#def.n}}borde ha fler än {{=n}} sak{{#def.mPlural}}",
@@ -226,7 +226,7 @@ module.exports = {
     pl:
       "{{#def.n}}powinien zawierać pol{{#def.propPlural}} {{=e.params.deps}} kiedy pole {{=e.params.property}} jest obecne",
     "pt-BR":
-      "{{#def.n}} deve ter propriedade {{#def.propPlural}} {{=e.params.deps}} quando a propriedade {{=e.params.property}} estiver presente",
+      "{{#def.n}} deve ter propriedade{{#def.propPlural}} {{=e.params.deps}} quando a propriedade {{=e.params.property}} estiver presente",
     ru:
       "{{#def.n}}должно иметь пол{{? n==1 }}е{{??}}я{{?}} {{=e.params.deps}}, когда присутствует поле {{=e.params.property}}",
     sk:
@@ -254,7 +254,7 @@ module.exports = {
     nb: "må være lik en av de forhåndsdefinerte verdiene",
     nl: "moet overeenkomen met één van de voorgedefinieerde waarden",
     pl: "powinien być równy jednej z predefiniowanych wartości",
-    "pt-BR": "deve ser igual a um dos valores predefinidos",
+    "pt-BR": "deve ser igual a um dos valores permitidos",
     ru: "должно быть равно одному из разрешенных значений",
     sk: "musí byť jedna z definovaných hodnôt",
     sv: "borde vara ekvivalent med en av dess fördefinierade värden",
@@ -278,7 +278,7 @@ module.exports = {
     nb: 'må stemme overens med formatet "{{=e.params.format}}"',
     nl: 'moet overeenkomen met het volgende formaat: "{{=e.params.format}}"',
     pl: 'powinien zgadzać się z formatem "{{=e.params.format}}"',
-    "pt-BR": 'a validação do formato falhou "{{=e.params.format}}"',
+    "pt-BR": 'deve corresponder ao formato "{{=e.params.format}}"',
     ru: 'должно соответствовать формату "{{=e.params.format}}"',
     sk: 'musí obsahovať formát "{{=e.params.format}}"',
     sv: 'borde matcha formatet "{{=e.params.format}}"',
@@ -406,7 +406,7 @@ module.exports = {
     nb: "{{#def.n}}kan ikke være lengre enn {{=n}} tegn",
     nl: "{{#def.n}}mag niet langer dan {{=n}} karakter{{#def.mPlural}} zijn",
     pl: "{{#def.n}}nie powinien być dłuższy niż {{=n}} znak{{? n!=1 }}ów{{?}}",
-    "pt-BR": "{{#def.n}}não deve ter mais que {{=n}} caracter{{? n!=1 }}es{{?}}",
+    "pt-BR": "{{#def.n}}não deve ser maior que {{=n}} caracter{{? n!=1 }}es{{?}}",
     ru: "{{#def.n}}должно быть не длиннее, чем {{=n}} символ{{#def.mPlural}}",
     sk: "{{#def.n}}nesmie byť dlhší než {{=n}} znak{{? n!=1 }}ov{{?}}",
     sv: "{{#def.n}}borde inte vara längre än {{=n}} tecken",
@@ -640,6 +640,7 @@ module.exports = {
     en: "must NOT have unevaluated properties",
     nl: "mag geen ongecontroleerde eigenschappen bevatten",
     ru: "не должно иметь непроверенных полей",
+    "pt-BR": "não pode possuir propridades não avaliadas"
   },
   unevaluatedItems: {
     _defs: {
@@ -648,6 +649,7 @@ module.exports = {
     en: "{{#def.n}}must NOT have more than {{=n}} item{{#def.mPlural}}",
     nl: "{{#def.n}}mag niet meer dan {{= n}} item{{#def.mPlural}} bevatten",
     ru: "{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}",
+    "pt-BR": "{{#def.n}}não pode possuir mais que {{=n}} {{? n==1 }}item{{??}}itens{{?}}",
   },
   uniqueItems: {
     en:

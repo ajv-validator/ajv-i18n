@@ -150,12 +150,14 @@ module.exports = {
       it: 'il tag "{{=e.params.tag}}" deve essere di tipo stringa',
       nl: 'tag "{{=e.params.tag}}" moet een tekenreeks zijn',
       ru: 'поле "{{=e.params.tag}}" должно быть строкой',
+      zh: '标签 "{{=e.params.tag}}" 的类型必须为字符串',
     },
     mapping: {
       en: 'value of tag "{{=e.params.tag}}" must be in mapping',
       it: 'il valore del tag "{{=e.params.tag}}" deve essere nei mapping',
       nl: 'de waarde van het veld "{{= e.params.tag}}" moet voorkomen in de mapping',
       ru: 'значение поля "{{=e.params.tag}}" должно быть ключом одной из схем',
+      zh: '标签 "{{=e.params.tag}}" 的值必须在 mapping 之中',
     },
   },
 

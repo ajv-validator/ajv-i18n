@@ -147,6 +147,7 @@ module.exports = {
     _type: true,
     tag: {
       en: 'tag "{{=e.params.tag}}" must be string',
+      de: 'der Tag "{{=e.params.tag}}" muss eine Zeichenkette sein',
       it: 'il tag "{{=e.params.tag}}" deve essere di tipo stringa',
       nl: 'tag "{{=e.params.tag}}" moet een tekenreeks zijn',
       "pt-BR": 'a tag "{{=e.params.tag}}" deve ser uma string',
@@ -155,6 +156,7 @@ module.exports = {
     },
     mapping: {
       en: 'value of tag "{{=e.params.tag}}" must be in mapping',
+      de: 'der Wert vom Tag "{{=e.params.tag}}" muss im Mapping enthalten sein',
       it: 'il valore del tag "{{=e.params.tag}}" deve essere nei mapping',
       nl: 'de waarde van het veld "{{= e.params.tag}}" moet voorkomen in de mapping',
       "pt-BR": 'o valor da tag "{{=e.params.tag}}" deve estar no mapping',

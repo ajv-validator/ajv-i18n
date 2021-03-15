@@ -38,7 +38,7 @@
   "homepage": "https://github.com/epoberezkin/ajv-i18n#readme",
   "devDependencies": {
     "@ajv-validator/config": "^0.3.0",
-    "ajv": "^8.0.0-beta.0",
+    "ajv": "8.0.0-beta.0",
     "ajv-formats": "^2.0.0-beta.0",
     "ajv-keywords": "^5.0.0-beta.0",
     "dot": "^1.0.3",

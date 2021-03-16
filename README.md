@@ -32,7 +32,7 @@ Internationalised error messages for [Ajv](https://github.com/ajv-validator/ajv)
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|-|*|
 |🇹🇭 th|Thai     |[encX](https://github.com/encX)|✓|✓|✓|-|*|
 |🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>&nbsp;|<br>✓|<br>✓|<br>✓|<br>✓|
-|🇹🇼 zh-TW|Chinese - Taiwan|[minipai](https://github.com/minipai)|✓|✓|✓|-|*|
+|🇹🇼 zh-TW|Chinese - Taiwan|[minipai](https://github.com/minipai)|✓|✓|✓|✓|✓|
 
 
 <sup>1</sup> added boolean schema, keywords `const`, `contains`, `propertyNames`

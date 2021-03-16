@@ -1,41 +1,54 @@
 "use strict"
 
 const doT = require("dot")
-const beautify = require("js-beautify")
+const prettier = require("prettier")
 const fs = require("fs")
 const path = require("path")
 let totalMissing = 0
 
-const [, , importFile, localeFile] = process.argv
+const [, , importFile, localeFileName] = process.argv
+const localeFile = `${localeFileName}.js`
+const localeDefFile = `${localeFileName}.d.ts`
 
 const errorMessages = require(path.join("../messages", importFile))
 
 const localize = getTemplate("localize.jst")
+const localizeDef = getTemplate("localize.d.jst")
 
 errorMessages._locales.forEach(compileMessages)
 saveLocales()
 console.log("Total missing messages:", totalMissing)
 
 function compileMessages(locale) {
-  const localePath = path.join(__dirname, "..", "localize", locale)
+  const localeDirPath = path.join(__dirname, "..", "localize", locale)
+  const localePath = path.join(localeDirPath, localeFile)
+  const localeDefPath = path.join(localeDirPath, localeDefFile)
+
   try {
-    fs.mkdirSync(localePath)
+    fs.mkdirSync(localeDirPath)
   } catch (e) {}
   const code = localize(localeMessages(locale))
+  const defCode = localizeDef()
   saveCode(localePath, code)
+  saveCode(localeDefPath, defCode)
 }
 
 function saveLocales() {
-  const indexPath = path.join(__dirname, "..", "localize")
+  const indexDirPath = path.join(__dirname, "..", "localize")
+  const indexPath = path.join(indexDirPath, localeFile)
+  const indexDefPath = path.join(indexDirPath, localeDefFile)
   const renderIndex = getTemplate("index.jst")
+  const renderDefIndex = getTemplate("index.d.jst")
+
   const code = renderIndex({locales: errorMessages._locales, importFile})
+  const defCode = renderDefIndex({locales: errorMessages._locales, importFile})
   saveCode(indexPath, code)
+  saveCode(indexDefPath, defCode)
 }
 
-function saveCode(filePath, code) {
-  code = beautify(code, {indent_size: 2}) + "\n"
-  const targetPath = path.join(filePath, localeFile)
-  fs.writeFileSync(targetPath, code)
+function saveCode(filepath, code) {
+  code = prettier.format(code, {semi: false, filepath})
+  fs.writeFileSync(filepath, code)
 }
 
 function localeMessages(locale) {

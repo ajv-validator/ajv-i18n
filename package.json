@@ -9,8 +9,8 @@
   ],
   "scripts": {
     "build": "npm run build:json-schema && npm run build:jtd",
-    "build:json-schema": "node scripts/compile-locales.js '' index.js",
-    "build:jtd": "node scripts/compile-locales.js '/jtd' jtd.js",
+    "build:json-schema": "node scripts/compile-locales.js '' index",
+    "build:jtd": "node scripts/compile-locales.js '/jtd' jtd",
     "eslint": "eslint messages scripts spec/*.js",
     "prepublish": "npm run build",
     "test": "npm run prettier:check && npm run eslint && npm run build && npm run test-cov",
@@ -45,7 +45,6 @@
     "eslint": "^7.8.1",
     "eslint-config-prettier": "^8.1.0",
     "husky": "^5.1.3",
-    "js-beautify": "^1.7.4",
     "json-schema-test": "^2.0.0",
     "lint-staged": "^10.5.4",
     "mocha": "^8.0.1",

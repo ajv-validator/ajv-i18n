@@ -1,3 +1,2 @@
 rules:
-  semi: [2, always]
   no-redeclare: 0

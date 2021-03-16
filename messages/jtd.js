@@ -153,6 +153,7 @@ module.exports = {
       "pt-BR": 'a tag "{{=e.params.tag}}" deve ser uma string',
       ru: 'поле "{{=e.params.tag}}" должно быть строкой',
       zh: '标签 "{{=e.params.tag}}" 的类型必须为字符串',
+      "zh-TW": '標籤 "{{=e.params.tag}}" 的類型必須是字串',
     },
     mapping: {
       en: 'value of tag "{{=e.params.tag}}" must be in mapping',
@@ -162,6 +163,7 @@ module.exports = {
       "pt-BR": 'o valor da tag "{{=e.params.tag}}" deve estar no mapping',
       ru: 'значение поля "{{=e.params.tag}}" должно быть ключом одной из схем',
       zh: '标签 "{{=e.params.tag}}" 的值必须在 mapping 之中',
+      "zh-TW": '標籤 "{{=e.params.tag}}" 必須在 mapping 其中之一',
     },
   },
 

@@ -1,7 +1,9 @@
-import { Localize } from "./types";
+import {Localize} from "./types";
 
-type Languages = {{~ it.locales:locale:index }}"{{=locale}}"{{? index < it.locales.length - 1 }} | {{?}}{{~}};
+type Language =
+  {{~ it.locales:locale }}
+    | "{{=locale}}"
+  {{~}};
 
-declare const _default: Record<Languages, Localize>;
-
-export default _default;
+declare const def: Record<Language, Localize>;
+export default def;

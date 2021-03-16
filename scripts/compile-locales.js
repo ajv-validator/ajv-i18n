@@ -1,7 +1,7 @@
 "use strict"
 
 const doT = require("dot")
-const beautify = require("js-beautify")
+const prettier = require("prettier")
 const fs = require("fs")
 const path = require("path")
 let totalMissing = 0
@@ -46,9 +46,9 @@ function saveLocales() {
   saveCode(indexDefPath, defCode)
 }
 
-function saveCode(filePath, code) {
-  code = beautify(code, {indent_size: 2}) + "\n"
-  fs.writeFileSync(filePath, code)
+function saveCode(filepath, code) {
+  code = prettier.format(code, {semi: false, filepath})
+  fs.writeFileSync(filepath, code)
 }
 
 function localeMessages(locale) {

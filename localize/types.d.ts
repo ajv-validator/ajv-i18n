@@ -1,5 +1,5 @@
-import { ValidateFunction } from 'ajv/dist/core';
+import {ErrorObject} from "ajv"
 
 export interface Localize {
-  (errors?: ValidateFunction['errors']): void
+  (errors?: null | ErrorObject): void
 }

@@ -644,6 +644,7 @@ module.exports = {
     "pt-BR": "não pode possuir propridades não avaliadas",
     ru: "не должно иметь непроверенных полей",
     zh: "不允许存在未求值的属性",
+    "zh-TW": "不應該有未驗證的屬性",
   },
   unevaluatedItems: {
     _defs: {
@@ -656,6 +657,7 @@ module.exports = {
     "pt-BR": "{{#def.n}}não pode possuir mais que {{=n}} {{? n==1 }}item{{??}}itens{{?}}",
     ru: "{{#def.n}}должно иметь не более, чем {{=n}} элемент{{#def.mPlural}}",
     zh: "{{#def.n}} 不允许有超过 {{=n}} 个元素",
+    "zh-TW": "{{#def.n}} 的元素不可以超過 {{=n}} 個",
   },
   uniqueItems: {
     en:

@@ -1,7 +1,7 @@
 {
   "name": "ajv-i18n",
   "version": "4.0.0-beta.0",
-  "description": "Internationalised error messages for ajv JSON-Schema validator",
+  "description": "Internationalised error messages for Ajv JSON validator",
   "main": "localize/index.js",
   "files": [
     "localize/",

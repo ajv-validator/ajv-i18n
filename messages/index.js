@@ -121,6 +121,7 @@ module.exports = {
     "zh-TW": "布林模式不正確",
   },
   additionalItems: {
+    _keywords: ["items"], // for JSON Schema draft-2020-12
     en: "{{#def.n}}must NOT have more than {{=n}} item{{#def.mPlural}}",
     ar: "{{#def.n}} يجب أن لا يحوي أكثر من {{=n}} عنصر",
     ca: "{{#def.n}}no ha de tenir més de {{=n}} element{{#def.mPlural}}",

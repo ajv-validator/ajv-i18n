@@ -9,7 +9,7 @@ Internationalised error messages for [Ajv](https://github.com/ajv-validator/ajv)
 
 ## Supported locales
 
-|locale|language |contributor|draft-04|draft-06<sup>1</sup>|draft-07<sup>2</sup>|draft<br>2019-09<sup>3</sup>|JTD<sup>4</sup>
+|locale|language |contributor|draft-04|draft-06<sup>1</sup>|draft-07<sup>2</sup>|draft<br>2019-09<sup>3</sup><br>/2020-12<sup>4</sup>|JTD<sup>5</sup>
 |------|:-------:|:---------:|:------:|:------:|:------:|:------:|:------:|
 |🇬🇧 en|English  | |✓|✓|✓|✓|✓|
 |AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|✓|-|-|
@@ -39,9 +39,11 @@ Internationalised error messages for [Ajv](https://github.com/ajv-validator/ajv)
 
 <sup>2</sup> added keywords `if`/`then`/`else`
 
-<sup>3</sup> added keywords `unevaluatedProperties`, `unevaluatedItems`, `dependentRequired`
+<sup>3</sup> added messages for keywords `unevaluatedProperties`, `unevaluatedItems`, `dependentRequired`
 
-<sup>4</sup> JSON Type Definition
+<sup>4</sup> keyword `items` messages
+
+<sup>5</sup> JSON Type Definition
 
 \* `discriminator` form messages are not translated
 

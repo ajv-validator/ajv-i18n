@@ -27,7 +27,11 @@ module.exports = function {{=name}}(errors) {
                   break;
               {{~}}
               default:
-                {{= stripFunction(it.typeMessage) }}
+                {{? it.typeMessage }}
+                  {{= stripFunction(it.typeMessage) }}
+                {{??}}
+                  {{= stripFunction(it.defaultMessage) }}
+                {{?}}
             }
           {{??}}
             {{= stripFunction(it.typeMessage) }}

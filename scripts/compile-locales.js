@@ -72,7 +72,7 @@ function localeMessages(locale) {
   function compileMessage(keyword) {
     const keyMsgs = errorMessages[keyword]
     if (!keyMsgs) return undefined
-    if (keyMsgs._type) {
+    if (keyMsgs._type !== undefined) {
       const msgFuncs = []
       for (const error in keyMsgs) {
         if (error[0] === "_") continue

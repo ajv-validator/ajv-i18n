@@ -3,6 +3,7 @@
   "version": "4.0.0-beta.0",
   "description": "Internationalised error messages for Ajv JSON validator",
   "main": "localize/index.js",
+  "types": "localize/index.d.ts",
   "files": [
     "localize/",
     "LICENSE"

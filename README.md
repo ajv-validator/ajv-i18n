@@ -1,47 +1,53 @@
 # ajv-i18n
 
-Internationalised error messages for [Ajv](https://github.com/epoberezkin/ajv) - currently the fastest JSON-Schema validator
+Internationalised error messages for [Ajv](https://github.com/ajv-validator/ajv) - superfast JSON validator for JSON Schema and JSON Type Definition.
 
 [![Build Status](https://travis-ci.org/ajv-validator/ajv-i18n.svg?branch=master)](https://travis-ci.org/ajv-validator/ajv-i18n)
 [![npm](https://img.shields.io/npm/v/ajv-i18n.svg)](https://www.npmjs.com/package/ajv-i18n)
 [![Coverage Status](https://coveralls.io/repos/github/ajv-validator/ajv-i18n/badge.svg?branch=master)](https://coveralls.io/github/ajv-validator/ajv-i18n?branch=master)
 [![Gitter](https://img.shields.io/gitter/room/ajv-validator/ajv.svg)](https://gitter.im/ajv-validator/ajv)
 
-
 ## Supported locales
 
-|locale|language |contributor|draft-04|draft-06<sup>\*</sup>|draft-07<sup>\*\*</sup>|
-|------|:-------:|:---------:|:------:|:------:|:------:|
-|🇬🇧 en|English  | |✓|✓|✓|
-|AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|✓|
-|CA ca|Catalan   |[alexandreec](https://github.com/alexandreec)|✓|✓|✓|
-|🇨🇿 cz|Czech    |[kiskovacs](https://github.com/kiskovacs)<br>[NAM0007](https://github.com/NAM0007)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|
-|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)<br>[gflohr](https://github.com/gflohr)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|
-|🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|✓|
-|🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)<br>[Telokis](https://github.com/Telokis)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|
-|🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|
-|🇮🇩 id|Indonesian|[Eko Eryanto](https://github.com/ekoeryanto)|✓|✓|✓|
-|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>&nbsp;|<br>✓|<br>✓|
-|🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|
-|🇰🇷 ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|
-|🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|
-|🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie)<br>[niekvb](https://github.com/niekvb)|✓|✓|✓|
-|🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|
-|🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)<br>[ggondim](https://github.com/ggondim)|✓|✓|✓|
-|🇷🇺 ru|Russian  | |✓|✓|✓|
-|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|
-|🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|
-|🇹🇭 th|Thai     |[encX](https://github.com/encX)|✓|✓|✓|
-|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>&nbsp;|<br>✓|<br>✓|
-|🇹🇼 zh-TW|Chinese - Taiwan|[minipai](https://github.com/minipai)|✓|✓|✓|
+|locale|language |contributor|draft-04|draft-06<sup>1</sup>|draft-07<sup>2</sup>|draft<br>2019-09<sup>3</sup><br>/2020-12<sup>4</sup>|JTD<sup>5</sup>
+|------|:-------:|:---------:|:------:|:------:|:------:|:------:|:------:|
+|🇬🇧 en|English  | |✓|✓|✓|✓|✓|
+|AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|✓|-|-|
+|CA ca|Catalan   |[alexandreec](https://github.com/alexandreec)|✓|✓|✓|-|*|
+|🇨🇿 cs|Czech    |[kiskovacs](https://github.com/kiskovacs)<br>[NAM0007](https://github.com/NAM0007)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|*|
+|🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)<br>[gflohr](https://github.com/gflohr)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|✓<br>&nbsp;|✓<br>&nbsp;|
+|🇪🇸 es|Spanish  |[jpablom](https://github.com/jpablom)|✓|✓|✓|-|*|
+|🇫🇷 fr|French   |[monlouisj](https://github.com/monlouisj)<br>[Telokis](https://github.com/Telokis)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|*|
+|🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|-|*|
+|🇮🇩 id|Indonesian|[ekoeryanto](https://github.com/ekoeryanto)|✓|✓|✓|-|*|
+|🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>&nbsp;|<br>✓|<br>✓|<br>✓|<br>✓|
+|🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|-|*|
+|🇰🇷 ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|-|*|
+|🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|-|*|
+|🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie)<br>[niekvb](https://github.com/niekvb)|✓|✓|✓|<br>✓|<br>✓|
+|🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|-|*|
+|🇧🇷 pt-BR|Português - Brasil|[marcosrava](https://github.com/marcosrava)<br>[ggondim](https://github.com/ggondim)|✓|✓|✓|<br>✓|<br>✓|
+|🇷🇺 ru|Russian  | |✓|✓|✓|✓|✓|
+|🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|-|*|
+|🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|-|*|
+|🇹🇭 th|Thai     |[encX](https://github.com/encX)|✓|✓|✓|✓|✓|
+|🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>&nbsp;|<br>✓|<br>✓|<br>✓|<br>✓|
+|🇹🇼 zh-TW|Chinese - Taiwan|[minipai](https://github.com/minipai)|✓|✓|✓|✓|✓|
 
 
-<sup>\*</sup> added boolean schema, keywords `const`, `contains`, `propertyNames`
+<sup>1</sup> added boolean schema, keywords `const`, `contains`, `propertyNames`
 
-<sup>\*\*</sup> added keywords `if`/`then`/`else`
+<sup>2</sup> added keywords `if`/`then`/`else`
+
+<sup>3</sup> added messages for keywords `unevaluatedProperties`, `unevaluatedItems`, `dependentRequired`
+
+<sup>4</sup> keyword `items` messages
+
+<sup>5</sup> JSON Type Definition
+
+\* `discriminator` form messages are not translated
 
 Please contribute locales that you need to use if they are missing or incomplete.
-
 
 ## Install
 
@@ -51,52 +57,46 @@ Using npm:
 npm install ajv-i18n
 ```
 
-Using bower:
-
-```
-bower install ajv-i18n
-cd bower_components/ajv-i18n
-npm install && npm run bundle-all
-```
-
 ## Usage
 
 In node:
 
 ```javascript
-var Ajv = require('ajv'); // version >= 2.0.0
-var localize = require('ajv-i18n');
+const Ajv = require("ajv") // version >= 8.0.0
+const localize = require("ajv-i18n")
+// or for JSON Type Definition
+// const localize = require("ajv-i18n/localize/jtd")
 
-// option `i18n` is required for this package to work
-var ajv = Ajv({ allErrors: true });
-var validate = ajv.compile(schema);
-var valid = validate(data);
+const ajv = Ajv({allErrors: true, messages: false})
+const validate = ajv.compile(schema)
+const valid = validate(data)
 
 if (!valid) {
-    // ru for Russian
-    localize.ru(validate.errors);
-    // string with all errors and data paths
-    console.log(ajv.errorsText(validate.errors, { separator: '\n' }));
+  // ru for Russian
+  localize.ru(validate.errors)
+  // string with all errors and data paths
+  console.log(ajv.errorsText(validate.errors, {separator: '\n'}))
 }
 ```
 
-To require only necessary locales in browser (with browserify):
+To require only necessary locales (e.g., with browserify):
 
 ```javascript
-var localize_ru = require('ajv-i18n/localize/ru');
+const localize_ru = require('ajv-i18n/localize/ru')
+// or for JSON Type Definition
+// const localize_ru = require('ajv-i18n/localize/ru/jtd')
 ```
 
 or
 
 ```javascript
-var localize = {
-    en: require('ajv-i18n/localize/en'),
-    ru: require('ajv-i18n/localize/ru')
-};
+const localize = {
+  en: require('ajv-i18n/localize/en'),
+  ru: require('ajv-i18n/localize/ru'),
+}
 ```
 
-See [Ajv docs](https://github.com/epoberezkin/ajv) for more information.
-
+See [Ajv docs](https://github.com/ajv-validator/ajv) for more information.
 
 ## Tests
 
@@ -106,13 +106,11 @@ git submodule update --init
 npm test
 ```
 
-
 ## Contributing
 
-Functions that localize error messages are generated using doT templates in [messages](https://github.com/epoberezkin/ajv-i18n/tree/master/messages/index.js) and [localize.jst](https://github.com/epoberezkin/ajv-i18n/tree/master/localize/localize.jst) template. Templates are precompiled so doT is not a run-time dependency.
+Functions that localize error messages are generated using doT template [localize.jst](https://github.com/ajv-validator/ajv-i18n/tree/master/localize/localize.jst), [JSON Schema messages](https://github.com/ajv-validator/ajv-i18n/tree/master/messages/index.js) and [JSON Type Definition messages](https://github.com/ajv-validator/ajv-i18n/tree/master/messages/jtd.js). Templates are pre-compiled, so doT is not a run-time dependency.
 
-`npm run build` - compiles functions to [localize](https://github.com/epoberezkin/ajv/tree/master/localize) folder.
-
+`npm run build` - compiles functions to [localize](https://github.com/ajv-validator/ajv/tree/master/localize) folder.
 
 ## Contributors of locales
 
@@ -144,11 +142,9 @@ Functions that localize error messages are generated using doT templates in [mes
 [![niekvb](https://avatars3.githubusercontent.com/u/37668320?s=40&v=4)](https://github.com/niekvb "niekvb")
 [![NAM0007](https://avatars1.githubusercontent.com/u/47188486?s=40&v=4)](https://github.com/NAM0007 "NAM0007")
 
-
 ## Enterprise support
 
 ajv-i18n package is a part of [Tidelift enterprise subscription](https://tidelift.com/subscription/pkg/npm-ajv-i18n?utm_source=npm-ajv-i18n&utm_medium=referral&utm_campaign=enterprise&utm_term=repo) - it provides a centralised commercial support to open-source software users, in addition to the support provided by software maintainers.
-
 
 ## Security contact
 
@@ -156,7 +152,6 @@ To report a security vulnerability, please use the
 [Tidelift security contact](https://tidelift.com/security).
 Tidelift will coordinate the fix and disclosure. Please do NOT report security vulnerability via GitHub issues.
 
-
 ## License
 
-[MIT](https://github.com/epoberezkin/ajv-i18n/blob/master/LICENSE)
+[MIT](https://github.com/ajv-validator/ajv-i18n/blob/master/LICENSE)

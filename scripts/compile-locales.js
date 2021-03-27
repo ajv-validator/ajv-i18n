@@ -1,83 +1,129 @@
-'use strict';
+"use strict"
 
-var messages = require('../messages')
-  , doT = require('dot')
-  , beautify = require('js-beautify')
-  , copy = require('ajv/lib/compile/util').copy
-  , fs = require('fs')
-  , path = require('path')
-  , totalMissing = 0;
+const doT = require("dot")
+const prettier = require("prettier")
+const fs = require("fs")
+const path = require("path")
+let totalMissing = 0
 
-var localize = getLocalizeTemplate();
+const [, , importFile, localeFileName] = process.argv
+const localeFile = `${localeFileName}.js`
+const localeDefFile = `${localeFileName}.d.ts`
 
-messages._locales.forEach(compileMessages);
-console.log('Total missing messages:', totalMissing);
+const errorMessages = require(path.join("../messages", importFile))
+
+const localize = getTemplate("localize.jst")
+const localizeDef = getTemplate("localize.d.jst")
+
+errorMessages._locales.forEach(compileMessages)
+saveLocales()
+console.log("Total missing messages:", totalMissing)
 
 function compileMessages(locale) {
-  var localePath = path.join(__dirname, '..', 'localize', locale);
-  try { fs.mkdirSync(localePath); } catch(e) {}
-  var locMsgs = localeMessages(locale);
-  var code = localize({ messages: locMsgs, locale: locale });
-  code = beautify(code, { indent_size: 2 }) + '\n';
-  var targetPath = path.join(localePath, 'index.js');
-  fs.writeFileSync(targetPath, code);
+  const localeDirPath = path.join(__dirname, "..", "localize", locale)
+  const localePath = path.join(localeDirPath, localeFile)
+  const localeDefPath = path.join(localeDirPath, localeDefFile)
+
+  try {
+    fs.mkdirSync(localeDirPath)
+  } catch (e) {}
+  const code = localize(localeMessages(locale))
+  const defCode = localizeDef()
+  saveCode(localePath, code)
+  saveCode(localeDefPath, defCode)
 }
 
+function saveLocales() {
+  const indexDirPath = path.join(__dirname, "..", "localize")
+  const indexPath = path.join(indexDirPath, localeFile)
+  const indexDefPath = path.join(indexDirPath, localeDefFile)
+  const renderIndex = getTemplate("index.jst")
+  const renderDefIndex = getTemplate("index.d.jst")
+
+  const code = renderIndex({locales: errorMessages._locales, importFile})
+  const defCode = renderDefIndex({locales: errorMessages._locales, importFile})
+  saveCode(indexPath, code)
+  saveCode(indexDefPath, defCode)
+}
+
+function saveCode(filepath, code) {
+  code = prettier.format(code, {semi: false, filepath})
+  fs.writeFileSync(filepath, code)
+}
 
 function localeMessages(locale) {
-  var locMsgs = []
-    , localeDefs = getLocalDefs(messages._defs, locale)
-    , enDefs = getLocalDefs(messages._defs, 'en');
+  const messages = []
+  const localeDefs = getLocaleDefs(errorMessages._defs, locale)
+  const enDefs = getLocaleDefs(errorMessages._defs, "en")
 
-  for (var keyword in messages) {
-    if (keyword[0] == '_') continue;
-    var keyMsgs = messages[keyword]
-      , msg = keyMsgs[locale]
-      , keyDefs = keyMsgs._defs
-      , defs;
+  for (const keyword in errorMessages) {
+    if (keyword[0] === "_") continue
+    const msgFunc = compileMessage(keyword)
+    if (msgFunc) messages.push({keyword, msgFunc, keywords: errorMessages[keyword]._keywords})
+  }
+  messages.sort(byKeyword)
+  return {
+    locale,
+    messages,
+    defaultMessage: compileMessage("_defaultMessage"),
+    typeMessage: compileMessage("_type"),
+  }
+
+  function compileMessage(keyword) {
+    const keyMsgs = errorMessages[keyword]
+    if (!keyMsgs) return undefined
+    if (keyMsgs._type !== undefined) {
+      const msgFuncs = []
+      for (const error in keyMsgs) {
+        if (error[0] === "_") continue
+        const func = compileMsgFunc(keyMsgs[error], `${keyword}/${error}`)
+        msgFuncs.push({error, func})
+      }
+      return msgFuncs
+    } else {
+      return compileMsgFunc(keyMsgs, keyword)
+    }
+  }
+
+  function compileMsgFunc(_keyMsgs, keyword) {
+    const keyDefs = _keyMsgs._defs
+    let msg = _keyMsgs[locale]
+    let defs
 
     if (msg) {
-      defs = localeDefs;
+      defs = localeDefs
     } else {
-      defs = enDefs;
-      totalMissing++;
-      msg = keyMsgs['en'];
-      var errorMsg = 'message for locale "' + locale + '" keyword "' + keyword + '"';
+      defs = enDefs
+      totalMissing++
+      msg = _keyMsgs["en"]
+      const errorMsg = `message for locale "${locale}" keyword "${keyword}"`
       if (msg) {
-        console.warn('Warning: Replaced with "en"', errorMsg);
+        console.warn(`Warning: Replaced with "en" ${errorMsg}`)
       } else {
-        console.error('Error: No', errorMsg);
-        continue;
+        throw new Error(`Error: No ${errorMsg}`)
       }
     }
 
-    if (keyDefs) defs = copy(keyDefs, copy(defs));
+    if (keyDefs) defs = {...defs, ...keyDefs}
 
-    var msgFunc = doT.compile(msg, defs);
-    locMsgs.push({ keyword: keyword, msgFunc: msgFunc });
+    return doT.compile(msg, defs)
   }
-
-  locMsgs.sort(byKeyword);
-  return locMsgs;
 }
 
-
-function getLocalDefs(defs, locale) {
-  var localeDefs = {};
-  for (var key in defs) {
-    var def = defs[key];
-    localeDefs[key] = typeof def == 'string' ? def : def[locale];
+function getLocaleDefs(defs, locale) {
+  const localeDefs = {}
+  for (const key in defs) {
+    const def = defs[key]
+    localeDefs[key] = typeof def == "string" ? def : def[locale]
   }
-  return localeDefs;
+  return localeDefs
 }
-
 
 function byKeyword(a, b) {
-  return a.keyword.localeCompare(b.keyword);
+  return a.keyword.localeCompare(b.keyword)
 }
 
-
-function getLocalizeTemplate() {
-  var tmplStr = fs.readFileSync(path.join(__dirname, '..', 'localize', 'localize.jst'));
-  return doT.compile(tmplStr);
+function getTemplate(fileName) {
+  const tmplStr = fs.readFileSync(path.join(__dirname, "..", "localize", fileName))
+  return doT.compile(tmplStr)
 }

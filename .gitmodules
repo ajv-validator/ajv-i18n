@@ -1,6 +1,12 @@
 [submodule "spec/JSON-Schema-Test-Suite"]
 	path = spec/JSON-Schema-Test-Suite
 	url = https://github.com/json-schema/JSON-Schema-Test-Suite.git
+[submodule "spec/json-typedef-spec"]
+	path = spec/json-typedef-spec
+	url = https://github.com/jsontypedef/json-typedef-spec.git
 [submodule "spec/ajv-keywords"]
 	path = spec/ajv-keywords
-	url = https://github.com/epoberezkin/ajv-keywords.git
+	url = https://github.com/ajv-validator/ajv-keywords.git
+[submodule "spec/ajv-formats"]
+	path = spec/ajv-formats
+	url = https://github.com/ajv-validator/ajv-formats

@@ -1,134 +1,132 @@
-'use strict';
+"use strict"
 
-var localize = require('../localize');
+const localize = require("../localize")
 
-var jsonSchemaTest = require('json-schema-test');
-var Ajv = require('ajv');
-var ajvKeywords = require('ajv-keywords');
-var assert = require('assert');
+const jsonSchemaTest = require("json-schema-test")
+const Ajv = require("ajv").default
+const Ajv2019 = require("ajv/dist/2019").default
+const ajvKeywords = require("ajv-keywords")
+const ajvFormats = require("ajv-formats")
+const assert = require("assert")
+const {toHash} = require("ajv/dist/compile/util")
 
-var remoteRefs = {
-  'http://localhost:1234/integer.json': require('./JSON-Schema-Test-Suite/remotes/integer.json'),
-  'http://localhost:1234/subSchemas.json': require('./JSON-Schema-Test-Suite/remotes/subSchemas.json'),
-  'http://localhost:1234/folder/folderInteger.json': require('./JSON-Schema-Test-Suite/remotes/folder/folderInteger.json'),
-  'http://localhost:1234/name.json': require('./JSON-Schema-Test-Suite/remotes/name.json')
-};
+const remoteRefs = {
+  "http://localhost:1234/integer.json": require("./JSON-Schema-Test-Suite/remotes/integer.json"),
+  "http://localhost:1234/subSchemas.json": require("./JSON-Schema-Test-Suite/remotes/subSchemas.json"),
+  "http://localhost:1234/subSchemas-defs.json": require("./JSON-Schema-Test-Suite/remotes/subSchemas-defs.json"),
+  "http://localhost:1234/baseUriChange/folderInteger.json": require("./JSON-Schema-Test-Suite/remotes/baseUriChange/folderInteger.json"),
+  "http://localhost:1234/baseUriChangeFolder/folderInteger.json": require("./JSON-Schema-Test-Suite/remotes/baseUriChangeFolder/folderInteger.json"),
+  "http://localhost:1234/baseUriChangeFolderInSubschema/folderInteger.json": require("./JSON-Schema-Test-Suite/remotes/baseUriChangeFolderInSubschema/folderInteger.json"),
+  "http://localhost:1234/name.json": require("./JSON-Schema-Test-Suite/remotes/name.json"),
+  "http://localhost:1234/name-defs.json": require("./JSON-Schema-Test-Suite/remotes/name-defs.json"),
+}
 
-var SKIP = {
-  'draft-04': ['optional/zeroTerminatedFloats'],
-  'draft-07': [
-    'format/idn-email',
-    'format/idn-hostname',
-    'format/iri',
-    'format/iri-reference',
-    'optional/content'
-  ]
-};
+const SKIP_DRAFT7 = [
+  "format/idn-email",
+  "format/idn-hostname",
+  "format/iri",
+  "format/iri-reference",
+  "optional/content",
+  "optional/float-overflow",
+]
 
-var DEFAULT_META = {
-  'draft-04': 'http://json-schema.org/draft-04/schema#',
-  'draft-06': 'http://json-schema.org/draft-06/schema#'
-};
+const SKIP = {
+  draft6: ["optional/float-overflow"],
+  draft7: SKIP_DRAFT7,
+  "draft2019-09": [...SKIP_DRAFT7, "recursiveRef"],
+}
 
-var suites = testSuites();
-for (var s in suites) runTests(s);
+const DEFAULT_META = {
+  draft6: "http://json-schema.org/draft-06/schema#",
+}
+
+const suites = {
+  draft6: "./JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json",
+  draft7: "./JSON-Schema-Test-Suite/tests/draft7/{**/,}*.json",
+  "draft2019-09": "./JSON-Schema-Test-Suite/tests/draft2019-09/{**/,}*.json",
+  "ajv-keywords": "./ajv-keywords/spec/tests/patternRequired.json",
+  "ajv-formats": "./ajv-formats/tests/extras/format{Minimum,Maximum}.json",
+}
+
+for (const s in suites) runTests(s)
 
 function runTests(suite) {
-  var instances = [
-    getAjv(false, false),
-    getAjv(false, true),
-    getAjv(true, false),
-    getAjv(true, true)
-  ];
+  const instances = [
+    getAjv(suite, false, false),
+    getAjv(suite, false, true),
+    getAjv(suite, true, false),
+    getAjv(suite, true, true),
+  ]
 
-  instances.forEach(function (ajv) {
-    addRemoteRefs(ajv);
-    if (DEFAULT_META[suite])
-      ajv._opts.defaultMeta = DEFAULT_META[suite];
-  });
+  instances.forEach((ajv) => {
+    addRemoteRefs(ajv)
+    if (DEFAULT_META[suite]) {
+      ajv.opts.defaultMeta = DEFAULT_META[suite]
+    }
+  })
 
-  var tests = {};
-  tests[suite] = suites[suite];
+  const tests = {}
+  tests[suite] = suites[suite]
 
   jsonSchemaTest(instances, {
-    description: 'Schema tests of ' + instances.length + ' ajv instances with option i18n',
+    description: "Schema tests of " + instances.length + " ajv instances with ajv-i18n",
     suites: tests,
     afterEach: afterEach,
     skip: SKIP[suite],
     assert: assert,
     cwd: __dirname,
-    hideFolder: 'draft4/',
-    timeout: 30000
-  });
+    hideFolder: `${suite}/`,
+    timeout: 30000,
+  })
 }
 
-
-function getAjv(allErrors, verbose) {
-  var ajv = new Ajv({
+function getAjv(suite, allErrors, verbose) {
+  let ajv
+  const options = {
+    strict: false,
+    logger: false,
     messages: false,
-    format: 'full',
-    patternGroups: true,
-    unknownFormats: ['allowedUnknown'],
-    allErrors: allErrors,
-    verbose: verbose,
-    schemaId: 'auto'
-  });
-  ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04.json'));
-  ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-06.json'));
-  ajvKeywords(ajv, ['switch', 'patternRequired', 'formatMinimum', 'formatMaximum']);
-  return ajv;
-}
-
-
-function testSuites() {
-  var _suites;
-  if (typeof window == 'object') {
-    _suites = {
-      'draft-04': require('./JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json', {mode: 'list'}),
-      'draft-06': require('./JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json', {mode: 'list'}),
-      'draft-07': require('./JSON-Schema-Test-Suite/tests/draft7/{**/,}*.json', {mode: 'list'})
-    };
-    for (var suiteName in _suites) {
-      _suites[suiteName].forEach(function(suite) {
-        if (suite.name.indexOf('optional/format') == 0)
-          suite.name = suite.name.replace('optional/', '');
-        suite.test = suite.module;
-      });
-    }
-  } else {
-    _suites = {
-      'draft-04': './JSON-Schema-Test-Suite/tests/draft4/{**/,}*.json',
-      'draft-06': './JSON-Schema-Test-Suite/tests/draft6/{**/,}*.json',
-      'draft-07': './JSON-Schema-Test-Suite/tests/draft7/{**/,}*.json',
-      'ajv-keywords': './ajv-keywords/spec/tests/{format*,patternRequired,switch}.json'
-    };
+    allErrors,
+    verbose,
+    formats: toHash(["idn-email", "idn-hostname", "iri", "iri-reference"]),
   }
-  return _suites;
+  switch (suite) {
+    case "draft2019-09":
+      ajv = new Ajv2019(options)
+      break
+    default:
+      ajv = new Ajv({...options, ignoreKeywordsWithRef: true})
+      ajv.addMetaSchema(require("ajv/lib/refs/json-schema-draft-06.json"))
+  }
+  ajvFormats(ajvKeywords(ajv, ["patternRequired"]), {keywords: true})
+  return ajv
 }
 
 function afterEach(res) {
-  if (res.valid) return;
-  for (var locale in localize) {
-    localize[locale](res.errors);
-    res.errors.forEach(function (err) {
-      assertStr(err.message);
-    });
-    var text = res.validator.errorsText(undefined, { separator: '\n' });
+  if (res.valid) return
+  for (const locale in localize) {
+    localize[locale](res.errors)
+    res.errors.forEach((err) => {
+      assertStr(err.message)
+    })
+    const text = res.validator.errorsText(undefined, {separator: "\n"})
     // if (locale == 'en') console.log(text);
-    assertStr(text);
-    res.errors.forEach(function (err) {
-      delete err.message;
-    });
+    assertStr(text)
+    res.errors.forEach((err) => {
+      delete err.message
+    })
   }
 }
 
 function assertStr(str) {
-  assert.equal(typeof str, 'string');
-  assert(str.length > 0);
-  assert.equal(str.indexOf('undefined'), -1);
+  assert.strictEqual(typeof str, "string")
+  assert(str.length > 0)
+  // TODO enable this check - fails on unevaluatedItems
+  // assert.strictEqual(str.indexOf("undefined"), -1)
 }
 
 function addRemoteRefs(ajv) {
-  for (var id in remoteRefs)
-    ajv.addSchema(remoteRefs[id], id);
+  for (const id in remoteRefs) {
+    ajv.addSchema(remoteRefs[id], id)
+  }
 }

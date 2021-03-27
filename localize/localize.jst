@@ -1,24 +1,45 @@
 'use strict';
 
 {{
-  var STRIP_FUNCTION = /function\s+anonymous\s*\(it[^)]*\)\s*{|return\s+out;\s*}/g
-    , VAR_OUT = /var\s+out/
-    , OUT_EMPTY_STRING = /out\s*\+=\s*\'\'\s*\+\s*/g;
+  const STRIP_FUNCTION = /function\s+anonymous\s*\(it[^)]*\)\s*{|return\s+out;\s*}/g;
+  const VAR_OUT = /var\s+out/;
+  const OUT_EMPTY_STRING = /out\s*\+=\s*\'\'\s*\+\s*/g;
 }}
 
 {{ var name = 'localize_' + it.locale.replace('-','_'); }}
 module.exports = function {{=name}}(errors) {
   if (!(errors && errors.length)) return;
-  for (var i=0; i<errors.length; i++) {
-    var e = errors[i];
-    var out;
+  for (const e of errors) {
+    let out;
     switch (e.keyword) {
       {{~ it.messages:msg }}
-        case '{{= msg.keyword }}':
-          {{= stripFunction(msg.msgFunc) }}
+        case "{{= msg.keyword }}":
+          {{~ msg.keywords:kwd }}
+            case '{{= kwd }}':
+          {{~}}
+          {{? typeof msg.msgFunc == "function" }}
+            {{= stripFunction(msg.msgFunc) }}
+          {{?? msg.msgFunc.length }}
+            switch (e.params.error) {
+              {{~ msg.msgFunc:err }}
+                case "{{= err.error }}":
+                  {{= stripFunction(err.func) }}
+                  break;
+              {{~}}
+              default:
+                {{? it.typeMessage }}
+                  {{= stripFunction(it.typeMessage) }}
+                {{??}}
+                  {{= stripFunction(it.defaultMessage) }}
+                {{?}}
+            }
+          {{??}}
+            {{= stripFunction(it.typeMessage) }}
+          {{?}}
           break;
       {{~}}
-      default: continue;
+      default:
+        {{= stripFunction(it.defaultMessage) }}
     }
     e.message = out;
   }

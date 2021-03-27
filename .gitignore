@@ -31,7 +31,8 @@ node_modules
 
 # Compiled templates
 localize/**/*.js
-!localize/index.js
+localize/**/*.d.ts
+!localize/types.d.ts
 
 # Browserified tests
 .browser

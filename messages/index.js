@@ -198,44 +198,27 @@ module.exports = {
     _defs: {
       n: "{{var n = e.params.depsCount;}}",
     },
-    en:
-      "{{#def.n}}must have propert{{#def.propPlural}} {{=e.params.deps}} when property {{=e.params.property}} is present",
-    ar:
-      "{{#def.n}} يجب أن يحوي الخصائص {{=e.params.deps}} عندما تكون الخاصية {{=e.params.property}} موجودة",
-    ca:
-      "{{#def.n}}ha de contenir la propietat{{#def.propPlural}} {{=e.params.deps}} quan la propietat {{=e.params.property}} és present",
-    cs:
-      "{{#def.n}}musí mít polož{{#def.propPlural}}: {{=e.params.deps}}, pokud obsahuje {{=e.params.property}}",
-    de:
-      "{{#def.n}}muss Attribut{{#def.propPlural}} {{=e.params.deps}} aufweisen, wenn Attribut {{=e.params.property}} gesetzt ist",
-    es:
-      "{{#def.n}}debe contener la{{#def.mPlural}} propiedad{{#def.propPlural}} {{=e.params.deps}} cuando la propiedad {{=e.params.property}} se encuentra presente",
-    fr:
-      "{{#def.n}}doit avoir la propriété {{=e.params.deps}} quand la propriété {{=e.params.property}} est présente",
-    hu:
-      "{{#def.n}}-nak kell legyen{{? n>1 }}ek{{?}} a következő tulajdonsága{{#def.propPlural}}: {{=e.params.deps}}, ha van {{=e.params.property}} tulajdonsága",
-    id:
-      "{{#def.n}} harus memiliki properti {{=e.params.deps}} ketika properti {{=e.params.property}} hadir",
-    it:
-      "{{#def.n}}dovrebbe avere {{? n==1 }}l'{{??}}gli {{?}}attribut{{#def.propPlural}} {{=e.params.deps}} quando l'attributo {{=e.params.property}} è presente",
+    en: "{{#def.n}}must have propert{{#def.propPlural}} {{=e.params.deps}} when property {{=e.params.property}} is present",
+    ar: "{{#def.n}} يجب أن يحوي الخصائص {{=e.params.deps}} عندما تكون الخاصية {{=e.params.property}} موجودة",
+    ca: "{{#def.n}}ha de contenir la propietat{{#def.propPlural}} {{=e.params.deps}} quan la propietat {{=e.params.property}} és present",
+    cs: "{{#def.n}}musí mít polož{{#def.propPlural}}: {{=e.params.deps}}, pokud obsahuje {{=e.params.property}}",
+    de: "{{#def.n}}muss Attribut{{#def.propPlural}} {{=e.params.deps}} aufweisen, wenn Attribut {{=e.params.property}} gesetzt ist",
+    es: "{{#def.n}}debe contener la{{#def.mPlural}} propiedad{{#def.propPlural}} {{=e.params.deps}} cuando la propiedad {{=e.params.property}} se encuentra presente",
+    fr: "{{#def.n}}doit avoir la propriété {{=e.params.deps}} quand la propriété {{=e.params.property}} est présente",
+    hu: "{{#def.n}}-nak kell legyen{{? n>1 }}ek{{?}} a következő tulajdonsága{{#def.propPlural}}: {{=e.params.deps}}, ha van {{=e.params.property}} tulajdonsága",
+    id: "{{#def.n}} harus memiliki properti {{=e.params.deps}} ketika properti {{=e.params.property}} hadir",
+    it: "{{#def.n}}dovrebbe avere {{? n==1 }}l'{{??}}gli {{?}}attribut{{#def.propPlural}} {{=e.params.deps}} quando l'attributo {{=e.params.property}} è presente",
     ja: "{{=e.params.property}}がある場合、{{#def.n}}は{{=e.params.deps}}をつけなければいけない",
     ko: "{{#def.n}}{{=e.params.property}}속성이 있는 경우, {{=e.params.deps}} 속성이 있어야합니다",
-    nb:
-      "{{#def.n}}må ha egenskapen{{? n != 1}}e{{?}} {{=e.params.deps}} når egenskapen {{=e.params.property}} er angitt",
-    nl:
-      "{{#def.n}}moet de eigenschap{{#def.propPlural}} {{=e.params.deps}} bevatten als {{=e.params.property}} is gedefinieerd",
-    pl:
-      "{{#def.n}}powinien zawierać pol{{#def.propPlural}} {{=e.params.deps}} kiedy pole {{=e.params.property}} jest obecne",
+    nb: "{{#def.n}}må ha egenskapen{{? n != 1}}e{{?}} {{=e.params.deps}} når egenskapen {{=e.params.property}} er angitt",
+    nl: "{{#def.n}}moet de eigenschap{{#def.propPlural}} {{=e.params.deps}} bevatten als {{=e.params.property}} is gedefinieerd",
+    pl: "{{#def.n}}powinien zawierać pol{{#def.propPlural}} {{=e.params.deps}} kiedy pole {{=e.params.property}} jest obecne",
     "pt-BR":
       "{{#def.n}} deve ter propriedade{{#def.propPlural}} {{=e.params.deps}} quando a propriedade {{=e.params.property}} estiver presente",
-    ru:
-      "{{#def.n}}должно иметь пол{{? n==1 }}е{{??}}я{{?}} {{=e.params.deps}}, когда присутствует поле {{=e.params.property}}",
-    sk:
-      "{{#def.n}} musí obsahovať polož{{#def.propPlural}}: {{=e.params.deps}}, ak obsahuje {{=e.params.property}}",
-    sv:
-      "{{#def.n}}borde ha egenskap{{#def.propPlural}} {{=e.params.deps}} när egenskap {{=e.params.property}} finns tillgängligt",
-    th:
-      "{{#def.n}}เมื่อมี property {{=e.params.property}} แล้วจะต้องมี property {{=e.params.deps}} ด้วย",
+    ru: "{{#def.n}}должно иметь пол{{? n==1 }}е{{??}}я{{?}} {{=e.params.deps}}, когда присутствует поле {{=e.params.property}}",
+    sk: "{{#def.n}} musí obsahovať polož{{#def.propPlural}}: {{=e.params.deps}}, ak obsahuje {{=e.params.property}}",
+    sv: "{{#def.n}}borde ha egenskap{{#def.propPlural}} {{=e.params.deps}} när egenskap {{=e.params.property}} finns tillgängligt",
+    th: "{{#def.n}}เมื่อมี property {{=e.params.property}} แล้วจะต้องมี property {{=e.params.deps}} ด้วย",
     zh: "{{#def.n}}应当拥有属性{{=e.params.property}}的依赖属性{{=e.params.deps}}",
     "zh-TW": "{{#def.n}}應該要有屬性{{=e.params.property}}的依賴屬性{{=e.params.deps}}",
   },
@@ -623,10 +606,8 @@ module.exports = {
     it: "deve essere di tipo {{=e.params.type}}",
     ja: "{{=e.params.type}}でなければいけない",
     ko: "{{=e.params.type}}이여야 합니다",
-    nb:
-      '{{#def.t}}må være {{? t == "number" }}et tall{{?? t == "integer"}}et heltall{{?? t == "string"}}en streng{{?? t == "boolean"}}ja eller nei{{??}}{{=t}}{{?}}',
-    nl:
-      '{{#def.t}}moet een {{? t == "number" }}nummer{{?? t == "integer"}}geheel getal{{?? t == "string"}}tekenreeks{{?? t == "boolean"}}ja of nee waarde{{?}} ({{=t}}) bevatten',
+    nb: '{{#def.t}}må være {{? t == "number" }}et tall{{?? t == "integer"}}et heltall{{?? t == "string"}}en streng{{?? t == "boolean"}}ja eller nei{{??}}{{=t}}{{?}}',
+    nl: '{{#def.t}}moet een {{? t == "number" }}nummer{{?? t == "integer"}}geheel getal{{?? t == "string"}}tekenreeks{{?? t == "boolean"}}ja of nee waarde{{?}} ({{=t}}) bevatten',
     pl: "powinien być {{=e.params.type}}",
     "pt-BR":
       '{{#def.t}}deve ser {{? t == "number" }}um número{{?? t == "integer"}}um número inteiro{{?? t == "string"}}um texto{{?? t == "boolean"}}um booleano{{??}}{{=t}}{{?}}',
@@ -663,37 +644,26 @@ module.exports = {
     "zh-TW": "{{#def.n}} 的元素不可以超過 {{=n}} 個",
   },
   uniqueItems: {
-    en:
-      "must NOT have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)",
+    en: "must NOT have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)",
     ar: "يجب أن لا يحوي عناصر مكررة (العنصر ## {{=e.params.j}} و {{=e.params.i}} متطابقة)",
-    ca:
-      "no ha de tenir ítems duplicats (els ítems ## {{=e.params.j}} i {{=e.params.i}} són idèntics)",
-    cs:
-      "nesmí obsahovat duplicitní prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} jsou identické)",
-    de:
-      "darf keine Duplikate enthalten (Elemente #{{=e.params.j}} und #{{=e.params.i}} sind gleich)",
-    es:
-      "no debe contener elementos duplicados, (los elementos ## {{=e.params.j}} y {{=e.params.i}} son idénticos)",
-    fr:
-      "ne doit pas contenir de doublons (les éléments ## {{=e.params.j}} et {{=e.params.i}} sont identiques)",
+    ca: "no ha de tenir ítems duplicats (els ítems ## {{=e.params.j}} i {{=e.params.i}} són idèntics)",
+    cs: "nesmí obsahovat duplicitní prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} jsou identické)",
+    de: "darf keine Duplikate enthalten (Elemente #{{=e.params.j}} und #{{=e.params.i}} sind gleich)",
+    es: "no debe contener elementos duplicados, (los elementos ## {{=e.params.j}} y {{=e.params.i}} son idénticos)",
+    fr: "ne doit pas contenir de doublons (les éléments ## {{=e.params.j}} et {{=e.params.i}} sont identiques)",
     hu: "nem lehetnek azonos elemei ({{=e.params.j}} és {{=e.params.i}} elemek azonosak)",
     id: "tidak boleh memiliki item duplikat (item ## {{=e.params.j}} dan {{=e.params.i}} identik)",
     it: "non deve avere duplicati (gli elementi ## {{=e.params.j}} e {{=e.params.i}} sono uguali)",
     ja: "重複するアイテムがあってはいけない（{{=e.params.j}}と{{=e.params.i}}は同じである）",
     ko: "중복 아이템이 없어야 합니다 (아이템{{=e.params.j}}과 아이템{{=e.params.i}}가 동일합니다)",
-    nb:
-      "kan ikke ha duplikate elemeneter (elementene ## {{=e.params.j}} og {{=e.params.i}} er identiske)",
-    nl:
-      "mag geen gedupliceerde items bevatten (items ## {{=e.params.j}} en {{=e.params.i}} zijn identiek)",
-    pl:
-      "nie powinien zawierać elementów które się powtarzają (elementy {{=e.params.j}} i {{=e.params.i}} są identyczne)",
+    nb: "kan ikke ha duplikate elemeneter (elementene ## {{=e.params.j}} og {{=e.params.i}} er identiske)",
+    nl: "mag geen gedupliceerde items bevatten (items ## {{=e.params.j}} en {{=e.params.i}} zijn identiek)",
+    pl: "nie powinien zawierać elementów które się powtarzają (elementy {{=e.params.j}} i {{=e.params.i}} są identyczne)",
     "pt-BR":
       "não deve ter itens duplicados (os itens ## {{=e.params.j}} e {{=e.params.i}} são idênticos)",
-    ru:
-      "не должно иметь повторяющихся элементов (элементы {{=e.params.j}} и {{=e.params.i}} идентичны)",
+    ru: "не должно иметь повторяющихся элементов (элементы {{=e.params.j}} и {{=e.params.i}} идентичны)",
     sk: "nesmie obsahovať duplicitné prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} sú rovnaké)",
-    sv:
-      "borde inte ha duplicerade saker (sakerna ## {{=e.params.j}} och {{=e.params.i}} är identiska)",
+    sv: "borde inte ha duplicerade saker (sakerna ## {{=e.params.j}} och {{=e.params.i}} är identiska)",
     th: "ต้องมีสมาชิกไม่ซ้ำักัน (ลำดับที่ {{=e.params.j}} กับ {{=e.params.i}} ซ้ำกัน)",
     zh: "不应当含有重复项 (第 {{=e.params.j}} 项与第 {{=e.params.i}} 项是重复的)",
     "zh-TW": "不應該有重複項目 (第 {{=e.params.j}} 項和第 {{=e.params.i}} 項是重複的)",
@@ -731,8 +701,7 @@ module.exports = {
     it: 'deve avere un attributo che corrisponda al formato "{{=e.params.missingPattern}}"',
     ko: '"{{=e.params.missingPattern}}"패턴과 일치하는 속성을 가져야 합니다',
     nb: 'må ha en egenskap som samsvarer med mønsteret "{{=e.params.missingPattern}}',
-    nl:
-      'moet een eigenschap bevatten die overeenkomt met het pattroon: "{{=e.params.missingPattern}}"',
+    nl: 'moet een eigenschap bevatten die overeenkomt met het pattroon: "{{=e.params.missingPattern}}"',
     pl: 'powinien mieć pole pasujące do wzorca "{{=e.params.missingPattern}}"',
     "pt-BR": 'deve ter a propriedade correspondente ao padrão "{{=e.params.missingPattern}}"',
     ru: 'должно иметь поле, соответствующее образцу "{{=e.params.missingPattern}}"',

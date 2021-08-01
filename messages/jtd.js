@@ -73,10 +73,8 @@ module.exports = {
     it: "{{#def.t}}deve essere di tipo {{=t+n}}",
     ja: "{{#def.t}}{{=t+n}}でなければいけない",
     ko: "{{#def.t}}{{=t+n}}이여야 합니다",
-    nb:
-      '{{#def.t}}må være {{? t == "number" }}et tall{{?? t == "integer"}}et heltall{{?? t == "string"}}en streng{{?? t == "boolean"}}ja eller nei{{??}}{{=t}}{{?}}{{=n}}',
-    nl:
-      '{{#def.t}}moet een {{? t == "number" }}nummer{{?? t == "integer"}}geheel getal{{?? t == "string"}}tekenreeks{{?? t == "boolean"}}ja of nee waarde{{?}}{{=n}} ({{=t}}) bevatten',
+    nb: '{{#def.t}}må være {{? t == "number" }}et tall{{?? t == "integer"}}et heltall{{?? t == "string"}}en streng{{?? t == "boolean"}}ja eller nei{{??}}{{=t}}{{?}}{{=n}}',
+    nl: '{{#def.t}}moet een {{? t == "number" }}nummer{{?? t == "integer"}}geheel getal{{?? t == "string"}}tekenreeks{{?? t == "boolean"}}ja of nee waarde{{?}}{{=n}} ({{=t}}) bevatten',
     pl: "{{#def.t}}powinien być {{=t+n}}",
     "pt-BR":
       '{{#def.t}}deve ser {{? t == "number" }}um número{{?? t == "integer"}}um número inteiro{{?? t == "string"}}um texto{{?? t == "boolean"}}um booleano{{??}}{{=t}}{{?}}{{=n}}',

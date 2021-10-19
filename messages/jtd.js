@@ -54,7 +54,7 @@ module.exports = {
     sk: 'musí splniť "{{=e.keyword}}" validáciu',
     sv: 'bör passera "{{=e.keyword}}" nyckelord validering',
     th: 'ต้องผ่านคีย์เวิร์ด "{{=e.keyword}}"',
-    zh: '应当通过 "{{=e.keyword}} 关键词校验"',
+    zh: '必须通过 "{{=e.keyword}}" 关键词校验',
     "zh-TW": '應該通過 "{{=e.keyword}} 關鍵詞檢驗"',
   },
 
@@ -82,7 +82,7 @@ module.exports = {
     sk: "{{#def.t}}musí byť {{=t+n}}",
     sv: "{{#def.t}}borde vara {{=t+n}}",
     th: "{{#def.t}}ต้องเป็น {{=t+n}}",
-    zh: "{{#def.t}}应当是 {{=t+n}} 类型",
+    zh: "{{#def.t}}必须是 {{=t+n}} 类型",
     "zh-TW": "{{#def.t}}應該是 {{=t+n}} 類型",
   },
 
@@ -136,7 +136,7 @@ module.exports = {
       sk: "musí obsahovať požadovanú položku {{=e.params.missingProperty}}",
       sv: "borde ha den nödvändiga egenskapen {{=e.params.missingProperty}}",
       th: "ต้องมี property {{=e.params.missingProperty}} ด้วย",
-      zh: "应当有必需属性 {{=e.params.missingProperty}}",
+      zh: "必须有必需属性 {{=e.params.missingProperty}}",
       "zh-TW": "應該有必須屬性 {{=e.params.missingProperty}}",
     },
   },
@@ -189,7 +189,7 @@ module.exports = {
     sk: "musí byť jedna z definovaných hodnôt",
     sv: "borde vara ekvivalent med en av dess fördefinierade värden",
     th: "ต้องตรงกับหนึ่งในค่าที่กำหนดไว้",
-    zh: "应当是预设定的枚举值之一",
+    zh: "必须是预设定的枚举值之一",
     "zh-TW": "應該要在預設的值之中",
   },
 
@@ -213,7 +213,7 @@ module.exports = {
     sk: 'musí splňovať aspoň jednu zo schém v "union"',
     sv: 'borde matcha något schema i "union"',
     th: 'ต้องตรงกับหนึ่งใน schema ที่กำหนดไว้ใน "union"',
-    zh: "数据应为 union 所指定的其中一个",
+    zh: "必须匹配 union 其中的一个模式",
     "zh-TW": "不符合 union 指定的模式",
   },
 }

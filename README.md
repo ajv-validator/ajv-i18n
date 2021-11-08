@@ -142,6 +142,7 @@ Functions that localize error messages are generated using doT template [localiz
 [![ggondim](https://avatars2.githubusercontent.com/u/2074685?s=40&v=4)](https://github.com/ggondim "ggondim")
 [![niekvb](https://avatars3.githubusercontent.com/u/37668320?s=40&v=4)](https://github.com/niekvb "niekvb")
 [![NAM0007](https://avatars1.githubusercontent.com/u/47188486?s=40&v=4)](https://github.com/NAM0007 "NAM0007")
+[![saulipurhonen](https://avatars.githubusercontent.com/u/48789543?s=40&v=4)](https://github.com/saulipurhonen "saulipurhonen")
 
 ## Enterprise support
 

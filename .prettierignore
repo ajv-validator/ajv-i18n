@@ -1,7 +1,7 @@
 spec/JSON-Schema-Test-Suite
 spec/json-typedef-spec
 spec/ajv-keywords
-spec/ajv-keywords
+spec/ajv-formats
 .browser
 coverage
 bundle

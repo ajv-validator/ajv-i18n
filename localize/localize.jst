@@ -7,7 +7,7 @@
 }}
 
 {{ var name = 'localize_' + it.locale.replace('-','_'); }}
-module.exports = function {{=name}}(errors) {
+function {{=name}}(errors) {
   if (!(errors && errors.length)) return;
   for (const e of errors) {
     let out;
@@ -44,6 +44,31 @@ module.exports = function {{=name}}(errors) {
     e.message = out;
   }
 };
+
+function makeLocalizedErrors(ajv) {
+  return {
+    get: function() {
+      return ajv._errors;
+    },
+    set: function(errors) {
+      ajv._errors = {{=name}}(errors);
+    },
+    configurable: true
+  };
+}
+
+function initialize(ajv) {
+  ajv._compile = ajv.compile;
+
+  ajv.compile = schema => {
+    const validate = ajv._compile(schema);
+    Object.defineProperty(validate, 'errors', makeLocalizedErrors(ajv));
+    return validate;
+  }
+}
+
+initialize.localize = {{=name}};
+module.exports = initialize;
 
 {{
   function stripFunction(code) {

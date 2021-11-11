@@ -97,7 +97,7 @@ module.exports = {
     sk: 'musí splniť "{{=e.keyword}}" validáciu',
     sv: 'bör passera "{{=e.keyword}}" nyckelord validering',
     th: 'ต้องผ่านคีย์เวิร์ด "{{=e.keyword}}"',
-    zh: '应当通过 "{{=e.keyword}} 关键词校验"',
+    zh: '必须通过 "{{=e.keyword}}" 关键词校验',
     "zh-TW": '應該通過 "{{=e.keyword}} 關鍵詞檢驗"',
   },
 
@@ -226,7 +226,7 @@ module.exports = {
     sk: "{{#def.n}} musí obsahovať polož{{#def.propPlural}}: {{=e.params.deps}}, ak obsahuje {{=e.params.property}}",
     sv: "{{#def.n}}borde ha egenskap{{#def.propPlural}} {{=e.params.deps}} när egenskap {{=e.params.property}} finns tillgängligt",
     th: "{{#def.n}}เมื่อมี property {{=e.params.property}} แล้วจะต้องมี property {{=e.params.deps}} ด้วย",
-    zh: "{{#def.n}}应当拥有属性{{=e.params.property}}的依赖属性{{=e.params.deps}}",
+    zh: "{{#def.n}}必须拥有属性{{=e.params.property}}的依赖属性{{=e.params.deps}}",
     "zh-TW": "{{#def.n}}應該要有屬性{{=e.params.property}}的依賴屬性{{=e.params.deps}}",
   },
   enum: {
@@ -251,7 +251,7 @@ module.exports = {
     sk: "musí byť jedna z definovaných hodnôt",
     sv: "borde vara ekvivalent med en av dess fördefinierade värden",
     th: "ต้องตรงกับหนึ่งในค่าที่กำหนดไว้",
-    zh: "应当是预设定的枚举值之一",
+    zh: "必须是预设定的枚举值之一",
     "zh-TW": "應該要在預設的值之中",
   },
   format: {
@@ -276,7 +276,7 @@ module.exports = {
     sk: 'musí obsahovať formát "{{=e.params.format}}"',
     sv: 'borde matcha formatet "{{=e.params.format}}"',
     th: 'ต้องเป็นรูปแบบ "{{=e.params.format}}"',
-    zh: '应当匹配格式 "{{=e.params.format}}"',
+    zh: '必须匹配格式 "{{=e.params.format}}"',
     "zh-TW": "應該要符合{{=e.params.format}}格式",
   },
   maximum: {
@@ -305,7 +305,7 @@ module.exports = {
     sk: "{{#def.c}}musí byť {{=cond}}",
     sv: "{{#def.c}}borde vara {{=cond}}",
     th: "{{#def.c}}ต้อง {{=cond}}",
-    zh: "{{#def.c}}应当为 {{=cond}}",
+    zh: "{{#def.c}}必须 {{=cond}}",
     "zh-TW": "{{#def.c}}應該要 {{=cond}}",
   },
   minimum: {
@@ -334,7 +334,7 @@ module.exports = {
     sk: "{{#def.c}}musí byť {{=cond}}",
     sv: "{{#def.c}}borde vara {{=cond}}",
     th: "{{#def.c}}ต้อง {{=cond}}",
-    zh: "{{#def.c}}应当为 {{=cond}}",
+    zh: "{{#def.c}}必须 {{=cond}}",
     "zh-TW": "{{#def.c}}應該要 {{=cond}}",
   },
   maxItems: {
@@ -359,7 +359,7 @@ module.exports = {
     sk: "{{#def.n}}nesmie obsahovať viac než {{=n}} prv{{#def.mPlural}}",
     sv: "{{#def.n}}borde inte ha fler än {{=n}} sak{{#def.mPlural}}",
     th: "{{#def.n}}ต้องมีสมาชิกไม่เกิน {{=n}}",
-    zh: "{{#def.n}}不应多于 {{=n}} 个项",
+    zh: "{{#def.n}}不能多于 {{=n}} 个项",
     "zh-TW": "{{#def.n}}不應該多於 {{=n}} 個",
   },
   minItems: {
@@ -384,7 +384,7 @@ module.exports = {
     sk: "{{#def.n}}nesmie obsahovať menej než {{=n}} prv{{#def.mPlural}}",
     sv: "{{#def.n}}borde inte ha färre än {{=n}} sak{{#def.mPlural}}",
     th: "{{#def.n}}ควรมีสมาชิกไม่น้อยกว่า {{=n}}",
-    zh: "{{#def.n}}不应少于 {{=n}} 个项",
+    zh: "{{#def.n}}不能少于 {{=n}} 个项",
     "zh-TW": "{{#def.n}}不應該少於 {{=n}} 個",
   },
   maxLength: {
@@ -409,7 +409,7 @@ module.exports = {
     sk: "{{#def.n}}nesmie byť dlhší než {{=n}} znak{{? n!=1 }}ov{{?}}",
     sv: "{{#def.n}}borde inte vara längre än {{=n}} tecken",
     th: "{{#def.n}}ต้องยาวไม่เกิน {{=n}} ตัวอักษร",
-    zh: "{{#def.n}}不应多于 {{=n}} 个字符",
+    zh: "{{#def.n}}不能多于 {{=n}} 个字符",
     "zh-TW": "{{#def.n}}不應該多於 {{=n}} 個字元",
   },
   minLength: {
@@ -434,7 +434,7 @@ module.exports = {
     sk: "{{#def.n}}nesmie byť kratší než {{=n}} znak{{? n!=1 }}ov{{?}}",
     sv: "{{#def.n}}borde inte vara kortare än {{=n}} tecken",
     th: "{{#def.n}}ต้องมีอย่างน้อย {{=n}} ตัวอักษร",
-    zh: "{{#def.n}}不应少于 {{=n}} 个字符",
+    zh: "{{#def.n}}不能少于 {{=n}} 个字符",
     "zh-TW": "{{#def.n}}不應該少於 {{=n}} 個字元",
   },
   maxProperties: {
@@ -459,7 +459,7 @@ module.exports = {
     sk: "{{#def.n}}nesmie obsahovať viac než {{=n}} polož{{#def.propPlural}}",
     sv: "{{#def.n}}borde inte ha fler än {{=n}} egenskap{{#def.propPlural}}",
     th: "{{#def.n}}ต้องมี property ไม่เกิน {{=n}} ตัว",
-    zh: "{{#def.n}}不应有多于 {{=n}} 个属性",
+    zh: "{{#def.n}}不能有多于 {{=n}} 个属性",
     "zh-TW": "{{#def.n}}不應該多於 {{=n}} 個屬性",
   },
   minProperties: {
@@ -484,7 +484,7 @@ module.exports = {
     sk: "{{#def.n}}nesmie obsahovať menej než {{=n}} polož{{#def.propPlural}}",
     sv: "{{#def.n}}borde inte ha färre än {{=n}} egenskap{{#def.propPlural}}",
     th: "{{#def.n}}ต้องมี property อย่างน้อย {{=n}} ตัว",
-    zh: "{{#def.n}}不应有少于 {{=n}} 个属性",
+    zh: "{{#def.n}}不能有少于 {{=n}} 个属性",
     "zh-TW": "{{#def.n}}不應該少於 {{=n}} 個屬性",
   },
   multipleOf: {
@@ -509,7 +509,7 @@ module.exports = {
     sk: "musí byť násobkom {{=e.params.multipleOf}}",
     sv: "borde vara en multipel av {{=e.params.multipleOf}}",
     th: "ต้องเป็นเลขที่หาร {{=e.params.multipleOf}} ลงตัว",
-    zh: "应当是 {{=e.params.multipleOf}} 的整数倍",
+    zh: "必须是 {{=e.params.multipleOf}} 的整数倍",
     "zh-TW": "應該是 {{=e.params.multipleOf}} 的整數倍",
   },
   not: {
@@ -584,7 +584,7 @@ module.exports = {
     sk: 'musí splňovať regulárny výraz "{{=e.params.pattern}}"',
     sv: 'borde matcha mönstret "{{=e.params.pattern}}"',
     th: 'ต้องตรงตาม pattern "{{=e.params.pattern}}"',
-    zh: '应当匹配模式 "{{=e.params.pattern}}"',
+    zh: '必须匹配模式 "{{=e.params.pattern}}"',
     "zh-TW": '應該符合模式 "{{=e.params.pattern}}"',
   },
   required: {
@@ -609,7 +609,7 @@ module.exports = {
     sk: "musí obsahovať požadovanú položku {{=e.params.missingProperty}}",
     sv: "borde ha den nödvändiga egenskapen {{=e.params.missingProperty}}",
     th: "ต้องมี property {{=e.params.missingProperty}} ด้วย",
-    zh: "应当有必需属性 {{=e.params.missingProperty}}",
+    zh: "必须有必需属性 {{=e.params.missingProperty}}",
     "zh-TW": "應該有必須屬性 {{=e.params.missingProperty}}",
   },
   type: {
@@ -638,7 +638,7 @@ module.exports = {
     sk: "musí byť {{=e.params.type}}",
     sv: "borde vara {{=e.params.type}}",
     th: "ต้องเป็น {{=e.params.type}}",
-    zh: "应当是 {{=e.params.type}} 类型",
+    zh: "必须是 {{=e.params.type}} 类型",
     "zh-TW": "應該是 {{=e.params.type}} 類型",
   },
   unevaluatedProperties: {
@@ -693,7 +693,7 @@ module.exports = {
     sk: "nesmie obsahovať duplicitné prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} sú rovnaké)",
     sv: "borde inte ha duplicerade saker (sakerna ## {{=e.params.j}} och {{=e.params.i}} är identiska)",
     th: "ต้องมีสมาชิกไม่ซ้ำักัน (ลำดับที่ {{=e.params.j}} กับ {{=e.params.i}} ซ้ำกัน)",
-    zh: "不应当含有重复项 (第 {{=e.params.j}} 项与第 {{=e.params.i}} 项是重复的)",
+    zh: "不能含有重复项 (第 {{=e.params.j}} 项与第 {{=e.params.i}} 项是重复的)",
     "zh-TW": "不應該有重複項目 (第 {{=e.params.j}} 項和第 {{=e.params.i}} 項是重複的)",
   },
   propertyNames: {
@@ -715,7 +715,7 @@ module.exports = {
     sk: "názov položky nezodpovedá schéme",
     sv: "egenskap med namnet är inte giltig",
     th: "ชื่อ property ไม่ถูกต้อง",
-    zh: "属性名 无效",
+    zh: "属性名无效",
     "zh-TW": "属性名 無效",
   },
   patternRequired: {
@@ -738,7 +738,7 @@ module.exports = {
     sk: 'musí obsahovať položku splňjúcu regulárny výraz "{{=e.params.missingPattern}}"',
     sv: 'bör ha en egenskap som matchar mönstret "{{=e.params.missingPattern}}"',
     th: 'ต้องมี property ที่มีชื่อตรงตาม pattern "{{=e.params.missingPattern}}"',
-    zh: "应当有属性匹配模式 {{=e.params.missingPattern}}",
+    zh: "必须有属性匹配模式 {{=e.params.missingPattern}}",
     "zh-TW": "應該有屬性對應模式 {{=e.params.missingPattern}}",
   },
   const: {
@@ -761,7 +761,7 @@ module.exports = {
     sk: "musí byť konštanta",
     sv: "bör vara en konstant",
     th: "ต้องเท่ากับค่าคงที่",
-    zh: "应当等于常量",
+    zh: "必须等于常量",
     "zh-TW": "應該等於常數",
   },
   contains: {
@@ -783,7 +783,7 @@ module.exports = {
     sk: "musí obsahovať prvok zodpovedajúci schéme",
     sv: "bör innehålla ett giltigt objekt",
     th: "ต้องมีสมาชิกที่ผ่านเงื่อนไขอยู่",
-    zh: "应当包含一个有效项",
+    zh: "必须包含一个有效项",
     "zh-TW": "應該包含一個有效元素",
   },
   formatMaximum: {
@@ -810,7 +810,7 @@ module.exports = {
     sk: "{{#def.c}}musí byť {{=cond}}",
     sv: "{{#def.c}}bör vara {{=cond}}",
     th: "{{#def.c}}ต้อง {{=cond}}",
-    zh: "{{#def.c}}应当是 {{=cond}}",
+    zh: "{{#def.c}}必须 {{=cond}}",
     "zh-TW": "{{#def.c}}應該是 {{=cond}}",
   },
   formatMinimum: {
@@ -837,7 +837,7 @@ module.exports = {
     sk: "{{#def.c}}musí byť {{=cond}}",
     sv: "{{#def.c}}bör vara {{=cond}}",
     th: "{{#def.c}}ต้อง {{=cond}}",
-    zh: "{{#def.c}}应当是 {{=cond}}",
+    zh: "{{#def.c}}必须 {{=cond}}",
     "zh-TW": "{{#def.c}}應該是 {{=cond}}",
   },
   if: {
@@ -856,7 +856,7 @@ module.exports = {
     "pt-BR": 'deve corresponder ao schema "{{=e.params.failingKeyword}}"',
     ru: 'должно соответствовать схемe "{{=e.params.failingKeyword}}"',
     th: 'ต้องตรงกับ schema "{{=e.params.failingKeyword}}"',
-    zh: '应当匹配模式 "{{=e.params.failingKeyword}}" ',
+    zh: '必须匹配模式 "{{=e.params.failingKeyword}}" ',
     "zh-TW": '應該符合 "{{=e.params.failingKeyword}}" schema',
   },
   discriminator: {

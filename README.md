@@ -32,6 +32,7 @@ Internationalised error messages for [Ajv](https://github.com/ajv-validator/ajv)
 |🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|-|*|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|-|*|
 |🇹🇭 th|Thai     |[encX](https://github.com/encX)|✓|✓|✓|✓|✓|
+|🇹🇷 tr|Turkish     |[ademkoc](https://github.com/ademkoc)<br>[aykutkircan](https://github.com/aykutkircan)|✓|✓|✓|✓|✓|
 |🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>&nbsp;|<br>✓|<br>✓|<br>✓|<br>✓|
 |🇹🇼 zh-TW|Chinese - Taiwan|[minipai](https://github.com/minipai)|✓|✓|✓|✓|✓|
 

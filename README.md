@@ -12,7 +12,7 @@ Internationalised error messages for [Ajv](https://github.com/ajv-validator/ajv)
 |locale|language |contributor|draft-04|draft-06<sup>1</sup>|draft-07<sup>2</sup>|draft<br>2019-09<sup>3</sup><br>/2020-12<sup>4</sup>|JTD<sup>5</sup>
 |------|:-------:|:---------:|:------:|:------:|:------:|:------:|:------:|
 |🇬🇧 en|English  | |✓|✓|✓|✓|✓|
-|AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)|✓|✓|✓|-|-|
+|AR ar|Arabic   |[Mahmoud-Mardeni](https://github.com/Mahmoud-Mardeni)<br>[PeterAbdalla](https://github.com/PeterAbdalla)|✓|✓|✓|<br>✓|<br>✓|
 |CA ca|Catalan   |[alexandreec](https://github.com/alexandreec)|✓|✓|✓|-|*|
 |🇨🇿 cs|Czech    |[kiskovacs](https://github.com/kiskovacs)<br>[NAM0007](https://github.com/NAM0007)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|-|*|
 |🇩🇪 de|German   |[jmtoball](https://github.com/jmtoball)<br>[gflohr](https://github.com/gflohr)|✓<br>&nbsp;|✓<br>&nbsp;|<br>✓|✓<br>&nbsp;|✓<br>&nbsp;|
@@ -143,6 +143,7 @@ Functions that localize error messages are generated using doT template [localiz
 [![niekvb](https://avatars3.githubusercontent.com/u/37668320?s=40&v=4)](https://github.com/niekvb "niekvb")
 [![NAM0007](https://avatars1.githubusercontent.com/u/47188486?s=40&v=4)](https://github.com/NAM0007 "NAM0007")
 [![saulipurhonen](https://avatars.githubusercontent.com/u/48789543?s=40&v=4)](https://github.com/saulipurhonen "saulipurhonen")
+[![PeterAbdalla](https://avatars.githubusercontent.com/u/47214483?s=40&v=4)](https://github.com/PeterAbdalla "PeterAbdalla")
 
 ## Enterprise support
 

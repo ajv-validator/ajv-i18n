@@ -40,7 +40,7 @@ module.exports = {
     mPlural: {
       // plural for the words item (element) and character
       en: "{{? n!=1 }}s{{?}}",
-      ar: "{{? n!=1 }}عناصر{{?}}",
+      ar: "{{? n!=1 }} عناصر {{?}}",
       ca: "{{? n!=1 }}s{{?}}",
       cs: "{{? n>=2 && n<=4 }}ky{{?? n!=1 }}ek{{??}}ků{{?}}",
       de: "{{? n!=1 }}e{{?}}",
@@ -58,7 +58,7 @@ module.exports = {
     propPlural: {
       // plural for the word property (attribute)
       en: "{{? n==1 }}y{{??}}ies{{?}}",
-      ar: "{{? n!=1 }}خصائص{{?}}",
+      ar: "{{? n!=1 }} خصائص {{?}}",
       ca: "{{? n!=1 }}s{{?}}",
       cs: "{{? n>=2 && n<=4 }}ky{{?? n!=1 }}ek{{??}}ka{{?}}",
       de: "{{? n!=1 }}e{{?}}",
@@ -79,7 +79,7 @@ module.exports = {
   // error messages
   _defaultMessage: {
     en: 'must pass "{{=e.keyword}}" keyword validation',
-    ar: 'يجب أن تمرر كلمة التحقق المفتاحية "{{=e.keyword}}"',
+    ar: 'أن يجتاز التحقق من الصحة "{{=e.keyword}}" يجب',
     ca: 'ha de passar la validació de la clau "{{=e.keyword}}"',
     cs: 'musí vyhovět "{{=e.keyword}}" validaci',
     de: 'muss die Validierung "{{=e.keyword}}" bestehen',
@@ -103,7 +103,7 @@ module.exports = {
 
   "false schema": {
     en: "boolean schema is false",
-    ar: "المخطط المنطقي غير صحيح",
+    ar: "المخطط المنطقي خاطئ",
     ca: "l’esquema és fals",
     cs: "schéma je false",
     de: "boolesches Schema ist falsch",
@@ -126,7 +126,7 @@ module.exports = {
   additionalItems: {
     _keywords: ["items"], // for JSON Schema draft-2020-12
     en: "{{#def.n}}must NOT have more than {{=n}} item{{#def.mPlural}}",
-    ar: "{{#def.n}} يجب أن لا يحوي أكثر من {{=n}} عنصر",
+    ar: "{{#def.n}} يجب ألا يحتوي على أكثر من {{=n}} عنصر",
     ca: "{{#def.n}}no ha de tenir més de {{=n}} element{{#def.mPlural}}",
     cs: "{{#def.n}}nemůže mít víc, než {{=n}} prv{{#def.mPlural}}",
     de: "{{#def.n}}darf nicht mehr als {{=n}} Element{{#def.mPlural}} enthalten",
@@ -151,7 +151,7 @@ module.exports = {
   },
   additionalProperties: {
     en: "must NOT have additional properties",
-    ar: "يجب أن لا يحوي خصائص إضافية",
+    ar: "يجب ألا يكون لها خصائص إضافية",
     ca: "no ha de tenir propietats addicionals",
     cs: "nemůže mít další položky",
     de: "darf keine zusätzlichen Attribute haben",
@@ -176,7 +176,7 @@ module.exports = {
   },
   anyOf: {
     en: 'must match a schema in "anyOf"',
-    ar: 'يجب أن يوافق أحد المخططات الموجودة في "anyOf"',
+    ar: 'يجب أن يتطابق مع اي مخطط في "anyOf"',
     ca: 'ha de coincidir amb algun esquema definit a "anyOf"',
     cs: 'musí vyhovět alespoň jednomu schématu v "anyOf"',
     de: 'muss einem der Schemata in "anyOf" entsprechen',
@@ -205,7 +205,7 @@ module.exports = {
       n: "{{var n = e.params.depsCount;}}",
     },
     en: "{{#def.n}}must have propert{{#def.propPlural}} {{=e.params.deps}} when property {{=e.params.property}} is present",
-    ar: "{{#def.n}} يجب أن يحوي الخصائص {{=e.params.deps}} عندما تكون الخاصية {{=e.params.property}} موجودة",
+    ar: "{{#def.n}} يجب أن يكون لها خصائص {{=e.params.deps}} عندما تكون الخاصية {{=e.params.property}} موجودة",
     ca: "{{#def.n}}ha de contenir la propietat{{#def.propPlural}} {{=e.params.deps}} quan la propietat {{=e.params.property}} és present",
     cs: "{{#def.n}}musí mít polož{{#def.propPlural}}: {{=e.params.deps}}, pokud obsahuje {{=e.params.property}}",
     de: "{{#def.n}}muss Attribut{{#def.propPlural}} {{=e.params.deps}} aufweisen, wenn Attribut {{=e.params.property}} gesetzt ist",
@@ -231,7 +231,7 @@ module.exports = {
   },
   enum: {
     en: "must be equal to one of the allowed values",
-    ar: "قيمة هذا الحقل يجب أن تكون مساوية لأحد القيم المعرفة مسبقاً",
+    ar: "يجب أن تكون مساوية لإحدى القيم المسموح بها",
     ca: "ha de ser igual a un dels valors predefinits",
     cs: "musí být rovno jedné hodnotě z výčtu",
     de: "muss einem der vorgegebenen Werte entsprechen",
@@ -256,7 +256,7 @@ module.exports = {
   },
   format: {
     en: 'must match format "{{=e.params.format}}"',
-    ar: 'يجب أن يوافق الصيغة "{{=e.params.format}}"',
+    ar: 'يجب أن يتطابق مع الصيغة "{{=e.params.format}}"',
     ca: 'ha de coincidir amb el format "{{=e.params.format}}"',
     cs: 'musí být ve formátu "{{=e.params.format}}"',
     de: 'muss diesem Format entsprechen: "{{=e.params.format}}"',
@@ -339,7 +339,7 @@ module.exports = {
   },
   maxItems: {
     en: "{{#def.n}}must NOT have more than {{=n}} item{{#def.mPlural}}",
-    ar: "{{#def.n}} يجب أن لا يحوي أكثر من {{=n}} عنصر",
+    ar: "{{#def.n}} يجب ألا يحتوي على أكثر من {{=n}} عنصر",
     ca: "{{#def.n}}no ha de tenir més de {{=n}} ítem{{#def.mPlural}}",
     cs: "{{#def.n}}nesmí obsahovat víc než {{=n}} prv{{#def.mPlural}}",
     de: "{{#def.n}}darf nicht mehr als {{=n}} Element{{#def.mPlural}} haben",
@@ -364,7 +364,7 @@ module.exports = {
   },
   minItems: {
     en: "{{#def.n}}must NOT have less than {{=n}} item{{#def.mPlural}}",
-    ar: "{{#def.n}} يجب أن لا يحوي أقل من {{=n}} عنصر",
+    ar: "{{#def.n}} يجب ألا يكون أقل من {{=n}} عنصر",
     ca: "{{#def.n}}no ha de tenir menys de {{=n}} ítem{{#def.mPlural}}",
     cs: "{{#def.n}}nesmí obsahovat méně než {{=n}} prv{{#def.mPlural}}",
     de: "{{#def.n}}darf nicht weniger als {{=n}} Element{{#def.mPlural}} haben",
@@ -389,7 +389,7 @@ module.exports = {
   },
   maxLength: {
     en: "{{#def.n}}must NOT be longer than {{=n}} character{{#def.mPlural}}",
-    ar: "{{#def.n}} يجب أن لا يحوي أكثر من {{=n}} محرف",
+    ar: "{{#def.n}} يجب ألا يكون أطول من {{=n}} حرف",
     ca: "{{#def.n}}no pot contenir més de {{=n}} caràcter{{#def.mPlural}}",
     cs: "{{#def.n}}nesmí být delší než {{=n}} zna{{? n>=2 && n<=4 }}ky{{?? n!=1 }}k{{??}}ků{{?}}",
     de: "{{#def.n}}darf nicht länger als {{=n}} Zeichen sein",
@@ -414,7 +414,7 @@ module.exports = {
   },
   minLength: {
     en: "{{#def.n}}must NOT be shorter than {{=n}} character{{#def.mPlural}}",
-    ar: "{{#def.n}} يجب أن لا يحوي أقل من {{=n}} محرف",
+    ar: "{{#def.n}} يجب ألا يكون أقصر من {{=n}} حرف",
     ca: "{{#def.n}}no pot contenir menys de {{=n}} caràcter{{#def.mPlural}}",
     cs: "{{#def.n}}nesmí být kratší než {{=n}} zna{{? n>=2 && n<=4 }}ky{{?? n!=1 }}k{{??}}ků{{?}}",
     de: "{{#def.n}}darf nicht kürzer als {{=n}} Zeichen sein",
@@ -439,7 +439,7 @@ module.exports = {
   },
   maxProperties: {
     en: "{{#def.n}}must NOT have more than {{=n}} propert{{#def.propPlural}}",
-    ar: "{{#def.n}} يجب أن لا يحوي أكثر من {{=n}} خصائص",
+    ar: "{{#def.n}} يجب ألا يحتوي على أكثر من {{=n}} خاصية",
     ca: "{{#def.n}}no pot contenir més de {{=n}} propietat{{#def.mPlural}}",
     cs: "{{#def.n}}nesmí mít víc než {{=n}} polož{{#def.propPlural}}",
     de: "{{#def.n}}darf nicht mehr als {{=n}} Attribut{{#def.propPlural}} haben",
@@ -464,7 +464,7 @@ module.exports = {
   },
   minProperties: {
     en: "{{#def.n}}must NOT have less than {{=n}} propert{{#def.propPlural}}",
-    ar: "{{#def.n}} يجب أن لا يحوي أقل من {{=n}} خصائص",
+    ar: "{{#def.n}} يجب ألا يكون أقل من {{=n}} خاصية",
     ca: "{{#def.n}}no pot contenir menys de {{=n}} propietat{{#def.mPlural}}",
     cs: "{{#def.n}}nesmí mít méně než {{=n}} polož{{#def.propPlural}}",
     de: "{{#def.n}}darf nicht weniger als {{=n}} Attribut{{#def.propPlural}} haben",
@@ -489,7 +489,7 @@ module.exports = {
   },
   multipleOf: {
     en: "must be a multiple of {{=e.params.multipleOf}}",
-    ar: " يجب أن يحوي أكثر من {{=e.params.multipleOf}}",
+    ar: "يجب أن يكون من مضاعفات {{=e.params.multipleOf}}",
     ca: "ha de ser múltiple de {{=e.params.multipleOf}}",
     cs: "musí být násobkem {{=e.params.multipleOf}}",
     de: "muss ein Vielfaches von {{=e.params.multipleOf}} sein",
@@ -514,7 +514,7 @@ module.exports = {
   },
   not: {
     en: 'must NOT be valid according to schema in "not"',
-    ar: 'يجب أن يكون غير صحيح وفقاً للمخطط "not"',
+    ar: 'يجب ألا يكون صالحًا وفقًا للمخطط في "not"',
     ca: 'no ha de ser vàlid d’acord amb l’esquema definit a "not"',
     cs: 'nesmí vyhovět schématu v "not"',
     de: 'muss dem in "not" angegebenen Schema widersprechen',
@@ -539,7 +539,7 @@ module.exports = {
   },
   oneOf: {
     en: 'must match exactly one schema in "oneOf"',
-    ar: 'يجب أن يوافق مخطط واحد فقط موجود في "oneOf"',
+    ar: 'يجب أن يتطابق تمامًا مع مخطط واحد في "oneOf"',
     ca: 'ha de coincidir només amb un esquema definit a "oneOf"',
     cs: 'musí vyhovět právě jednomu schématu v "oneOf"',
     de: 'muss genau einem der Schemata in "oneOf" entsprechen',
@@ -564,7 +564,7 @@ module.exports = {
   },
   pattern: {
     en: 'must match pattern "{{=e.params.pattern}}"',
-    ar: 'يجب أن يوافق النمط "{{=e.params.pattern}}"',
+    ar: 'يجب أن يتطابق مع النمط "{{=e.params.pattern}}"',
     ca: 'ha de coincidir amb el patró "{{=e.params.pattern}}"',
     cs: 'musí vyhovět regulárnímu výrazu "{{=e.params.pattern}}"',
     de: 'muss diesem Muster entsprechen: "{{=e.params.pattern}}"',
@@ -589,7 +589,7 @@ module.exports = {
   },
   required: {
     en: "must have required property {{=e.params.missingProperty}}",
-    ar: "هذا الحقل إلزامي",
+    ar: "يجب أن يكون لديك خاصية مطلوبة {{=e.params.missingProperty}}",
     ca: "ha de tenir la propietat requerida {{=e.params.missingProperty}}",
     cs: "musí obsahovat požadovanou položku {{=e.params.missingProperty}}",
     de: "muss das erforderliche Attribut {{=e.params.missingProperty}} enthalten",
@@ -617,7 +617,7 @@ module.exports = {
       t: "{{var t = e.params.type;}}",
     },
     en: "must be {{=e.params.type}}",
-    ar: "قيمة هذا الحقل غير صالحة",
+    ar: "يجب أن يكون {{=e.params.type}}",
     ca: "ha de ser del tipus {{=e.params.type}}",
     cs: "musí být {{=e.params.type}}",
     de: "muss sein: {{=e.params.type}}",
@@ -643,6 +643,7 @@ module.exports = {
   },
   unevaluatedProperties: {
     en: "must NOT have unevaluated properties",
+    ar: "يجب ألا يكون لها خصائص غير مقيمة",
     de: "darf keine unausgewerteten Attribute haben",
     fi: "ei saa sisältää arvioimattomia ominaisuuksia",
     it: "non deve avere attributi non valutati",
@@ -659,6 +660,7 @@ module.exports = {
       n: "{{var n = e.params.len;}}",
     },
     en: "{{#def.n}}must NOT have more than {{=n}} item{{#def.mPlural}}",
+    ar: "{{#def.n}} يجب ألا يحتوي على أكثر من {{=n}} عنصر",
     de: "{{#def.n}}darf nicht mehr als {{=n}} Element{{#def.mPlural}} haben",
     fi: "{{#def.n}}ei saa olla enemmän kuin {{=n}} elementti{{? n!=1 }}ä{{?}}",
     it: "{{#def.n}}non deve avere più di {{=n}} elementi{{#def.mPlural}}",
@@ -672,7 +674,7 @@ module.exports = {
   },
   uniqueItems: {
     en: "must NOT have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)",
-    ar: "يجب أن لا يحوي عناصر مكررة (العنصر ## {{=e.params.j}} و {{=e.params.i}} متطابقة)",
+    ar: "يجب ألا يحتوي على عناصر مكررة (العناصر ## {{=e.params.j}} و {{=e.params.i}} متطابقان)",
     ca: "no ha de tenir ítems duplicats (els ítems ## {{=e.params.j}} i {{=e.params.i}} són idèntics)",
     cs: "nesmí obsahovat duplicitní prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} jsou identické)",
     de: "darf keine Duplikate enthalten (Elemente #{{=e.params.j}} und #{{=e.params.i}} sind gleich)",
@@ -720,7 +722,7 @@ module.exports = {
   },
   patternRequired: {
     en: 'must have property matching pattern "{{=e.params.missingPattern}}"',
-    ar: 'يجب أن يحوي خاصية توافق النمط "{{=e.params.missingPattern}}"',
+    ar: 'يجب أن يحتوي على نمط مطابق للخاصية "{{=e.params.missingPattern}}"',
     ca: 'la propietat ha de coincidir amb el patró "{{=e.params.missingPattern}}"',
     cs: 'musí obsahovat položku vyhovující regulárnímu výrazu "{{=e.params.missingPattern}}"',
     de: 'muss ein Attribut nach folgendem Muster haben "{{=e.params.missingPattern}}"',
@@ -743,7 +745,7 @@ module.exports = {
   },
   const: {
     en: "must be equal to constant",
-    ar: "يجب أن يكون ثابتاً",
+    ar: "يجب أن يكون مساوي لثابت غير متغير",
     ca: "ha de ser igual a la constant",
     cs: "musí být roven konstantě",
     de: "muss gleich der Konstanten sein",
@@ -766,7 +768,7 @@ module.exports = {
   },
   contains: {
     en: "must contain a valid item",
-    ar: "يجب أن يحوي عنصرا صحيح",
+    ar: "يجب أن يحتوي على عنصر صالح",
     ca: "ha de contenir un ítem vàlid",
     cs: "musí obsahovat prvek odpovídající schématu",
     de: "muss ein valides Element enthalten",
@@ -842,7 +844,7 @@ module.exports = {
   },
   if: {
     en: 'must match "{{=e.params.failingKeyword}}" schema',
-    ar: 'يجب أن توافق المخطط "{{=e.params.failingKeyword}}"',
+    ar: 'يجب أن يتطابق مع مخطط "{{=e.params.failingKeyword}}"',
     ca: 'ha de correspondre’s amb l’esquema "{{=e.params.failingKeyword}}"',
     cs: 'musí vyhovět "{{=e.params.failingKeyword}}" schématu',
     de: 'muss dem Schema "{{=e.params.failingKeyword}}" entsprechen',
@@ -863,6 +865,7 @@ module.exports = {
     _type: false,
     tag: {
       en: 'tag "{{=e.params.tag}}" must be string',
+      ar: 'العنصر "{{=e.params.tag}}" يجب أن يكون نص',
       de: 'der Tag "{{=e.params.tag}}" muss eine Zeichenkette sein',
       fi: 'tunniste "{{=e.params.tag}}" täytyy olla merkkijono',
       it: 'il tag "{{=e.params.tag}}" deve essere di tipo stringa',
@@ -876,6 +879,7 @@ module.exports = {
     },
     mapping: {
       en: 'value of tag "{{=e.params.tag}}" must be in oneOf',
+      ar: 'يجب أن تكون قيمة العنصر "{{=e.params.tag}}" في oneOf',
       de: 'der Wert vom Tag "{{=e.params.tag}}" muss im oneOf enthalten sein',
       fi: 'tunnisteen "{{=e.params.tag}}" arvon muoto pitää olla oneOf',
       it: 'il valore del tag "{{=e.params.tag}}" deve essere nei oneOf',

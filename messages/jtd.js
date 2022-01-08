@@ -126,7 +126,7 @@ module.exports = {
     },
     missing: {
       en: "must have property {{=e.params.missingProperty}}",
-      en: "يجب أن يكون لديك الخاصية {{=e.params.missingProperty}}",
+      ar: "يجب أن يكون لديك الخاصية {{=e.params.missingProperty}}",
       ca: "ha de tenir la propietat requerida {{=e.params.missingProperty}}",
       cs: "musí obsahovat požadovanou položku {{=e.params.missingProperty}}",
       de: "muss das erforderliche Attribut {{=e.params.missingProperty}} enthalten",
@@ -169,7 +169,7 @@ module.exports = {
     },
     mapping: {
       en: 'value of tag "{{=e.params.tag}}" must be in mapping',
-      en: 'يجب أن تكون قيمة العنصر "{{=e.params.tag}}" قيد التعيين',
+      ar: 'يجب أن تكون قيمة العنصر "{{=e.params.tag}}" قيد التعيين',
       de: 'der Wert vom Tag "{{=e.params.tag}}" muss im Mapping enthalten sein',
       fi: 'tunnisteen arvon "{{=e.params.tag}}" on oltava kartoituksessa',
       it: 'il valore del tag "{{=e.params.tag}}" deve essere nei mapping',

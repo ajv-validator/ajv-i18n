@@ -895,6 +895,7 @@ module.exports = {
     th: 'ต้องตรงกับ schema "{{=e.params.failingKeyword}}"',
     zh: '应当匹配模式 "{{=e.params.failingKeyword}}" ',
     "zh-TW": '應該符合 "{{=e.params.failingKeyword}}" schema',
+    fa: 'باید با الگوی "{{=e.params.failingKeyword}}" مطابق باشد',
   },
   discriminator: {
     _type: false,

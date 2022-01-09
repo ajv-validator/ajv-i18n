@@ -665,7 +665,7 @@ module.exports = {
     th: "ต้องเป็น {{=e.params.type}}",
     zh: "应当是 {{=e.params.type}} 类型",
     "zh-TW": "應該是 {{=e.params.type}} 類型",
-    fa: 'باید از نوع {{=e.params.type}} باشد',
+    fa: 'باید {{? t == "number" }}عددی{{?? t == "integer"}}عددی صحیح{{?? t == "string"}}رشته{{?? t == "boolean"}}\'بله یا خیر\'{{??}}{{=t}}{{?}} باشد',
   },
   unevaluatedProperties: {
     en: "must NOT have unevaluated properties",

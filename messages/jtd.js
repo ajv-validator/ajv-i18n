@@ -147,7 +147,7 @@ module.exports = {
       th: "ต้องมี property {{=e.params.missingProperty}} ด้วย",
       zh: "应当有必需属性 {{=e.params.missingProperty}}",
       "zh-TW": "應該有必須屬性 {{=e.params.missingProperty}}",
-      ir: "باید مورد {{=e.params.missingProperty}} را دارا باشد",
+      fa: "باید مورد {{=e.params.missingProperty}} را دارا باشد",
     },
   },
 

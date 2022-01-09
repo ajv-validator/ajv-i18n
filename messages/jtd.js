@@ -31,6 +31,7 @@ module.exports = {
     "th",
     "zh",
     "zh-TW",
+    "fa"
   ],
 
   // shared defines
@@ -58,6 +59,7 @@ module.exports = {
     th: 'ต้องผ่านคีย์เวิร์ด "{{=e.keyword}}"',
     zh: '应当通过 "{{=e.keyword}} 关键词校验"',
     "zh-TW": '應該通過 "{{=e.keyword}} 關鍵詞檢驗"',
+    fa: '"{{=e.keyword}}" باید معتبر باشد',
   },
 
   _type: {
@@ -87,6 +89,7 @@ module.exports = {
     th: "{{#def.t}}ต้องเป็น {{=t+n}}",
     zh: "{{#def.t}}应当是 {{=t+n}} 类型",
     "zh-TW": "{{#def.t}}應該是 {{=t+n}} 類型",
+    fa: "{{#def.t}}باید {{=t+n}} باشد",
   },
 
   type: {
@@ -119,6 +122,7 @@ module.exports = {
       th: "ต้องไม่มี property อื่นๆ นอกเหนีอจากที่กำหนดไว้",
       zh: "不允许有额外的属性",
       "zh-TW": "不可以有額外的屬性",
+      fa: "نباید مورد اضافی داشته باشه",
     },
     missing: {
       en: "must have property {{=e.params.missingProperty}}",
@@ -143,6 +147,7 @@ module.exports = {
       th: "ต้องมี property {{=e.params.missingProperty}} ด้วย",
       zh: "应当有必需属性 {{=e.params.missingProperty}}",
       "zh-TW": "應該有必須屬性 {{=e.params.missingProperty}}",
+      ir: "باید مورد {{=e.params.missingProperty}} را دارا باشد",
     },
   },
 
@@ -160,6 +165,8 @@ module.exports = {
       th: 'tag "{{=e.params.tag}}" ต้องเป็น string',
       zh: '标签 "{{=e.params.tag}}" 的类型必须为字符串',
       "zh-TW": '標籤 "{{=e.params.tag}}" 的類型必須是字串',
+      fa: 'تگ "{{=e.params.tag}}" باید رشته باشد',
+
     },
     mapping: {
       en: 'value of tag "{{=e.params.tag}}" must be in mapping',
@@ -173,6 +180,7 @@ module.exports = {
       th: 'ต้องมีค่าของ tag "{{=e.params.tag}}" ใน mapping',
       zh: '标签 "{{=e.params.tag}}" 的值必须在 mapping 之中',
       "zh-TW": '標籤 "{{=e.params.tag}}" 必須在 mapping 其中之一',
+      fa: 'مقدار تگ "{{=e.params.tag}}"  باید در الگو موجود باشد',
     },
   },
 
@@ -199,6 +207,7 @@ module.exports = {
     th: "ต้องตรงกับหนึ่งในค่าที่กำหนดไว้",
     zh: "应当是预设定的枚举值之一",
     "zh-TW": "應該要在預設的值之中",
+    fa: "باید برابر با یکی از مقادیر مجاز باشد",
   },
 
   union: {
@@ -224,5 +233,6 @@ module.exports = {
     th: 'ต้องตรงกับหนึ่งใน schema ที่กำหนดไว้ใน "union"',
     zh: "数据应为 union 所指定的其中一个",
     "zh-TW": "不符合 union 指定的模式",
+    fa: 'باید با یکی از الگوهای "union" مطابق باشد',
   },
 }

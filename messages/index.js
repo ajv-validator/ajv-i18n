@@ -32,6 +32,7 @@ module.exports = {
     "th",
     "zh",
     "zh-TW",
+    "fa",
   ],
 
   // shared defines
@@ -54,6 +55,7 @@ module.exports = {
       ru: "{{? n>=2 && n<=4 }}а{{?? n!=1 }}ов{{?}}",
       sk: "{{? n==1 }}ok{{??}}kov{{?}}",
       sv: "{{? n!=1 }}er{{?}}",
+      fa: '{{? n!=1 }}ها{{?}}',
     },
     propPlural: {
       // plural for the word property (attribute)
@@ -73,6 +75,7 @@ module.exports = {
       ru: "{{? n==1 }}е{{?? n>=2 && n<=4 }}я{{??}}ей{{?}}",
       sk: "{{? n>=2 && n<=4 }}ky{{?? n!=1 }}iek{{??}}ka{{?}}",
       sv: "{{? n!=1 }}er{{?}}",
+      fa: '{{? n!=1 }}ها{{?}}',
     },
   },
 
@@ -99,6 +102,7 @@ module.exports = {
     th: 'ต้องผ่านคีย์เวิร์ด "{{=e.keyword}}"',
     zh: '应当通过 "{{=e.keyword}} 关键词校验"',
     "zh-TW": '應該通過 "{{=e.keyword}} 關鍵詞檢驗"',
+    fa: '"{{=e.keyword}}" باید معتبر باشد',
   },
 
   "false schema": {
@@ -122,6 +126,7 @@ module.exports = {
     th: "schema เป็น false",
     zh: "布尔模式出错",
     "zh-TW": "布林模式不正確",
+    fa: 'الگو اشتباه است',
   },
   additionalItems: {
     _keywords: ["items"], // for JSON Schema draft-2020-12
@@ -148,6 +153,7 @@ module.exports = {
     th: "{{#def.n}}ต้องมีสมาชิกไม่เกิน {{=n}} ตัว",
     zh: "{{#def.n}}不允许超过{{=n}}个元素",
     "zh-TW": "{{#def.n}}不可以超過{{=n}}個元素",
+    fa: '{{#def.n}} نباید بیشتر از {{=n}} ایتم باشد {{#def.mPlural}}',
   },
   additionalProperties: {
     en: "must NOT have additional properties",
@@ -173,6 +179,7 @@ module.exports = {
     th: "ต้องไม่มี property อื่นๆ นอกเหนีอจากที่กำหนดไว้",
     zh: "不允许有额外的属性",
     "zh-TW": "不可以有額外的屬性",
+    fa: 'فیلد مازاد مجاز نمی‌باشد',
   },
   anyOf: {
     en: 'must match a schema in "anyOf"',
@@ -198,6 +205,7 @@ module.exports = {
     th: 'ต้องตรงกับหนึ่งใน schema ที่กำหนดไว้ใน "anyOf"',
     zh: "数据应为 anyOf 所指定的其中一个",
     "zh-TW": "不符合 anyOf 指定的模式",
+    fa: 'الزام به همخوانی داشتن فیلد ها در "anyOf" است.',
   },
   dependencies: {
     _keywords: ["dependentRequired"],
@@ -228,6 +236,8 @@ module.exports = {
     th: "{{#def.n}}เมื่อมี property {{=e.params.property}} แล้วจะต้องมี property {{=e.params.deps}} ด้วย",
     zh: "{{#def.n}}应当拥有属性{{=e.params.property}}的依赖属性{{=e.params.deps}}",
     "zh-TW": "{{#def.n}}應該要有屬性{{=e.params.property}}的依賴屬性{{=e.params.deps}}",
+    fa:
+      '{{#def.n}} باید حاوی مقدار {{=e.params.deps}} وقتی ویژگی {{=e.params.property}} وجود دارد',
   },
   enum: {
     en: "must be equal to one of the allowed values",
@@ -253,6 +263,7 @@ module.exports = {
     th: "ต้องตรงกับหนึ่งในค่าที่กำหนดไว้",
     zh: "应当是预设定的枚举值之一",
     "zh-TW": "應該要在預設的值之中",
+    fa: 'مقدار باید با یکی از مقادیر تعریف شده همخوانی داشته باشد',
   },
   format: {
     en: 'must match format "{{=e.params.format}}"',
@@ -278,6 +289,7 @@ module.exports = {
     th: 'ต้องเป็นรูปแบบ "{{=e.params.format}}"',
     zh: '应当匹配格式 "{{=e.params.format}}"',
     "zh-TW": "應該要符合{{=e.params.format}}格式",
+    fa: 'باید با فرمت "{{=e.params.format}}" مطابقت داشته باشد',
   },
   maximum: {
     _keywords: ["exclusiveMaximum"],
@@ -307,6 +319,7 @@ module.exports = {
     th: "{{#def.c}}ต้อง {{=cond}}",
     zh: "{{#def.c}}应当为 {{=cond}}",
     "zh-TW": "{{#def.c}}應該要 {{=cond}}",
+    fa: '{{#def.c}} باید {{=cond}} باشد',
   },
   minimum: {
     _keywords: ["exclusiveMinimum"],
@@ -336,6 +349,7 @@ module.exports = {
     th: "{{#def.c}}ต้อง {{=cond}}",
     zh: "{{#def.c}}应当为 {{=cond}}",
     "zh-TW": "{{#def.c}}應該要 {{=cond}}",
+    fa: '{{#def.c}} باید {{=cond}} باشد',
   },
   maxItems: {
     en: "{{#def.n}}must NOT have more than {{=n}} item{{#def.mPlural}}",
@@ -361,6 +375,7 @@ module.exports = {
     th: "{{#def.n}}ต้องมีสมาชิกไม่เกิน {{=n}}",
     zh: "{{#def.n}}不应多于 {{=n}} 个项",
     "zh-TW": "{{#def.n}}不應該多於 {{=n}} 個",
+    fa: '{{#def.n}} نباید بیشتر از {{=n}} ایتم باشد{{#def.mPlural}}',
   },
   minItems: {
     en: "{{#def.n}}must NOT have less than {{=n}} item{{#def.mPlural}}",
@@ -386,6 +401,7 @@ module.exports = {
     th: "{{#def.n}}ควรมีสมาชิกไม่น้อยกว่า {{=n}}",
     zh: "{{#def.n}}不应少于 {{=n}} 个项",
     "zh-TW": "{{#def.n}}不應該少於 {{=n}} 個",
+    fa: '{{#def.n}} نباید کمتر از {{=n}} ایتم باشد{{#def.mPlural}}',
   },
   maxLength: {
     en: "{{#def.n}}must NOT be longer than {{=n}} character{{#def.mPlural}}",
@@ -411,6 +427,7 @@ module.exports = {
     th: "{{#def.n}}ต้องยาวไม่เกิน {{=n}} ตัวอักษร",
     zh: "{{#def.n}}不应多于 {{=n}} 个字符",
     "zh-TW": "{{#def.n}}不應該多於 {{=n}} 個字元",
+    fa: '{{#def.n}}نباید بیشتر از  {{=n}} کارکتر باشد{{#def.mPlural}}',
   },
   minLength: {
     en: "{{#def.n}}must NOT be shorter than {{=n}} character{{#def.mPlural}}",
@@ -436,6 +453,7 @@ module.exports = {
     th: "{{#def.n}}ต้องมีอย่างน้อย {{=n}} ตัวอักษร",
     zh: "{{#def.n}}不应少于 {{=n}} 个字符",
     "zh-TW": "{{#def.n}}不應該少於 {{=n}} 個字元",
+    fa: '{{#def.n}}نباید کمتر از {{=n}} کارکتر باشد{{#def.mPlural}}',
   },
   maxProperties: {
     en: "{{#def.n}}must NOT have more than {{=n}} propert{{#def.propPlural}}",
@@ -461,6 +479,7 @@ module.exports = {
     th: "{{#def.n}}ต้องมี property ไม่เกิน {{=n}} ตัว",
     zh: "{{#def.n}}不应有多于 {{=n}} 个属性",
     "zh-TW": "{{#def.n}}不應該多於 {{=n}} 個屬性",
+    fa: '{{#def.n}}نباید بیشتر از  {{=n}} ایتم باشد{{#def.mPlural}}',
   },
   minProperties: {
     en: "{{#def.n}}must NOT have less than {{=n}} propert{{#def.propPlural}}",
@@ -486,6 +505,7 @@ module.exports = {
     th: "{{#def.n}}ต้องมี property อย่างน้อย {{=n}} ตัว",
     zh: "{{#def.n}}不应有少于 {{=n}} 个属性",
     "zh-TW": "{{#def.n}}不應該少於 {{=n}} 個屬性",
+    fa: '{{#def.n}}نباید کمتر از  {{=n}} ایتم باشد{{#def.mPlural}}',
   },
   multipleOf: {
     en: "must be a multiple of {{=e.params.multipleOf}}",
@@ -511,6 +531,7 @@ module.exports = {
     th: "ต้องเป็นเลขที่หาร {{=e.params.multipleOf}} ลงตัว",
     zh: "应当是 {{=e.params.multipleOf}} 的整数倍",
     "zh-TW": "應該是 {{=e.params.multipleOf}} 的整數倍",
+    fa: 'باید مضربی از {{=e.params.multipleOf}} باشد',
   },
   not: {
     en: 'must NOT be valid according to schema in "not"',
@@ -536,6 +557,7 @@ module.exports = {
     th: 'ต้องไม่ผ่าน schema ที่กำหนดไว้ใน "not"',
     zh: '不应当匹配 "not" schema',
     "zh-TW": '不應該符合 "not" schema',
+    fa: 'نباید معتبر باشد بر اساس "not"',
   },
   oneOf: {
     en: 'must match exactly one schema in "oneOf"',
@@ -561,6 +583,7 @@ module.exports = {
     th: 'ต้องตรงกับ schema ตัวเดียวใน "oneOf" เท่านั้น',
     zh: '只能匹配一个 "oneOf" 中的 schema',
     "zh-TW": '只能符合一個 "oneOf" 中的 schema',
+    fa: 'باید حداقل با یکی از طرح های "oneOf" مطابقت داشته',
   },
   pattern: {
     en: 'must match pattern "{{=e.params.pattern}}"',
@@ -586,6 +609,7 @@ module.exports = {
     th: 'ต้องตรงตาม pattern "{{=e.params.pattern}}"',
     zh: '应当匹配模式 "{{=e.params.pattern}}"',
     "zh-TW": '應該符合模式 "{{=e.params.pattern}}"',
+    fa: 'باید با الگوی "{{=e.params.pattern}}" مطابقت داشته باشد',
   },
   required: {
     en: "must have required property {{=e.params.missingProperty}}",
@@ -611,6 +635,7 @@ module.exports = {
     th: "ต้องมี property {{=e.params.missingProperty}} ด้วย",
     zh: "应当有必需属性 {{=e.params.missingProperty}}",
     "zh-TW": "應該有必須屬性 {{=e.params.missingProperty}}",
+    fa: 'فیلد {{=e.params.missingProperty}} الزامی می‌باشد.',
   },
   type: {
     _defs: {
@@ -640,6 +665,7 @@ module.exports = {
     th: "ต้องเป็น {{=e.params.type}}",
     zh: "应当是 {{=e.params.type}} 类型",
     "zh-TW": "應該是 {{=e.params.type}} 類型",
+    fa: 'باید از نوع {{=e.params.type}} باشد',
   },
   unevaluatedProperties: {
     en: "must NOT have unevaluated properties",
@@ -653,6 +679,7 @@ module.exports = {
     th: "ต้องไม่มี property ที่ยังไม่ได้ผ่านการตรวจสอบเงื่อนไขใดๆ",
     zh: "不允许存在未求值的属性",
     "zh-TW": "不應該有未驗證的屬性",
+    fa: "نباید مورد مقدار دهی نشده داشته باشد",
   },
   unevaluatedItems: {
     _defs: {
@@ -669,6 +696,7 @@ module.exports = {
     th: "{{#def.n}}ต้องมีไม่เกิน {{=n}} ตัว",
     zh: "{{#def.n}} 不允许有超过 {{=n}} 个元素",
     "zh-TW": "{{#def.n}} 的元素不可以超過 {{=n}} 個",
+    fa: "{{#def.n}} باید موردی بیشتر از {{=n}} نداشته باشد",
   },
   uniqueItems: {
     en: "must NOT have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)",
@@ -695,6 +723,8 @@ module.exports = {
     th: "ต้องมีสมาชิกไม่ซ้ำักัน (ลำดับที่ {{=e.params.j}} กับ {{=e.params.i}} ซ้ำกัน)",
     zh: "不应当含有重复项 (第 {{=e.params.j}} 项与第 {{=e.params.i}} 项是重复的)",
     "zh-TW": "不應該有重複項目 (第 {{=e.params.j}} 項和第 {{=e.params.i}} 項是重複的)",
+    fa:
+      'نباید ایتم تکراری داشته باشد (items ## {{=e.params.j}} و {{=e.params.i}} برابر هستند)',
   },
   propertyNames: {
     en: "property name is invalid",
@@ -717,6 +747,7 @@ module.exports = {
     th: "ชื่อ property ไม่ถูกต้อง",
     zh: "属性名 无效",
     "zh-TW": "属性名 無效",
+    fa: "ویژگی '{{=e.params.propertyName}}' مجاز نمی باشد",
   },
   patternRequired: {
     en: 'must have property matching pattern "{{=e.params.missingPattern}}"',
@@ -740,6 +771,8 @@ module.exports = {
     th: 'ต้องมี property ที่มีชื่อตรงตาม pattern "{{=e.params.missingPattern}}"',
     zh: "应当有属性匹配模式 {{=e.params.missingPattern}}",
     "zh-TW": "應該有屬性對應模式 {{=e.params.missingPattern}}",
+    fa:
+      'باید ویژگی سازگار با الگوی "{{=e.params.missingPattern}}" وجود داشته باشد',
   },
   const: {
     en: "must be equal to constant",
@@ -763,6 +796,7 @@ module.exports = {
     th: "ต้องเท่ากับค่าคงที่",
     zh: "应当等于常量",
     "zh-TW": "應該等於常數",
+    fa: 'باید برابر با ثابت باشد',
   },
   contains: {
     en: "must contain a valid item",
@@ -785,6 +819,7 @@ module.exports = {
     th: "ต้องมีสมาชิกที่ผ่านเงื่อนไขอยู่",
     zh: "应当包含一个有效项",
     "zh-TW": "應該包含一個有效元素",
+    fa: 'باید حاوی ایتم معتبر باشد',
   },
   formatMaximum: {
     _keywords: ["formatExclusiveMaximum"],
@@ -812,6 +847,7 @@ module.exports = {
     th: "{{#def.c}}ต้อง {{=cond}}",
     zh: "{{#def.c}}应当是 {{=cond}}",
     "zh-TW": "{{#def.c}}應該是 {{=cond}}",
+    fa: '{{#def.c}}باید مطابق {{=cond}} باشد',
   },
   formatMinimum: {
     _keywords: ["formatExclusiveMinimum"],
@@ -839,6 +875,7 @@ module.exports = {
     th: "{{#def.c}}ต้อง {{=cond}}",
     zh: "{{#def.c}}应当是 {{=cond}}",
     "zh-TW": "{{#def.c}}應該是 {{=cond}}",
+    fa: '{{#def.c}}باید مطابق {{=cond}} باشد',
   },
   if: {
     en: 'must match "{{=e.params.failingKeyword}}" schema',
@@ -873,6 +910,7 @@ module.exports = {
       th: 'tag "{{=e.params.tag}}" ต้องเป็น string',
       zh: '标签 "{{=e.params.tag}}" 的类型必须为字符串',
       "zh-TW": '標籤 "{{=e.params.tag}}" 的類型必須是字串',
+      fa: 'تگ "{{=e.params.tag}}" باید رشته باشد'
     },
     mapping: {
       en: 'value of tag "{{=e.params.tag}}" must be in oneOf',
@@ -886,6 +924,7 @@ module.exports = {
       th: 'ต้องมีค่าของ tag "{{=e.params.tag}}" ใน oneOf',
       zh: '标签 "{{=e.params.tag}}" 的值必须在 oneOf 之中',
       "zh-TW": '標籤 "{{=e.params.tag}}" 必須在 oneOf 其中之一',
+      fa: 'مقدار باید در یکی "{{=e.params.tag}}" از oneOf باشد'
     },
   },
 }

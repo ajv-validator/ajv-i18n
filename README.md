@@ -32,9 +32,9 @@ Internationalised error messages for [Ajv](https://github.com/ajv-validator/ajv)
 |🇸🇰 sk|Slovak   |[kiskovacs](https://github.com/kiskovacs)|✓|✓|-|-|*|
 |🇸🇪 sv|Swedish  |[limmen](https://github.com/Limmen)|✓|✓|-|-|*|
 |🇹🇭 th|Thai     |[encX](https://github.com/encX)|✓|✓|✓|✓|✓|
+|🇺🇦 uk|Ukrainian |[switchy](https://github.com/switchy)|✓|✓|✓|✓|✓|
 |🇨🇳 zh|Chinese  |[jinzhubaofu](https://github.com/jinzhubaofu)<br>[leuction](https://github.com/leuction)|✓<br>&nbsp;|<br>✓|<br>✓|<br>✓|<br>✓|
 |🇹🇼 zh-TW|Chinese - Taiwan|[minipai](https://github.com/minipai)|✓|✓|✓|✓|✓|
-
 
 <sup>1</sup> added boolean schema, keywords `const`, `contains`, `propertyNames`
 
@@ -143,7 +143,7 @@ Functions that localize error messages are generated using doT template [localiz
 [![niekvb](https://avatars3.githubusercontent.com/u/37668320?s=40&v=4)](https://github.com/niekvb "niekvb")
 [![NAM0007](https://avatars1.githubusercontent.com/u/47188486?s=40&v=4)](https://github.com/NAM0007 "NAM0007")
 [![saulipurhonen](https://avatars.githubusercontent.com/u/48789543?s=40&v=4)](https://github.com/saulipurhonen "saulipurhonen")
-
+[![switchy](https://avatars.githubusercontent.com/u/1830978?s=40&v=4)](https://github.com/switchy "switchy")
 ## Enterprise support
 
 ajv-i18n package is a part of [Tidelift enterprise subscription](https://tidelift.com/subscription/pkg/npm-ajv-i18n?utm_source=npm-ajv-i18n&utm_medium=referral&utm_campaign=enterprise&utm_term=repo) - it provides a centralised commercial support to open-source software users, in addition to the support provided by software maintainers.

@@ -79,10 +79,8 @@ module.exports = {
     ja: "{{#def.t}}{{=t+n}}でなければいけない",
     ka: "{{#def.t}}უნდა იყოს {{=t+n}}",
     ko: "{{#def.t}}{{=t+n}}이여야 합니다",
-    nb:
-      '{{#def.t}}må være {{? t == "number" }}et tall{{?? t == "integer"}}et heltall{{?? t == "string"}}en streng{{?? t == "boolean"}}ja eller nei{{??}}{{=t}}{{?}}{{=n}}',
-    nl:
-      '{{#def.t}}moet een {{? t == "number" }}nummer{{?? t == "integer"}}geheel getal{{?? t == "string"}}tekenreeks{{?? t == "boolean"}}ja of nee waarde{{?}}{{=n}} ({{=t}}) bevatten',
+    nb: '{{#def.t}}må være {{? t == "number" }}et tall{{?? t == "integer"}}et heltall{{?? t == "string"}}en streng{{?? t == "boolean"}}ja eller nei{{??}}{{=t}}{{?}}{{=n}}',
+    nl: '{{#def.t}}moet een {{? t == "number" }}nummer{{?? t == "integer"}}geheel getal{{?? t == "string"}}tekenreeks{{?? t == "boolean"}}ja of nee waarde{{?}}{{=n}} ({{=t}}) bevatten',
     pl: "{{#def.t}}powinien być {{=t+n}}",
     "pt-BR":
       '{{#def.t}}deve ser {{? t == "number" }}um número{{?? t == "integer"}}um número inteiro{{?? t == "string"}}um texto{{?? t == "boolean"}}um booleano{{??}}{{=t}}{{?}}{{=n}}',
@@ -161,6 +159,7 @@ module.exports = {
       fi: 'tunniste "{{=e.params.tag}}" täytyy olla merkkijono',
       it: 'il tag "{{=e.params.tag}}" deve essere di tipo stringa',
       ka: 'იარლიყი "{{=e.params.tag}}" უნდა იყოს ტექსტური ტიპის',
+      ko: '"{{=e.params.tag}}"태그는 문자열이여야 합니다',
       nl: 'tag "{{=e.params.tag}}" moet een tekenreeks zijn',
       "pt-BR": 'a tag "{{=e.params.tag}}" deve ser uma string',
       ru: 'поле "{{=e.params.tag}}" должно быть строкой',
@@ -174,6 +173,7 @@ module.exports = {
       fi: 'tunnisteen arvon "{{=e.params.tag}}" on oltava kartoituksessa',
       it: 'il valore del tag "{{=e.params.tag}}" deve essere nei mapping',
       ka: 'იარლიყის მნიშვნელობა "{{=e.params.tag}}" უნდა იყოს სქემაში',
+      ko: '"{{=e.params.tag}}"태그의 값은 반드시 매핑에 있어야합니다.',
       nl: 'de waarde van het veld "{{= e.params.tag}}" moet voorkomen in de mapping',
       "pt-BR": 'o valor da tag "{{=e.params.tag}}" deve estar no mapping',
       ru: 'значение поля "{{=e.params.tag}}" должно быть ключом одной из схем',

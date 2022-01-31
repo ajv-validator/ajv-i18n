@@ -857,6 +857,7 @@ module.exports = {
     cs: "{{#def.c}}musí být {{=cond}}",
     de: "{{#def.c}}muss {{=cond}} sein",
     es: "{{#def.c}}debe ser {{=cond}}",
+    fi: "{{#def.c}}täytyy olla {{=cond}}",
     fr: "{{#def.c}}doit être {{=cond}}",
     id: "{{#def.c}}harus {{=cond}}",
     it: "{{#def.c}}deve essere {{=cond}}",

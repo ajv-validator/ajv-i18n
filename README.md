@@ -22,7 +22,7 @@ Internationalised error messages for [Ajv](https://github.com/ajv-validator/ajv)
 |🇭🇺 hu|Hungarian|[szilveszter9](https://github.com/szilveszter9)|✓|-|-|-|*|
 |🇮🇩 id|Indonesian|[ekoeryanto](https://github.com/ekoeryanto)|✓|✓|✓|-|*|
 |🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>&nbsp;|<br>✓|<br>✓|<br>✓|<br>✓|
-|🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|-|*|
+|🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|✓|✓|✓|✓|
 |🇰🇷 ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|✓|✓|
 |🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|-|*|
 |🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie)<br>[niekvb](https://github.com/niekvb)|✓|✓|✓|<br>✓|<br>✓|

@@ -14,6 +14,7 @@ module.exports = {
     "cs",
     "de",
     "es",
+    "fa",
     "fi",
     "fr",
     "hu",
@@ -31,7 +32,6 @@ module.exports = {
     "th",
     "zh",
     "zh-TW",
-    "fa"
   ],
 
   // shared defines
@@ -44,6 +44,7 @@ module.exports = {
     cs: 'musí vyhovět "{{=e.keyword}}" validaci',
     de: 'muss die Validierung "{{=e.keyword}}" bestehen',
     es: 'debe pasar la validación de palabra clave "{{=e.keyword}}"',
+    fa: '"{{=e.keyword}}" باید معتبر باشد',
     fi: 'täytyy läpäistä "{{=e.keyword}}" avainsanatarkistus',
     fr: 'doit être valide selon le critère "{{=e.keyword}}"',
     id: 'harus lulus validasi kata kunci "{{=e.keyword}}"',
@@ -59,7 +60,6 @@ module.exports = {
     th: 'ต้องผ่านคีย์เวิร์ด "{{=e.keyword}}"',
     zh: '应当通过 "{{=e.keyword}} 关键词校验"',
     "zh-TW": '應該通過 "{{=e.keyword}} 關鍵詞檢驗"',
-    fa: '"{{=e.keyword}}" باید معتبر باشد',
   },
 
   _type: {
@@ -71,6 +71,7 @@ module.exports = {
     cs: "{{#def.t}}musí být {{=t+n}}",
     de: "{{#def.t}}muss sein: {{=t+n}}",
     es: "{{#def.t}}debe ser {{=t+n}}",
+    fa: "{{#def.t}}باید {{=t+n}} باشد",
     fi: "{{#def.t}}täytyy olla {{=t+n}}",
     fr: "{{#def.t}}doit être de type {{=t+n}}",
     hu: "{{#def.t}}{{=t+n}} kell legyen",
@@ -89,7 +90,6 @@ module.exports = {
     th: "{{#def.t}}ต้องเป็น {{=t+n}}",
     zh: "{{#def.t}}应当是 {{=t+n}} 类型",
     "zh-TW": "{{#def.t}}應該是 {{=t+n}} 類型",
-    fa: "{{#def.t}}باید {{=t+n}} باشد",
   },
 
   type: {
@@ -105,6 +105,7 @@ module.exports = {
       cs: "nemůže mít další položky",
       de: "darf keine zusätzlichen Attribute haben",
       es: "no debe tener propiedades adicionales",
+      fa: "نباید مورد اضافی داشته باشه",
       fi: "ei saa sisältää ylimääräisiä ominaisuuksia",
       fr: "ne doit pas contenir de propriétés additionnelles",
       hu: "nem lehetnek további elemei",
@@ -122,7 +123,6 @@ module.exports = {
       th: "ต้องไม่มี property อื่นๆ นอกเหนีอจากที่กำหนดไว้",
       zh: "不允许有额外的属性",
       "zh-TW": "不可以有額外的屬性",
-      fa: "نباید مورد اضافی داشته باشه",
     },
     missing: {
       en: "must have property {{=e.params.missingProperty}}",
@@ -130,6 +130,7 @@ module.exports = {
       cs: "musí obsahovat požadovanou položku {{=e.params.missingProperty}}",
       de: "muss das erforderliche Attribut {{=e.params.missingProperty}} enthalten",
       es: "debe tener la propiedad requerida {{=e.params.missingProperty}}",
+      fa: "باید مورد {{=e.params.missingProperty}} را دارا باشد",
       fi: "täytyy sisältää ominaisuus {{=e.params.missingProperty}}",
       fr: "requiert la propriété {{=e.params.missingProperty}}",
       hu: "kell legyen {{=e.params.missingProperty}} tulajdonsága",
@@ -147,7 +148,6 @@ module.exports = {
       th: "ต้องมี property {{=e.params.missingProperty}} ด้วย",
       zh: "应当有必需属性 {{=e.params.missingProperty}}",
       "zh-TW": "應該有必須屬性 {{=e.params.missingProperty}}",
-      fa: "باید مورد {{=e.params.missingProperty}} را دارا باشد",
     },
   },
 
@@ -156,6 +156,7 @@ module.exports = {
     tag: {
       en: 'tag "{{=e.params.tag}}" must be string',
       de: 'der Tag "{{=e.params.tag}}" muss eine Zeichenkette sein',
+      fa: 'تگ "{{=e.params.tag}}" باید رشته باشد',
       fi: 'tunniste "{{=e.params.tag}}" täytyy olla merkkijono',
       it: 'il tag "{{=e.params.tag}}" deve essere di tipo stringa',
       ko: '"{{=e.params.tag}}"태그는 문자열이여야 합니다',
@@ -165,12 +166,11 @@ module.exports = {
       th: 'tag "{{=e.params.tag}}" ต้องเป็น string',
       zh: '标签 "{{=e.params.tag}}" 的类型必须为字符串',
       "zh-TW": '標籤 "{{=e.params.tag}}" 的類型必須是字串',
-      fa: 'تگ "{{=e.params.tag}}" باید رشته باشد',
-
     },
     mapping: {
       en: 'value of tag "{{=e.params.tag}}" must be in mapping',
       de: 'der Wert vom Tag "{{=e.params.tag}}" muss im Mapping enthalten sein',
+      fa: 'مقدار تگ "{{=e.params.tag}}"  باید در الگو موجود باشد',
       fi: 'tunnisteen arvon "{{=e.params.tag}}" on oltava kartoituksessa',
       it: 'il valore del tag "{{=e.params.tag}}" deve essere nei mapping',
       ko: '"{{=e.params.tag}}"태그의 값은 반드시 매핑에 있어야합니다.',
@@ -180,7 +180,6 @@ module.exports = {
       th: 'ต้องมีค่าของ tag "{{=e.params.tag}}" ใน mapping',
       zh: '标签 "{{=e.params.tag}}" 的值必须在 mapping 之中',
       "zh-TW": '標籤 "{{=e.params.tag}}" 必須在 mapping 其中之一',
-      fa: 'مقدار تگ "{{=e.params.tag}}"  باید در الگو موجود باشد',
     },
   },
 
@@ -190,6 +189,7 @@ module.exports = {
     cs: "musí být rovno jedné hodnotě z výčtu",
     de: "muss einem der vorgegebenen Werte entsprechen",
     es: "deber ser igual a uno de los valores predefinidos",
+    fa: "باید برابر با یکی از مقادیر مجاز باشد",
     fi: "täytyy olla yhtä kuin jokin sallituista arvoista",
     fr: "doit être égal à une des valeurs prédéfinies",
     hu: "egyenlő kell legyen valamely előre meghatározott értékkel",
@@ -207,7 +207,6 @@ module.exports = {
     th: "ต้องตรงกับหนึ่งในค่าที่กำหนดไว้",
     zh: "应当是预设定的枚举值之一",
     "zh-TW": "應該要在預設的值之中",
-    fa: "باید برابر با یکی از مقادیر مجاز باشد",
   },
 
   union: {
@@ -216,6 +215,7 @@ module.exports = {
     cs: 'musí vyhovět alespoň jednomu schématu v "union"',
     de: 'muss einem der Schemata in "union" entsprechen',
     es: 'debe coincidir con algún esquema en "union"',
+    fa: 'باید با یکی از الگوهای "union" مطابق باشد',
     fi: 'täytyy vastata "union" skeemaa',
     fr: 'doit correspondre à un schéma de "union"',
     hu: 'meg kell feleljen legalább egy "union" alaknak',
@@ -233,6 +233,5 @@ module.exports = {
     th: 'ต้องตรงกับหนึ่งใน schema ที่กำหนดไว้ใน "union"',
     zh: "数据应为 union 所指定的其中一个",
     "zh-TW": "不符合 union 指定的模式",
-    fa: 'باید با یکی از الگوهای "union" مطابق باشد',
   },
 }

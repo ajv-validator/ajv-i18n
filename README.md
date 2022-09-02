@@ -24,6 +24,7 @@ Internationalised error messages for [Ajv](https://github.com/ajv-validator/ajv)
 |🇮🇹 it|Italian  |[jasoniangreen](https://github.com/jasoniangreen)<br>[lucacorti](https://github.com/lucacorti)|✓<br>&nbsp;|<br>✓|<br>✓|<br>✓|<br>✓|
 |🇯🇵 ja|Japanese |[gilgongo](https://github.com/gilgongo)|✓|-|-|-|*|
 |🇰🇷 ko|Korean |[MinByeongDon](https://github.com/MinByeongDon)|✓|✓|✓|✓|✓|
+|MN mn|Mongolian |[erdenemunkh](https://github.com/erdenemunkh)|-|-|-|-|✓|
 |🇳🇴 nb|Norwegian bokmål|[mtramm](https://github.com/mtramm)|✓|✓|-|-|*|
 |🇳🇱 nl|Dutch    |[pimlie](https://github.com/pimlie)<br>[niekvb](https://github.com/niekvb)|✓|✓|✓|<br>✓|<br>✓|
 |🇵🇱 pl|Polish   |[danielzurawski](https://github.com/danielzurawski)|✓|-|-|-|*|

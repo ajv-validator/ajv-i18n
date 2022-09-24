@@ -56,7 +56,6 @@ module.exports = {
       sk: "{{? n==1 }}ok{{??}}kov{{?}}",
       sv: "{{? n!=1 }}er{{?}}",
       uk: "{{? n>=2 && n<=4 }}и{{?? n!=1 }}ів{{?}}"
-
     },
     propPlural: {
       // plural for the word property (attribute)
@@ -77,7 +76,6 @@ module.exports = {
       sk: "{{? n>=2 && n<=4 }}ky{{?? n!=1 }}iek{{??}}ka{{?}}",
       sv: "{{? n!=1 }}er{{?}}",
       uk: "{{? n==1 }}е{{?? n>=2 && n<=4 }}я{{??}}ів{{?}}"
-
     },
   },
 

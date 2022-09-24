@@ -228,8 +228,7 @@ module.exports = {
     nb: "{{#def.n}}må ha egenskapen{{? n != 1}}e{{?}} {{=e.params.deps}} når egenskapen {{=e.params.property}} er angitt",
     nl: "{{#def.n}}moet de eigenschap{{#def.propPlural}} {{=e.params.deps}} bevatten als {{=e.params.property}} is gedefinieerd",
     pl: "{{#def.n}}powinien zawierać pol{{#def.propPlural}} {{=e.params.deps}} kiedy pole {{=e.params.property}} jest obecne",
-    "pt-BR":
-        "{{#def.n}} deve ter propriedade{{#def.propPlural}} {{=e.params.deps}} quando a propriedade {{=e.params.property}} estiver presente",
+    "pt-BR": "{{#def.n}} deve ter propriedade{{#def.propPlural}} {{=e.params.deps}} quando a propriedade {{=e.params.property}} estiver presente",
     ru: "{{#def.n}}должно иметь пол{{? n==1 }}е{{??}}я{{?}} {{=e.params.deps}}, когда присутствует поле {{=e.params.property}}",
     sk: "{{#def.n}} musí obsahovať polož{{#def.propPlural}}: {{=e.params.deps}}, ak obsahuje {{=e.params.property}}",
     sv: "{{#def.n}}borde ha egenskap{{#def.propPlural}} {{=e.params.deps}} när egenskap {{=e.params.property}} finns tillgängligt",
@@ -656,8 +655,7 @@ module.exports = {
     nb: '{{#def.t}}må være {{? t == "number" }}et tall{{?? t == "integer"}}et heltall{{?? t == "string"}}en streng{{?? t == "boolean"}}ja eller nei{{??}}{{=t}}{{?}}',
     nl: '{{#def.t}}moet een {{? t == "number" }}nummer{{?? t == "integer"}}geheel getal{{?? t == "string"}}tekenreeks{{?? t == "boolean"}}ja of nee waarde{{?}} ({{=t}}) bevatten',
     pl: "powinien być {{=e.params.type}}",
-    "pt-BR":
-        '{{#def.t}}deve ser {{? t == "number" }}um número{{?? t == "integer"}}um número inteiro{{?? t == "string"}}um texto{{?? t == "boolean"}}um booleano{{??}}{{=t}}{{?}}',
+    "pt-BR": '{{#def.t}}deve ser {{? t == "number" }}um número{{?? t == "integer"}}um número inteiro{{?? t == "string"}}um texto{{?? t == "boolean"}}um booleano{{??}}{{=t}}{{?}}',
     ru: "должно быть {{=e.params.type}}",
     sk: "musí byť {{=e.params.type}}",
     sv: "borde vara {{=e.params.type}}",
@@ -714,8 +712,7 @@ module.exports = {
     nb: "kan ikke ha duplikate elemeneter (elementene ## {{=e.params.j}} og {{=e.params.i}} er identiske)",
     nl: "mag geen gedupliceerde items bevatten (items ## {{=e.params.j}} en {{=e.params.i}} zijn identiek)",
     pl: "nie powinien zawierać elementów które się powtarzają (elementy {{=e.params.j}} i {{=e.params.i}} są identyczne)",
-    "pt-BR":
-        "não deve ter itens duplicados (os itens ## {{=e.params.j}} e {{=e.params.i}} são idênticos)",
+    "pt-BR": "não deve ter itens duplicados (os itens ## {{=e.params.j}} e {{=e.params.i}} são idênticos)",
     ru: "не должно иметь повторяющихся элементов (элементы {{=e.params.j}} и {{=e.params.i}} идентичны)",
     sk: "nesmie obsahovať duplicitné prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} sú rovnaké)",
     sv: "borde inte ha duplicerade saker (sakerna ## {{=e.params.j}} och {{=e.params.i}} är identiska)",

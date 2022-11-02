@@ -1,6 +1,6 @@
 import {Localize} from "./types";
 
-type Language =
+export type Language =
   {{~ it.locales:locale }}
     | "{{=locale}}"
   {{~}};

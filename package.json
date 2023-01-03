@@ -43,7 +43,7 @@
     "ajv-formats": "^2.0.0",
     "ajv-keywords": "^5.0.0",
     "dot": "^1.0.3",
-    "eslint": "^7.8.1",
+    "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.1.0",
     "husky": "^7.0.1",
     "json-schema-test": "^2.0.0",
